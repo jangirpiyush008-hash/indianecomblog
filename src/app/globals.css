@@ -1,26 +1,244 @@
 @import "tailwindcss";
 
+/* ============================================================
+ * Fable design tokens — premium editorial-commerce light theme
+ * ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base */
+  --cream: #faf6f1;
+  --cream-100: #f5efe6;
+  --cream-200: #ede4d4;
+  --ink: #0a0a0b;
+  --ink-80: #2a2a2d;
+  --ink-60: #4a4a4e;
+  --ink-40: #6b6560;
+  --line: #e6e0d8;
+  --line-strong: #d4ccc0;
+  --paper: #ffffff;
+
+  /* Brand accents */
+  --accent: #d4502c;
+  --accent-dark: #b8431f;
+  --accent-tint: #faeae3;
+  --gold: #c9a961;
+  --gold-tint: #f5ecd5;
+  --emerald: #047857;
+  --azure: #0369a1;
+  --plum: #7c2d6b;
+
+  /* Semantic */
+  --success: #059669;
+  --warning: #d97706;
+  --danger: #dc2626;
+
+  /* Surface */
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --surface: var(--paper);
+  --surface-muted: var(--cream-100);
+  --border: var(--line);
+
+  /* Typography scale */
+  --font-serif: "Fraunces", "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-ink: var(--ink);
+  --color-ink-80: var(--ink-80);
+  --color-ink-60: var(--ink-60);
+  --color-ink-40: var(--ink-40);
+  --color-cream: var(--cream);
+  --color-cream-100: var(--cream-100);
+  --color-cream-200: var(--cream-200);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-tint: var(--accent-tint);
+  --color-gold: var(--gold);
+  --color-gold-tint: var(--gold-tint);
+  --color-emerald: var(--emerald);
+  --color-azure: var(--azure);
+  --color-plum: var(--plum);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================================
+ * Base reset + typography defaults
+ * ============================================================ */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings:
+    "ss01" 1,
+    "cv11" 1;
+}
+
+/* Editorial serif headlines */
+.font-editorial,
+h1.editorial,
+h2.editorial,
+h3.editorial {
+  font-family: var(--font-serif);
+  font-feature-settings:
+    "ss01" 1,
+    "ss02" 1;
+  letter-spacing: -0.015em;
+}
+
+/* Fine-tune defaults */
+::selection {
+  background: var(--accent);
+  color: var(--cream);
+}
+
+/* Utility: drop-cap for feature articles */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  line-height: 0.85;
+  margin: 0.15em 0.1em 0 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Marquee / ticker */
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  animation: ticker 50s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle underline-on-hover for editorial links */
+.link-underline {
+  background-image: linear-gradient(var(--ink), var(--ink));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 0.3s ease;
+}
+
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+/* Hide scrollbar util */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Rule above section headings — editorial device */
+.rule-above {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.rule-above::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--accent);
+}
+
+/* Prose adjustments for articles */
+.prose-editorial {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--ink-80);
+}
+
+.prose-editorial p {
+  margin-bottom: 1.25em;
+}
+
+.prose-editorial h2 {
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.prose-editorial h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.prose-editorial a {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.prose-editorial blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: var(--ink-60);
+  margin: 2em 0;
+}
+
+.prose-editorial ul,
+.prose-editorial ol {
+  padding-left: 1.5rem;
+  margin: 1em 0;
+}
+
+.prose-editorial li {
+  margin-bottom: 0.5em;
+}
+
+.prose-editorial img {
+  border-radius: 2px;
+  margin: 2em 0;
 }
