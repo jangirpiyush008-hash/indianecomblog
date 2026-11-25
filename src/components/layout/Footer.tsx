@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { brand } from "@/config/brand";
 import { siteConfig } from "@/config/site";
+import { Logo } from "@/components/brand/Logo";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 
 export function Footer() {
@@ -10,7 +11,7 @@ export function Footer() {
       <Container size="xl">
         <div className="py-16 grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
-            <p className="font-editorial text-4xl font-semibold mb-4">{brand.name}</p>
+            <Logo className="text-3xl text-cream mb-4" markClassName="h-10 w-10" />
             <p className="text-cream/70 text-sm leading-relaxed max-w-sm">
               {brand.description}
             </p>

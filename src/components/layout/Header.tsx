@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/config/site";
 import { brand } from "@/config/brand";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/brand/Logo";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -47,9 +48,8 @@ export function Header() {
 
           <div className="flex-1 md:flex-none text-center md:text-left">
             <Link href="/" className="inline-block">
-              <span className="font-editorial text-3xl md:text-4xl font-semibold tracking-tight text-ink">
-                {brand.name}
-              </span>
+              <Logo className="text-2xl md:text-3xl text-ink align-middle" markClassName="h-8 w-8 md:h-9 md:w-9" />
+              <span className="sr-only">{brand.name} home</span>
               <span className="hidden md:inline-block ml-3 align-top font-mono text-[10px] uppercase tracking-[0.2em] text-ink-40 pt-2">
                 {brand.tagline}
               </span>
@@ -112,7 +112,7 @@ export function Header() {
       {mobileOpen && (
         <div className="md:hidden fixed inset-0 z-50 bg-cream">
           <div className="flex items-center justify-between p-5 border-b border-line">
-            <span className="font-editorial text-2xl font-semibold">{brand.name}</span>
+            <Logo className="text-2xl text-ink" markClassName="h-8 w-8" />
             <button onClick={() => setMobileOpen(false)} aria-label="Close menu">
               <X className="h-5 w-5" />
             </button>

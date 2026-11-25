@@ -4,15 +4,14 @@
  */
 
 export const brand = {
-  name: "Fable",
-  shortName: "Fable",
-  tagline: "India's premium discovery magazine",
+  name: "TrendNations",
+  shortName: "TrendNations",
+  tagline: "What's trending, explained",
   description:
-    "Discover what's trending in India — tech, AI tools, shopping, money, lifestyle, entertainment & travel. Curated, verified, premium.",
-  /** Placeholder until a domain is bought — see BRAND_RESEARCH.md. */
-  domain: "fable.in",
-  /** Public contact address. Set NEXT_PUBLIC_CONTACT_EMAIL once a mailbox exists. */
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@fable.in",
+    "What's trending right now — tech, AI tools, shopping, money, lifestyle, entertainment and travel — explained with sources, plus price-checked buying guides.",
+  domain: "trendnations.com",
+  /** Public contact address. */
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info.trendnations@gmail.com",
   founder: "Piyush Jangir",
   /** Add real profile URLs here once the handles are registered. */
   social: {} as Record<string, string>,

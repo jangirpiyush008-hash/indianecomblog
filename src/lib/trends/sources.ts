@@ -32,7 +32,7 @@ export async function pullGoogleNewsIndia(categories: string[]): Promise<TrendSi
     const url = `https://news.google.com/rss/search?q=${q}&hl=en-IN&gl=IN&ceid=IN:en`;
     try {
       const res = await fetch(url, {
-        headers: { "User-Agent": "Mozilla/5.0 Fable/1.0" },
+        headers: { "User-Agent": "Mozilla/5.0 TrendNations/1.0" },
         next: { revalidate: 300 },
       });
       const text = await res.text();
@@ -76,7 +76,7 @@ export async function pullRedditIndia(): Promise<TrendSignal[]> {
   for (const sub of subs) {
     try {
       const res = await fetch(`https://www.reddit.com/r/${sub}/hot.json?limit=10`, {
-        headers: { "User-Agent": "Fable/1.0" },
+        headers: { "User-Agent": "TrendNations/1.0" },
         next: { revalidate: 600 },
       });
       const json = await res.json();

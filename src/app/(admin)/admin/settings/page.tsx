@@ -21,7 +21,7 @@ const sections = [
     id: "supabase",
     icon: Key,
     title: "Supabase (database + auth)",
-    description: "Connection to the Fable database",
+    description: "Connection to the TrendNations database",
     fields: [
       { label: "Supabase URL", key: "NEXT_PUBLIC_SUPABASE_URL", type: "text", status: "missing" },
       { label: "Anon public key", key: "NEXT_PUBLIC_SUPABASE_ANON_KEY", type: "password", status: "missing" },
@@ -46,7 +46,7 @@ const sections = [
     title: "Affiliate networks",
     description: "Amazon, Flipkart, Cuelinks, EarnKaro",
     fields: [
-      { label: "Amazon Associates tag", key: "AMAZON_ASSOC_TAG", value: "fablemag-21", type: "text" },
+      { label: "Amazon Associates tag", key: "AMAZON_ASSOC_TAG", value: "", type: "text" },
       { label: "Cuelinks token", key: "CUELINKS_TOKEN", type: "password", status: "missing" },
       { label: "EarnKaro API key", key: "EARNKARO_API_KEY", type: "password", status: "missing" },
     ],
@@ -58,7 +58,7 @@ const sections = [
     description: "Resend for transactional + newsletter delivery",
     fields: [
       { label: "Resend API key", key: "RESEND_API_KEY", type: "password", status: "missing" },
-      { label: "From address", key: "NEWSLETTER_FROM_EMAIL", value: "digest@fable.in", type: "text" },
+      { label: "From address", key: "NEWSLETTER_FROM_EMAIL", value: "info.trendnations@gmail.com", type: "text" },
     ],
   },
 ];

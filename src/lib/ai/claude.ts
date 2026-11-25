@@ -19,7 +19,7 @@ export async function generateArticleOutline({
   angle?: string;
   keywordData?: { volume?: number; difficulty?: number; relatedKeywords?: string[] };
 }) {
-  const system = `You are the senior editor of Fable, a premium Indian digital magazine for consumer discovery.
+  const system = `You are the senior editor of TrendNations, a digital publication that explains what's trending and helps readers buy well.
 
 EDITORIAL VOICE:
 - Premium, warm, directly useful
@@ -75,7 +75,7 @@ export async function generateArticleDraft({
   outline: any;
   topic: string;
 }) {
-  const system = `You are Fable's senior editor. Write a complete article in Markdown based on the outline provided.
+  const system = `You are TrendNations' senior editor. Write a complete article in Markdown based on the outline provided.
 
 STYLE:
 - Premium editorial prose, not SEO spam
@@ -120,7 +120,7 @@ export async function runQualityChecks({
   markdown: string;
   topic: string;
 }) {
-  const system = `You are an editorial fact-checker and quality analyst for Fable.
+  const system = `You are an editorial fact-checker and quality analyst for TrendNations.
 
 Check the draft for:
 1. Unsourced claims / statistics
