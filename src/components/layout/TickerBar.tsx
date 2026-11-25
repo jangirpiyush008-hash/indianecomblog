@@ -1,39 +1,32 @@
-import Link from "next/link";
+export type TickerItem = { label: string; href: string; external?: boolean };
 
-const defaultItems = [
-  { label: "Jio AI Cloud announced for July rollout", href: "/technology/jio-ai-cloud" },
-  { label: "iPhone 16 Pro drops to ₹1,19,900 on Amazon", href: "/deals/iphone-16-pro" },
-  { label: "Perplexity Pro free for Airtel customers", href: "/ai-tools/perplexity-airtel" },
-  { label: "HDFC Infinia now gives 10X on Amazon", href: "/money/hdfc-infinia-amazon" },
-  { label: "Panchayat Season 4 release confirmed", href: "/entertainment/panchayat-s4" },
-  { label: "Lakshadweep opens 3 new islands to tourists", href: "/travel/lakshadweep-new-islands" },
-  { label: "Nykaa's Blockbuster Beauty Sale starts Friday", href: "/shopping/nykaa-sale" },
-];
-
-export function TickerBar({ items = defaultItems }: { items?: typeof defaultItems }) {
+/** Scrolling headline strip. Items must be real — the homepage passes live headlines and our latest stories. */
+export function TickerBar({ items }: { items: TickerItem[] }) {
+  if (!items.length) return null;
   const double = [...items, ...items];
   return (
-    <div className="border-b border-line bg-cream-100 overflow-hidden">
+    <div className="border-b border-line bg-cream-100 overflow-hidden" aria-label="Latest headlines">
       <div className="flex items-center">
         <div className="flex-shrink-0 bg-accent text-white px-5 py-3">
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] font-bold whitespace-nowrap">
-              Trending now
-            </span>
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] font-bold whitespace-nowrap">Latest</span>
           </div>
         </div>
         <div className="flex-1 overflow-hidden relative">
           <div className="ticker-track flex whitespace-nowrap py-3">
             {double.map((item, i) => (
-              <Link
+              <a
                 key={`${item.href}-${i}`}
                 href={item.href}
+                {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                aria-hidden={i >= items.length ? true : undefined}
+                tabIndex={i >= items.length ? -1 : undefined}
                 className="inline-flex items-center gap-3 px-6 text-sm text-ink hover:text-accent transition"
               >
                 <span className="text-ink-40 font-mono text-xs">◆</span>
                 {item.label}
-              </Link>
+              </a>
             ))}
           </div>
         </div>

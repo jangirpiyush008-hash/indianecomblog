@@ -24,12 +24,11 @@ export function Header() {
             </div>
             <div className="flex items-center gap-6">
               <Link href="/newsletter" className="hover:text-accent transition">
-                Daily digest
+                Newsletter
               </Link>
               <Link href="/trending" className="hover:text-accent transition">
                 Trending now
               </Link>
-              <span className="hidden md:inline text-cream/60">New Delhi · Mumbai · Bengaluru</span>
             </div>
           </div>
         </Container>
@@ -102,7 +101,7 @@ export function Header() {
                 className="text-[13px] font-medium tracking-wide text-accent hover:text-accent-dark whitespace-nowrap transition flex items-center gap-2"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                Hot deals
+                Deals
               </Link>
             </li>
           </ul>
@@ -137,7 +136,7 @@ export function Header() {
                 href="/newsletter"
                 className="block w-full py-3 bg-ink text-cream text-center text-sm font-medium"
               >
-                Subscribe to daily digest
+                Subscribe to the newsletter
               </Link>
             </div>
           </nav>
@@ -162,7 +161,7 @@ function HeaderDate() {
 
 function SearchOverlay({ onClose }: { onClose: () => void }) {
   const [q, setQ] = useState("");
-  const popular = ["best phones under 30000", "best AI tools", "mutual funds 2026", "Goa in winter", "OTT releases this week"];
+  const popular = ["ANC earbuds", "smartwatch", "UPI Circle", "credit report", "IMEI", "OTT releases"];
   return (
     <div className="fixed inset-0 z-50 bg-cream/98 backdrop-blur-md" onClick={onClose}>
       <div
@@ -170,31 +169,35 @@ function SearchOverlay({ onClose }: { onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mx-auto max-w-2xl">
-          <div className="flex items-center gap-3 border-b-2 border-ink pb-3">
-            <Search className="h-6 w-6 text-ink-60" />
+          <form action="/search" role="search" className="flex items-center gap-3 border-b-2 border-ink pb-3">
+            <Search className="h-6 w-6 text-ink-60" aria-hidden />
+            <label htmlFor="site-search" className="sr-only">Search</label>
             <input
+              id="site-search"
+              name="q"
+              type="search"
               autoFocus
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Search articles, products, deals…"
+              placeholder="Search articles and products…"
               className="flex-1 bg-transparent outline-none text-xl md:text-2xl font-editorial placeholder:text-ink-40"
             />
-            <button onClick={onClose} className="text-ink-60 hover:text-ink">
+            <button type="button" onClick={onClose} className="text-ink-60 hover:text-ink" aria-label="Close search">
               <X className="h-5 w-5" />
             </button>
-          </div>
+          </form>
           <div className="mt-10">
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-4">Popular searches</p>
             <ul className="space-y-2">
               {popular.map((p) => (
                 <li key={p}>
-                  <button
-                    onClick={() => setQ(p)}
+                  <a
+                    href={`/search?q=${encodeURIComponent(p)}`}
                     className="group flex items-center gap-2 text-base text-ink-80 hover:text-accent py-2"
                   >
                     <span className="text-ink-40 group-hover:text-accent">↗</span>
                     {p}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>

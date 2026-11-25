@@ -5,25 +5,35 @@
  */
 
 import { brand } from "@/config/brand";
-import type { Article, Product } from "@/types/content";
+import { siteConfig } from "@/config/site";
+import type { Article, Author, FaqItem, Product } from "@/types/content";
 
-const BASE = "https://fable.in";
+export const BASE = siteConfig.url;
+export const abs = (path: string) => (path.startsWith("http") ? path : `${BASE}${path}`);
+
+/** Serialise JSON-LD safely (escapes `<` per Next.js JSON-LD guidance). */
+export function jsonLd(data: unknown) {
+  return { __html: JSON.stringify(data).replace(/</g, "\\u003c") };
+}
+
+const publisher = () => ({
+  "@type": "NewsMediaOrganization",
+  "@id": `${BASE}/#organization`,
+  name: brand.name,
+  url: BASE,
+  logo: { "@type": "ImageObject", url: `${BASE}/icon.svg` },
+  founder: { "@type": "Person", name: brand.founder },
+  ethicsPolicy: `${BASE}/editorial-policy`,
+  correctionsPolicy: `${BASE}/corrections-policy`,
+  publishingPrinciples: `${BASE}/editorial-policy`,
+});
 
 export function organizationSchema() {
+  const social = Object.values(brand.social);
   return {
     "@context": "https://schema.org",
-    "@type": "NewsMediaOrganization",
-    name: brand.name,
-    url: BASE,
-    logo: `${BASE}/logo.png`,
-    sameAs: [
-      `https://twitter.com/${brand.social.twitter.replace("@", "")}`,
-      `https://instagram.com/${brand.social.instagram.replace("@", "")}`,
-      `https://youtube.com/${brand.social.youtube.replace("@", "")}`,
-    ],
-    foundingLocation: { "@type": "Place", name: "New Delhi, India" },
-    ethicsPolicy: `${BASE}/editorial-policy`,
-    correctionsPolicy: `${BASE}/corrections-policy`,
+    ...publisher(),
+    ...(social.length ? { sameAs: social } : {}),
   };
 }
 
@@ -31,8 +41,11 @@ export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${BASE}/#website`,
     name: brand.name,
     url: BASE,
+    inLanguage: "en-IN",
+    publisher: { "@id": `${BASE}/#organization` },
     potentialAction: {
       "@type": "SearchAction",
       target: `${BASE}/search?q={search_term_string}`,
@@ -41,64 +54,83 @@ export function websiteSchema() {
   };
 }
 
+export function personSchema(author: Author) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${BASE}/authors/${author.slug}#person`,
+    name: author.name,
+    jobTitle: author.role,
+    description: author.bio,
+    url: `${BASE}/authors/${author.slug}`,
+    worksFor: { "@id": `${BASE}/#organization` },
+    ...(author.sameAs?.length ? { sameAs: author.sameAs } : {}),
+  };
+}
+
 export function articleSchema(article: Article) {
   return {
     "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    headline: article.title,
+    "@type": "Article",
+    headline: article.seoTitle ?? article.title,
     description: article.excerpt,
-    image: [article.heroImage],
+    image: [abs(article.heroImage)],
     datePublished: article.publishedAt,
     dateModified: article.updatedAt || article.publishedAt,
+    inLanguage: "en-IN",
     author: {
       "@type": "Person",
+      "@id": `${BASE}/authors/${article.author.slug}#person`,
       name: article.author.name,
       url: `${BASE}/authors/${article.author.slug}`,
       jobTitle: article.author.role,
     },
-    publisher: {
-      "@type": "NewsMediaOrganization",
-      name: brand.name,
-      logo: { "@type": "ImageObject", url: `${BASE}/logo.png` },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${BASE}${article.url}`,
-    },
+    publisher: publisher(),
+    mainEntityOfPage: { "@type": "WebPage", "@id": abs(article.url) },
     articleSection: article.categoryName,
     keywords: article.tags?.join(", "),
+    ...(article.sources?.length
+      ? { citation: article.sources.map((s) => ({ "@type": "CreativeWork", name: s.name, url: s.url })) }
+      : {}),
   };
 }
 
 export function productSchema(product: Product) {
-  const schema: any = {
+  // Product + Offer only. No aggregateRating/review: we don't have verified ratings.
+  return {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     image: product.image,
-    description: product.verdict || product.name,
+    description: product.keyFeatures?.join(", ") || product.name,
     brand: { "@type": "Brand", name: product.brand },
     offers: {
       "@type": "Offer",
       price: product.price,
       priceCurrency: "INR",
+      priceValidUntil: undefined,
       availability:
-        product.availability === "in_stock"
-          ? "https://schema.org/InStock"
-          : "https://schema.org/OutOfStock",
+        product.availability === "out_of_stock"
+          ? "https://schema.org/OutOfStock"
+          : "https://schema.org/InStock",
       seller: { "@type": "Organization", name: product.merchantName },
-      url: product.affiliateUrl,
+      url: product.sourceUrl,
     },
   };
-  // Only include aggregateRating when the rating is verifiably from a real source.
-  if (product.rating && product.reviewCount && product.reviewCount >= 10) {
-    schema.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue: product.rating,
-      reviewCount: product.reviewCount,
-    };
-  }
-  return schema;
+}
+
+export function itemListSchema(name: string, items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      url: abs(it.url),
+    })),
+  };
 }
 
 export function breadcrumbSchema(items: { name: string; url: string }[]) {
@@ -109,12 +141,12 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: item.url.startsWith("http") ? item.url : `${BASE}${item.url}`,
+      item: abs(item.url),
     })),
   };
 }
 
-export function faqSchema(items: { question: string; answer: string }[]) {
+export function faqSchema(items: FaqItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",

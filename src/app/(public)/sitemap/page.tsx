@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { brand } from "@/config/brand";
+import { allArticles, collections } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Sitemap",
-  description: "Every page on Fable, in one list.",
+  description: "Every page and article on the site, in one list.",
+  alternates: { canonical: "/sitemap" },
 };
 
 const sections = [
@@ -34,23 +36,22 @@ const sections = [
     title: "Shopping",
     links: [
       { label: "Shopping Hub", href: "/shopping" },
-      { label: "Today's Deals", href: "/deals" },
-      { label: "Trending Products", href: "/trending-products" },
+      { label: "Deals", href: "/deals" },
+      { label: "Products we track", href: "/trending-products" },
       { label: "Buying Guides", href: "/buying-guides" },
       { label: "Product Comparisons", href: "/product-comparisons" },
     ],
   },
   {
     title: "Collections",
-    links: [
-      { label: "2026 India Buyer's Almanac", href: "/collections/buyers-almanac-2026" },
-      { label: "AI Tools That Actually Work", href: "/collections/ai-tools-india" },
-      { label: "Money Playbooks for 2026", href: "/collections/money-playbooks-2026" },
-      { label: "Weekend Getaways", href: "/collections/weekend-getaways" },
-    ],
+    links: collections.map((c) => ({ label: c.title, href: `/collections/${c.slug}` })),
   },
   {
-    title: "About Fable",
+    title: "Articles",
+    links: allArticles.map((a) => ({ label: a.title, href: a.url })),
+  },
+  {
+    title: "About",
     links: [
       { label: "About Us", href: "/about" },
       { label: "Authors", href: "/authors" },
@@ -80,7 +81,7 @@ export default function SitemapPage() {
             <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">Sitemap</span>
           </div>
           <h1 className="font-editorial text-5xl md:text-7xl font-semibold leading-[0.95] max-w-4xl">
-            Every page on Fable.
+            Every page on {brand.name}
           </h1>
           <p className="mt-6 text-lg text-ink-60">
             An HTML sitemap for humans. The XML version for search engines lives at <Link href="/sitemap.xml" className="underline hover:text-accent">/sitemap.xml</Link>.

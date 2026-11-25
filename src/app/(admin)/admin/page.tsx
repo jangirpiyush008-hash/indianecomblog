@@ -12,28 +12,32 @@ import {
   AlertCircle,
   CheckCircle2,
 } from "lucide-react";
-import { sampleArticles, sampleTrends } from "@/lib/sample-content";
+import { allArticles, allProducts } from "@/lib/content";
+import { getLiveTrends } from "@/lib/trends/live";
 import { formatRelativeTime } from "@/lib/utils";
 
-export default function AdminDashboard() {
+export default async function AdminDashboard() {
+  const live = await getLiveTrends(5);
+  const weekAgo = Date.now() - 7 * 86400_000;
+  const thisWeek = allArticles.filter((a) => +new Date(a.publishedAt) > weekAgo).length;
   const stats = [
-    { label: "Published articles", value: "12", change: "+3 this week", icon: FileText, trend: "up" },
-    { label: "Drafts", value: "7", change: "4 need review", icon: Clock, trend: "neutral" },
-    { label: "Trending topics", value: "83", change: "22 new today", icon: TrendingUp, trend: "up" },
-    { label: "Newsletter subs", value: "0", change: "Not yet live", icon: Mail, trend: "neutral" },
-    { label: "Weekly page views", value: "0", change: "Analytics not configured", icon: Eye, trend: "neutral" },
-    { label: "Affiliate clicks", value: "0", change: "Tracking not live", icon: MousePointerClick, trend: "neutral" },
+    { label: "Published articles", value: String(allArticles.length), change: `${thisWeek} this week`, icon: FileText, trend: "up" },
+    { label: "Products (EarnKaro)", value: String(allProducts.length), change: "Full tracking links", icon: CheckCircle2, trend: "neutral" },
+    { label: "Live headlines", value: String(live.length), change: "Google News India", icon: TrendingUp, trend: "neutral" },
+    { label: "Newsletter subs", value: "—", change: "See Newsletter tab", icon: Mail, trend: "neutral" },
+    { label: "Page views", value: "—", change: "Connect GA4", icon: Eye, trend: "neutral" },
+    { label: "Affiliate clicks", value: "—", change: "Logged to Supabase", icon: MousePointerClick, trend: "neutral" },
   ];
 
-  const recentDrafts = sampleArticles.slice(0, 4);
-  const topTrends = sampleTrends.slice(0, 5);
+  const recentDrafts = allArticles.slice(0, 4);
+  const topTrends = live;
 
   return (
     <>
       <AdminPageHeader
         eyebrow="Today"
         title="Good morning, Piyush"
-        description="7 drafts need your eyes. 22 new trends in the last 12 hours. Let's ship."
+        description={`${allArticles.length} published articles · ${live.length} live headlines on the radar.`}
         actions={
           <>
             <Link href="/admin/generate">
@@ -166,7 +170,7 @@ export default function AdminDashboard() {
             <div className="p-5 border-b border-line flex items-center justify-between">
               <div>
                 <h3 className="font-editorial text-xl font-semibold">Top trends right now</h3>
-                <p className="text-xs text-ink-60 mt-1">From Trend Radar · last 6 hours</p>
+                <p className="text-xs text-ink-60 mt-1">Google News India · live</p>
               </div>
               <Link href="/admin/trends" className="text-xs text-ink-60 hover:text-accent">
                 Full radar →
@@ -176,7 +180,7 @@ export default function AdminDashboard() {
               {topTrends.map((t, i) => (
                 <Link
                   key={t.id}
-                  href={`/admin/trends/${t.id}`}
+                  href={`/admin/generate?topic=${encodeURIComponent(t.topic)}`}
                   className="flex items-center gap-4 p-5 hover:bg-cream-100 transition group"
                 >
                   <span className="font-editorial text-2xl font-semibold text-ink-40 min-w-[2rem]">
@@ -188,22 +192,14 @@ export default function AdminDashboard() {
                         {t.categoryName}
                       </span>
                       <span className="font-mono text-[10px] text-ink-40">
-                        {t.direction === "up" ? "▲" : t.direction === "down" ? "▼" : "—"}
+                        {t.sources?.[0]?.name}
                       </span>
                     </div>
                     <h4 className="font-editorial text-base font-semibold text-ink group-hover:text-accent transition">
                       {t.topic}
                     </h4>
-                    <p className="text-xs text-ink-60 mt-1 line-clamp-1">{t.summary}</p>
                   </div>
-                  <div className="text-right">
-                    <div className="font-editorial text-2xl font-semibold text-accent leading-none">
-                      {t.interestScore}
-                    </div>
-                    <div className="font-mono text-[9px] uppercase tracking-[0.15em] text-ink-40 mt-1">
-                      score
-                    </div>
-                  </div>
+                  <span className="text-xs text-ink-40 whitespace-nowrap">{formatRelativeTime(t.discoveredAt)}</span>
                 </Link>
               ))}
             </div>

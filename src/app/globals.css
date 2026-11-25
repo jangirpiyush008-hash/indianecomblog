@@ -234,9 +234,12 @@ h3.editorial {
   margin: 1em 0;
 }
 
+.prose-editorial ul { list-style: disc; }
+.prose-editorial ol { list-style: decimal; }
 .prose-editorial li {
   margin-bottom: 0.5em;
 }
+.prose-editorial li::marker { color: var(--accent); }
 
 .prose-editorial img {
   border-radius: 2px;

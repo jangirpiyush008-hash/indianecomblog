@@ -3,7 +3,7 @@ import Image from "next/image";
 import { AdminPageHeader } from "@/components/admin/AdminShell";
 import { Button } from "@/components/ui/Button";
 import { Plus, RefreshCw } from "lucide-react";
-import { sampleProducts } from "@/lib/sample-content";
+import { allProducts } from "@/lib/content";
 import { formatINR, formatRelativeTime } from "@/lib/utils";
 
 export const metadata = { title: "Products — Admin" };
@@ -43,7 +43,7 @@ export default function AdminProductsPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-line">
-              {sampleProducts.map((p) => (
+              {allProducts.map((p) => (
                 <tr key={p.id} className="hover:bg-cream-100 transition">
                   <td className="px-5 py-3">
                     <div className="flex items-center gap-3">

@@ -12,31 +12,46 @@ import {
 } from "@/components/editorial/ArticleCard";
 import { ProductCard } from "@/components/commerce/ProductCard";
 import {
-  sampleArticles,
-  sampleProducts,
-  sampleTrends,
+  allArticles,
+  allProducts,
   articlesByCategory,
-  trendingArticles,
-} from "@/lib/sample-content";
+  featuredArticles,
+  allTags,
+  slugify,
+} from "@/lib/content";
+import { getLiveTrends } from "@/lib/trends/live";
+import { NewsletterForm } from "@/components/forms/NewsletterForm";
+import { jsonLd, organizationSchema, websiteSchema } from "@/lib/seo/schema";
+
+export const revalidate = 1800;
 import { brand } from "@/config/brand";
 import { formatRelativeTime } from "@/lib/utils";
 import { ClientDate } from "@/components/ui/ClientDate";
 
-export default function HomePage() {
-  const hero = sampleArticles[0];
-  const subHero = sampleArticles.slice(1, 3);
-  const trending = trendingArticles();
+export default async function HomePage() {
+  const featured = featuredArticles();
+  const hero = featured[0] ?? allArticles[0];
+  const subHero = [...featured.slice(1), ...allArticles].filter((a, i, arr) => a.id !== hero.id && arr.findIndex((x) => x.id === a.id) === i).slice(0, 3);
+  const trends = await getLiveTrends(8);
+  const topics = allTags().slice(0, 10);
   const tech = articlesByCategory("technology", 4);
   const ai = articlesByCategory("ai-tools", 4);
   const money = articlesByCategory("money", 4);
   const lifestyle = articlesByCategory("lifestyle", 4);
   const entertainment = articlesByCategory("entertainment", 4);
   const travel = articlesByCategory("travel", 4);
-  const topDeals = sampleProducts.slice(0, 4);
+  const topDeals = allProducts.slice(0, 4);
 
   return (
     <>
-      <TickerBar />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(organizationSchema())} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(websiteSchema())} />
+      <TickerBar
+        items={[
+          ...allArticles.slice(0, 3).map((a) => ({ label: a.title, href: a.url })),
+          ...trends.slice(0, 5).map((t) => ({ label: t.topic, href: t.sources?.[0]?.url ?? "/trending", external: true })),
+        ]}
+      />
 
       {/* ================== HERO ================== */}
       <section className="pt-10 md:pt-16 pb-16 border-b border-line">
@@ -50,7 +65,7 @@ export default function HomePage() {
                 </span>
               </div>
               <h1 className="font-editorial text-2xl md:text-3xl font-semibold text-ink">
-                What India is reading, buying & watching
+                {brand.name}: what&apos;s trending in India, explained
               </h1>
             </div>
             <ClientDate className="hidden md:block font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40" />
@@ -74,22 +89,13 @@ export default function HomePage() {
               </div>
               <div>
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold mb-5 block">
-                  Trending searches
+                  Popular topics
                 </span>
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    "iPhone 16 Pro",
-                    "HDFC Infinia",
-                    "Perplexity Pro",
-                    "Best laptop under 50000",
-                    "Panchayat S4",
-                    "Goa December",
-                    "Nykaa sale",
-                    "Jio AI Cloud",
-                  ].map((s) => (
+                  {topics.map((s) => (
                     <Link
                       key={s}
-                      href={`/search?q=${encodeURIComponent(s)}`}
+                      href={`/tag/${slugify(s)}`}
                       className="px-3 py-1.5 border border-line bg-paper text-sm text-ink hover:border-ink hover:bg-cream-100 transition"
                     >
                       {s}
@@ -110,7 +116,7 @@ export default function HomePage() {
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-px w-8 bg-accent" />
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">
-                  Trending Radar · Live
+                  Trend Radar · Google News India
                 </span>
               </div>
               <h2 className="font-editorial text-4xl md:text-5xl font-semibold text-cream leading-tight">
@@ -126,28 +132,34 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
-            {sampleTrends.slice(0, 8).map((t, i) => (
+            {trends.length === 0 && (
+              <p className="text-cream/60">Live headlines are temporarily unavailable.</p>
+            )}
+            {trends.map((t, i) => (
               <div key={t.id} className="group">
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-editorial text-5xl font-semibold text-cream/20">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <div className="text-right">
-                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">
-                      {t.direction === "up" ? "▲ Rising" : t.direction === "down" ? "▼ Falling" : "— Steady"}
-                    </div>
-                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/40 mt-0.5">
-                      Score {t.interestScore}
-                    </div>
-                  </div>
+                  <time dateTime={t.discoveredAt} className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/40">
+                    {formatRelativeTime(t.discoveredAt)}
+                  </time>
                 </div>
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/50 mb-2">
+                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent mb-2">
                   {t.categoryName}
                 </div>
-                <h3 className="font-editorial text-xl font-semibold text-cream leading-tight mb-2 group-hover:text-accent transition">
-                  {t.topic}
+                <h3 className="font-editorial text-xl font-semibold text-cream leading-tight mb-2">
+                  {t.sources?.[0] ? (
+                    <a href={t.sources[0].url} target="_blank" rel="noopener noreferrer" className="group-hover:text-accent transition">
+                      {t.topic}
+                    </a>
+                  ) : (
+                    t.topic
+                  )}
                 </h3>
-                <p className="text-sm text-cream/70 leading-relaxed">{t.summary}</p>
+                {t.sources?.[0] && (
+                  <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-cream/50">{t.sources[0].name}</p>
+                )}
               </div>
             ))}
           </div>
@@ -158,9 +170,9 @@ export default function HomePage() {
       <section className="py-20 border-b border-line">
         <Container size="xl">
           <SectionHeading
-            eyebrow="Verified Deals"
-            title="Today's best deals, personally tested"
-            description="Every price checked within the last 24 hours. If the price moves, so does our pick."
+            eyebrow="Deals"
+            title="Prices checked on the brand's own store"
+            description="Each card shows when we last checked the price. Prices change — the store's price at checkout is the one that counts."
             seeMoreHref="/deals"
             seeMoreLabel="See all deals"
           />
@@ -187,8 +199,8 @@ export default function HomePage() {
         <Container size="xl">
           <SectionHeading
             eyebrow="AI Tools · The Working Edition"
-            title={<>Every AI tool worth your time, <em className="text-accent-dark">reviewed by Indians who use them</em></>}
-            description="We cut through the hype. These are the tools we actually recommend."
+            title={<>AI tools, <em className="text-accent-dark">explained for India</em></>}
+            description="Prices in rupees, offers checked against the provider's own pages."
             seeMoreHref="/ai-tools"
           />
           <div className="grid lg:grid-cols-3 gap-10">
@@ -257,7 +269,7 @@ export default function HomePage() {
                 Never buy the wrong thing again.
               </h2>
               <p className="text-lg text-cream/80 leading-relaxed max-w-lg mb-8">
-                Our comparison tool pulls specs, prices and real-world reviews across Amazon, Flipkart, Nykaa and more — all in one place.
+                Side-by-side comparisons built from manufacturer specs and prices checked on the store — with the date we checked, every time.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -276,22 +288,20 @@ export default function HomePage() {
             </div>
             <div className="lg:col-span-6">
               <div className="grid grid-cols-2 gap-4">
-                {[
-                  { from: "₹25,000", to: "₹50,000", label: "Phones" },
-                  { from: "₹50,000", to: "₹1,00,000", label: "Laptops" },
-                  { from: "₹2,000", to: "₹10,000", label: "Headphones" },
-                  { from: "₹5,000", to: "₹30,000", label: "Smartwatches" },
-                ].map((p) => (
+                {allArticles
+                  .filter((a) => a.productSlugs?.length)
+                  .slice(0, 4)
+                  .map((a) => (
                   <Link
-                    key={p.label}
-                    href={`/buying-guides/${p.label.toLowerCase()}`}
+                    key={a.id}
+                    href={a.url}
                     className="group p-6 border border-cream/20 hover:border-accent transition bg-cream/5"
                   >
                     <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/50 mb-2">
-                      Best {p.label}
+                      {a.categoryName}
                     </div>
-                    <div className="font-editorial text-xl md:text-2xl font-semibold text-cream">
-                      {p.from} – {p.to}
+                    <div className="font-editorial text-lg md:text-xl font-semibold text-cream leading-snug">
+                      {a.title}
                     </div>
                     <div className="mt-4 text-sm text-cream/60 group-hover:text-accent">
                       See picks →
@@ -354,12 +364,12 @@ export default function HomePage() {
       <section className="py-20 border-b border-line bg-cream-100">
         <Container size="xl">
           <SectionHeading
-            eyebrow="Most Read"
-            title="The 10 stories India is reading this week"
-            seeMoreHref="/popular"
+            eyebrow="Latest"
+            title="Every story, newest first"
+            seeMoreHref="/sitemap"
           />
           <div className="grid md:grid-cols-2 gap-x-12">
-            {sampleArticles.slice(0, 10).map((a, i) => (
+            {allArticles.slice(0, 10).map((a, i) => (
               <ArticleListCard key={a.id} article={a} number={i + 1} />
             ))}
           </div>
@@ -378,26 +388,14 @@ export default function HomePage() {
               <div className="h-px w-8 bg-white/60" />
             </div>
             <h2 className="font-editorial text-4xl md:text-6xl font-semibold leading-[0.95] mb-6">
-              India's most-read morning email
+              New stories, straight to your inbox
             </h2>
             <p className="text-lg text-white/90 mb-10 max-w-lg mx-auto">
-              7 stories. Picked by editors. Delivered by 7 AM. Join 120,000+ readers who start their day with {brand.name}.
+              The explainers and price-checked picks from {brand.name}, when they publish. Free.
             </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="you@email.com"
-                className="flex-1 px-5 py-4 bg-white text-ink placeholder:text-ink-40 focus:outline-none focus:ring-2 focus:ring-ink"
-              />
-              <button
-                type="submit"
-                className="px-7 py-4 bg-ink text-cream font-medium hover:bg-ink-80 transition whitespace-nowrap"
-              >
-                Join free
-              </button>
-            </form>
+            <NewsletterForm source="home" variant="accent" className="max-w-md mx-auto" />
             <p className="mt-4 text-xs text-white/70">
-              No spam. Unsubscribe in one click. Read by editors from BloombergQuint, Economic Times & more.
+              No spam. Unsubscribe in one click.
             </p>
           </div>
         </Container>

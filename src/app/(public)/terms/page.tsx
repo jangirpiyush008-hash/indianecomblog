@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
+import { brand } from "@/config/brand";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "The terms governing your use of Fable.",
+  description: "The terms for using this website.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {
@@ -16,7 +18,7 @@ export default function TermsPage() {
             <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">Terms of Service</span>
           </div>
           <h1 className="font-editorial text-4xl md:text-5xl font-semibold leading-tight">The ground rules.</h1>
-          <p className="mt-4 text-sm text-ink-40 font-mono uppercase tracking-[0.15em]">Last updated: 24 November 2026</p>
+          <p className="mt-4 text-sm text-ink-40 font-mono uppercase tracking-[0.15em]">Last updated: 25 November 2026</p>
         </Container>
       </section>
 
@@ -25,12 +27,12 @@ export default function TermsPage() {
           <div className="prose-editorial">
             <h2>1. Acceptance of terms</h2>
             <p>
-              By accessing or using fable.in ("the Service"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the Service.
+              By accessing or using this website ("the Service"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the Service.
             </p>
 
             <h2>2. The Service</h2>
             <p>
-              Fable Media Pvt Ltd ("Fable") operates fable.in as a digital publication providing editorial content, product recommendations, deals, trend analysis and related services. We may modify, suspend or discontinue any aspect of the Service at any time.
+              {brand.name}, run by {brand.founder}, operates the Service as a digital publication providing editorial content, product recommendations, deals, trend analysis and related services. We may modify, suspend or discontinue any aspect of the Service at any time.
             </p>
 
             <h2>3. Eligibility</h2>
@@ -46,17 +48,17 @@ export default function TermsPage() {
 
             <h2>5. Editorial content</h2>
             <p>
-              Fable's editorial content reflects our opinions, based on our testing and research. Prices, specifications and availability change frequently — the information on our site is accurate as of publication and reasonable updates thereafter, but we cannot guarantee real-time accuracy. Always verify on the merchant's site before purchasing.
+              Our editorial content reflects our opinions, based on our research and the sources listed on each article. Prices, specifications and availability change frequently — the information on our site is accurate as of publication and reasonable updates thereafter, but we cannot guarantee real-time accuracy. Always verify on the merchant's site before purchasing.
             </p>
 
             <h2>6. Affiliate links</h2>
             <p>
-              The Service contains affiliate links through which Fable may earn commissions. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a> for details. Purchases made via affiliate links are contracts between you and the respective merchant — Fable is not party to those transactions.
+              The Service contains affiliate links through which we may earn commissions. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a> for details. Purchases made via affiliate links are contracts between you and the respective merchant — Fable is not party to those transactions.
             </p>
 
             <h2>7. No warranty</h2>
             <p>
-              The Service is provided "as is" without warranties of any kind, express or implied. Fable does not warrant that the Service will be uninterrupted, error-free, or that the information provided is complete or accurate at all times.
+              The Service is provided "as is" without warranties of any kind, express or implied. We do not warrant that the Service will be uninterrupted, error-free, or that the information provided is complete or accurate at all times.
             </p>
             <p>
               Any reliance on the Service's content for purchase, investment, financial, medical or legal decisions is at your own risk. We recommend consulting qualified professionals for material decisions.
@@ -64,15 +66,15 @@ export default function TermsPage() {
 
             <h2>8. Limitation of liability</h2>
             <p>
-              To the maximum extent permitted by Indian law, Fable and its officers, directors, employees and agents will not be liable for any indirect, incidental, consequential, special or punitive damages arising from your use of the Service.
+              To the maximum extent permitted by Indian law, {brand.name} and its operator will not be liable for any indirect, incidental, consequential, special or punitive damages arising from your use of the Service.
             </p>
             <p>
-              Fable's total liability for any claim arising out of or relating to the Service shall not exceed ₹5,000.
+              Our total liability for any claim arising out of or relating to the Service shall not exceed ₹5,000.
             </p>
 
             <h2>9. Intellectual property</h2>
             <p>
-              All content on the Service — articles, images, logos, design, and underlying code — is the property of Fable Media Pvt Ltd or its licensors, and is protected by Indian and international copyright law.
+              All content on the Service — articles, images, logos, design, and underlying code — is the property of {brand.name} or its licensors (product images belong to their respective brands), and is protected by Indian and international copyright law.
             </p>
             <p>You may share links to our content and quote brief excerpts with attribution. You may not reproduce, distribute, modify or create derivative works without written permission.</p>
 
@@ -94,7 +96,7 @@ export default function TermsPage() {
 
             <h2>12. Governing law</h2>
             <p>
-              These Terms are governed by the laws of India. Any dispute shall be subject to the exclusive jurisdiction of the courts of New Delhi, India.
+              These Terms are governed by the laws of India. Any dispute shall be subject to the jurisdiction of the courts of India.
             </p>
 
             <h2>13. Changes</h2>
@@ -104,7 +106,7 @@ export default function TermsPage() {
 
             <h2>14. Contact</h2>
             <p>
-              Questions about these Terms? Write to <a href="mailto:legal@fable.in">legal@fable.in</a> or to our registered address: Fable Media Pvt Ltd, Saket District Centre, New Delhi 110017, India.
+              Questions about these Terms? Write to <a href={`mailto:${brand.email}`}>{brand.email}</a>.
             </p>
           </div>
         </Container>

@@ -33,7 +33,7 @@ export function NewsletterForm({
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Subscription failed");
       setStatus("done");
-      setMessage("Thanks! Check your inbox to confirm.");
+      setMessage("You're subscribed. Thanks!");
       setEmail("");
     } catch (err: any) {
       setStatus("error");

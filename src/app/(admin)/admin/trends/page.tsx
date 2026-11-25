@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AdminPageHeader } from "@/components/admin/AdminShell";
 import { Button } from "@/components/ui/Button";
 import { Sparkles, RefreshCw, Filter, TrendingUp, TrendingDown, Minus } from "lucide-react";
-import { sampleTrends } from "@/lib/sample-content";
+import { getLiveTrends } from "@/lib/trends/live";
 import { formatRelativeTime, cn } from "@/lib/utils";
 
 export const metadata = { title: "Trend Radar — Admin" };
@@ -18,7 +18,8 @@ const scoringBreakdown = [
   { label: "Freshness", weight: 5, note: "How new the signal is" },
 ];
 
-export default function TrendRadarPage() {
+export default async function TrendRadarPage() {
+  const trends = await getLiveTrends(40);
   return (
     <>
       <AdminPageHeader
@@ -86,7 +87,7 @@ export default function TrendRadarPage() {
             </div>
           </div>
           <div className="divide-y divide-line">
-            {sampleTrends.map((t, i) => {
+            {trends.map((t, i) => {
               const DirIcon =
                 t.direction === "up" ? TrendingUp : t.direction === "down" ? TrendingDown : Minus;
               const dirColor =
@@ -118,19 +119,24 @@ export default function TrendRadarPage() {
                     <h4 className="font-editorial text-lg font-semibold text-ink leading-tight">
                       {t.topic}
                     </h4>
-                    <p className="text-sm text-ink-60 mt-1 line-clamp-2">{t.summary}</p>
+                    {t.summary && <p className="text-sm text-ink-60 mt-1 line-clamp-2">{t.summary}</p>}
+                    {t.sources?.[0] && (
+                      <a href={t.sources[0].url} target="_blank" rel="noopener noreferrer" className="text-xs text-ink-40 hover:text-accent">
+                        {t.sources[0].name} ↗
+                      </a>
+                    )}
                   </div>
                   <div className="md:col-span-2">
                     <div className="flex items-center gap-2">
                       <DirIcon className={cn("h-4 w-4", dirColor)} />
                       <span className={cn("font-mono text-[11px] uppercase tracking-[0.15em] font-semibold", dirColor)}>
-                        {t.direction === "up" ? "Rising" : t.direction === "down" ? "Falling" : "Steady"}
+                        {t.direction === "up" ? "Rising" : t.direction === "down" ? "Falling" : t.direction === "steady" ? "Steady" : "New"}
                       </span>
                     </div>
                   </div>
                   <div className="md:col-span-1 text-right">
                     <div className="font-editorial text-3xl font-semibold text-accent leading-none">
-                      {t.interestScore}
+                      {t.interestScore ?? "—"}
                     </div>
                     <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink-40 mt-1">
                       score
@@ -138,13 +144,7 @@ export default function TrendRadarPage() {
                   </div>
                   <div className="md:col-span-3 flex items-center justify-end gap-2">
                     <Link
-                      href={`/admin/trends/${t.id}`}
-                      className="px-3 py-1.5 border border-line text-xs font-medium hover:border-ink"
-                    >
-                      Details
-                    </Link>
-                    <Link
-                      href={`/admin/generate?trend=${t.id}`}
+                      href={`/admin/generate?topic=${encodeURIComponent(t.topic)}`}
                       className="px-3 py-1.5 bg-ink text-cream text-xs font-medium hover:bg-accent inline-flex items-center gap-1.5"
                     >
                       <Sparkles className="h-3 w-3" />

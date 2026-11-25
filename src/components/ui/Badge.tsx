@@ -38,15 +38,19 @@ export function CategoryTag({
   name,
   color,
   className,
+  asLink = true,
 }: {
   slug: string;
   name: string;
   color?: string;
   className?: string;
+  /** Set false when rendered inside another link (nested <a> is invalid HTML). */
+  asLink?: boolean;
 }) {
+  const Tag = asLink ? "a" : "span";
   return (
-    <a
-      href={`/${slug}`}
+    <Tag
+      {...(asLink ? { href: `/${slug}` } : {})}
       className={cn(
         "inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] font-semibold hover:opacity-80 transition",
         className
@@ -58,6 +62,6 @@ export function CategoryTag({
         style={{ background: color || "var(--accent)" }}
       />
       {name}
-    </a>
+    </Tag>
   );
 }

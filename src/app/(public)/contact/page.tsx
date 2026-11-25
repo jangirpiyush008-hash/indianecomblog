@@ -1,116 +1,51 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ContactForm } from "@/components/forms/ContactForm";
+import { brand } from "@/config/brand";
+import { breadcrumbSchema, jsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Contact Fable",
-  description: "Pitch a story, report a correction, or send feedback.",
+  title: "Contact",
+  description: `Report a correction, flag an outdated price, suggest a story or ask about partnerships with ${brand.name}.`,
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   return (
     <>
-      <section className="pt-16 pb-16 border-b border-line">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Contact", url: "/contact" }]))}
+      />
+      <section className="pt-16 pb-12 border-b border-line">
         <Container size="lg">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="h-px w-8 bg-accent" />
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">Contact</span>
-          </div>
-          <h1 className="font-editorial text-5xl md:text-7xl font-semibold leading-[0.95] max-w-4xl">
-            Say hello.
-          </h1>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">Contact</span>
+          <h1 className="font-editorial text-5xl md:text-6xl font-semibold leading-[0.95] mt-4">Contact {brand.name}</h1>
           <p className="mt-6 text-xl text-ink-60 max-w-2xl">
-            Pitch a story. Report a correction. Flag an outdated price. Or just say hi — we read everything.
+            Spotted an error or an outdated price? Have a story idea or a partnership question? Send a message — {brand.founder} reads them all.
           </p>
         </Container>
       </section>
-
-      <section className="py-16 border-b border-line">
+      <section className="py-16">
         <Container size="lg">
           <div className="grid md:grid-cols-12 gap-14">
             <div className="md:col-span-7">
-              <h2 className="font-editorial text-3xl font-semibold mb-6">General inquiry</h2>
-              <form className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-2">Your name</label>
-                    <input type="text" required className="w-full px-4 py-3 border border-line focus:border-ink focus:outline-none" />
-                  </div>
-                  <div>
-                    <label className="block font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-2">Email</label>
-                    <input type="email" required className="w-full px-4 py-3 border border-line focus:border-ink focus:outline-none" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-2">Type of inquiry</label>
-                  <select className="w-full px-4 py-3 border border-line focus:border-ink focus:outline-none bg-paper">
-                    <option>Story pitch</option>
-                    <option>Correction / error report</option>
-                    <option>Outdated price / dead link</option>
-                    <option>Brand partnership</option>
-                    <option>Press inquiry</option>
-                    <option>Technical issue</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-2">Subject</label>
-                  <input type="text" required className="w-full px-4 py-3 border border-line focus:border-ink focus:outline-none" />
-                </div>
-                <div>
-                  <label className="block font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-2">Message</label>
-                  <textarea required rows={6} className="w-full px-4 py-3 border border-line focus:border-ink focus:outline-none" />
-                </div>
-                <button type="submit" className="px-8 py-4 bg-ink text-cream font-medium hover:bg-accent transition">
-                  Send message
-                </button>
-                <p className="text-xs text-ink-40 italic">
-                  We read every message. Most get a reply within 2 business days.
-                </p>
-              </form>
+              <h2 className="font-editorial text-3xl font-semibold mb-6">Send a message</h2>
+              <ContactForm />
             </div>
-
-            <aside className="md:col-span-5 space-y-10">
+            <aside className="md:col-span-5 space-y-8">
               <div>
-                <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold mb-4">Direct lines</h3>
-                <dl className="space-y-4">
-                  {[
-                    { label: "Editorial pitches", email: "pitch@fable.in" },
-                    { label: "Corrections", email: "corrections@fable.in" },
-                    { label: "Brand partnerships", email: "partners@fable.in" },
-                    { label: "Press", email: "press@fable.in" },
-                    { label: "General", email: "hello@fable.in" },
-                  ].map((d) => (
-                    <div key={d.email} className="pb-4 border-b border-line">
-                      <dt className="text-sm text-ink-60">{d.label}</dt>
-                      <dd className="font-editorial text-lg text-ink mt-1">
-                        <a href={`mailto:${d.email}`} className="hover:text-accent">{d.email}</a>
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
+                <h2 className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold mb-3">Email</h2>
+                <a href={`mailto:${brand.email}`} className="font-editorial text-xl hover:text-accent">{brand.email}</a>
               </div>
-
               <div>
-                <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold mb-4">Our offices</h3>
-                <div className="space-y-5">
-                  <div>
-                    <div className="font-editorial text-lg font-semibold mb-1">New Delhi (HQ)</div>
-                    <address className="not-italic text-sm text-ink-60 leading-relaxed">
-                      Fable Media Pvt Ltd<br />
-                      Saket District Centre<br />
-                      New Delhi 110017<br />
-                      India
-                    </address>
-                  </div>
-                  <div>
-                    <div className="font-editorial text-lg font-semibold mb-1">Bengaluru</div>
-                    <address className="not-italic text-sm text-ink-60 leading-relaxed">
-                      Indiranagar<br />
-                      Bengaluru 560038
-                    </address>
-                  </div>
-                </div>
+                <h2 className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold mb-3">Before you write</h2>
+                <ul className="space-y-2 text-sm text-ink-60">
+                  <li><Link href="/corrections-policy" className="underline hover:text-accent">How we handle corrections</Link></li>
+                  <li><Link href="/affiliate-disclosure" className="underline hover:text-accent">How affiliate links work</Link></li>
+                  <li><Link href="/advertise" className="underline hover:text-accent">Advertising and partnerships</Link></li>
+                </ul>
               </div>
             </aside>
           </div>

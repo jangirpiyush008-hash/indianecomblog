@@ -2,81 +2,57 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import crypto from "crypto";
 import { createSupabaseServiceClient } from "@/lib/supabase/server";
+import { getProduct } from "@/lib/content";
 
 export const maxDuration = 10;
 
+/** Only affiliate destinations we generate are allowed (prevents open redirects). */
+const ALLOWED_HOSTS = new Set(["trackingv3.linkredirect.in"]);
+
 const bodySchema = z.object({
-  productId: z.string().uuid().optional(),
-  productSlug: z.string().optional(),
-  articleId: z.string().uuid().optional(),
-  merchant: z.string().optional(),
-  campaign: z.string().optional(),
-  destinationUrl: z.string().url(),
+  productSlug: z.string().max(200).optional(),
+  articleId: z.string().max(200).optional(),
+  merchant: z.string().max(50).optional(),
+  campaign: z.string().max(100).optional(),
+  destinationUrl: z.string().url().optional(),
 });
 
-/**
- * Logs an affiliate click and 302-redirects to the destination.
- * Called from product cards: /api/affiliate/click?url=...
- */
+async function logClick(req: Request, input: z.infer<typeof bodySchema>) {
+  if (!process.env.SUPABASE_SERVICE_ROLE_KEY) return;
+  const supabase = createSupabaseServiceClient();
+  await supabase.from("affiliate_clicks").insert({
+    product_slug: input.productSlug ?? null,
+    article_slug: input.articleId ?? null,
+    merchant: null, // merchant enum in DB is legacy; slug identifies the product
+    campaign: [input.merchant, input.campaign].filter(Boolean).join(":") || null,
+    ip_hash: hashIP(req.headers.get("x-forwarded-for") || ""),
+    user_agent: req.headers.get("user-agent")?.slice(0, 300) || null,
+    referrer: req.headers.get("referer")?.slice(0, 500) || null,
+  });
+}
+
+/** Beacon endpoint used by <AffiliateLink>. */
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const input = bodySchema.parse(body);
-
-    if (process.env.SUPABASE_SERVICE_ROLE_KEY) {
-      const supabase = createSupabaseServiceClient();
-      const ipHash = hashIP(req.headers.get("x-forwarded-for") || "");
-      await supabase.from("affiliate_clicks").insert({
-        product_id: input.productId ?? null,
-        article_id: input.articleId ?? null,
-        merchant: input.merchant ?? null,
-        campaign: input.campaign ?? null,
-        ip_hash: ipHash,
-        user_agent: req.headers.get("user-agent") || null,
-        referrer: req.headers.get("referer") || null,
-      });
-    }
-
+    const input = bodySchema.parse(await req.json());
+    await logClick(req, input);
     return NextResponse.json({ ok: true });
-  } catch (err: any) {
-    return NextResponse.json({ ok: false, error: err.message }, { status: 400 });
+  } catch {
+    return NextResponse.json({ ok: false }, { status: 400 });
   }
 }
 
+/** /api/affiliate/click?p=<product-slug> — logs and redirects to the product's EarnKaro URL. */
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  const destination = url.searchParams.get("url");
-  if (!destination) {
-    return NextResponse.json({ error: "Missing url parameter" }, { status: 400 });
+  const product = getProduct(url.searchParams.get("p") ?? "");
+  if (!product) return NextResponse.json({ error: "Unknown product" }, { status: 404 });
+  const dest = new URL(product.affiliateUrl);
+  if (!ALLOWED_HOSTS.has(dest.hostname)) {
+    return NextResponse.json({ error: "Destination not allowed" }, { status: 400 });
   }
-  try {
-    const dest = new URL(destination);
-    if (!/^https?:$/.test(dest.protocol)) {
-      throw new Error("Invalid protocol");
-    }
-
-    // Log async; don't block the redirect
-    if (process.env.SUPABASE_SERVICE_ROLE_KEY) {
-      const supabase = createSupabaseServiceClient();
-      const ipHash = hashIP(req.headers.get("x-forwarded-for") || "");
-      supabase
-        .from("affiliate_clicks")
-        .insert({
-          product_id: url.searchParams.get("pid") ?? null,
-          article_id: url.searchParams.get("aid") ?? null,
-          merchant: url.searchParams.get("m") ?? null,
-          campaign: url.searchParams.get("c") ?? null,
-          ip_hash: ipHash,
-          user_agent: req.headers.get("user-agent") || null,
-          referrer: req.headers.get("referer") || null,
-        })
-        .then(() => {});
-    }
-
-    return NextResponse.redirect(destination, 302);
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 400 });
-  }
+  logClick(req, { productSlug: product.slug, campaign: url.searchParams.get("c") ?? undefined }).catch(() => {});
+  return NextResponse.redirect(dest.toString(), 302);
 }
 
 function hashIP(ip: string) {

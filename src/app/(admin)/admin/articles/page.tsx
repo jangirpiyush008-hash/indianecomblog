@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AdminPageHeader } from "@/components/admin/AdminShell";
 import { Button } from "@/components/ui/Button";
-import { sampleArticles } from "@/lib/sample-content";
+import { allArticles } from "@/lib/content";
 import { formatRelativeTime, cn } from "@/lib/utils";
 import { Plus, Sparkles, FileText, Clock, CheckCircle2, Calendar, X as XIcon, Archive } from "lucide-react";
 
@@ -23,7 +23,7 @@ export default function AdminArticlesPage({
 }: {
   searchParams?: Promise<{ status?: string }>;
 }) {
-  const articles = sampleArticles;
+  const articles = allArticles;
 
   return (
     <>

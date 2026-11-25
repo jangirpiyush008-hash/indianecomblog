@@ -1,79 +1,54 @@
 import type { Metadata } from "next";
-import { Container } from "@/components/ui/Container";
+import Link from "next/link";
+import { TextPage } from "@/components/layout/TextPage";
+import { brand } from "@/config/brand";
 
 export const metadata: Metadata = {
   title: "Affiliate Disclosure",
-  description: "How Fable uses affiliate links and partner commissions.",
+  description: `How ${brand.name} uses EarnKaro affiliate links and how they're labelled.`,
+  alternates: { canonical: "/affiliate-disclosure" },
 };
 
 export default function AffiliateDisclosurePage() {
   return (
-    <>
-      <section className="pt-16 pb-10 border-b border-line">
-        <Container size="md">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="h-px w-8 bg-accent" />
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">Affiliate Disclosure</span>
-          </div>
-          <h1 className="font-editorial text-4xl md:text-5xl font-semibold leading-tight">How we use affiliate links.</h1>
-          <p className="mt-4 text-sm text-ink-40 font-mono uppercase tracking-[0.15em]">Last updated: 24 November 2026</p>
-        </Container>
-      </section>
+    <TextPage
+      eyebrow="Disclosure"
+      title="Affiliate disclosure"
+      intro="Some product links on this site earn us a commission. Here's exactly how that works."
+      path="/affiliate-disclosure"
+      updated="2026-11-25"
+    >
+      <h2>The short version</h2>
+      <p>
+        When you buy a product through a &ldquo;View on …&rdquo; link on {brand.name}, we may earn a commission from the retailer. You pay the same price either way.
+      </p>
 
-      <section className="py-16 border-b border-line">
-        <Container size="md">
-          <div className="prose-editorial">
-            <h2>The short version</h2>
-            <p>
-              When you buy a product through a link on Fable, we may earn a small commission from the merchant. It costs you nothing extra. This is one of the ways we fund our editorial work.
-            </p>
-            <p>
-              Crucially: affiliate commissions do not influence what we recommend. We rank products on merit. We recommend "do not buy" when the product deserves it. We recommend cheaper alternatives when they're better — even when the cheaper option pays us less.
-            </p>
+      <h2>Which network we use</h2>
+      <p>
+        Our product links currently go through <strong>EarnKaro</strong>, an Indian affiliate platform. Clicking one takes you through EarnKaro&apos;s tracking address (linkredirect.in) and on to the retailer&apos;s own product page — for example the boAt or Noise store. We use the full tracking link, not a URL shortener, so you can always see where it goes.
+      </p>
 
-            <h2>How to spot an affiliate link</h2>
-            <p>
-              Every "Buy", "See deal", or "Shop" link on Fable goes through an affiliate network. We don't hide them. Our product cards also note the merchant (Amazon.in, Flipkart, Nykaa, etc.).
-            </p>
-            <p>
-              You can always buy a product by searching for it directly on the merchant's site. We'd just appreciate it if you used our link — it helps us keep the lights on.
-            </p>
+      <h2>How to recognise an affiliate link</h2>
+      <ul>
+        <li>Product cards and &ldquo;View on [store]&rdquo; buttons are affiliate links.</li>
+        <li>Articles that contain affiliate links say so near the top.</li>
+        <li>Affiliate links are marked <code>rel=&quot;sponsored&quot;</code> for search engines.</li>
+      </ul>
 
-            <h2>Our affiliate partners</h2>
-            <p>Fable is an affiliate of the following programs (as of this date):</p>
-            <ul>
-              <li>Amazon Associates India</li>
-              <li>Flipkart Affiliates (where applicable)</li>
-              <li>Cuelinks</li>
-              <li>EarnKaro</li>
-              <li>Admitad India</li>
-              <li>Impact</li>
-              <li>CJ Affiliate</li>
-              <li>Various direct brand partnerships (reviewed and approved by our editorial team)</li>
-            </ul>
-            <p>
-              This list changes. Some partners come and go as programs evolve.
-            </p>
+      <h2>What affiliate links don&apos;t do</h2>
+      <ul>
+        <li>They don&apos;t change which products we include or what we say about them.</li>
+        <li>They don&apos;t change your price.</li>
+        <li>They don&apos;t give us your name, address or payment details. We see only aggregated order reports from EarnKaro.</li>
+      </ul>
+      <p>
+        When we click-track a link on our own site, we log the product and page, plus a one-way hash of your IP address for fraud prevention — see the <Link href="/privacy-policy">privacy policy</Link>.
+      </p>
 
-            <h2>What affiliate links do NOT do</h2>
-            <ul>
-              <li><strong>They do not affect our editorial verdict.</strong> We rank products by merit, not by commission.</li>
-              <li><strong>They do not change your price.</strong> You pay the same price with or without our link.</li>
-              <li><strong>They do not share your personal information with us.</strong> We receive aggregate data about orders, not your details.</li>
-            </ul>
-
-            <h2>The FTC / ASCI standard</h2>
-            <p>
-              We follow both the US FTC guidelines on affiliate disclosure and the Advertising Standards Council of India (ASCI) guidelines for influencer and affiliate transparency. If you find a page on Fable that uses an affiliate link without clear disclosure, please report it to <a href="mailto:corrections@fable.in">corrections@fable.in</a>.
-            </p>
-
-            <h2>Questions</h2>
-            <p>
-              If you have questions about how we use affiliate links, write to <a href="mailto:editor@fable.in">editor@fable.in</a>.
-            </p>
-          </div>
-        </Container>
-      </section>
-    </>
+      <h2>Standards we follow</h2>
+      <p>
+        We aim to follow the Advertising Standards Council of India (ASCI) guidance on clear disclosure. If you find a page with an affiliate link and no disclosure, please tell us through the <Link href="/contact">contact page</Link>.
+      </p>
+    </TextPage>
   );
 }

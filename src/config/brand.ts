@@ -9,14 +9,13 @@ export const brand = {
   tagline: "India's premium discovery magazine",
   description:
     "Discover what's trending in India — tech, AI tools, shopping, money, lifestyle, entertainment & travel. Curated, verified, premium.",
+  /** Placeholder until a domain is bought — see BRAND_RESEARCH.md. */
   domain: "fable.in",
-  email: "hello@fable.in",
-  social: {
-    twitter: "@fablemag",
-    instagram: "@fable.magazine",
-    youtube: "@fable",
-    linkedin: "fable-magazine",
-  },
+  /** Public contact address. Set NEXT_PUBLIC_CONTACT_EMAIL once a mailbox exists. */
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@fable.in",
+  founder: "Piyush Jangir",
+  /** Add real profile URLs here once the handles are registered. */
+  social: {} as Record<string, string>,
   colors: {
     ink: "#0A0A0B",
     cream: "#FAF6F1",

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Search } from "lucide-react";
-import { sampleArticles } from "@/lib/sample-content";
+import { allArticles } from "@/lib/content";
 
 export default function NotFound() {
-  const popular = sampleArticles.slice(0, 5);
+  const popular = allArticles.slice(0, 5);
 
   return (
     <section className="min-h-[70vh] py-24 flex items-center">
@@ -16,14 +16,16 @@ export default function NotFound() {
               This page got away from us.
             </h1>
             <p className="text-lg text-ink-60 mb-10 max-w-md">
-              The URL you tried doesn't exist on Fable — maybe it was moved, maybe we never wrote it. Either way, let's get you somewhere useful.
+              That URL doesn't exist here — maybe it was moved, maybe we never wrote it. Either way, let's get you somewhere useful.
             </p>
 
             <form action="/search" className="relative max-w-md mb-10">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-ink-60" />
               <input
                 name="q"
-                placeholder="Search Fable..."
+                type="search"
+                aria-label="Search"
+                placeholder="Search articles and products…"
                 className="w-full pl-12 pr-4 py-4 border-2 border-ink bg-paper focus:outline-none"
               />
             </form>
@@ -40,7 +42,7 @@ export default function NotFound() {
 
           <aside className="md:col-span-5">
             <h2 className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold pb-3 border-b border-line mb-5">
-              Popular on Fable
+              Latest stories
             </h2>
             <div className="space-y-5">
               {popular.map((a, i) => (

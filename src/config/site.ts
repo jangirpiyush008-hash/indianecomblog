@@ -1,7 +1,8 @@
 import { categories } from "./brand";
 
 export const siteConfig = {
-  url: "https://fable.in",
+  /** Canonical origin. Set NEXT_PUBLIC_SITE_URL in Railway when the custom domain is live. */
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://indianecomblog-production.up.railway.app").replace(/\/$/, ""),
   defaultLocale: "en-IN",
   nav: [
     { label: "Trending", href: "/trending" },

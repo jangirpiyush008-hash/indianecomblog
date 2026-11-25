@@ -1,6 +1,6 @@
 import { AdminPageHeader } from "@/components/admin/AdminShell";
 import { Button } from "@/components/ui/Button";
-import { sampleArticles } from "@/lib/sample-content";
+import { allArticles } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { Plus, Calendar as CalIcon } from "lucide-react";
 
@@ -21,12 +21,12 @@ export default function PublishingCalendarPage() {
   const start = new Date(today.getFullYear(), today.getMonth(), 1);
   const startDay = start.getDay();
   const daysInMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
-  const cells: { day: number | null; articles: typeof sampleArticles }[] = [];
+  const cells: { day: number | null; articles: typeof allArticles }[] = [];
   for (let i = 0; i < startDay; i++) cells.push({ day: null, articles: [] });
   for (let d = 1; d <= daysInMonth; d++) {
     cells.push({
       day: d,
-      articles: sampleArticles.filter((a) => new Date(a.publishedAt).getDate() === d),
+      articles: allArticles.filter((a) => new Date(a.publishedAt).getDate() === d),
     });
   }
 

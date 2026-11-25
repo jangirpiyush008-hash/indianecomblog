@@ -482,13 +482,13 @@ alter table public.site_settings enable row level security;
 -- ============================================================
 -- UPDATED_AT TRIGGERS
 -- ============================================================
-create or replace function set_updated_at()
-returns trigger as $$
+create or replace function public.set_updated_at()
+returns trigger language plpgsql set search_path = '' as $$
 begin
   new.updated_at = now();
   return new;
 end;
-$$ language plpgsql;
+$$;
 
 do $$ declare
   r record;
@@ -511,13 +511,17 @@ end $$;
 -- Subscribers manage their own data.
 
 -- Helper: check role
-create or replace function auth_role() returns text as $$
+-- SECURITY DEFINER so these bypass RLS on profiles; otherwise the profiles
+-- policy -> is_admin() -> profiles policy loop raises "infinite recursion".
+create or replace function public.auth_role() returns text
+language sql stable security definer set search_path = '' as $$
   select role::text from public.profiles where id = auth.uid();
-$$ language sql stable;
+$$;
 
-create or replace function is_admin() returns boolean as $$
+create or replace function public.is_admin() returns boolean
+language sql stable security definer set search_path = '' as $$
   select coalesce((select role from public.profiles where id = auth.uid()) in ('admin','editor'), false);
-$$ language sql stable;
+$$;
 
 -- Profiles: self-read, admin all
 drop policy if exists profiles_self_read on public.profiles;
@@ -558,7 +562,7 @@ create policy products_admin_write on public.products for all using (is_admin())
 drop policy if exists subscribers_self on public.newsletter_subscribers;
 create policy subscribers_self on public.newsletter_subscribers
   for select using (
-    (select email from auth.users where id = auth.uid()) = email or is_admin()
+    (auth.jwt() ->> 'email') = email or is_admin()
   );
 
 drop policy if exists subscribers_public_insert on public.newsletter_subscribers;
@@ -589,3 +593,27 @@ insert into public.categories (slug, name, tagline, accent_color, icon, sort_ord
   ('entertainment', 'Entertainment', 'OTT, cinema, music, stars', '#EA580C', 'clapperboard', 7),
   ('travel', 'Travel', 'Where India is going', '#0891B2', 'plane', 8)
 on conflict (slug) do nothing;
+
+-- ============================================================
+-- 2026-11-25 additions (applied to production as migrations)
+-- ============================================================
+alter table public.affiliate_clicks add column if not exists product_slug text;
+alter table public.affiliate_clicks add column if not exists article_slug text;
+create index if not exists aff_clicks_product_slug_idx on public.affiliate_clicks(product_slug);
+alter table public.products add column if not exists affiliate_network text default 'earnkaro';
+alter table public.products add column if not exists source_url text;
+
+create table if not exists public.contact_messages (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  email text not null,
+  topic text,
+  message text not null,
+  page text,
+  ip_hash text,
+  handled boolean default false,
+  created_at timestamptz default now()
+);
+alter table public.contact_messages enable row level security;
+drop policy if exists contact_admin on public.contact_messages;
+create policy contact_admin on public.contact_messages for all using (public.is_admin()) with check (public.is_admin());

@@ -3,127 +3,141 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Badge } from "@/components/ui/Badge";
-import {
-  FeatureArticleCard,
-  ArticleCard,
-  ArticleListCard,
-  ArticleHCard,
-} from "@/components/editorial/ArticleCard";
+import { FeatureArticleCard, ArticleCard, ArticleListCard } from "@/components/editorial/ArticleCard";
 import { ProductCard } from "@/components/commerce/ProductCard";
+import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { categories } from "@/config/brand";
-import { articlesByCategory, sampleProducts, sampleArticles } from "@/lib/sample-content";
+import { articlesByCategory, allArticles, productsBySlugs, slugify } from "@/lib/content";
+import { getLiveTrends } from "@/lib/trends/live";
+import { formatRelativeTime } from "@/lib/utils";
+import { breadcrumbSchema, itemListSchema, jsonLd } from "@/lib/seo/schema";
 
-const validSlugs = categories.filter((c) => c.slug !== "trending").map((c) => c.slug);
+export const revalidate = 1800;
+export const dynamicParams = false;
+
+const desks = categories.filter((c) => c.slug !== "trending");
+
+/** What each desk covers — used as the page intro and meta description. */
+const intros: Record<string, string> = {
+  technology: "Phones, laptops, wearables and the tools that make them work — plus how-tos for the services every Indian phone owner should know.",
+  "ai-tools": "What AI tools cost in rupees, which offers are still running, and how to use them well.",
+  shopping: "Buying guides built on manufacturer specs and prices we check on the store, with the date we checked.",
+  money: "UPI, credit, tax and everyday personal finance in India, explained from the official source.",
+  lifestyle: "Skincare, grooming, fashion and wellness — what the labels mean and what's worth buying.",
+  entertainment: "What's new on Netflix, Prime Video, JioHotstar, SonyLIV and in cinemas.",
+  travel: "Practical travel guides for Indian travellers — airports, documents, destinations.",
+};
 
 export async function generateStaticParams() {
-  return validSlugs.map((category) => ({ category }));
+  // /shopping has its own hub page.
+  return desks.filter((c) => c.slug !== "shopping").map((c) => ({ category: c.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ category: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
   const { category } = await params;
-  const cat = categories.find((c) => c.slug === category);
+  const cat = desks.find((c) => c.slug === category);
   if (!cat) return {};
   return {
     title: `${cat.name} — ${cat.tagline}`,
-    description: `The best ${cat.name.toLowerCase()} coverage in India — tested, verified, curated by our editors.`,
+    description: intros[cat.slug],
+    alternates: { canonical: `/${cat.slug}` },
   };
 }
 
-export default async function CategoryPage({
-  params,
-}: {
-  params: Promise<{ category: string }>;
-}) {
+export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
-  const cat = categories.find((c) => c.slug === category);
-  if (!cat || cat.slug === "trending") notFound();
+  const cat = desks.find((c) => c.slug === category);
+  if (!cat) notFound();
 
-  const articles = articlesByCategory(category, 20);
+  const articles = articlesByCategory(category, 50);
   const hero = articles[0];
-  const grid = articles.slice(1, 7);
-  const list = sampleArticles.slice(0, 8);
+  const rest = articles.slice(1);
+  const tags = [...new Set(articles.flatMap((a) => a.tags ?? []))];
+  const products = productsBySlugs([...new Set(articles.flatMap((a) => a.productSlugs ?? []))]).slice(0, 4);
+  const elsewhere = allArticles.filter((a) => a.category !== category).slice(0, 5);
+  const headlines = (await getLiveTrends(40)).filter((t) => t.category === category).slice(0, 5);
 
   return (
     <>
-      {/* Hero */}
-      <section
-        className="pt-16 pb-16 border-b border-line"
-        style={{ background: `linear-gradient(135deg, ${cat.accent}05 0%, var(--cream) 100%)` }}
-      >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(breadcrumbSchema([{ name: "Home", url: "/" }, { name: cat.name, url: `/${cat.slug}` }]))}
+      />
+      {articles.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLd(itemListSchema(`${cat.name} stories`, articles.map((a) => ({ name: a.title, url: a.url }))))}
+        />
+      )}
+
+      <section className="pt-16 pb-14 border-b border-line" style={{ background: `linear-gradient(135deg, ${cat.accent}0d 0%, var(--cream) 100%)` }}>
         <Container size="xl">
           <div className="flex items-center gap-3 mb-5">
             <div className="h-px w-8" style={{ background: cat.accent }} />
-            <span
-              className="font-mono text-[11px] uppercase tracking-[0.2em] font-semibold"
-              style={{ color: cat.accent }}
-            >
-              The {cat.name} Desk
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] font-semibold" style={{ color: cat.accent }}>
+              The {cat.name} desk
             </span>
           </div>
-          <h1 className="font-editorial text-5xl md:text-7xl font-semibold leading-[0.95] max-w-4xl">
-            {cat.tagline}.
-          </h1>
-          <p className="mt-6 text-xl text-ink-60 max-w-2xl">
-            Deep reporting, verified recommendations, and the stories you'll want to send to a friend.
-          </p>
-
-          <div className="mt-10 flex items-center gap-6 flex-wrap">
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40">
-              Browse by:
-            </span>
-            {categorySubtopics[category]?.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/${category}/${s.slug}`}
-                className="text-sm text-ink hover:text-accent border-b border-transparent hover:border-accent transition pb-0.5"
-              >
-                {s.name}
-              </Link>
-            ))}
-          </div>
+          <h1 className="font-editorial text-5xl md:text-7xl font-semibold leading-[0.95] max-w-4xl">{cat.name}: {cat.tagline.toLowerCase()}</h1>
+          <p className="mt-6 text-lg md:text-xl text-ink-60 max-w-2xl">{intros[cat.slug]}</p>
+          {tags.length > 0 && (
+            <div className="mt-8 flex items-center gap-x-5 gap-y-2 flex-wrap">
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40">Topics:</span>
+              {tags.map((t) => (
+                <Link key={t} href={`/tag/${slugify(t)}`} className="text-sm text-ink hover:text-accent border-b border-transparent hover:border-accent transition pb-0.5">
+                  {t}
+                </Link>
+              ))}
+            </div>
+          )}
         </Container>
       </section>
 
-      {/* Featured */}
-      {hero && (
+      {hero ? (
         <section className="py-16 border-b border-line">
           <Container size="xl">
             <div className="grid lg:grid-cols-12 gap-14">
               <div className="lg:col-span-8">
-                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold mb-5 inline-block">
-                  The feature
-                </span>
                 <FeatureArticleCard article={hero} />
               </div>
               <aside className="lg:col-span-4">
-                <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 pb-4 border-b border-line mb-2">
-                  Trending in {cat.name}
-                </h3>
-                {sampleArticles.slice(0, 5).map((a, i) => (
-                  <ArticleListCard key={a.id} article={a} number={i + 1} />
-                ))}
+                <h2 className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 pb-4 border-b border-line mb-2">
+                  {cat.name} in the news
+                </h2>
+                {headlines.length === 0 && <p className="text-sm text-ink-60 py-4">Live headlines unavailable right now.</p>}
+                <ul>
+                  {headlines.map((t) => (
+                    <li key={t.id} className="py-4 border-b border-line last:border-0">
+                      <a href={t.sources?.[0]?.url} target="_blank" rel="noopener noreferrer" className="font-editorial text-base font-semibold leading-snug hover:text-accent">
+                        {t.topic}
+                      </a>
+                      <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.15em] text-ink-40">
+                        {t.sources?.[0]?.name} · {formatRelativeTime(t.discoveredAt)}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+                <Link href={`/trending?cat=${cat.slug}`} className="mt-4 inline-block text-sm font-medium hover:text-accent">
+                  More {cat.name.toLowerCase()} headlines →
+                </Link>
               </aside>
             </div>
           </Container>
         </section>
+      ) : (
+        <section className="py-20 border-b border-line">
+          <Container size="md">
+            <p className="text-ink-60">Our first {cat.name.toLowerCase()} stories are on the way.</p>
+          </Container>
+        </section>
       )}
 
-      {/* Grid of articles */}
-      {grid.length > 0 && (
+      {rest.length > 0 && (
         <section className="py-16 border-b border-line">
           <Container size="xl">
-            <SectionHeading
-              eyebrow="Latest"
-              title={`New in ${cat.name}`}
-              seeMoreHref={`/${category}/all`}
-            />
+            <SectionHeading eyebrow="Latest" title={`More from ${cat.name}`} />
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {grid.map((a) => (
+              {rest.map((a) => (
                 <ArticleCard key={a.id} article={a} />
               ))}
             </div>
@@ -131,65 +145,39 @@ export default async function CategoryPage({
         </section>
       )}
 
-      {/* Shopping strip for commercial categories */}
-      {(category === "shopping" || category === "technology" || category === "lifestyle") && (
+      {products.length > 0 && (
         <section className="py-16 border-b border-line bg-cream-100">
           <Container size="xl">
             <SectionHeading
-              eyebrow="Recommended"
-              title="Products we stand behind"
-              description="Every pick verified in the last 24 hours."
-              seeMoreHref="/shopping"
+              eyebrow="From our guides"
+              title="Products in this desk's guides"
+              description="Prices from the brand's own store on the date shown. Affiliate links."
+              seeMoreHref="/deals"
+              seeMoreLabel="All products"
             />
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {sampleProducts.slice(0, 4).map((p) => (
-                <ProductCard key={p.id} product={p} />
+              {products.map((p) => (
+                <ProductCard key={p.id} product={p} placement={`desk:${cat.slug}`} />
               ))}
             </div>
           </Container>
         </section>
       )}
 
-      {/* Most read + collections */}
       <section className="py-16 border-b border-line">
         <Container size="xl">
           <div className="grid lg:grid-cols-2 gap-14">
             <div>
-              <SectionHeading
-                eyebrow="Most read"
-                title={`The ${cat.name} stories India is reading`}
-                size="sm"
-              />
-              {list.slice(0, 5).map((a, i) => (
+              <SectionHeading eyebrow="Elsewhere" title="From our other desks" size="sm" />
+              {elsewhere.map((a, i) => (
                 <ArticleListCard key={a.id} article={a} number={i + 1} />
               ))}
             </div>
-            <div>
-              <SectionHeading
-                eyebrow="Editorial collections"
-                title="Guides, comparisons & explainers"
-                size="sm"
-              />
-              <div className="grid gap-5">
-                {editorialCollections.slice(0, 4).map((c) => (
-                  <Link
-                    key={c.title}
-                    href={c.href}
-                    className="block p-6 bg-paper border border-line hover:border-ink transition group"
-                  >
-                    <span
-                      className="font-mono text-[11px] uppercase tracking-[0.2em] font-semibold"
-                      style={{ color: cat.accent }}
-                    >
-                      {c.count} stories
-                    </span>
-                    <h4 className="font-editorial text-xl font-semibold mt-2 group-hover:text-accent transition">
-                      {c.title}
-                    </h4>
-                    <p className="text-sm text-ink-60 mt-2">{c.description}</p>
-                  </Link>
-                ))}
-              </div>
+            <div className="p-8 bg-ink text-cream self-start">
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">Newsletter</span>
+              <h2 className="font-editorial text-3xl font-semibold mt-3 mb-3">Get new {cat.name.toLowerCase()} stories by email</h2>
+              <p className="text-cream/70 mb-6">Free. Unsubscribe any time.</p>
+              <NewsletterForm source={`desk:${cat.slug}`} variant="dark" />
             </div>
           </div>
         </Container>
@@ -197,80 +185,3 @@ export default async function CategoryPage({
     </>
   );
 }
-
-const categorySubtopics: Record<string, { slug: string; name: string }[]> = {
-  technology: [
-    { slug: "smartphones", name: "Smartphones" },
-    { slug: "laptops", name: "Laptops" },
-    { slug: "audio", name: "Audio" },
-    { slug: "wearables", name: "Wearables" },
-    { slug: "accessories", name: "Accessories" },
-  ],
-  "ai-tools": [
-    { slug: "chatgpt", name: "ChatGPT & Claude" },
-    { slug: "image", name: "AI Image" },
-    { slug: "video", name: "AI Video" },
-    { slug: "writing", name: "AI Writing" },
-    { slug: "productivity", name: "Productivity" },
-  ],
-  shopping: [
-    { slug: "deals", name: "Deals" },
-    { slug: "buying-guides", name: "Buying Guides" },
-    { slug: "comparisons", name: "Comparisons" },
-    { slug: "editors-picks", name: "Editor's Picks" },
-  ],
-  money: [
-    { slug: "credit-cards", name: "Credit Cards" },
-    { slug: "mutual-funds", name: "Mutual Funds" },
-    { slug: "stocks", name: "Stocks" },
-    { slug: "upi", name: "UPI & Fintech" },
-    { slug: "tax", name: "Tax" },
-  ],
-  lifestyle: [
-    { slug: "skincare", name: "Skincare" },
-    { slug: "fragrance", name: "Fragrance" },
-    { slug: "fashion", name: "Fashion" },
-    { slug: "home", name: "Home" },
-    { slug: "wellness", name: "Wellness" },
-  ],
-  entertainment: [
-    { slug: "ott", name: "OTT" },
-    { slug: "cinema", name: "Cinema" },
-    { slug: "series", name: "Web Series" },
-    { slug: "music", name: "Music" },
-  ],
-  travel: [
-    { slug: "india", name: "India" },
-    { slug: "international", name: "International" },
-    { slug: "weekend", name: "Weekend Trips" },
-    { slug: "hill-stations", name: "Hill Stations" },
-    { slug: "beaches", name: "Beaches" },
-  ],
-};
-
-const editorialCollections = [
-  {
-    title: "The 2026 India Buyer's Almanac",
-    description: "Best products at every price point, tested over six months.",
-    href: "/collections/buyers-almanac-2026",
-    count: 47,
-  },
-  {
-    title: "AI tools that actually work in India",
-    description: "Reviewed for INR pricing, Indian internet, and real use cases.",
-    href: "/collections/ai-tools-india",
-    count: 23,
-  },
-  {
-    title: "Money playbooks for 2026",
-    description: "Tax-saving, SIPs, credit cards and the quiet shifts in Indian finance.",
-    href: "/collections/money-playbooks-2026",
-    count: 31,
-  },
-  {
-    title: "Best weekend getaways from your city",
-    description: "From Delhi, Bengaluru, Mumbai and Hyderabad.",
-    href: "/collections/weekend-getaways",
-    count: 19,
-  },
-];

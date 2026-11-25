@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CategoryTag } from "@/components/ui/Badge";
+
+/** Product shots (transparent PNGs from brand stores) should fit, photos should fill. */
+const fit = (src: string) => (src.includes("cdn.shopify.com") ? "object-contain p-6 bg-cream-100" : "object-cover");
 import { formatRelativeTime } from "@/lib/utils";
 import type { Article } from "@/types/content";
 import { cn } from "@/lib/utils";
@@ -15,7 +18,7 @@ export function FeatureArticleCard({ article }: { article: Article }) {
           alt={article.heroImageAlt || article.title}
           fill
           sizes="(min-width: 1024px) 60vw, 100vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          className={`${fit(article.heroImage)} transition-transform duration-700 group-hover:scale-[1.03]`}
           priority
         />
         {article.trending && (
@@ -28,6 +31,7 @@ export function FeatureArticleCard({ article }: { article: Article }) {
       </div>
       <div>
         <CategoryTag
+          asLink={false}
           slug={article.category}
           name={article.categoryName}
           color={article.categoryAccent}
@@ -80,11 +84,12 @@ export function ArticleCard({
             alt={article.heroImageAlt || article.title}
             fill
             sizes="(min-width: 1024px) 33vw, 50vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            className={`${fit(article.heroImage)} transition-transform duration-700 group-hover:scale-[1.03]`}
           />
         </div>
       )}
       <CategoryTag
+          asLink={false}
         slug={article.category}
         name={article.categoryName}
         color={article.categoryAccent}
@@ -128,6 +133,7 @@ export function ArticleListCard({
       )}
       <div className="flex-1">
         <CategoryTag
+          asLink={false}
           slug={article.category}
           name={article.categoryName}
           color={article.categoryAccent}
@@ -154,11 +160,12 @@ export function ArticleHCard({ article }: { article: Article }) {
           alt={article.heroImageAlt || article.title}
           fill
           sizes="144px"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          className={`${fit(article.heroImage)} transition-transform duration-700 group-hover:scale-105`}
         />
       </div>
       <div className="flex-1 min-w-0">
         <CategoryTag
+          asLink={false}
           slug={article.category}
           name={article.categoryName}
           color={article.categoryAccent}
