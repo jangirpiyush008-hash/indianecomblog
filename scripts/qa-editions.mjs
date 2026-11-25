@@ -22,13 +22,14 @@ const check = (name, ok, detail = "") => {
 const get = (path, { headers = {}, redirect = "manual" } = {}) =>
   fetch(BASE + path, { headers: { "user-agent": "Mozilla/5.0 QA", ...headers }, redirect });
 
-const loc = (r) => (r.headers.get("location") || "").replace(BASE, "");
+const loc = (r) => (r.headers.get("location") || "").replace(/^https?:\/\/[^/]+/, (h) => (h === BASE ? "" : h));
+const GEO = process.env.QA_GEO !== "0"; // set QA_GEO=0 when the server isn't behind Cloudflare yet
 const mainHtml = (html) => (html.match(/<main[\s\S]*?<\/main>/) || [html])[0];
 const hrefs = (html) => [...html.matchAll(/href="([^"#]+)"/g)].map((m) => m[1].replace(/&amp;/g, "&"));
 
 async function routing() {
   console.log("\n— Routing");
-  for (const [iso, cc] of [["IN", "in"], ["US", "us"], ["DE", "de"], ["BR", "br"], ["SA", "sa"], ["AE", "ae"]]) {
+  for (const [iso, cc] of GEO ? [["IN", "in"], ["US", "us"], ["DE", "de"], ["BR", "br"], ["SA", "sa"], ["AE", "ae"]] : []) {
     const r = await get("/", { headers: { "cf-ipcountry": iso } });
     check(`Visitor from ${iso} → /${cc}`, r.status === 302 && loc(r) === `/${cc}`, `${r.status} ${loc(r)}`);
   }
@@ -47,6 +48,7 @@ async function routing() {
   // Test F: preference retained over geolocation
   const back = await get("/", { headers: { "cf-ipcountry": "IN", cookie: "tn_country=us" } });
   check("Saved US preference overrides Indian IP", back.status === 302 && loc(back) === "/us", loc(back));
+  check("Redirects never point at another host", !/^https?:/.test(loc(sw)) && !/^https?:/.test(loc(back)), `${loc(sw)} ${loc(back)}`);
   // Localized section mapping
   const de = await get("/api/country?cc=de&from=%2Fus%2Fdeals");
   check("Switch US deals → German 'angebote'", loc(de) === "/de/angebote", loc(de));

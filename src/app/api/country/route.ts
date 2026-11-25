@@ -13,14 +13,16 @@ import { getArticle } from "@/lib/content";
 export function GET(req: Request) {
   const url = new URL(req.url);
   const cc = url.searchParams.get("cc");
-  if (!isCountryCode(cc)) return NextResponse.redirect(new URL("/", url), 302);
+  // Relative Location headers: behind Railway's proxy, req.url carries the internal
+  // host (localhost:8080), so absolute redirects built from it would leave the site.
+  if (!isCountryCode(cc)) return new NextResponse(null, { status: 302, headers: { Location: "/" } });
   const dest = equivalentPath(url.searchParams.get("from") ?? "/", cc);
-  const res = NextResponse.redirect(new URL(dest, url), 302);
+  const res = new NextResponse(null, { status: 302, headers: { Location: dest, "Cache-Control": "private, no-store" } });
   res.cookies.set(COUNTRY_COOKIE, cc, {
     path: "/",
     maxAge: 60 * 60 * 24 * 180, // 180 days
     sameSite: "lax",
-    secure: url.protocol === "https:",
+    secure: process.env.NODE_ENV === "production",
     httpOnly: false,
   });
   return res;

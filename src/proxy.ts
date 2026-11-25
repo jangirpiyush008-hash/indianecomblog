@@ -25,10 +25,19 @@ function routeRoot(req: NextRequest) {
     res.headers.set("Vary", "Cookie, CF-IPCountry");
     return res;
   }
-  const res = NextResponse.redirect(new URL(`/${target}`, req.url), 302);
+  // Build from the forwarded host: behind Railway's proxy req.url holds the internal
+  // host (localhost:8080). Proxy redirects must be absolute.
+  const res = NextResponse.redirect(`${publicOrigin(req)}/${target}`, 302);
   res.headers.set("Cache-Control", "private, no-store");
   res.headers.set("Vary", "Cookie, CF-IPCountry");
   return res;
+}
+
+function publicOrigin(req: NextRequest) {
+  const host = (req.headers.get("x-forwarded-host") ?? req.headers.get("host") ?? req.nextUrl.host).split(",")[0].trim();
+  const proto = (req.headers.get("x-forwarded-proto") ?? req.nextUrl.protocol.replace(":", "")).split(",")[0].trim();
+  // Only accept a plain hostname[:port] — never let a header inject a path or scheme.
+  return /^[a-z0-9.-]+(:\d+)?$/i.test(host) ? `${proto === "http" ? "http" : "https"}://${host}` : req.nextUrl.origin;
 }
 
 export async function proxy(req: NextRequest) {
