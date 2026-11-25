@@ -4,206 +4,173 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Search, Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { siteConfig } from "@/config/site";
-import { brand } from "@/config/brand";
-import { cn } from "@/lib/utils";
 import { Logo } from "@/components/brand/Logo";
+import { CountrySwitcher, type SwitcherCountry } from "./CountrySwitcher";
 
-export function Header() {
+export type HeaderProps = {
+  homeHref: string;
+  tagline: string;
+  nav: { label: string; href: string }[];
+  highlight?: { label: string; href: string };
+  topLinks: { label: string; href: string }[];
+  searchAction?: string;
+  labels: { search: string; searchPlaceholder: string; subscribe: string; menu: string; close: string; edition: string };
+  locale: string;
+  timeZone: string;
+  countries: SwitcherCountry[];
+  current?: SwitcherCountry;
+  popular?: { label: string; href: string }[];
+};
+
+export function Header(p: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-cream/95 backdrop-blur supports-[backdrop-filter]:bg-cream/80">
-      {/* Top strip */}
       <div className="border-b border-line/60 bg-ink text-cream">
         <Container size="xl">
-          <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.2em] py-2">
+          <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.2em] py-2 gap-4">
             <div className="hidden md:block">
-              <span className="text-cream/60">Today —</span>{" "}
-              <HeaderDate />
+              {p.current && <span className="text-cream/60 mr-2">{p.current.flag} {p.current.name} —</span>}
+              <HeaderDate locale={p.locale} timeZone={p.timeZone} />
             </div>
-            <div className="flex items-center gap-6">
-              <Link href="/newsletter" className="hover:text-accent transition">
-                Newsletter
-              </Link>
-              <Link href="/trending" className="hover:text-accent transition">
-                Trending now
-              </Link>
+            <div className="flex items-center gap-6 ml-auto">
+              {p.topLinks.map((l) => (
+                <Link key={l.href} href={l.href} className="hover:text-accent transition">
+                  {l.label}
+                </Link>
+              ))}
             </div>
           </div>
         </Container>
       </div>
 
-      {/* Main bar */}
       <Container size="xl">
-        <div className="flex items-center justify-between py-5 md:py-6">
-          <button
-            onClick={() => setMobileOpen(true)}
-            className="md:hidden p-2 -ml-2"
-            aria-label="Open menu"
-          >
+        <div className="flex items-center justify-between py-4 md:py-5 gap-3">
+          <button onClick={() => setMobileOpen(true)} className="md:hidden p-2 -ml-2" aria-label={p.labels.menu}>
             <Menu className="h-5 w-5" />
           </button>
 
-          <div className="flex-1 md:flex-none text-center md:text-left">
-            <Link href="/" className="inline-block">
-              <Logo className="text-2xl md:text-3xl text-ink align-middle" markClassName="h-8 w-8 md:h-9 md:w-9" />
-              <span className="sr-only">{brand.name} home</span>
-              <span className="hidden md:inline-block ml-3 align-top font-mono text-[10px] uppercase tracking-[0.2em] text-ink-40 pt-2">
-                {brand.tagline}
+          <div className="flex-1 md:flex-none min-w-0">
+            <Link href={p.homeHref} className="inline-flex items-center">
+              <Logo className="text-xl sm:text-2xl md:text-3xl text-ink" markClassName="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9" />
+              <span className="hidden lg:inline-block ml-3 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-40">
+                {p.tagline}
               </span>
             </Link>
           </div>
 
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => setSearchOpen(true)}
-              className="hidden md:inline-flex items-center gap-2 px-4 py-2 border border-line hover:border-ink text-ink-60 hover:text-ink text-sm transition"
-            >
-              <Search className="h-4 w-4" />
-              <span className="font-mono text-[11px] uppercase tracking-[0.15em]">Search</span>
-            </button>
-            <button
-              onClick={() => setSearchOpen(true)}
-              className="md:hidden p-2"
-              aria-label="Search"
-            >
-              <Search className="h-5 w-5" />
-            </button>
-            <Link
-              href="/newsletter"
-              className="hidden lg:inline-flex items-center px-5 py-2 bg-ink text-cream text-sm font-medium hover:bg-accent transition"
-            >
-              Subscribe
-            </Link>
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+            <CountrySwitcher countries={p.countries} current={p.current} label={p.labels.edition} />
+            {p.searchAction && (
+              <button
+                onClick={() => setSearchOpen(true)}
+                className="inline-flex items-center gap-2 p-2 md:px-4 md:py-2 md:border md:border-line hover:border-ink text-ink-60 hover:text-ink text-sm transition"
+                aria-label={p.labels.search}
+              >
+                <Search className="h-4 w-4" />
+                <span className="hidden md:inline font-mono text-[11px] uppercase tracking-[0.15em]">{p.labels.search}</span>
+              </button>
+            )}
           </div>
         </div>
       </Container>
 
-      {/* Category nav */}
-      <nav className="hidden md:block border-t border-line bg-cream">
-        <Container size="xl">
-          <ul className="flex items-center gap-8 py-3.5 overflow-x-auto no-scrollbar">
-            {siteConfig.nav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-[13px] font-medium tracking-wide text-ink hover:text-accent whitespace-nowrap transition"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-            <li className="ml-auto">
-              <Link
-                href="/deals"
-                className="text-[13px] font-medium tracking-wide text-accent hover:text-accent-dark whitespace-nowrap transition flex items-center gap-2"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                Deals
-              </Link>
-            </li>
-          </ul>
-        </Container>
-      </nav>
+      {p.nav.length > 0 && (
+        <nav className="hidden md:block border-t border-line bg-cream" aria-label="Sections">
+          <Container size="xl">
+            <ul className="flex items-center gap-7 py-3 overflow-x-auto no-scrollbar">
+              {p.nav.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-[13px] font-medium tracking-wide text-ink hover:text-accent whitespace-nowrap transition">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              {p.highlight && (
+                <li className="ml-auto">
+                  <Link href={p.highlight.href} className="text-[13px] font-medium text-accent hover:text-accent-dark whitespace-nowrap flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                    {p.highlight.label}
+                  </Link>
+                </li>
+              )}
+            </ul>
+          </Container>
+        </nav>
+      )}
 
-      {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 z-50 bg-cream">
+        <div className="md:hidden fixed inset-0 z-50 bg-cream overflow-auto">
           <div className="flex items-center justify-between p-5 border-b border-line">
             <Logo className="text-2xl text-ink" markClassName="h-8 w-8" />
-            <button onClick={() => setMobileOpen(false)} aria-label="Close menu">
+            <button onClick={() => setMobileOpen(false)} aria-label={p.labels.close}>
               <X className="h-5 w-5" />
             </button>
           </div>
           <nav className="p-5">
             <ul className="space-y-1">
-              {siteConfig.nav.map((item) => (
+              {[...p.nav, ...(p.highlight ? [p.highlight] : [])].map((item) => (
                 <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-3 border-b border-line text-lg font-editorial"
-                  >
+                  <Link href={item.href} onClick={() => setMobileOpen(false)} className="block py-3 border-b border-line text-lg font-editorial">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              {p.topLinks.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} onClick={() => setMobileOpen(false)} className="block py-3 border-b border-line text-base text-ink-60">
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-8 space-y-3">
-              <Link
-                href="/newsletter"
-                className="block w-full py-3 bg-ink text-cream text-center text-sm font-medium"
-              >
-                Subscribe to the newsletter
-              </Link>
-            </div>
           </nav>
         </div>
       )}
 
-      {/* Search overlay */}
-      {searchOpen && (
-        <SearchOverlay onClose={() => setSearchOpen(false)} />
+      {searchOpen && p.searchAction && (
+        <div className="fixed inset-0 z-50 bg-cream/98 backdrop-blur-md" onClick={() => setSearchOpen(false)}>
+          <div className="min-h-screen pt-28 px-5" onClick={(e) => e.stopPropagation()}>
+            <div className="mx-auto max-w-2xl">
+              <form action={p.searchAction} role="search" className="flex items-center gap-3 border-b-2 border-ink pb-3">
+                <Search className="h-6 w-6 text-ink-60" aria-hidden />
+                <label htmlFor="site-search" className="sr-only">{p.labels.search}</label>
+                <input
+                  id="site-search"
+                  name="q"
+                  type="search"
+                  autoFocus
+                  placeholder={p.labels.searchPlaceholder}
+                  className="flex-1 bg-transparent outline-none text-xl md:text-2xl font-editorial placeholder:text-ink-40"
+                />
+                <button type="button" onClick={() => setSearchOpen(false)} className="text-ink-60 hover:text-ink" aria-label={p.labels.close}>
+                  <X className="h-5 w-5" />
+                </button>
+              </form>
+              {p.popular?.length ? (
+                <ul className="mt-10 flex flex-wrap gap-2">
+                  {p.popular.map((x) => (
+                    <li key={x.href}>
+                      <a href={x.href} className="px-3 py-1.5 border border-line hover:border-ink text-sm">{x.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          </div>
+        </div>
       )}
     </header>
   );
 }
 
-function HeaderDate() {
+function HeaderDate({ locale, timeZone }: { locale: string; timeZone: string }) {
   const [d, setD] = useState("");
   useEffect(() => {
-    setD(new Date().toLocaleDateString("en-IN", { weekday: "long", day: "numeric", month: "long" }));
-  }, []);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- date must render client-side in the edition's time zone
+    setD(new Date().toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long", timeZone }));
+  }, [locale, timeZone]);
   return <span>{d}</span>;
-}
-
-function SearchOverlay({ onClose }: { onClose: () => void }) {
-  const [q, setQ] = useState("");
-  const popular = ["ANC earbuds", "smartwatch", "UPI Circle", "credit report", "IMEI", "OTT releases"];
-  return (
-    <div className="fixed inset-0 z-50 bg-cream/98 backdrop-blur-md" onClick={onClose}>
-      <div
-        className="min-h-screen pt-28 px-5"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="mx-auto max-w-2xl">
-          <form action="/search" role="search" className="flex items-center gap-3 border-b-2 border-ink pb-3">
-            <Search className="h-6 w-6 text-ink-60" aria-hidden />
-            <label htmlFor="site-search" className="sr-only">Search</label>
-            <input
-              id="site-search"
-              name="q"
-              type="search"
-              autoFocus
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Search articles and products…"
-              className="flex-1 bg-transparent outline-none text-xl md:text-2xl font-editorial placeholder:text-ink-40"
-            />
-            <button type="button" onClick={onClose} className="text-ink-60 hover:text-ink" aria-label="Close search">
-              <X className="h-5 w-5" />
-            </button>
-          </form>
-          <div className="mt-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-4">Popular searches</p>
-            <ul className="space-y-2">
-              {popular.map((p) => (
-                <li key={p}>
-                  <a
-                    href={`/search?q=${encodeURIComponent(p)}`}
-                    className="group flex items-center gap-2 text-base text-ink-80 hover:text-accent py-2"
-                  >
-                    <span className="text-ink-40 group-hover:text-accent">↗</span>
-                    {p}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
 }

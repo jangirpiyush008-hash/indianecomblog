@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import crypto from "crypto";
 import { createSupabaseServiceClient } from "@/lib/supabase/server";
-import { getProduct } from "@/lib/content";
+import { findProductAnyEdition } from "@/lib/content";
+import { isCountryCode } from "@/config/countries";
 
 export const maxDuration = 10;
 
@@ -11,6 +12,8 @@ const ALLOWED_HOSTS = new Set(["trackingv3.linkredirect.in"]);
 
 const bodySchema = z.object({
   productSlug: z.string().max(200).optional(),
+  country: z.string().max(2).optional(),
+  network: z.string().max(40).optional(),
   articleId: z.string().max(200).optional(),
   merchant: z.string().max(50).optional(),
   campaign: z.string().max(100).optional(),
@@ -20,8 +23,12 @@ const bodySchema = z.object({
 async function logClick(req: Request, input: z.infer<typeof bodySchema>) {
   if (!process.env.SUPABASE_SERVICE_ROLE_KEY) return;
   const supabase = createSupabaseServiceClient();
+  // Trust the product record, not the client, for country and network.
+  const product = input.productSlug ? findProductAnyEdition(input.productSlug) : undefined;
   await supabase.from("affiliate_clicks").insert({
-    product_slug: input.productSlug ?? null,
+    product_slug: product?.slug ?? null,
+    country_code: product?.country ?? (isCountryCode(input.country) ? input.country : null),
+    network: product?.affiliateNetwork ?? null,
     article_slug: input.articleId ?? null,
     merchant: null, // merchant enum in DB is legacy; slug identifies the product
     campaign: [input.merchant, input.campaign].filter(Boolean).join(":") || null,
@@ -45,7 +52,7 @@ export async function POST(req: Request) {
 /** /api/affiliate/click?p=<product-slug> — logs and redirects to the product's EarnKaro URL. */
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  const product = getProduct(url.searchParams.get("p") ?? "");
+  const product = findProductAnyEdition(url.searchParams.get("p") ?? "");
   if (!product) return NextResponse.json({ error: "Unknown product" }, { status: 404 });
   const dest = new URL(product.affiliateUrl);
   if (!ALLOWED_HOSTS.has(dest.hostname)) {

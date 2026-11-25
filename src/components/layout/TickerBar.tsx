@@ -1,7 +1,7 @@
 export type TickerItem = { label: string; href: string; external?: boolean };
 
 /** Scrolling headline strip. Items must be real — the homepage passes live headlines and our latest stories. */
-export function TickerBar({ items }: { items: TickerItem[] }) {
+export function TickerBar({ items, label = "Latest" }: { items: TickerItem[]; label?: string }) {
   if (!items.length) return null;
   const double = [...items, ...items];
   return (
@@ -10,7 +10,7 @@ export function TickerBar({ items }: { items: TickerItem[] }) {
         <div className="flex-shrink-0 bg-accent text-white px-5 py-3">
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] font-bold whitespace-nowrap">Latest</span>
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] font-bold whitespace-nowrap">{label}</span>
           </div>
         </div>
         <div className="flex-1 overflow-hidden relative">

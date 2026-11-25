@@ -12,18 +12,24 @@ import {
   AlertCircle,
   CheckCircle2,
 } from "lucide-react";
-import { allArticles, allProducts } from "@/lib/content";
+import { everyArticle, everyProduct, articlesFor, productsFor } from "@/lib/content";
+import { ALL_COUNTRIES, COUNTRIES, isCountryCode, type CountryCode } from "@/config/countries";
+import { AdminCountryPicker } from "@/components/admin/AdminCountryPicker";
 import { getLiveTrends } from "@/lib/trends/live";
 import { formatRelativeTime } from "@/lib/utils";
 
-export default async function AdminDashboard() {
-  const live = await getLiveTrends(5);
+export default async function AdminDashboard({ searchParams }: { searchParams: Promise<{ country?: string }> }) {
+  const { country } = await searchParams;
+  const active: CountryCode | undefined = isCountryCode(country) ? country : undefined;
+  const allArticles = active ? articlesFor(active) : everyArticle();
+  const allProducts = active ? productsFor(active) : everyProduct();
+  const live = await getLiveTrends(active ?? "in", 5);
   const weekAgo = Date.now() - 7 * 86400_000;
   const thisWeek = allArticles.filter((a) => +new Date(a.publishedAt) > weekAgo).length;
   const stats = [
     { label: "Published articles", value: String(allArticles.length), change: `${thisWeek} this week`, icon: FileText, trend: "up" },
     { label: "Products (EarnKaro)", value: String(allProducts.length), change: "Full tracking links", icon: CheckCircle2, trend: "neutral" },
-    { label: "Live headlines", value: String(live.length), change: "Google News India", icon: TrendingUp, trend: "neutral" },
+    { label: "Live headlines", value: String(live.length), change: `Google News ${active ? COUNTRIES[active].name : "India"}`, icon: TrendingUp, trend: "neutral" },
     { label: "Newsletter subs", value: "—", change: "See Newsletter tab", icon: Mail, trend: "neutral" },
     { label: "Page views", value: "—", change: "Connect GA4", icon: Eye, trend: "neutral" },
     { label: "Affiliate clicks", value: "—", change: "Logged to Supabase", icon: MousePointerClick, trend: "neutral" },
@@ -37,7 +43,7 @@ export default async function AdminDashboard() {
       <AdminPageHeader
         eyebrow="Today"
         title="Good morning, Piyush"
-        description={`${allArticles.length} published articles · ${live.length} live headlines on the radar.`}
+        description={`${active ? `${COUNTRIES[active].flag} ${COUNTRIES[active].name}` : `All ${ALL_COUNTRIES.length} editions`} · ${allArticles.length} published articles · ${allProducts.length} products.`}
         actions={
           <>
             <Link href="/admin/generate">
@@ -54,6 +60,7 @@ export default async function AdminDashboard() {
       />
 
       <div className="p-6 lg:p-10 space-y-10">
+        <AdminCountryPicker basePath="/admin" active={active} />
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {stats.map((s) => {
@@ -170,7 +177,7 @@ export default async function AdminDashboard() {
             <div className="p-5 border-b border-line flex items-center justify-between">
               <div>
                 <h3 className="font-editorial text-xl font-semibold">Top trends right now</h3>
-                <p className="text-xs text-ink-60 mt-1">Google News India · live</p>
+                <p className="text-xs text-ink-60 mt-1">Google News {active ? COUNTRIES[active].name : "India"} · live</p>
               </div>
               <Link href="/admin/trends" className="text-xs text-ink-60 hover:text-accent">
                 Full radar →

@@ -24,6 +24,8 @@ export function AffiliateLink({
     try {
       const body = JSON.stringify({
         productSlug: product.slug,
+        country: product.country,
+        network: product.affiliateNetwork,
         articleId,
         merchant: product.merchant,
         campaign: placement,

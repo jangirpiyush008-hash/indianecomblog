@@ -30,7 +30,7 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
   const author = allAuthors.find((a) => a.slug === slug);
   if (!author) notFound();
   const articles = articlesByAuthor(slug);
-  const desks = [...new Set(articles.map((a) => a.categoryName))];
+  const desks = [...new Set(articles.map((a) => a.country.toUpperCase()))];
 
   return (
     <>
@@ -68,7 +68,7 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
                   <dd className="font-editorial text-2xl font-semibold">{articles.length}</dd>
                 </div>
                 <div>
-                  <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-40">Covers</dt>
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-40">Editions</dt>
                   <dd className="text-ink-80 mt-1">{desks.join(", ")}</dd>
                 </div>
               </dl>

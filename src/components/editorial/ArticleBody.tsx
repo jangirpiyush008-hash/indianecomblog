@@ -1,5 +1,7 @@
 import type { Article, ArticleBlock } from "@/types/content";
 import { productsBySlugs } from "@/lib/content";
+import { COUNTRIES } from "@/config/countries";
+import { DICTIONARIES } from "@/config/dictionaries";
 import { ProductCardHorizontal } from "@/components/commerce/ProductCard";
 
 export function tocFromBody(body: ArticleBlock[] = []) {
@@ -87,16 +89,14 @@ export function ArticleBody({ article }: { article: Article }) {
               </div>
             );
           case "products": {
-            const items = productsBySlugs(b.slugs);
+            const items = productsBySlugs(article.country, b.slugs);
             if (!items.length) return null;
             return (
               <div key={i} className="not-prose my-8 space-y-3">
                 {items.map((p) => (
                   <ProductCardHorizontal key={p.id} product={p} articleId={article.slug} placement="in-article" />
                 ))}
-                <p className="text-xs text-ink-40 italic">
-                  Affiliate links: we may earn a commission if you buy, at no extra cost to you.
-                </p>
+                <p className="text-xs text-ink-40 italic">{DICTIONARIES[COUNTRIES[article.country].lang].ui.affiliateNote}</p>
               </div>
             );
           }

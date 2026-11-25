@@ -54,7 +54,7 @@ const nav = [
     heading: "Commerce",
     items: [
       { label: "Products", href: "/admin/products", icon: ShoppingBag },
-      { label: "Affiliate links", href: "/admin/affiliate", icon: LinkIcon },
+      { label: "Affiliate programmes", href: "/admin/affiliate-programs", icon: LinkIcon },
     ],
   },
   {

@@ -1,6 +1,7 @@
 import { AdminPageHeader } from "@/components/admin/AdminShell";
 import { Button } from "@/components/ui/Button";
-import { allArticles } from "@/lib/content";
+import { everyArticle } from "@/lib/content";
+const allArticles = everyArticle();
 import { cn } from "@/lib/utils";
 import { Plus, Calendar as CalIcon } from "lucide-react";
 

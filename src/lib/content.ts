@@ -1,97 +1,103 @@
-import { articles } from "@/content/articles";
-import { products } from "@/content/products";
+/**
+ * Country-scoped content API. Every function takes the edition and only ever
+ * reads that edition's records — there is no "all countries" fallback here.
+ */
+import { ARTICLES } from "@/content/articles";
+import { PRODUCTS } from "@/content/products";
 import { authors, allAuthors } from "@/content/authors";
+import { isCountryCode, type CountryCode, type Desk } from "@/config/countries";
 import type { Article, Product } from "@/types/content";
 
-export { articles as allArticles, products as allProducts, authors, allAuthors };
+export { authors, allAuthors };
 
-export function articlesByCategory(category: string, limit = 6): Article[] {
-  return articles.filter((a) => a.category === category).slice(0, limit);
+function assertCountry(c: string): asserts c is CountryCode {
+  if (!isCountryCode(c)) throw new Error(`Unknown edition: ${c}`);
 }
 
-export function featuredArticles(): Article[] {
-  return articles.filter((a) => a.featured);
+export function articlesFor(country: CountryCode): Article[] {
+  assertCountry(country);
+  return ARTICLES[country];
 }
 
-export function trendingArticles(): Article[] {
-  return articles.filter((a) => a.trending);
+export function productsFor(country: CountryCode): Product[] {
+  assertCountry(country);
+  return PRODUCTS[country];
 }
 
-export function getArticle(category: string, slug: string): Article | undefined {
-  return articles.find((a) => a.slug === slug && a.category === category);
+export function articlesByDesk(country: CountryCode, desk: Desk, limit = 50): Article[] {
+  return articlesFor(country).filter((a) => a.category === desk).slice(0, limit);
 }
 
-export function getProduct(slug: string): Product | undefined {
-  return products.find((p) => p.slug === slug);
+export function featuredArticles(country: CountryCode): Article[] {
+  return articlesFor(country).filter((a) => a.featured);
 }
 
-export function productsBySlugs(slugs: string[] = []): Product[] {
-  return slugs.map(getProduct).filter((p): p is Product => Boolean(p));
+export function trendingArticles(country: CountryCode): Article[] {
+  return articlesFor(country).filter((a) => a.trending);
 }
 
-export function articlesByAuthor(slug: string): Article[] {
-  return articles.filter((a) => a.author.slug === slug);
+export function getArticle(country: CountryCode, desk: string, slug: string): Article | undefined {
+  return articlesFor(country).find((a) => a.category === desk && a.slug === slug);
 }
 
-export function articlesByTag(tag: string): Article[] {
-  const t = tag.toLowerCase();
-  return articles.filter((a) => a.tags?.some((x) => slugify(x) === t || x.toLowerCase() === t));
+export function getProduct(country: CountryCode, slug: string): Product | undefined {
+  return productsFor(country).find((p) => p.slug === slug);
 }
 
-export function allTags(): string[] {
-  return [...new Set(articles.flatMap((a) => a.tags ?? []))];
+/** Looks up a product anywhere — only for server-side redirect validation. */
+export function findProductAnyEdition(slug: string): Product | undefined {
+  for (const list of Object.values(PRODUCTS)) {
+    const p = list.find((x) => x.slug === slug);
+    if (p) return p;
+  }
+}
+
+export function productsBySlugs(country: CountryCode, slugs: string[] = []): Product[] {
+  return slugs.map((s) => getProduct(country, s)).filter((p): p is Product => Boolean(p));
+}
+
+export function relatedArticles(article: Article, limit = 3): Article[] {
+  const list = articlesFor(article.country).filter((a) => a.id !== article.id);
+  return [...list.filter((a) => a.category === article.category), ...list.filter((a) => a.category !== article.category)].slice(0, limit);
 }
 
 export function slugify(s: string) {
   return s
     .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[̀-ͯ]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 }
 
-export function relatedArticles(article: Article, limit = 3): Article[] {
-  const sameCat = articles.filter((a) => a.id !== article.id && a.category === article.category);
-  const rest = articles.filter((a) => a.id !== article.id && a.category !== article.category);
-  return [...sameCat, ...rest].slice(0, limit);
+export function tagsFor(country: CountryCode): string[] {
+  return [...new Set(articlesFor(country).flatMap((a) => a.tags ?? []))];
 }
 
-/** Articles that recommend specific products (buying guides & comparisons). */
-export function guideArticles(): Article[] {
-  return articles.filter((a) => a.productSlugs?.length);
+export function articlesByTag(country: CountryCode, tagSlug: string): Article[] {
+  return articlesFor(country).filter((a) => a.tags?.some((t) => slugify(t) === tagSlug));
 }
 
-export function comparisonArticles(): Article[] {
-  return articles.filter((a) => / vs /i.test(a.title));
+export function guideArticles(country: CountryCode): Article[] {
+  return articlesFor(country).filter((a) => a.productSlugs?.length);
 }
 
-export function productCategories(): string[] {
-  return [...new Set(products.map((p) => p.category))];
+export function productCategories(country: CountryCode): string[] {
+  return [...new Set(productsFor(country).map((p) => p.category))];
 }
 
-/** Editorial collections are built from real content — counts are never hard-coded. */
-export const collections = [
-  {
-    slug: "buying-guides",
-    title: "Buying guides",
-    description: "Spec-and-price comparisons, with prices checked on the store and the date we checked.",
-    filter: (a: Article) => Boolean(a.productSlugs?.length),
-  },
-  {
-    slug: "how-to",
-    title: "How-tos for Indian services",
-    description: "Step-by-step guides to government and banking services, with links to the official source.",
-    filter: (a: Article) => ["money", "technology", "travel"].includes(a.category) && !a.productSlugs?.length,
-  },
-  {
-    slug: "whats-new",
-    title: "What's new this week",
-    description: "Timely explainers on releases, offers and changes worth knowing about.",
-    filter: (a: Article) => Boolean(a.trending),
-  },
-] as const;
+/** All articles in every edition — only for global sitemaps/feeds and author pages. */
+export function everyArticle(): Article[] {
+  return Object.values(ARTICLES).flat();
+}
 
-export function getCollection(slug: string) {
-  const c = collections.find((x) => x.slug === slug);
-  if (!c) return undefined;
-  return { ...c, articles: articles.filter(c.filter) };
+/** Every product in every edition — admin only. */
+export function everyProduct(): Product[] {
+  return Object.values(PRODUCTS).flat();
+}
+
+export function articlesByAuthor(slug: string): Article[] {
+  return everyArticle()
+    .filter((a) => a.author.slug === slug)
+    .sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt));
 }

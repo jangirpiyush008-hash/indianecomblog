@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { brand } from "@/config/brand";
-import { allArticles } from "@/lib/content";
+import { everyArticle } from "@/lib/content";
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function NewsletterPage() {
-  const recent = allArticles.slice(0, 6);
+  const recent = everyArticle().sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt)).slice(0, 8);
   return (
     <>
       <section className="pt-16 pb-16 border-b border-line bg-accent text-white">

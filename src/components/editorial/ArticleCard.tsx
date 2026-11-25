@@ -4,7 +4,7 @@ import { CategoryTag } from "@/components/ui/Badge";
 
 /** Product shots (transparent PNGs from brand stores) should fit, photos should fill. */
 const fit = (src: string) => (src.includes("cdn.shopify.com") ? "object-contain p-6 bg-cream-100" : "object-cover");
-import { formatRelativeTime } from "@/lib/utils";
+import { formatShortDate } from "@/lib/utils";
 import type { Article } from "@/types/content";
 import { cn } from "@/lib/utils";
 
@@ -48,7 +48,7 @@ export function FeatureArticleCard({ article }: { article: Article }) {
         <div className="mt-6 flex items-center gap-3 text-sm text-ink-40">
           <span className="text-ink-80 font-medium">{article.author.name}</span>
           <span>·</span>
-          <span>{formatRelativeTime(article.publishedAt)}</span>
+          <time dateTime={article.publishedAt}>{formatShortDate(article.publishedAt, article.lang)}</time>
           <span>·</span>
           <span>{article.readingTime}</span>
         </div>

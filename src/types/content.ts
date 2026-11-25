@@ -1,3 +1,5 @@
+import type { CountryCode, Desk } from "@/config/countries";
+
 export type Category =
   | "trending"
   | "technology"
@@ -41,13 +43,17 @@ export interface FaqItem {
 
 export interface Article {
   id: string;
+  /** Edition this article belongs to. Mandatory — content never crosses editions. */
+  country: CountryCode;
+  /** BCP-47 language of the article text. */
+  lang: string;
   slug: string;
   title: string;
   /** SEO title if different from the on-page H1. */
   seoTitle?: string;
   subtitle?: string;
   excerpt: string;
-  category: Category;
+  category: Desk;
   categoryName: string;
   categoryAccent?: string;
   tags?: string[];
@@ -84,6 +90,10 @@ export type Merchant =
 
 export interface Product {
   id: string;
+  /** Edition this product (and its affiliate link) is valid for. */
+  country: CountryCode;
+  /** ISO 4217 currency of price/originalPrice. */
+  currency: string;
   slug: string;
   name: string;
   brand: string;
@@ -103,7 +113,7 @@ export interface Product {
   affiliateUrl: string;
   /** Plain merchant product page the affiliate link resolves to. */
   sourceUrl: string;
-  affiliateNetwork: "earnkaro";
+  affiliateNetwork: "earnkaro" | "amazon" | "awin" | "impact" | "cj" | "rakuten" | "admitad" | "commission-factory" | "a8" | "mercadolivre" | "other";
   /** Manufacturer-stated specs, as published on the product page. */
   keyFeatures?: string[];
   verdict?: string;
@@ -113,8 +123,9 @@ export interface Product {
 
 export interface Trend {
   id: string;
+  country: CountryCode;
   topic: string;
-  category: Category;
+  category: Desk | "trending";
   categoryName: string;
   summary?: string;
   direction?: "up" | "steady" | "down";

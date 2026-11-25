@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { AdminPageHeader } from "@/components/admin/AdminShell";
 import { Button } from "@/components/ui/Button";
-import { Sparkles, RefreshCw, Filter, TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { Sparkles, TrendingUp, TrendingDown, Minus } from "lucide-react";
 import { getLiveTrends } from "@/lib/trends/live";
+import { COUNTRIES, isCountryCode } from "@/config/countries";
+import { AdminCountryPicker } from "@/components/admin/AdminCountryPicker";
 import { formatRelativeTime, cn } from "@/lib/utils";
 
 export const metadata = { title: "Trend Radar — Admin" };
@@ -18,36 +20,27 @@ const scoringBreakdown = [
   { label: "Freshness", weight: 5, note: "How new the signal is" },
 ];
 
-export default async function TrendRadarPage() {
-  const trends = await getLiveTrends(40);
+export default async function TrendRadarPage({ searchParams }: { searchParams: Promise<{ country?: string }> }) {
+  const { country } = await searchParams;
+  const active = isCountryCode(country) ? country : "in";
+  const trends = await getLiveTrends(active, 40);
   return (
     <>
       <AdminPageHeader
-        eyebrow="Trend Radar · Live"
-        title="What India is about to want"
-        description="Discovered from Google Trends, news feeds, Reddit, YouTube, brand releases and e-commerce signals."
-        actions={
-          <>
-            <Button variant="soft" size="md" shape="soft">
-              <Filter className="h-4 w-4" />
-              Filters
-            </Button>
-            <Button variant="primary" size="md" shape="soft">
-              <RefreshCw className="h-4 w-4" />
-              Pull now
-            </Button>
-          </>
-        }
+        eyebrow="Global admin · Trend Radar"
+        title={`${COUNTRIES[active].flag} Trend Radar — ${COUNTRIES[active].name}`}
+        description={`Live headlines for this edition from Google News (${COUNTRIES[active].newsScope ? "local English outlets" : `${COUNTRIES[active].name} edition`}). Scores appear once the scoring job stores trends in Supabase.`}
       />
 
       <div className="p-6 lg:p-10 space-y-10">
+        <AdminCountryPicker basePath="/admin/trends" active={active} allowAll={false} />
         {/* Snapshot */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { label: "Tracked topics", value: "1,247" },
-            { label: "Rising (24h)", value: "83" },
-            { label: "Last update", value: "4 min ago" },
-            { label: "Data sources", value: "22" },
+            { label: "Headlines now", value: String(trends.length) },
+            { label: "Desks covered", value: String(new Set(trends.map((t) => t.category)).size) },
+            { label: "Newest", value: trends[0] ? formatRelativeTime(trends[0].discoveredAt) : "—" },
+            { label: "Sources", value: "Google News" },
           ].map((s) => (
             <div key={s.label} className="p-5 bg-paper border border-line">
               <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-2">

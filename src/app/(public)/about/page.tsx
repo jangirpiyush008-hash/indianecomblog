@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { TextPage } from "@/components/layout/TextPage";
 import { brand } from "@/config/brand";
-import { allArticles, allProducts } from "@/lib/content";
+import { everyArticle, everyProduct } from "@/lib/content";
+import { ALL_COUNTRIES } from "@/config/countries";
 import { jsonLd, organizationSchema, personSchema } from "@/lib/seo/schema";
 import { piyush } from "@/content/authors";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `${brand.name} is an independent Indian publication founded and edited by ${brand.founder}. How we research, how we make money, and what we promise.`,
+  description: `${brand.name} is an independent publication with ten country editions, founded and edited by ${brand.founder}. How we research, how we make money, and what we promise.`,
   alternates: { canonical: "/about" },
 };
 
@@ -20,7 +21,7 @@ export default function AboutPage() {
       <TextPage
         eyebrow="About"
         title={`About ${brand.name}`}
-        intro={`${brand.name} explains what's trending in India — technology, AI tools, shopping, money, lifestyle, entertainment and travel — and links every claim to its source.`}
+        intro={`${brand.name} explains what's trending in ${ALL_COUNTRIES.length} countries — technology, AI tools, shopping, money, lifestyle, entertainment and travel — with a local edition for each and a source for every claim.`}
         path="/about"
         updated="2026-11-25"
       >
@@ -31,13 +32,13 @@ export default function AboutPage() {
 
         <h2>What we publish</h2>
         <ul>
-          <li><strong>Explainers</strong> on Indian services and changes — UPI, credit reports, government portals, airport systems — built from the official source.</li>
+          <li><strong>Local explainers</strong> for each edition — credit reports, payments, government portals and more — built from that country's official sources.</li>
           <li><strong>Buying guides and comparisons</strong> that compare products on the manufacturer&apos;s published specs and the store price on a stated date.</li>
           <li><strong>What&apos;s new</strong> — releases and offers worth knowing about this week.</li>
-          <li><strong>A live Trend Radar</strong> of Indian headlines from Google News, each linked to its publisher.</li>
+          <li><strong>A live Trend Radar for every country</strong> — local headlines from Google News and trending searches from Google Trends, each linked to its source.</li>
         </ul>
         <p>
-          Right now that&apos;s {allArticles.length} published stories and {allProducts.length} products we track. We&apos;d rather publish fewer, useful pages than many thin ones.
+          Right now that&apos;s {everyArticle().length} published stories across {ALL_COUNTRIES.length} country editions and {everyProduct().length} products we track. We&apos;d rather publish fewer, useful pages than many thin ones.
         </p>
 
         <h2>How we research</h2>

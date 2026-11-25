@@ -1,10 +1,14 @@
 import Image from "next/image";
-import { formatINR, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import { COUNTRIES, formatPrice, formatDateFor } from "@/config/countries";
+import { DICTIONARIES } from "@/config/dictionaries";
+
+const dictFor = (p: Product) => DICTIONARIES[COUNTRIES[p.country].lang];
+const money = (p: Product, n: number) => formatPrice(n, p.country);
 import type { Product } from "@/types/content";
 import { AffiliateLink } from "./AffiliateLink";
 
-const checked = (iso: string) =>
-  new Date(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Kolkata" });
+const checked = (p: Product) => formatDateFor(p.verifiedAt, p.country, { day: "numeric", month: "short", year: "numeric" });
 
 export function ProductCard({
   product,
@@ -30,7 +34,7 @@ export function ProductCard({
         {product.discount && product.discount >= 10 ? (
           <div className="absolute top-3 left-3 bg-accent text-white px-2 py-1">
             <span className="font-mono text-[10px] uppercase tracking-[0.1em] font-bold">
-              {product.discount}% off MRP
+              −{product.discount}%
             </span>
           </div>
         ) : null}
@@ -54,10 +58,10 @@ export function ProductCard({
         ) : null}
         <div className="flex items-end justify-between mb-4 mt-auto">
           <div>
-            <div className="text-xl font-semibold text-ink">{formatINR(product.price)}</div>
+            <div className="text-xl font-semibold text-ink">{money(product, product.price)}</div>
             {product.originalPrice && product.originalPrice > product.price && (
               <div className="text-xs text-ink-40">
-                MRP <span className="line-through">{formatINR(product.originalPrice)}</span>
+                {dictFor(product).ui.mrp} <span className="line-through">{money(product, product.originalPrice)}</span>
               </div>
             )}
           </div>
@@ -71,10 +75,10 @@ export function ProductCard({
           articleId={articleId}
           className="block w-full py-3 bg-ink text-cream text-center text-sm font-medium tracking-wide hover:bg-accent transition"
         >
-          View on {product.merchantName} →
+          {dictFor(product).ui.viewOn(product.merchantName)} →
         </AffiliateLink>
         <p className="mt-2 text-center font-mono text-[9px] uppercase tracking-[0.15em] text-ink-40">
-          Price checked {checked(product.verifiedAt)} · may change
+          {dictFor(product).ui.priceChecked(checked(product))}
         </p>
       </div>
     </div>
@@ -111,10 +115,10 @@ export function ProductCardHorizontal({
         ) : null}
         <div className="flex flex-wrap items-center gap-3 mt-auto">
           <div>
-            <div className="text-lg font-semibold text-ink">{formatINR(product.price)}</div>
+            <div className="text-lg font-semibold text-ink">{money(product, product.price)}</div>
             {product.originalPrice && product.originalPrice > product.price && (
               <div className="text-xs text-ink-40">
-                MRP <span className="line-through">{formatINR(product.originalPrice)}</span>
+                {dictFor(product).ui.mrp} <span className="line-through">{money(product, product.originalPrice)}</span>
               </div>
             )}
           </div>
@@ -124,7 +128,7 @@ export function ProductCardHorizontal({
             articleId={articleId}
             className="ml-auto px-4 py-2.5 bg-ink text-cream text-sm font-medium hover:bg-accent transition whitespace-nowrap"
           >
-            View on {product.merchantName}
+            {dictFor(product).ui.viewOn(product.merchantName)}
           </AffiliateLink>
         </div>
       </div>

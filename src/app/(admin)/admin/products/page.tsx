@@ -3,7 +3,8 @@ import Image from "next/image";
 import { AdminPageHeader } from "@/components/admin/AdminShell";
 import { Button } from "@/components/ui/Button";
 import { Plus, RefreshCw } from "lucide-react";
-import { allProducts } from "@/lib/content";
+import { everyProduct } from "@/lib/content";
+const allProducts = everyProduct();
 import { formatINR, formatRelativeTime } from "@/lib/utils";
 
 export const metadata = { title: "Products — Admin" };

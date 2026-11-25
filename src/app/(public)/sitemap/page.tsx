@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { brand } from "@/config/brand";
-import { allArticles, collections } from "@/lib/content";
+import { articlesFor } from "@/lib/content";
+import { ALL_COUNTRIES, DESKS, urls } from "@/config/countries";
+import { DICTIONARIES } from "@/config/dictionaries";
 
 export const metadata: Metadata = {
   title: "Sitemap",
@@ -10,46 +12,22 @@ export const metadata: Metadata = {
   alternates: { canonical: "/sitemap" },
 };
 
+const editionSections = ALL_COUNTRIES.map((c) => {
+  const d = DICTIONARIES[c.lang];
+  return {
+    title: `${c.flag} ${c.name}`,
+    links: [
+      { label: d.home.eyebrow, href: urls.home(c.code) },
+      { label: d.sections.trending, href: urls.section(c.code, "trending") },
+      ...DESKS.map((k) => ({ label: d.sections[k], href: urls.section(c.code, k) })),
+      { label: d.sections.deals, href: urls.section(c.code, "deals") },
+      ...articlesFor(c.code).map((a) => ({ label: a.title, href: a.url })),
+    ],
+  };
+});
+
 const sections = [
-  {
-    title: "Main",
-    links: [
-      { label: "Home", href: "/" },
-      { label: "Trending", href: "/trending" },
-      { label: "Newsletter", href: "/newsletter" },
-      { label: "Search", href: "/search" },
-    ],
-  },
-  {
-    title: "Categories",
-    links: [
-      { label: "Technology", href: "/technology" },
-      { label: "AI Tools", href: "/ai-tools" },
-      { label: "Shopping", href: "/shopping" },
-      { label: "Money", href: "/money" },
-      { label: "Lifestyle", href: "/lifestyle" },
-      { label: "Entertainment", href: "/entertainment" },
-      { label: "Travel", href: "/travel" },
-    ],
-  },
-  {
-    title: "Shopping",
-    links: [
-      { label: "Shopping Hub", href: "/shopping" },
-      { label: "Deals", href: "/deals" },
-      { label: "Products we track", href: "/trending-products" },
-      { label: "Buying Guides", href: "/buying-guides" },
-      { label: "Product Comparisons", href: "/product-comparisons" },
-    ],
-  },
-  {
-    title: "Collections",
-    links: collections.map((c) => ({ label: c.title, href: `/collections/${c.slug}` })),
-  },
-  {
-    title: "Articles",
-    links: allArticles.map((a) => ({ label: a.title, href: a.url })),
-  },
+  ...editionSections,
   {
     title: "About",
     links: [
@@ -57,6 +35,7 @@ const sections = [
       { label: "Authors", href: "/authors" },
       { label: "Contact", href: "/contact" },
       { label: "Advertise", href: "/advertise" },
+      { label: "Newsletter", href: "/newsletter" },
     ],
   },
   {
@@ -84,7 +63,7 @@ export default function SitemapPage() {
             Every page on {brand.name}
           </h1>
           <p className="mt-6 text-lg text-ink-60">
-            An HTML sitemap for humans. The XML version for search engines lives at <Link href="/sitemap.xml" className="underline hover:text-accent">/sitemap.xml</Link>.
+            An HTML sitemap for humans. The XML version for search engines lives at <a href="/sitemap.xml" className="underline hover:text-accent">/sitemap.xml</a>.
           </p>
         </Container>
       </section>
