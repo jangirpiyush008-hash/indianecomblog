@@ -943,6 +943,72 @@ const drafts: Draft[] = [
     ],
     methodology: "Reunido a partir da Agência Senado, Exame e Canaltech, conferido em 27 de novembro de 2026.",
   },
+  {
+    id: "br-farmacia-popular-gratuito",
+    slug: "farmacia-popular-remedios-gratis-como-retirar",
+    title: "Farmácia Popular: todos os remédios do programa são grátis — veja como retirar",
+    seoTitle: "Farmácia Popular Grátis: Como Retirar Remédios e Fraldas",
+    subtitle: "Desde fevereiro de 2025, 100% dos itens do programa saem sem custo. Basta receita, documento e CPF.",
+    excerpt:
+      "Desde fevereiro de 2025 todos os medicamentos e insumos do Farmácia Popular são gratuitos. O que levar, quem pode retirar, fraldas e absorventes.",
+    category: "lifestyle",
+    tags: ["Saúde", "SUS", "Farmácia Popular", "Remédios"],
+    publishedAt: "2026-11-27T14:00:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Cartelas de comprimidos e cápsulas",
+    keyTakeaways: [
+      "Desde 14 de fevereiro de 2025, 100% dos medicamentos e insumos do Farmácia Popular são gratuitos.",
+      "A lista inclui remédios para hipertensão, diabetes, asma, osteoporose, anticoncepcionais e outros, além de fraldas geriátricas e absorventes.",
+      "Qualquer pessoa com receita válida — do SUS ou particular — pode retirar; não precisa estar no CadÚnico.",
+      "Leve documento com foto, CPF e a receita a uma farmácia com o selo 'Aqui tem Farmácia Popular'.",
+    ],
+    body: [
+      { type: "p", text: "Resposta rápida: vá a uma farmácia credenciada com receita, documento com foto e CPF, e peça o medicamento pelo Farmácia Popular. Se ele estiver na lista do programa, você não paga nada." },
+      { type: "h2", id: "lista", text: "O que está na lista" },
+      {
+        type: "table",
+        head: ["Grupo", "Exemplos"],
+        rows: [
+          ["Hipertensão", "Losartana, captopril, hidroclorotiazida"],
+          ["Diabetes", "Metformina, glibenclamida, insulinas"],
+          ["Asma", "Salbutamol, beclometasona"],
+          ["Outros", "Anticoncepcionais, osteoporose, Parkinson, glaucoma, rinite, colesterol"],
+          ["Insumos", "Fraldas geriátricas e absorventes higiênicos"],
+        ],
+      },
+      { type: "p", text: "A lista oficial é atualizada pelo Ministério da Saúde; confira os itens e as dosagens em gov.br/saude antes de ir à farmácia." },
+      { type: "h2", id: "retirar", text: "Como retirar" },
+      {
+        type: "ol",
+        items: [
+          "Procure uma farmácia com o selo 'Aqui tem Farmácia Popular'.",
+          "Leve a receita (válida, do SUS ou particular), documento oficial com foto e CPF.",
+          "Se for retirar para outra pessoa, leve também os documentos dela e uma procuração quando exigida.",
+          "Assine o cupom vinculado e guarde a via.",
+        ],
+      },
+      { type: "h2", id: "fraldas", text: "Fraldas e absorventes" },
+      {
+        type: "ul",
+        items: [
+          "Fraldas geriátricas: para pessoas a partir de 60 anos ou com deficiência, com receita ou laudo.",
+          "Absorventes: para pessoas de baixa renda cadastradas, com autorização emitida no app Meu SUS Digital.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "O Farmácia Popular é de graça?", answer: "Sim. Desde fevereiro de 2025, todos os medicamentos e insumos do programa são gratuitos." },
+      { question: "Preciso estar no CadÚnico?", answer: "Não para os medicamentos. Basta receita válida, documento com foto e CPF." },
+      { question: "Receita de médico particular vale?", answer: "Sim, receitas do SUS ou particulares são aceitas." },
+      { question: "Como pegar absorvente pelo Farmácia Popular?", answer: "Emitindo a autorização no app Meu SUS Digital e levando-a à farmácia credenciada com documento e CPF." },
+    ],
+    sources: [
+      { name: "Agência Gov — Saiba como retirar medicamentos e insumos pelo Farmácia Popular", url: "https://agenciagov.ebc.com.br/noticias/202503/saiba-como-retirar-medicamentos-e-insumos-pelo-farmacia-popular" },
+      { name: "Agência Brasil — Farmácia Popular: remédios e fraldas geriátricas gratuitas", url: "https://agenciabrasil.ebc.com.br/saude/noticia/2025-02/farmacia-popular-saiba-como-retirar-remedios-e-fraldas-geriatricas-gratuitas" },
+      { name: "O Liberal — Farmácia Popular: como pegar remédios de graça", url: "https://www.oliberal.com/saude/farmacia-popular-saiba-como-pegar-remedios-de-graca-1.836232" },
+    ],
+    methodology: "Reunido a partir da Agência Gov, Agência Brasil e O Liberal, conferido em 27 de novembro de 2026. Confirme a lista oficial no gov.br/saude.",
+  },
 ];
 
 export const articles = buildArticles("br", drafts);

@@ -955,6 +955,72 @@ const drafts: Draft[] = [
     ],
     methodology: "Synthèse d'après l'Institut Montaigne, France Travail et OpenClassrooms, vérifiée le 27 novembre 2026.",
   },
+  {
+    id: "fr-mon-soutien-psy",
+    slug: "mon-soutien-psy-12-seances-remboursees",
+    title: "Mon soutien psy : 12 séances chez le psychologue remboursées, sans ordonnance",
+    seoTitle: "Mon soutien psy : 12 séances remboursées, sans ordonnance",
+    subtitle: "Depuis 2025, plus besoin de passer par le médecin. La séance coûte 50 €, remboursée à 60 % par l'Assurance Maladie.",
+    excerpt:
+      "Mon soutien psy rembourse jusqu'à 12 séances par an chez un psychologue partenaire, sans prescription. Tarif, remboursement, mutuelle et démarches.",
+    category: "lifestyle",
+    tags: ["Santé mentale", "Assurance Maladie", "Santé", "Remboursement"],
+    publishedAt: "2026-11-27T18:00:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Deux mains qui se tendent l'une vers l'autre",
+    keyTakeaways: [
+      "Jusqu'à 12 séances par année civile chez un psychologue partenaire du dispositif.",
+      "Plus besoin d'ordonnance : on peut prendre rendez-vous directement.",
+      "Depuis le décret du 15 mai 2025, la séance est fixée à 50 €, sans dépassement d'honoraires.",
+      "L'Assurance Maladie rembourse 60 % (30 €) ; la complémentaire santé peut couvrir le reste.",
+    ],
+    body: [
+      { type: "p", text: "En bref : cherchez un psychologue partenaire dans l'annuaire sur ameli.fr ou monsoutienpsy.ameli.fr, prenez rendez-vous et présentez votre carte Vitale. Vous payez 50 € et êtes remboursé 30 € par l'Assurance Maladie, le reste par votre mutuelle selon votre contrat." },
+      { type: "h2", id: "qui", text: "Pour qui ?" },
+      {
+        type: "ul",
+        items: [
+          "Toute personne à partir de 3 ans qui traverse une souffrance psychique légère à modérée (anxiété, déprime, stress…).",
+          "Les mineurs viennent avec l'accord d'un parent.",
+          "Les situations graves (idées suicidaires, troubles sévères) relèvent d'un médecin ou d'un psychiatre.",
+        ],
+      },
+      { type: "h2", id: "prix", text: "Combien ça coûte" },
+      {
+        type: "table",
+        head: ["", "Montant"],
+        rows: [
+          ["Prix d'une séance", "50 €, sans dépassement"],
+          ["Remboursement Assurance Maladie (60 %)", "30 €"],
+          ["Part complémentaire santé (40 %)", "20 €, selon le contrat"],
+        ],
+      },
+      { type: "h2", id: "demarche", text: "Les démarches" },
+      {
+        type: "ol",
+        items: [
+          "Trouvez un psychologue partenaire dans l'annuaire officiel.",
+          "Prenez rendez-vous directement, sans passer par votre médecin.",
+          "Présentez votre carte Vitale à chaque séance.",
+          "Le psychologue peut vous orienter vers un médecin si nécessaire.",
+        ],
+      },
+      { type: "callout", title: "Besoin d'aide tout de suite ?", text: "En cas de pensées suicidaires, appelez le 3114, numéro national de prévention du suicide, gratuit et ouvert 24 h/24." },
+    ],
+    faq: [
+      { question: "Faut-il une ordonnance pour Mon soutien psy ?", answer: "Non. Depuis 2025, on peut consulter un psychologue partenaire directement." },
+      { question: "Combien de séances sont remboursées ?", answer: "Jusqu'à 12 séances par année civile." },
+      { question: "Quel est le prix d'une séance ?", answer: "50 €, sans dépassement d'honoraires, depuis le décret du 15 mai 2025." },
+      { question: "Combien rembourse l'Assurance Maladie ?", answer: "60 %, soit 30 € par séance ; la complémentaire peut prendre en charge le reste." },
+      { question: "Comment trouver un psychologue partenaire ?", answer: "Dans l'annuaire officiel Mon soutien psy sur ameli.fr." },
+    ],
+    sources: [
+      { name: "info.gouv.fr — Mon soutien psy : 12 séances remboursées", url: "https://www.info.gouv.fr/actualite/mon-soutien-psy-12-seances-remboursees-par-an" },
+      { name: "Service-Public.fr — Santé mentale : évolution du dispositif", url: "https://www.service-public.gouv.fr/particuliers/actualites/A17461" },
+      { name: "Vidal — Évolution du dispositif Mon soutien psy", url: "https://www.vidal.fr/actualites/31366-evolution-du-dispositif-mon-soutien-psy-des-seances-en-plus-et-un-acces-simplifie.html" },
+    ],
+    methodology: "Synthèse d'après info.gouv.fr, Service-Public.fr et Vidal, vérifiée le 27 novembre 2026.",
+  },
 ];
 
 export const articles = buildArticles("fr", drafts);

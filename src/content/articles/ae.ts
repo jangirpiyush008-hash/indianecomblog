@@ -929,6 +929,127 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from UAE news fact-checks and coverage of the Stargate UAE announcement, checked 27 November 2026. Check OpenAI's pricing page for current plans.",
   },
+  {
+    id: "ae-single-use-plastic-ban-2026",
+    slug: "uae-single-use-plastic-ban-2026-what-changes",
+    title: "UAE single-use plastic ban 2026: which items are now banned",
+    seoTitle: "UAE Single-Use Plastic Ban 2026: Items Banned From January",
+    subtitle: "From 1 January 2026, plastic cups, lids, cutlery and plates joined the ban. Bags were already gone.",
+    excerpt:
+      "The UAE's single-use plastic ban reached its final phase on 1 January 2026: cups, lids, cutlery and plates. The full list, timeline and what to use.",
+    category: "lifestyle",
+    tags: ["Environment", "Plastic Ban", "Dubai", "Shopping"],
+    publishedAt: "2026-11-27T19:30:00+04:00",
+    heroImage: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Plastic bottles and waste washed up on a beach",
+    keyTakeaways: [
+      "Single-use plastic shopping bags were banned across the UAE from 1 January 2024.",
+      "In Dubai, plastic stirrers, straws, Styrofoam cups and containers, cotton buds and table covers went in 2025.",
+      "From 1 January 2026: single-use plastic cups and lids, cutlery (including chopsticks), plates and tableware.",
+      "The UAE-wide list also covers straws, stirrers and food containers; check your emirate's rules for exceptions.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: shops, cafés and delivery apps in the UAE can no longer hand out single-use plastic bags, cups, lids, cutlery or plates. Carry a reusable bag and cup, and expect paper, wood or reusable alternatives instead." },
+      { type: "h2", id: "timeline", text: "The timeline" },
+      {
+        type: "table",
+        head: ["Date", "What was banned"],
+        rows: [
+          ["1 January 2024", "Single-use plastic shopping bags (UAE-wide)"],
+          ["1 January 2025", "Plastic stirrers, straws, Styrofoam cups and food containers, cotton buds, table covers (Dubai)"],
+          ["1 January 2026", "Plastic cups and lids, cutlery, plates and tableware (final phase)"],
+        ],
+      },
+      { type: "h2", id: "you", text: "What it means for you" },
+      {
+        type: "ul",
+        items: [
+          "Bring a reusable shopping bag; stores may charge for alternatives.",
+          "Carry a reusable bottle and coffee cup.",
+          "Choose 'no cutlery' when ordering delivery.",
+          "Recycle plastic bottles at reverse-vending machines and recycling points.",
+        ],
+      },
+      { type: "h2", id: "business", text: "For businesses" },
+      { type: "p", text: "Businesses that break the rules can be fined, and repeat fines rise. Retailers told Gulf News they had stocked eco-friendly alternatives and pledged to keep prices stable. Check with Dubai Municipality or your emirate's authority for exemptions, such as some medical items." },
+    ],
+    faq: [
+      { question: "Are plastic bags banned in the UAE?", answer: "Yes. Single-use plastic shopping bags have been banned UAE-wide since 1 January 2024." },
+      { question: "What plastic items are banned from January 2026?", answer: "Single-use plastic cups and lids, cutlery, plates and tableware, completing the phased ban." },
+      { question: "Are plastic straws banned in Dubai?", answer: "Yes. Dubai banned plastic straws and stirrers in 2025." },
+      { question: "Can shops charge for paper bags?", answer: "Yes, shops may charge for alternatives such as paper or reusable bags." },
+    ],
+    sources: [
+      { name: "Dubai Municipality — Final phase of single-use plastic ban from 2026", url: "https://www.dm.gov.ae/dubai-to-enforce-final-phase-of-single-use-plastic-ban-from-2026/" },
+      { name: "Khaleej Times — Dubai single-use plastic ban final phase guide", url: "https://www.khaleejtimes.com/uae/dubai-single-use-plastic-ban-final-phase-january-2026-awareness-guide" },
+      { name: "The National — Which single-use plastic products are banned from January", url: "https://www.thenationalnews.com/news/uae/2025/12/16/which-single-use-plastic-products-will-be-banned-in-the-uae-from-january/" },
+    ],
+    methodology: "Compiled from Dubai Municipality and UAE news coverage, checked 27 November 2026.",
+  },
+  {
+    id: "ae-premarital-genetic-testing",
+    slug: "uae-premarital-genetic-testing-emiratis-explained",
+    title: "Premarital genetic testing in the UAE: what Emirati couples need to know",
+    seoTitle: "UAE Premarital Genetic Testing: What Emirati Couples Know",
+    subtitle: "Since January 2025, genetic tests covering 570 genes are part of mandatory premarital screening for Emiratis.",
+    excerpt:
+      "Premarital genetic testing became mandatory for Emiratis in January 2025, covering 570 genes and 840+ conditions. What's tested and what results mean.",
+    category: "lifestyle",
+    tags: ["Health", "Marriage", "Genetics", "Family"],
+    publishedAt: "2026-11-27T19:00:00+04:00",
+    heroImage: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A pipette filling sample tubes in a laboratory",
+    keyTakeaways: [
+      "The Ministry of Health and Prevention made genetic testing part of premarital screening for Emiratis from early January 2025.",
+      "The panel covers 570 genes linked to more than 840 inherited conditions.",
+      "Abu Dhabi piloted it with 800+ couples; 86% were genetically compatible and 14% needed extra counselling.",
+      "Results don't stop a marriage — couples at risk get genetic counselling and family-planning options.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: Emirati couples planning to marry now take a genetic test as part of the standard premarital screening. If both carry a variant for the same condition, they're offered confidential counselling about the risks and options. The decision to marry stays with the couple." },
+      { type: "h2", id: "what", text: "What's tested" },
+      {
+        type: "ul",
+        items: [
+          "570 genes associated with more than 840 inherited conditions.",
+          "The conditions are serious inherited disorders that a child can inherit when both parents carry the same variant.",
+          "It sits alongside existing premarital checks for blood disorders and infectious diseases.",
+        ],
+      },
+      { type: "h2", id: "results", text: "What the results mean" },
+      {
+        type: "table",
+        head: ["Result", "What happens"],
+        rows: [
+          ["Compatible (most couples)", "No further action"],
+          ["Both carry the same variant", "Genetic counselling and family-planning options"],
+        ],
+      },
+      { type: "p", text: "A Dubai study of the first 1,000 couples reported in Nature Medicine found 8% were carriers of the same harmful variant — information that helps families plan." },
+      { type: "h2", id: "how", text: "How to book" },
+      {
+        type: "ol",
+        items: [
+          "Book premarital screening through your emirate's health authority or MOHAP centre.",
+          "Allow time — genetic results take longer than standard blood tests.",
+          "Attend counselling if offered; it's confidential.",
+          "Bring the screening certificate when you register the marriage.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Is premarital genetic testing mandatory in the UAE?", answer: "Yes, for Emirati citizens, as part of premarital screening since early January 2025." },
+      { question: "How many genes are tested?", answer: "570 genes linked to more than 840 conditions, according to the Ministry of Health and Prevention." },
+      { question: "Can a couple still marry if results show a risk?", answer: "Yes. Couples receive counselling and options; the decision is theirs." },
+      { question: "Are results confidential?", answer: "Yes. Results and counselling are handled confidentially by health authorities." },
+    ],
+    sources: [
+      { name: "MOHAP — Mandatory genetic testing in premarital screening for Emiratis", url: "https://mohap.gov.ae/en/w/mohap-announces-mandatory-genetic-testing-as-part-of-premarital-screening-for-emiratis-starting-early-january-2025" },
+      { name: "The National — Mandated premarital genetic testing from January", url: "https://www.thenationalnews.com/news/uae/2024/12/25/uae-to-introduce-mandated-premarital-genetic-testing-for-emiratis-from-january" },
+      { name: "Gulf News — Genetic tests part of mandatory premarital screening", url: "https://gulfnews.com/uae/health/uae-genetic-tests-to-be-part-of-mandatory-pre-marital-screening-from-2025-1.104625620" },
+    ],
+    methodology: "Compiled from MOHAP and UAE news coverage, checked 27 November 2026. Speak to a doctor or genetic counsellor about your situation.",
+  },
 ];
 
 export const articles = buildArticles("ae", drafts);

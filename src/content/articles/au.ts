@@ -833,6 +833,131 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from eSafety Commissioner media releases, checked 27 November 2026. If you are in danger, call 000.",
   },
+  {
+    id: "au-sunscreen-spf-tests",
+    slug: "sunscreen-spf-choice-test-tga-what-to-buy",
+    title: "Can you trust your sunscreen's SPF? What the CHOICE tests and TGA found",
+    seoTitle: "Sunscreen SPF Tests: CHOICE Results, TGA Review, What to Do",
+    subtitle: "16 of 20 sunscreens missed their SPF claim in CHOICE's 2025 test. Here's how to stay protected this summer.",
+    excerpt:
+      "CHOICE found 16 of 20 sunscreens missed their SPF claims, and the TGA flagged 21 products. How to check yours, the reforms coming, and sun-safe habits.",
+    category: "lifestyle",
+    tags: ["Sunscreen", "Health", "Summer", "CHOICE"],
+    publishedAt: "2026-11-27T17:00:00+11:00",
+    heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A sunny beach with waves at sunrise",
+    keyTakeaways: [
+      "In June 2025, CHOICE found 16 of 20 SPF 50+ sunscreens failed to match their SPF claims; one returned SPF 4.",
+      "The TGA investigated and later advised consumers to find alternatives to 21 products unlikely to meet their claims.",
+      "The TGA has proposed tougher testing rules; in October 2026 CHOICE urged it to speed them up.",
+      "Sunscreen is one layer — still use shade, a hat, clothing and sunglasses when the UV index is 3 or above.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: check your sunscreen against the TGA's list of products to avoid, choose a broad-spectrum SPF 50+ from a brand not on it, apply plenty (about a teaspoon per limb), and reapply every two hours and after swimming. Don't rely on sunscreen alone." },
+      { type: "h2", id: "found", text: "What the tests found" },
+      {
+        type: "ul",
+        items: [
+          "CHOICE's June 2025 test: 16 of 20 sunscreens didn't meet their SPF claim.",
+          "One product, Lean Screen, was voluntarily recalled after low SPF results.",
+          "The TGA said SPF testing varies between labs — a known problem worldwide — and is looking at more reliable methods.",
+          "A Consumer NZ test in October 2026 found 6 of 7 products also sold in Australia missed their claims.",
+        ],
+      },
+      { type: "h2", id: "check", text: "How to check your sunscreen" },
+      {
+        type: "ol",
+        items: [
+          "Look up the product on the TGA's sunscreen SPF testing page.",
+          "If it's listed, switch to another product until the review is finished.",
+          "Check for an AUST L number — it shows the sunscreen is registered as a therapeutic good.",
+          "Check the expiry date; old sunscreen loses strength.",
+        ],
+      },
+      { type: "h2", id: "habits", text: "Sun-safe habits that don't depend on SPF" },
+      {
+        type: "table",
+        head: ["Step", "Why"],
+        rows: [
+          ["Slip on clothing", "Covers skin reliably"],
+          ["Slop on sunscreen", "Reapply every 2 hours"],
+          ["Slap on a hat", "Protects face, ears and neck"],
+          ["Seek shade", "Especially in the middle of the day"],
+          ["Slide on sunglasses", "Protects your eyes"],
+        ],
+      },
+      { type: "p", text: "Use sun protection whenever the UV index is 3 or above — check it in the SunSmart app or on the Bureau of Meteorology website." },
+    ],
+    faq: [
+      { question: "Which sunscreens failed the CHOICE test?", answer: "CHOICE named 16 of 20 SPF 50+ products. The TGA keeps the official list of products consumers should consider avoiding." },
+      { question: "Is my sunscreen still safe to use?", answer: "Sunscreens aren't unsafe, but some may protect less than labelled. If yours is on the TGA's list, consider switching." },
+      { question: "How much sunscreen should I use?", answer: "About a teaspoon for each arm, leg, front, back and face (including ears and neck) — roughly 35 ml for an adult." },
+      { question: "What is the TGA doing about sunscreen testing?", answer: "It has reviewed affected products and proposed tougher testing requirements." },
+    ],
+    sources: [
+      { name: "CHOICE — We tested the SPF claims of 20 sunscreens. 16 failed", url: "https://www.choice.com.au/health-and-body/beauty-and-personal-care/skin-care-and-cosmetics/articles/sunscreen-test" },
+      { name: "TGA — Sunscreen SPF testing: information for consumers", url: "https://www.tga.gov.au/news/news/sunscreen-spf-testing-information-consumers" },
+      { name: "CHOICE — Consumer NZ test raises concerns about sunscreens in Australia (Oct 2026)", url: "https://www.choice.com.au/about-us/media/media-releases/2026/october/consumer-nz-test-raises-concerns-about-sunscreens-available-in-australia-choice" },
+    ],
+    methodology: "Compiled from CHOICE tests and TGA statements, checked 27 November 2026.",
+  },
+  {
+    id: "au-christmas-postage-dates-2026",
+    slug: "australia-post-christmas-sending-dates-2026",
+    title: "Australia Post Christmas 2026: the last days to send cards and parcels",
+    seoTitle: "Australia Post Christmas 2026 Last Sending Dates",
+    subtitle: "Cards interstate by 18 December, within your state by 21 December. Parcels and international mail have their own cut-offs.",
+    excerpt:
+      "Australia Post's Christmas 2026 cut-offs: cards interstate by 18 Dec, same state by 21 Dec. Parcel, Express and overseas deadlines, plus scam warnings.",
+    category: "lifestyle",
+    tags: ["Christmas", "Australia Post", "Post", "Holidays"],
+    publishedAt: "2026-11-27T16:30:00+11:00",
+    heroImage: "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A person holding a wrapped Christmas parcel",
+    keyTakeaways: [
+      "Cards and letters by regular post: 18 December interstate, 21 December within the same state.",
+      "Parcel Post within the same state: about 21–22 December; Express Post: about 22–23 December depending on where you are.",
+      "Items to or from WA and the NT have earlier Express cut-offs.",
+      "International deadlines started in early December for some destinations — check your country now.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: send interstate cards by Friday 18 December and same-state cards by Monday 21 December. Get parcels in the same week, and use Express Post if you're cutting it fine. Check Australia Post's Christmas page for your exact route." },
+      { type: "h2", id: "domestic", text: "Domestic cut-offs" },
+      {
+        type: "table",
+        head: ["Service", "Same state", "Interstate"],
+        rows: [
+          ["Cards and letters (regular post)", "21 December", "18 December"],
+          ["Parcel Post", "About 21–22 December", "Earlier — check your route"],
+          ["Express Post", "About 22–23 December", "Earlier for WA and NT"],
+        ],
+      },
+      { type: "p", text: "Items from South Australia, Tasmania and the Northern Territory often travel interstate first, so allow extra days. Remote and rural deliveries can also take longer." },
+      { type: "h2", id: "international", text: "Sending overseas" },
+      { type: "p", text: "International cut-offs vary by country and service, and some Express and Standard deadlines fell in early to mid-December. Look up your destination on Australia Post's Christmas page before posting." },
+      { type: "h2", id: "tips", text: "Tips" },
+      {
+        type: "ul",
+        items: [
+          "Buy postage online and use a Parcel Locker to avoid queues.",
+          "Double-check the postcode — it's the main cause of delays.",
+          "Track parcels in the AusPost app.",
+          "Be wary of texts about a 'held parcel' fee. Australia Post doesn't text links asking for payment; report scams to Scamwatch.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When is the last day to post Christmas cards in Australia in 2026?", answer: "18 December for interstate and 21 December within the same state, by regular post." },
+      { question: "What's the latest I can send a parcel before Christmas?", answer: "Express Post within the same state is usually the last option, around 22–23 December. Check the exact date for your route." },
+      { question: "Are WA and NT deadlines different?", answer: "Yes. Express cut-offs for WA and the NT are earlier." },
+      { question: "Is a text about an unpaid Australia Post fee real?", answer: "Treat it as a scam. Check tracking in the official app instead of tapping links." },
+    ],
+    sources: [
+      { name: "Australia Post — Christmas sending dates", url: "https://auspost.com.au/christmas" },
+      { name: "SBS News — Australia Post Christmas cut-off dates 2026", url: "https://www.sbs.com.au/news/article/australia-post-christmas-cut-off-dates-2026/54hwr4304" },
+    ],
+    methodology: "Compiled from Australia Post and SBS, checked 27 November 2026. Some parcel dates vary by route; use Australia Post's tool for your exact deadline.",
+  },
 ];
 
 export const articles = buildArticles("au", drafts);
