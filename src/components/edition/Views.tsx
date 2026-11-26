@@ -251,6 +251,8 @@ function ProductGrid({ products, placement }: { products: Product[]; placement: 
 
 export function ShoppingView({ e }: { e: Edition }) {
   const guides = guideArticles(e.code);
+  const guideIds = new Set(guides.map((g) => g.id));
+  const explainers = articlesByDesk(e.code, "shopping").filter((a) => !guideIds.has(a.id));
   const products = productsFor(e.code);
   const top = [...products].sort((a, b) => (b.discount ?? 0) - (a.discount ?? 0)).slice(0, 4);
   return (
@@ -263,6 +265,16 @@ export function ShoppingView({ e }: { e: Edition }) {
             <SectionHeading eyebrow={e.dict.sections.guides} title={e.dict.sections.guides} seeMoreHref={urls.section(e.code, "guides")} seeMoreLabel={e.dict.ui.seeAll} />
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {guides.map((a) => <ArticleCard key={a.id} article={a} />)}
+            </div>
+          </Container>
+        </section>
+      )}
+      {explainers.length > 0 && (
+        <section className="py-14 border-b border-line">
+          <Container size="xl">
+            <SectionHeading eyebrow={e.dict.sections.shopping} title={e.dict.ui.explainers} />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {explainers.map((a) => <ArticleCard key={a.id} article={a} />)}
             </div>
           </Container>
         </section>
@@ -308,6 +320,7 @@ export function DealsView({ e, type }: { e: Edition; type?: string }) {
           </nav>
           <section className="py-14">
             <Container size="xl">
+              <h2 className="sr-only">{active ?? e.dict.sections.deals}</h2>
               <ProductGrid products={list} placement="deals" />
               <p className="mt-10 text-sm text-ink-60 max-w-2xl">
                 {e.dict.ui.affiliateNote} <Link href="/affiliate-disclosure" className="underline">{e.dict.ui.howWeMakeMoney}</Link>

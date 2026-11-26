@@ -139,9 +139,9 @@ export function ArticleListCard({
           color={article.categoryAccent}
           className="mb-2"
         />
-        <h4 className="font-editorial text-lg font-semibold leading-tight text-ink group-hover:text-accent-dark transition-colors">
+        <h3 className="font-editorial text-lg font-semibold leading-tight text-ink group-hover:text-accent-dark transition-colors">
           {article.title}
-        </h4>
+        </h3>
         <div className="mt-2 text-[11px] font-mono uppercase tracking-[0.15em] text-ink-40">
           {article.readingTime}
         </div>
@@ -171,9 +171,9 @@ export function ArticleHCard({ article }: { article: Article }) {
           color={article.categoryAccent}
           className="mb-2"
         />
-        <h4 className="font-editorial text-lg md:text-xl font-semibold leading-tight text-ink group-hover:text-accent-dark transition-colors line-clamp-2">
+        <h3 className="font-editorial text-lg md:text-xl font-semibold leading-tight text-ink group-hover:text-accent-dark transition-colors line-clamp-2">
           {article.title}
-        </h4>
+        </h3>
         <p className="mt-2 text-sm text-ink-60 line-clamp-2 hidden md:block">
           {article.excerpt}
         </p>

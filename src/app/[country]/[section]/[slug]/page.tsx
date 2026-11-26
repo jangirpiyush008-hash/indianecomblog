@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { snippetDescription, snippetTitle } from "@/lib/seo/meta";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -36,15 +37,16 @@ export async function generateMetadata({
   const { article } = await load(params);
   if (!article) return {};
   const title = article.seoTitle ?? article.title;
+  const description = snippetDescription(article.excerpt);
   return {
-    title: { absolute: title },
-    description: article.excerpt,
+    title: { absolute: snippetTitle(title, article.title) },
+    description,
     keywords: article.tags,
     authors: [{ name: article.author.name, url: `/authors/${article.author.slug}` }],
     alternates: { canonical: article.url },
     openGraph: {
       title,
-      description: article.excerpt,
+      description,
       url: article.url,
       locale: article.lang.replace("-", "_"),
       images: [{ url: article.heroImage, alt: article.heroImageAlt ?? article.title }],
@@ -55,7 +57,7 @@ export async function generateMetadata({
       section: article.categoryName,
       tags: article.tags,
     },
-    twitter: { card: "summary_large_image", title, description: article.excerpt, images: [article.heroImage] },
+    twitter: { card: "summary_large_image", title, description, images: [article.heroImage] },
   };
 }
 
