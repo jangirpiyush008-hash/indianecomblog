@@ -54,6 +54,7 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const product = findProductAnyEdition(url.searchParams.get("p") ?? "");
   if (!product) return NextResponse.json({ error: "Unknown product" }, { status: 404 });
+  if (!product.affiliateUrl) return NextResponse.json({ error: "No affiliate link" }, { status: 404 });
   const dest = new URL(product.affiliateUrl);
   if (!ALLOWED_HOSTS.has(dest.hostname)) {
     return NextResponse.json({ error: "Destination not allowed" }, { status: 400 });

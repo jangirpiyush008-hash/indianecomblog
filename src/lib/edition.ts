@@ -61,7 +61,7 @@ export function headerProps(code?: CountryCode): HeaderProps {
     ],
     highlight: { label: d.sections.deals, href: urls.section(code, "deals") },
     topLinks: [
-      { label: d.ui.trendingNow, href: urls.section(code, "trending") },
+      { label: d.ui.trendingNow, href: urls.section(code, "trending"), live: true },
       { label: d.sections.guides, href: urls.section(code, "guides") },
     ],
     searchAction: urls.section(code, "search"),

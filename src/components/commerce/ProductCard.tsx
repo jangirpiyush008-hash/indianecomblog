@@ -2,9 +2,28 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { COUNTRIES, formatPrice, formatDateFor } from "@/config/countries";
 import { DICTIONARIES } from "@/config/dictionaries";
+import { COMMERCE_COPY } from "@/config/commerce-copy";
 
 const dictFor = (p: Product) => DICTIONARIES[COUNTRIES[p.country].lang];
 const money = (p: Product, n: number) => formatPrice(n, p.country);
+const commerce = (p: Product) => COMMERCE_COPY[COUNTRIES[p.country].lang];
+
+/** Verified price, or an honest "check current price" when we haven't verified one. */
+function Price({ product, size }: { product: Product; size: string }) {
+  if (product.price == null) {
+    return <div className="text-sm font-medium text-ink-60">{commerce(product).checkPrice}</div>;
+  }
+  return (
+    <div>
+      <div className={`${size} font-semibold text-ink`}>{money(product, product.price)}</div>
+      {product.originalPrice != null && product.originalPrice > product.price && (
+        <div className="text-xs text-ink-40">
+          {dictFor(product).ui.mrp} <span className="line-through">{money(product, product.originalPrice)}</span>
+        </div>
+      )}
+    </div>
+  );
+}
 import type { Product } from "@/types/content";
 import { AffiliateLink } from "./AffiliateLink";
 
@@ -57,14 +76,7 @@ export function ProductCard({
           </ul>
         ) : null}
         <div className="flex items-end justify-between mb-4 mt-auto">
-          <div>
-            <div className="text-xl font-semibold text-ink">{money(product, product.price)}</div>
-            {product.originalPrice && product.originalPrice > product.price && (
-              <div className="text-xs text-ink-40">
-                {dictFor(product).ui.mrp} <span className="line-through">{money(product, product.originalPrice)}</span>
-              </div>
-            )}
-          </div>
+          <Price product={product} size="text-xl" />
           <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-ink-40">
             {product.merchantName}
           </span>
@@ -77,9 +89,11 @@ export function ProductCard({
         >
           {dictFor(product).ui.viewOn(product.merchantName)} →
         </AffiliateLink>
-        <p className="mt-2 text-center font-mono text-[9px] uppercase tracking-[0.15em] text-ink-40">
-          {dictFor(product).ui.priceChecked(checked(product))}
-        </p>
+        {product.price != null && (
+          <p className="mt-2 text-center font-mono text-[9px] uppercase tracking-[0.15em] text-ink-40">
+            {dictFor(product).ui.priceChecked(checked(product))}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -114,14 +128,7 @@ export function ProductCardHorizontal({
           <p className="text-xs text-ink-60 mb-2 line-clamp-1">{product.keyFeatures.slice(0, 3).join(" · ")}</p>
         ) : null}
         <div className="flex flex-wrap items-center gap-3 mt-auto">
-          <div>
-            <div className="text-lg font-semibold text-ink">{money(product, product.price)}</div>
-            {product.originalPrice && product.originalPrice > product.price && (
-              <div className="text-xs text-ink-40">
-                {dictFor(product).ui.mrp} <span className="line-through">{money(product, product.originalPrice)}</span>
-              </div>
-            )}
-          </div>
+          <Price product={product} size="text-lg" />
           <AffiliateLink
             product={product}
             placement={placement}

@@ -12,7 +12,7 @@ export type HeaderProps = {
   tagline: string;
   nav: { label: string; href: string }[];
   highlight?: { label: string; href: string };
-  topLinks: { label: string; href: string }[];
+  topLinks: { label: string; href: string; live?: boolean }[];
   searchAction?: string;
   labels: { search: string; searchPlaceholder: string; subscribe: string; menu: string; close: string; edition: string };
   locale: string;
@@ -37,7 +37,8 @@ export function Header(p: HeaderProps) {
             </div>
             <div className="flex items-center gap-6 ml-auto">
               {p.topLinks.map((l) => (
-                <Link key={l.href} href={l.href} className="hover:text-accent transition">
+                <Link key={l.href} href={l.href} className={l.live ? "inline-flex items-center gap-2 text-accent hover:text-cream transition" : "hover:text-accent transition"}>
+                  {l.live && <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" aria-hidden />}
                   {l.label}
                 </Link>
               ))}

@@ -104,10 +104,10 @@ export function productSchema(product: Product) {
     image: product.image,
     description: product.keyFeatures?.join(", ") || product.name,
     brand: { "@type": "Brand", name: product.brand },
-    offers: {
+    offers: product.price == null ? undefined : {
       "@type": "Offer",
       price: product.price,
-      priceCurrency: "INR",
+      priceCurrency: product.currency,
       priceValidUntil: undefined,
       availability:
         product.availability === "out_of_stock"

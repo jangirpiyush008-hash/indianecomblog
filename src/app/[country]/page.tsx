@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TickerBar } from "@/components/layout/TickerBar";
-import { ArticleCard, ArticleHCard, FeatureArticleCard } from "@/components/editorial/ArticleCard";
+import { ArticleCard } from "@/components/editorial/ArticleCard";
+import { EditionHero } from "@/components/edition/EditionHero";
+import { HEROES, HOME_COPY } from "@/config/heroes";
 import { ProductCard } from "@/components/commerce/ProductCard";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { Headlines, SearchChips } from "@/components/edition/Views";
@@ -20,7 +22,8 @@ export const revalidate = 1800;
 
 export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
   const e = edition((await params).country);
-  return sectionMetadata(e.code, "home", `${brand.name} ${e.country.name} — ${e.dict.home.h1(e.country.phrase)}`, e.dict.home.intro(e.country.phrase));
+  const h = HEROES[e.code];
+  return sectionMetadata(e.code, "home", `${h.headline} | ${brand.name} ${e.country.name}`, h.intro);
 }
 
 export default async function EditionHome({ params }: { params: Promise<{ country: string }> }) {
@@ -28,8 +31,12 @@ export default async function EditionHome({ params }: { params: Promise<{ countr
   const [trends, searches] = await Promise.all([getLiveTrends(e.code, 40), getTrendingSearches(e.code, 12)]);
   const articles = articlesFor(e.code);
   const featured = featuredArticles(e.code);
-  const hero = featured[0] ?? articles[0];
-  const side = articles.filter((a) => a.id !== hero?.id).slice(0, 3);
+  const hero = HEROES[e.code];
+  const copy = HOME_COPY[e.country.lang];
+  const leading = [...featured, ...articles.filter((a) => !a.featured)].slice(0, 3);
+  const deskSections = e.country.deskPriority
+    .map((desk) => ({ desk, items: articles.filter((a) => a.category === desk) }))
+    .filter((x) => x.items.length);
   const products = [...productsFor(e.code)].sort((a, b) => (b.discount ?? 0) - (a.discount ?? 0)).slice(0, 4);
   const byDesk = e.country.deskPriority.map((desk) => ({ desk, items: trends.filter((t) => t.category === desk).slice(0, 3) })).filter((x) => x.items.length);
 
@@ -45,40 +52,14 @@ export default async function EditionHome({ params }: { params: Promise<{ countr
         ]}
       />
 
-      <section className="pt-10 md:pt-14 pb-14 border-b border-line">
-        <Container size="xl">
-          <div className="mb-10 border-b border-line pb-5">
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">
-              {e.country.flag} {e.dict.home.eyebrow}
-            </span>
-            <h1 className="font-editorial text-3xl md:text-5xl font-semibold text-ink mt-2 leading-tight">{e.dict.home.h1(e.country.phrase)}</h1>
-            <p className="mt-3 text-ink-60 max-w-2xl">{e.dict.home.intro(e.country.phrase)}</p>
-          </div>
-
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
-            <div className="lg:col-span-8">
-              {hero ? (
-                <FeatureArticleCard article={hero} />
-              ) : (
-                <p className="text-ink-60">{e.dict.ui.noStoriesYet}</p>
-              )}
-            </div>
-            <aside className="lg:col-span-4 space-y-8">
-              {side.length > 0 && (
-                <div className="border-b border-line pb-6">
-                  {side.map((a) => (
-                    <div key={a.id} className="mb-6 last:mb-0"><ArticleHCard article={a} /></div>
-                  ))}
-                </div>
-              )}
-              <div>
-                <h2 className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold mb-4">{e.dict.ui.trendingSearches}</h2>
-                {searches.length ? <SearchChips e={e} searches={searches.slice(0, 10)} /> : <p className="text-sm text-ink-60">{e.dict.ui.headlinesUnavailable}</p>}
-              </div>
-            </aside>
-          </div>
-        </Container>
-      </section>
+      <EditionHero
+        hero={hero}
+        flag={e.country.flag}
+        eyebrow={e.dict.home.eyebrow}
+        leadingLabel={copy.leading}
+        photoCredit={copy.photo}
+        leading={leading}
+      />
 
       <section className="py-16 bg-ink text-cream">
         <Container size="xl">
@@ -89,6 +70,12 @@ export default async function EditionHome({ params }: { params: Promise<{ countr
             </div>
             <Link href={urls.section(e.code, "trending")} className="hidden md:inline text-sm text-cream/80 hover:text-accent whitespace-nowrap">{e.dict.ui.seeAll} →</Link>
           </div>
+          {searches.length > 0 && (
+            <div className="mb-12 text-ink">
+              <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-cream/60 font-semibold mb-3">{e.dict.ui.trendingSearches}</h3>
+              <SearchChips e={e} searches={searches.slice(0, 10)} />
+            </div>
+          )}
           {byDesk.length === 0 && <p className="text-cream/60">{e.dict.ui.headlinesUnavailable}</p>}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
             {byDesk.map(({ desk, items }) => (
@@ -112,23 +99,32 @@ export default async function EditionHome({ params }: { params: Promise<{ countr
         </Container>
       </section>
 
-      {products.length > 0 && (
-        <section className="py-16 border-b border-line">
+      {deskSections.map(({ desk, items }, i) => (
+        <section key={desk} className={i % 2 ? "py-14 border-b border-line bg-cream-100" : "py-14 border-b border-line"}>
           <Container size="xl">
-            <SectionHeading eyebrow={e.dict.sections.deals} title={e.dict.ui.dealsH1(e.country.phrase)} seeMoreHref={urls.section(e.code, "deals")} seeMoreLabel={e.dict.ui.seeAll} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {products.map((p) => <ProductCard key={p.id} product={p} placement="home" />)}
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+              <div className="lg:col-span-3">
+                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">{copy.stories(items.length)}</span>
+                <h2 className="font-editorial text-3xl md:text-4xl font-semibold text-ink mt-2 leading-tight">{e.dict.sections[desk]}</h2>
+                <p className="mt-3 text-ink-60">{e.dict.deskTagline[desk]}</p>
+                <Link href={urls.section(e.code, desk)} className="mt-5 inline-block font-mono text-[11px] uppercase tracking-[0.18em] text-ink hover:text-accent border-b border-ink hover:border-accent pb-0.5">
+                  {copy.viewAll} →
+                </Link>
+              </div>
+              <div className="lg:col-span-9 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {items.slice(0, 3).map((a) => <ArticleCard key={a.id} article={a} />)}
+              </div>
             </div>
           </Container>
         </section>
-      )}
+      ))}
 
-      {articles.length > 0 && (
+      {products.length > 0 && (
         <section className="py-16 border-b border-line">
           <Container size="xl">
-            <SectionHeading eyebrow={e.dict.ui.latest} title={e.dict.ui.fromOurDesks} />
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {articles.slice(0, 9).map((a) => <ArticleCard key={a.id} article={a} />)}
+            <SectionHeading eyebrow={e.dict.sections.shopping} title={copy.shopping} description={copy.shoppingText} seeMoreHref={urls.section(e.code, "shopping")} seeMoreLabel={copy.viewAll} />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {products.map((p) => <ProductCard key={p.id} product={p} placement="home" />)}
             </div>
           </Container>
         </section>

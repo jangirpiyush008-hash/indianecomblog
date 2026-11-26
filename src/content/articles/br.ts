@@ -74,6 +74,124 @@ const drafts: Draft[] = [
     ],
     methodology: "Elaborado com base no gov.br e em reportagens sobre o Registrato, verificado em 25 de novembro de 2026.",
   },
+  {
+    id: "br-celular-seguro",
+    slug: "celular-seguro-bloquear-celular-roubado",
+    title: "Celular roubado? Como usar o Celular Seguro para bloquear tudo de uma vez",
+    seoTitle: "Celular Seguro (gov.br): como cadastrar e bloquear celular roubado ou furtado",
+    subtitle: "O programa do governo federal envia um alerta a bancos e operadoras parceiros com poucos toques. Veja como se preparar antes de precisar.",
+    excerpt:
+      "Com o Celular Seguro, você ou uma pessoa de confiança emite um alerta de roubo ou furto que pede o bloqueio do aparelho, da linha e de apps de bancos parceiros. Cadastre-se antes.",
+    category: "technology",
+    tags: ["Celular Seguro", "gov.br", "Roubo de Celular", "Segurança"],
+    publishedAt: "2026-11-26T09:00:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Smartphone com ícones de aplicativos",
+    keyTakeaways: [
+      "O Celular Seguro é gratuito e usa sua conta gov.br.",
+      "Cadastre o aparelho e indique pessoas de confiança — elas também precisam de conta gov.br.",
+      "Em caso de roubo ou furto, você ou uma pessoa de confiança emite o alerta pelo app ou pelo site.",
+      "Ligue também para a operadora e registre um boletim de ocorrência.",
+    ],
+    body: [
+      { type: "h2", id: "antes", text: "Antes: faça o cadastro" },
+      {
+        type: "ol",
+        items: [
+          "Baixe o app Celular Seguro ou acesse o site e entre com sua conta gov.br.",
+          "Cadastre seu aparelho e sua linha.",
+          "Adicione pessoas de confiança, que poderão emitir o alerta por você.",
+        ],
+      },
+      { type: "h2", id: "depois", text: "Depois do roubo ou furto" },
+      {
+        type: "ol",
+        items: [
+          "Emita o alerta no Celular Seguro (de outro aparelho, pelo site, ou peça a uma pessoa de confiança).",
+          "Os bancos e empresas parceiros recebem o pedido de bloqueio.",
+          "Ligue para a operadora para bloquear a linha e o IMEI, se necessário.",
+          "Registre um boletim de ocorrência — em muitos estados é possível fazer pela internet.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "O alerta não substitui o boletim",
+        text: "O Celular Seguro agiliza bloqueios, mas o boletim de ocorrência continua sendo importante para seguro e eventual recuperação do aparelho.",
+      },
+      { type: "h2", id: "desbloqueio", text: "Se recuperar o aparelho" },
+      { type: "p", text: "Os desbloqueios precisam ser pedidos diretamente a cada banco, operadora e empresa onde o bloqueio foi feito." },
+    ],
+    faq: [
+      { question: "O Celular Seguro é pago?", answer: "Não. É gratuito e usa a conta gov.br." },
+      { question: "Quem pode emitir o alerta?", answer: "O próprio usuário ou uma pessoa de confiança cadastrada, que também precisa ter conta gov.br." },
+    ],
+    sources: [
+      { name: "gov.br — Comunicar roubo ou furto pelo Celular Seguro", url: "https://www.gov.br/pt-br/servicos/comunicar-roubo-furto-de-aparelho-pelo-aplicativo-celular-seguro" },
+    ],
+    methodology: "Compilado a partir das páginas oficiais do gov.br, verificadas em 26 de novembro de 2026.",
+  },
+  {
+    id: "br-passaporte-2026",
+    slug: "como-tirar-passaporte",
+    title: "Como tirar passaporte em 2026: taxa, agendamento e prazo de entrega",
+    seoTitle: "Como tirar passaporte 2026: taxa R$ 257,25, agendamento na PF e prazo",
+    subtitle: "O passo a passo da Polícia Federal, do formulário à retirada — e os erros que atrasam o processo.",
+    excerpt:
+      "A taxa do passaporte comum é R$ 257,25 (R$ 514,50 em caso de perda ou roubo do anterior). Pague a GRU, aguarde a compensação, agende na PF e retire em até 90 dias.",
+    category: "travel",
+    tags: ["Passaporte", "Polícia Federal", "Viagem Internacional"],
+    publishedAt: "2026-11-26T08:00:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Asa de avião acima das nuvens",
+    keyTakeaways: [
+      "Taxa do passaporte comum: R$ 257,25.",
+      "Se o passaporte anterior foi perdido, roubado ou danificado e ainda era válido, a taxa dobra: R$ 514,50.",
+      "O agendamento só é liberado depois da compensação do pagamento, normalmente em cerca de um dia útil.",
+      "Retire o passaporte em até 90 dias, ou ele será cancelado.",
+    ],
+    body: [
+      { type: "h2", id: "passo-a-passo", text: "Passo a passo" },
+      {
+        type: "ol",
+        items: [
+          "Preencha o formulário de solicitação no site da Polícia Federal (gov.br).",
+          "Emita e pague a GRU (Guia de Recolhimento da União).",
+          "Aguarde a compensação do pagamento.",
+          "Agende o atendimento em um posto da PF.",
+          "Compareça com os documentos originais e o protocolo.",
+          "Retire o passaporte no prazo.",
+        ],
+      },
+      { type: "h2", id: "taxas", text: "Taxas" },
+      {
+        type: "table",
+        head: ["Situação", "Taxa"],
+        rows: [
+          ["Passaporte comum", "R$ 257,25"],
+          ["Anterior válido perdido, roubado ou danificado", "R$ 514,50"],
+        ],
+      },
+      { type: "h2", id: "prazo", text: "Prazo de entrega" },
+      {
+        type: "p",
+        text: "Depois do atendimento, a entrega costuma levar de 6 a 10 dias úteis, mas pode variar conforme o posto e a demanda. Não compre passagens contando com prazos curtos.",
+      },
+      {
+        type: "callout",
+        title: "Atenção ao prazo de retirada",
+        text: "Se não retirar em até 90 dias, o passaporte é cancelado e você precisará pagar uma nova taxa.",
+      },
+    ],
+    faq: [
+      { question: "Quanto custa tirar passaporte em 2026?", answer: "R$ 257,25 para o passaporte comum; R$ 514,50 se o anterior válido foi perdido, roubado ou danificado." },
+      { question: "Quanto tempo demora para o passaporte ficar pronto?", answer: "Em geral de 6 a 10 dias úteis após o atendimento, variando conforme o posto." },
+    ],
+    sources: [
+      { name: "gov.br — Obter passaporte comum", url: "https://www.gov.br/pt-br/servicos/obter-passaporte-comum-para-brasileiro" },
+      { name: "Polícia Federal — Passaporte", url: "https://www.gov.br/pf/pt-br/assuntos/passaporte" },
+    ],
+    methodology: "Compilado a partir das páginas oficiais da Polícia Federal e do gov.br, verificadas em 26 de novembro de 2026.",
+  },
 ];
 
 export const articles = buildArticles("br", drafts);

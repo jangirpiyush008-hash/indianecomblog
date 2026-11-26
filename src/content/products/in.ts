@@ -219,12 +219,12 @@ export function assertFullEarnKaroUrl(url: string) {
 }
 
 export const products: Product[] = raw.map((p) => {
-  assertFullEarnKaroUrl(p.affiliateUrl);
+  if (p.affiliateUrl) assertFullEarnKaroUrl(p.affiliateUrl);
   return {
     ...p,
     country: "in",
     currency: "INR",
     affiliateNetwork: "earnkaro",
-    discount: p.originalPrice ? pct(p.price, p.originalPrice) : undefined,
+    discount: p.originalPrice && p.price != null ? pct(p.price, p.originalPrice) : undefined,
   };
 });

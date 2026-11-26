@@ -99,8 +99,8 @@ export interface Product {
   brand: string;
   category: string;
   image: string;
-  /** Selling price on the merchant's own site when last verified. */
-  price: number;
+  /** Selling price on the merchant's own site when last verified. Omitted when not verified. */
+  price?: number;
   /** MRP shown by the merchant when last verified. */
   originalPrice?: number;
   discount?: number;
@@ -109,8 +109,8 @@ export interface Product {
   reviewCount?: number;
   merchant: Merchant;
   merchantName: string;
-  /** Full EarnKaro tracking URL (never a shortened bitli.in link). */
-  affiliateUrl: string;
+  /** Full, tested affiliate tracking URL (never a shortener). Empty until the programme is approved. */
+  affiliateUrl?: string;
   /** Plain merchant product page the affiliate link resolves to. */
   sourceUrl: string;
   affiliateNetwork: "earnkaro" | "amazon" | "awin" | "impact" | "cj" | "rakuten" | "admitad" | "commission-factory" | "a8" | "mercadolivre" | "other";

@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/Button";
 import { Plus, RefreshCw } from "lucide-react";
 import { everyProduct } from "@/lib/content";
 const allProducts = everyProduct();
-import { formatINR, formatRelativeTime } from "@/lib/utils";
+import { formatRelativeTime } from "@/lib/utils";
+import { formatPrice } from "@/config/countries";
 
 export const metadata = { title: "Products — Admin" };
 
@@ -59,9 +60,9 @@ export default function AdminProductsPage() {
                   </td>
                   <td className="px-5 py-3 hidden md:table-cell text-sm text-ink-60">{p.category}</td>
                   <td className="px-5 py-3 text-right">
-                    <div className="font-semibold text-sm">{formatINR(p.price)}</div>
-                    {p.originalPrice && (
-                      <div className="text-xs text-ink-40 line-through">{formatINR(p.originalPrice)}</div>
+                    <div className="font-semibold text-sm">{p.price != null ? formatPrice(p.price, p.country) : "—"}</div>
+                    {p.originalPrice != null && (
+                      <div className="text-xs text-ink-40 line-through">{formatPrice(p.originalPrice, p.country)}</div>
                     )}
                   </td>
                   <td className="px-5 py-3 hidden lg:table-cell">
