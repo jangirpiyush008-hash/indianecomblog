@@ -6,6 +6,8 @@ import { Footer } from "@/components/layout/Footer";
 import { COUNTRY_CODES } from "@/config/countries";
 import { edition, footerDiscover, headerProps } from "@/lib/edition";
 import { brand } from "@/config/brand";
+import { ConsentBanner } from "@/components/consent/ConsentBanner";
+import { CONSENT_COPY } from "@/config/consent-copy";
 
 export const dynamicParams = false;
 
@@ -36,7 +38,9 @@ export default async function EditionLayout({ children, params }: { children: Re
           discover={footerDiscover(e.code)}
           newsletterLabel={e.dict.ui.newsletterTitle}
           newsletterSource={`footer:${e.code}`}
+          cookieSettingsLabel={CONSENT_COPY[e.country.lang].settingsLink}
         />
+        <ConsentBanner copy={CONSENT_COPY[e.country.lang]} />
       </body>
     </html>
   );

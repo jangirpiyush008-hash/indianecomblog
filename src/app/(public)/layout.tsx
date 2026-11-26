@@ -3,6 +3,8 @@ import { baseMetadata, fontClasses } from "../shared-root";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { headerProps } from "@/lib/edition";
+import { ConsentBanner } from "@/components/consent/ConsentBanner";
+import { CONSENT_COPY } from "@/config/consent-copy";
 
 export const metadata = baseMetadata;
 
@@ -14,6 +16,7 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
         <Header {...headerProps()} />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ConsentBanner copy={CONSENT_COPY.en} />
       </body>
     </html>
   );

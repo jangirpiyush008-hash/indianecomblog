@@ -4,6 +4,7 @@ import { brand } from "@/config/brand";
 import { Logo } from "@/components/brand/Logo";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { ALL_COUNTRIES, urls } from "@/config/countries";
+import { ConsentLink } from "@/components/consent/ConsentLink";
 
 type Col = { title: string; links: { label: string; href: string }[] };
 
@@ -33,11 +34,13 @@ export function Footer({
   newsletterLabel = "Newsletter",
   newsletterSource = "footer",
   description = brand.description,
+  cookieSettingsLabel = "Cookie settings",
 }: {
   discover?: Col;
   newsletterLabel?: string;
   newsletterSource?: string;
   description?: string;
+  cookieSettingsLabel?: string;
 }) {
   const cols = [discover, companyLinks, legalLinks].filter(Boolean) as Col[];
   return (
@@ -63,6 +66,11 @@ export function Footer({
                     </Link>
                   </li>
                 ))}
+                {col === legalLinks && (
+                  <li>
+                    <ConsentLink label={cookieSettingsLabel} className="text-sm text-cream/80 hover:text-accent transition text-left" />
+                  </li>
+                )}
               </ul>
             </div>
           ))}

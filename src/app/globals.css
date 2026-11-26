@@ -236,6 +236,28 @@ h3.editorial {
 
 .prose-editorial ul { list-style: disc; }
 .prose-editorial ol { list-style: decimal; }
+.prose-editorial table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  display: block;
+  overflow-x: auto;
+}
+.prose-editorial th,
+.prose-editorial td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+.prose-editorial th {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-60, #555);
+}
 .prose-editorial li {
   margin-bottom: 0.5em;
 }
