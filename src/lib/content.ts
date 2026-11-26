@@ -61,6 +61,25 @@ export function relatedArticles(article: Article, limit = 3): Article[] {
   return [...list.filter((a) => a.category === article.category), ...list.filter((a) => a.category !== article.category)].slice(0, limit);
 }
 
+/**
+ * In-article internal links: other articles from the SAME edition, ranked by shared tags
+ * (strongest signal), then same desk, then recency. Only published articles — never invented URLs.
+ */
+export function contextualLinks(article: Article, limit = 3, exclude: string[] = []): Article[] {
+  const tags = new Set((article.tags ?? []).map((t) => t.toLowerCase()));
+  const skip = new Set([article.id, ...exclude]);
+  return articlesFor(article.country)
+    .filter((a) => !skip.has(a.id))
+    .map((a) => ({
+      a,
+      score: (a.tags ?? []).filter((t) => tags.has(t.toLowerCase())).length * 3 + (a.category === article.category ? 2 : 0),
+    }))
+    .filter((x) => x.score > 0)
+    .sort((x, y) => y.score - x.score || +new Date(y.a.publishedAt) - +new Date(x.a.publishedAt))
+    .slice(0, limit)
+    .map((x) => x.a);
+}
+
 export function slugify(s: string) {
   return s
     .toLowerCase()

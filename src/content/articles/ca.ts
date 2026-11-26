@@ -615,6 +615,105 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from the Department of Finance and coverage of CRA figures, checked 27 November 2026. Not tax advice.",
   },
+  {
+    id: "ca-cra-ai-chatbot",
+    slug: "cra-ai-chatbot-how-to-use",
+    title: "The CRA's AI chatbot: what it can answer, and what not to type into it",
+    seoTitle: "CRA's AI Chatbot: How to Use It Safely",
+    subtitle: "The Canada Revenue Agency's generative AI chatbot answers general tax questions from Canada.ca. Keep personal details out.",
+    excerpt:
+      "The CRA runs a generative AI chatbot (beta) on Canada.ca that answers general tax and benefit questions. It isn't built for personal information, and its answers aren't professional advice.",
+    category: "ai-tools",
+    tags: ["CRA", "AI Chatbot", "Taxes", "Canada.ca"],
+    publishedAt: "2026-11-27T11:00:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A person using a laptop and a phone",
+    keyTakeaways: [
+      "The CRA's generative AI chatbot (beta) appears as a widget in the lower-right corner of CRA pages on Canada.ca.",
+      "It draws its answers from Canada.ca content — it's for general questions, not your personal file.",
+      "The CRA says it isn't designed to handle personal or sensitive information.",
+      "Answers aren't professional or legal advice; check important points on the linked pages or with an agent.",
+    ],
+    body: [
+      { type: "h2", id: "how", text: "How to use it" },
+      {
+        type: "ol",
+        items: [
+          "Open a CRA page on Canada.ca and select the chatbot widget in the lower-right corner.",
+          "Ask a general question, such as which credits you might be eligible for.",
+          "Follow the links to the official pages in its answer.",
+          "For your own account, sign in to CRA My Account instead.",
+        ],
+      },
+      { type: "h2", id: "dont", text: "Don't type these in" },
+      {
+        type: "ul",
+        items: ["Your SIN.", "Your date of birth, address or account numbers.", "Details from your tax slips."],
+      },
+      { type: "callout", title: "Beware of fake 'CRA' chats", text: "The CRA never asks for payment by gift card or crypto, and won't contact you through social media chatbots." },
+    ],
+    faq: [
+      { question: "Can the CRA chatbot see my tax return?", answer: "No. It answers general questions from Canada.ca. Use CRA My Account for your own information." },
+      { question: "Is the CRA chatbot accurate?", answer: "It's a beta; treat answers as a starting point and confirm on the official pages." },
+      { question: "Where is the CRA chatbot?", answer: "In the lower-right corner of CRA pages on Canada.ca." },
+      { question: "Should I give the CRA chatbot my SIN?", answer: "No. The CRA says the chatbot isn't designed to handle personal or sensitive information." },
+    ],
+    sources: [
+      { name: "Canada.ca — CRA generative AI chatbot (beta)", url: "https://www.canada.ca/content/canadasite/en/revenue-agency/corporate/contact-information/cra-chatbot/genai-chatbot-beta.html" },
+      { name: "Canada.ca — CRA chatbot", url: "https://www.canada.ca/en/revenue-agency/corporate/contact-information/cra-chatbot.html" },
+    ],
+    methodology: "Compiled from the CRA's chatbot pages, checked 27 November 2026.",
+  },
+  {
+    id: "ca-deepfake-investment-scams",
+    slug: "deepfake-investment-scam-ads-canada",
+    title: "Deepfake ads of politicians and celebrities are selling fake investments in Canada",
+    seoTitle: "Deepfake Investment Scam Ads in Canada: How to Spot Them",
+    subtitle: "Fake videos of the Prime Minister and news anchors are pushing crypto schemes. Assume any such video is fake until proven otherwise.",
+    excerpt:
+      "Scammers use AI deepfakes of Mark Carney, news anchors and celebrities in ads for crypto and trading platforms. The Canadian Anti-Fraud Centre's advice, red flags, and where to report.",
+    category: "ai-tools",
+    tags: ["Deepfakes", "Investment Scams", "CAFC", "Crypto"],
+    publishedAt: "2026-11-27T10:30:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "The letters AI in a digital illustration",
+    keyTakeaways: [
+      "The CAFC says deepfakes impersonate politicians, celebrities and news anchors to promote investments.",
+      "Its rule: assume any video of a public figure promoting an investment is fake until you've verified it.",
+      "Crypto made up over 70% of reported investment-fraud losses in 2024, according to the CAFC.",
+      "Report to the Canadian Anti-Fraud Centre and, if you lost money, your bank and local police.",
+    ],
+    body: [
+      { type: "h2", id: "how", text: "How the scam works" },
+      {
+        type: "p",
+        text: "An ad on social media or a fake news-style article shows a well-known figure — CBC found deepfakes of the Prime Minister and journalists — praising a trading platform. You sign up, make a small deposit, see fake 'profits', and are pressured to invest more. Withdrawals never arrive.",
+      },
+      { type: "h2", id: "flags", text: "Red flags" },
+      {
+        type: "ul",
+        items: [
+          "A public figure 'endorsing' guaranteed or unusually high returns.",
+          "Pressure to install remote-access software or move money to crypto.",
+          "Platforms not registered with your provincial securities regulator.",
+        ],
+      },
+      { type: "h2", id: "report", text: "Where to report" },
+      { type: "p", text: "Report to the Canadian Anti-Fraud Centre online or at 1-888-495-8501. You can also report AI-generated government impersonators to the Competition Bureau. If you've paid, contact your bank immediately." },
+    ],
+    faq: [
+      { question: "Is the Mark Carney investment video real?", answer: "Videos of politicians promoting investment platforms have been deepfakes. Treat them as fake." },
+      { question: "How do I check if an investment firm is legitimate?", answer: "Check registration with your provincial securities regulator, for example through the CSA's National Registration Search." },
+      { question: "Where do I report a deepfake investment ad?", answer: "To the Canadian Anti-Fraud Centre at 1-888-495-8501 or online, and to the platform showing the ad." },
+      { question: "Why are crypto platforms used in these scams?", answer: "Crypto transfers are fast and hard to reverse; the CAFC says crypto made up over 70% of reported investment-fraud losses in 2024." },
+    ],
+    sources: [
+      { name: "Canadian Anti-Fraud Centre — Fraud using deepfakes", url: "https://antifraudcentre-centreantifraude.ca/features-vedette/2024/07/bulletin-deepfakes-hypertrucage-eng.htm" },
+      { name: "Competition Bureau — Watch out for AI-generated government impersonators", url: "https://www.canada.ca/en/competition-bureau/news/2026/03/watch-out-for-ai-generated-government-impersonators.html" },
+      { name: "CBC — More fake CBC ads investigation", url: "https://www.cbc.ca/news/canada/more-fake-cbc-ads-investigation-1.7494923" },
+    ],
+    methodology: "Compiled from the CAFC, the Competition Bureau and CBC reporting, checked 27 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("ca", drafts);

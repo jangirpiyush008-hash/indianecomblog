@@ -43,3 +43,28 @@ export function withSubId(url: string, network: Product["affiliateNetwork"], sub
 
 export const subIdFor = (country: string, context: string | undefined, placement: string | undefined) =>
   [country, context, placement].filter(Boolean).join("_");
+
+/**
+ * First-party campaign tracking for PLAIN merchant links (no affiliate network involved):
+ *   utm_source=trendnations & utm_medium=affiliate_content
+ *   utm_campaign={article slug, or the page/list for non-article placements}
+ *   utm_content={placement}
+ * Never applied to affiliate-network URLs (their own tracking and sub-IDs are preserved),
+ * never to internal links, and existing parameters are never overwritten or duplicated.
+ */
+export function withUtm(url: string, campaign: string, placement: string): string {
+  try {
+    const u = new URL(url);
+    const clean = (v: string) => v.toLowerCase().replace(/[^a-z0-9_-]+/g, "-").slice(0, 100);
+    const set = (k: string, v: string) => {
+      if (!u.searchParams.has(k)) u.searchParams.set(k, v);
+    };
+    set("utm_source", "trendnations");
+    set("utm_medium", "affiliate_content");
+    set("utm_campaign", clean(campaign));
+    set("utm_content", clean(placement));
+    return u.toString();
+  } catch {
+    return url;
+  }
+}

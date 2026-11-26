@@ -613,6 +613,217 @@ const drafts: Draft[] = [
     ],
     methodology: "Synthèse de sources officielles (préfectures, Service-Public.fr, CAF), vérifiée le 27 novembre 2026.",
   },
+  {
+    id: "fr-le-chat-mistral",
+    slug: "le-chat-mistral-gratuit-ou-pro",
+    title: "Le Chat de Mistral AI : l'assistant IA français, gratuit ou Pro ?",
+    seoTitle: "Le Chat de Mistral AI : version gratuite ou Pro ?",
+    subtitle: "L'assistant de la start-up française Mistral AI est gratuit avec des limites d'usage. L'offre Pro coûte 14,99 € par mois.",
+    excerpt:
+      "Le Chat, l'assistant IA de Mistral AI, propose une version gratuite (chat, recherche web, génération d'images) et une offre Pro à 14,99 € par mois avec plus de messages et de recherches. Ce qui change, et pour qui.",
+    category: "ai-tools",
+    tags: ["Mistral AI", "Le Chat", "IA", "Assistant IA"],
+    publishedAt: "2026-11-27T10:00:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Les lettres IA dans une illustration numérique",
+    keyTakeaways: [
+      "Le Chat est l'assistant IA grand public de Mistral AI, start-up française.",
+      "Gratuit : chat, recherche web, génération d'images et mémoire, avec des limites d'usage équitable.",
+      "Pro : 14,99 € par mois, avec plus de messages, de recherches et des rapports de recherche approfondie.",
+      "Un tarif réduit existe pour les étudiants vérifiés. Disponible sur le web, iOS et Android.",
+    ],
+    body: [
+      { type: "h2", id: "offres", text: "Gratuit ou Pro" },
+      {
+        type: "table",
+        head: ["", "Gratuit", "Pro"],
+        rows: [
+          ["Prix", "0 €", "14,99 € / mois"],
+          ["Chat et recherche web", "Oui, avec limites", "Plus de messages et de recherches"],
+          ["Génération d'images", "Oui", "Oui"],
+          ["Recherche approfondie", "Limitée", "Étendue"],
+        ],
+      },
+      { type: "h2", id: "pour-qui", text: "Pour qui ?" },
+      {
+        type: "ul",
+        items: [
+          "Usage ponctuel (questions, résumés, rédaction) : la version gratuite suffit souvent.",
+          "Usage intensif ou professionnel : l'offre Pro évite d'atteindre les limites.",
+          "Étudiants : vérifiez le tarif réduit sur le site de Mistral.",
+        ],
+      },
+      { type: "h2", id: "prudence", text: "Bonnes pratiques" },
+      {
+        type: "ol",
+        items: [
+          "Vérifiez les informations importantes (chiffres, dates, droit) auprès de sources officielles.",
+          "Ne partagez pas de données personnelles sensibles : numéro de sécurité sociale, coordonnées bancaires, mots de passe.",
+          "Pour un usage professionnel, consultez les conditions sur l'utilisation de vos données.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Le Chat de Mistral est-il gratuit ?", answer: "Oui, avec des limites d'usage. L'offre Pro coûte 14,99 € par mois." },
+      { question: "Le Chat est-il disponible sur mobile ?", answer: "Oui, sur iOS et Android, ainsi que sur le web." },
+    ],
+    sources: [
+      { name: "Mistral AI — Tarifs", url: "https://mistral.ai/fr/pricing" },
+      { name: "Mistral AI — Le tout nouveau Le Chat", url: "https://mistral.ai/fr/news/all-new-le-chat" },
+      { name: "Journal du Net — Mistral AI dévoile son offre commerciale", url: "https://www.journaldunet.com/intelligence-artificielle/1539017-mistral-ai-devoile-son-offre-commerciale-complete/" },
+    ],
+    methodology: "Synthèse de la page tarifs de Mistral AI et de la presse, vérifiée le 27 novembre 2026. Les prix peuvent évoluer ; consultez mistral.ai.",
+  },
+  {
+    id: "fr-carte-avantage-sncf",
+    slug: "carte-avantage-sncf-prix-reduction",
+    title: "Carte Avantage SNCF : 49 € pour 30 % de réduction, est-ce rentable ?",
+    seoTitle: "Carte Avantage SNCF : 49 €, 30 % de réduction, rentable ?",
+    subtitle: "La carte coûte 49 € par an et donne 30 % de réduction sur les TGV INOUI et Intercités, pour vous et un accompagnateur.",
+    excerpt:
+      "La carte Avantage SNCF coûte 49 € pour un an et offre 30 % de réduction sur les trains TGV INOUI et Intercités, y compris pour un accompagnateur. Les versions Jeune, Adulte et Senior, et quand elle devient rentable.",
+    category: "travel",
+    tags: ["SNCF", "Carte Avantage", "Train", "TGV"],
+    publishedAt: "2026-11-27T09:00:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1532105956626-9569c03602f6?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Des trains dans une gare couverte",
+    keyTakeaways: [
+      "Prix : 49 € pour un an (tarif en vigueur au 1er janvier 2026).",
+      "30 % de réduction sur TGV INOUI et Intercités à réservation obligatoire, pour le titulaire et un accompagnateur de plus de 12 ans.",
+      "Trois versions selon l'âge : Jeune (12-27 ans), Adulte (27-59 ans), Senior (60 ans et plus).",
+      "Non cumulable avec d'autres promotions ou codes. Sur les TER, les réductions dépendent des régions.",
+    ],
+    body: [
+      { type: "h2", id: "versions", text: "Les trois cartes" },
+      {
+        type: "table",
+        head: ["Carte", "Âge", "Prix"],
+        rows: [
+          ["Avantage Jeune", "12 à 27 ans", "49 €"],
+          ["Avantage Adulte", "27 à 59 ans", "49 €"],
+          ["Avantage Senior", "60 ans et plus", "49 €"],
+        ],
+      },
+      { type: "p", text: "La carte Adulte s'utilise pour des allers-retours comprenant une nuit sur place le samedi, ou un voyage en week-end, selon les conditions SNCF. Vérifiez les règles de chaque carte avant d'acheter." },
+      { type: "h2", id: "rentable", text: "Quand est-elle rentable ?" },
+      {
+        type: "p",
+        text: "Avec 30 % de réduction, la carte est remboursée dès que vous dépensez environ 165 € de billets plein tarif dans l'année. Pour deux ou trois allers-retours en TGV par an, elle est souvent rentable — d'autant plus si vous voyagez à deux.",
+      },
+      { type: "h2", id: "prix-plafonnes", text: "Et les prix plafonnés ?" },
+      { type: "callout", title: "À vérifier au moment de réserver", text: "La SNCF a proposé des prix plafonnés pour les détenteurs de la carte selon la durée du trajet. Nous n'avons pas pu confirmer qu'ils s'appliquent en 2026 : vérifiez sur SNCF Connect." },
+    ],
+    faq: [
+      { question: "Combien coûte la carte Avantage SNCF ?", answer: "49 € pour un an." },
+      { question: "La réduction s'applique-t-elle à un accompagnateur ?", answer: "Oui, 30 % pour le titulaire et pour un accompagnateur de plus de 12 ans voyageant avec lui." },
+    ],
+    sources: [
+      { name: "SNCF Voyageurs — Carte Avantage Adulte", url: "https://www.sncf-voyageurs.com/fr/voyagez-avec-nous/en-france/tarifs-grandes-lignes/carte-avantage/carte-avantage-adulte/" },
+      { name: "SNCF Connect — Cartes Avantage", url: "https://www.sncf-connect.com/bons-plans/cartes-avantage" },
+    ],
+    methodology: "Synthèse des pages officielles SNCF Voyageurs et SNCF Connect, vérifiée le 27 novembre 2026. Calcul de rentabilité indicatif.",
+  },
+  {
+    id: "fr-ai-act-transparence-2026",
+    slug: "ai-act-deepfakes-etiquetage-obligatoire",
+    title: "AI Act : depuis août 2026, les deepfakes doivent être signalés",
+    seoTitle: "AI Act : l'étiquetage des deepfakes obligatoire",
+    subtitle: "Les obligations de transparence du règlement européen sur l'IA s'appliquent depuis le 2 août 2026.",
+    excerpt:
+      "Depuis le 2 août 2026, un chatbot doit indiquer qu'il est une IA et les deepfakes doivent être signalés comme tels. L'omnibus numérique a surtout reporté les règles sur l'IA à haut risque.",
+    category: "ai-tools",
+    tags: ["AI Act", "Deepfakes", "Règlement IA", "Union européenne"],
+    publishedAt: "2026-11-27T11:00:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Un motif de circuit sur un écran lumineux",
+    keyTakeaways: [
+      "Depuis le 2 août 2026, l'article 50 du règlement européen sur l'IA (AI Act) s'applique.",
+      "Les utilisateurs doivent être informés qu'ils interagissent avec une IA.",
+      "Les deepfakes doivent être signalés comme contenus générés ou modifiés par IA.",
+      "L'omnibus numérique reporte surtout les obligations « haut risque » à août 2027, pas l'étiquetage des deepfakes.",
+    ],
+    body: [
+      { type: "h2", id: "quoi", text: "Ce qui s'applique" },
+      {
+        type: "ul",
+        items: [
+          "Les assistants conversationnels doivent indiquer qu'ils sont des IA, sauf si c'est évident.",
+          "Les images, vidéos ou sons réalistes générés par IA (deepfakes) doivent être signalés.",
+          "Certains textes générés par IA sur des sujets d'intérêt public doivent aussi être signalés.",
+        ],
+      },
+      { type: "h2", id: "report", text: "Ce qui a été reporté" },
+      { type: "p", text: "Les systèmes d'IA générative déjà sur le marché bénéficient d'un délai jusqu'en décembre 2026 pour le marquage lisible par machine. Les règles sur l'IA à haut risque sont décalées à août 2027." },
+      { type: "h2", id: "vous", text: "Ce que vous pouvez faire" },
+      {
+        type: "ol",
+        items: [
+          "Repérez les mentions « généré par IA » sous les images et vidéos.",
+          "Vérifiez les vidéos surprenantes de personnalités auprès de médias fiables.",
+          "Signalez les deepfakes non indiqués à la plateforme, et les contenus illicites sur Pharos.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Depuis quand les deepfakes doivent-ils être signalés ?", answer: "Depuis le 2 août 2026, en application de l'article 50 de l'AI Act." },
+      { question: "L'obligation a-t-elle été reportée ?", answer: "Non pour l'étiquetage des deepfakes. Les reports concernent surtout l'IA à haut risque." },
+      { question: "Qu'est-ce qu'un deepfake selon l'AI Act ?", answer: "Une image, un son ou une vidéo générés ou modifiés par IA, ressemblant à des personnes ou événements réels et pouvant paraître authentiques." },
+      { question: "Quand s'appliquent les règles sur l'IA à haut risque ?", answer: "Après l'omnibus numérique, à partir d'août 2027." },
+    ],
+    sources: [
+      { name: "Goodwin — EU AI Act transparency obligations now in force", url: "https://www.goodwinlaw.com/en/insights/publications/2026/08/alerts-technology-dpc-eu-ai-act-transparency-obligations-now-in-force" },
+      { name: "Mayer Brown — Digital Omnibus on AI and transparency guidance", url: "https://www.mayerbrown.com/en/insights/publications/2026/07/eu-ai-act-news-digital-omnibus-on-ai-new-guidance-on-risk-classification-gpai-and-transparency-obligations" },
+      { name: "DAC Beachcroft — AI Act: enforced, delayed and amended", url: "https://www.dacbeachcroft.com/fr/What-we-think/AI-Act-Enforced-delayed-and-amended" },
+    ],
+    methodology: "Synthèse d'analyses juridiques du règlement européen sur l'IA, vérifiée le 27 novembre 2026. Ceci n'est pas un conseil juridique.",
+  },
+  {
+    id: "fr-meta-ia-opposition",
+    slug: "meta-ia-s-opposer-entrainement-donnees",
+    title: "Meta entraîne son IA avec vos publications : comment vous y opposer",
+    seoTitle: "IA de Meta : comment s'opposer à l'usage de ses données",
+    subtitle: "La CNIL rappelle que vous pouvez refuser, sans justification. L'opposition vaut pour l'avenir.",
+    excerpt:
+      "Meta utilise les contenus publics des adultes européens sur Facebook et Instagram pour entraîner son IA. Un formulaire permet de s'y opposer, sans motif. Ce que dit la CNIL et comment faire.",
+    category: "ai-tools",
+    tags: ["Meta", "CNIL", "Données personnelles", "IA"],
+    publishedAt: "2026-11-27T10:30:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Du code coloré sur un écran",
+    keyTakeaways: [
+      "Depuis fin mai 2025, Meta utilise les contenus publics des adultes européens de Facebook et Instagram pour entraîner ses IA.",
+      "Un formulaire d'opposition est proposé pour chaque réseau ; aucune justification n'est demandée.",
+      "Les données de WhatsApp ne sont pas concernées, selon la CNIL ; celles des mineurs non plus.",
+      "L'opposition vaut pour l'avenir : les contenus déjà utilisés ne peuvent pas être retirés des modèles.",
+    ],
+    body: [
+      { type: "h2", id: "comment", text: "Comment s'opposer" },
+      {
+        type: "ol",
+        items: [
+          "Sur Instagram : Paramètres, puis Centre de confidentialité, puis « IA chez Meta ».",
+          "Sur Facebook : rubrique « IA chez Meta », puis la demande d'opposition.",
+          "Indiquez votre adresse e-mail ; le champ de justification peut rester vide.",
+          "Conservez l'e-mail de confirmation.",
+        ],
+      },
+      { type: "h2", id: "comptes", text: "Plusieurs comptes" },
+      { type: "p", text: "Si vos comptes Facebook et Instagram sont reliés au même Espace Comptes, une opposition peut suffire. Dans le doute, faites-en une par compte." },
+      { type: "callout", title: "Pour aller plus loin", text: "La CNIL explique aussi comment s'opposer à la réutilisation de ses données par d'autres agents conversationnels." },
+    ],
+    faq: [
+      { question: "Peut-on encore s'opposer à l'entraînement de l'IA de Meta ?", answer: "Oui. L'opposition s'applique aux contenus futurs." },
+      { question: "Faut-il justifier son opposition ?", answer: "Non, aucune justification n'est requise." },
+      { question: "WhatsApp est-il concerné ?", answer: "Non, selon la CNIL, les données de WhatsApp ne sont pas utilisées pour cet entraînement." },
+      { question: "Les comptes des mineurs sont-ils concernés ?", answer: "Non, les contenus publics des comptes de moins de 18 ans ne sont pas utilisés dans l'UE." },
+    ],
+    sources: [
+      { name: "CNIL — Meta entraînera ses systèmes d'IA avec les données des utilisateurs européens", url: "https://www.cnil.fr/fr/meta-entrainement-ia-donnees-utilisateurs" },
+      { name: "CNIL — Comment s'opposer à la réutilisation de ses données pour entraîner un agent conversationnel", url: "https://www.cnil.fr/fr/ia-comment-sopposer-la-reutilisation-de-ses-donnees-personnelles-entrainement-agent-conversationnel" },
+      { name: "UFC-Que Choisir — Empêcher Facebook et Instagram d'utiliser vos données pour leur IA", url: "https://www.quechoisir.org/actualite-donnees-personnelles-comment-empecher-facebook-et-instagram-d-utiliser-vos-donnees-pour-son-ia-n166168" },
+    ],
+    methodology: "Synthèse de la CNIL et d'UFC-Que Choisir, vérifiée le 27 novembre 2026. Les menus peuvent changer.",
+  },
 ];
 
 export const articles = buildArticles("fr", drafts);

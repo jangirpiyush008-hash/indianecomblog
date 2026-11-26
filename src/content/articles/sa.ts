@@ -555,6 +555,115 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from Fragomen, Gulf News and Business Today, checked 27 November 2026. Fees are as reported; confirm on pr.gov.sa. Not legal advice.",
   },
+  {
+    id: "sa-humain-chat-arabic-ai",
+    slug: "humain-chat-arabic-ai-app",
+    title: "HUMAIN Chat: Saudi Arabia's Arabic-first AI assistant, explained",
+    seoTitle: "HUMAIN Chat: Saudi Arabia's Arabic AI App Explained",
+    subtitle: "Built on the ALLaM model, it understands Arabic dialects, switches between Arabic and English, and keeps data in the Kingdom.",
+    excerpt:
+      "HUMAIN Chat, from the PIF-owned company HUMAIN, launched in August 2025. It runs on the ALLaM 34B Arabic model, supports dialect voice input and web search, and launched as a free beta.",
+    category: "ai-tools",
+    tags: ["HUMAIN Chat", "ALLaM", "Arabic AI", "PIF"],
+    publishedAt: "2026-11-27T10:00:00+03:00",
+    heroImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A humanoid robot sitting on a bench",
+    keyTakeaways: [
+      "HUMAIN Chat launched in Saudi Arabia in August 2025, from HUMAIN, an AI company owned by the Public Investment Fund.",
+      "It runs on ALLaM 34B, an Arabic-first large language model.",
+      "Features include Arabic voice input across dialects, Arabic–English switching, web search and conversation sharing.",
+      "HUMAIN says data is hosted in the Kingdom in line with the Personal Data Protection Law (PDPL). It launched as a free beta.",
+    ],
+    body: [
+      { type: "h2", id: "what", text: "What it is" },
+      {
+        type: "p",
+        text: "Most popular AI chatbots are trained mainly on English. HUMAIN Chat is built around Arabic, using the ALLaM model, so it aims to handle Gulf and other Arabic dialects, local context and bilingual conversations more naturally.",
+      },
+      { type: "h2", id: "features", text: "Main features" },
+      {
+        type: "ul",
+        items: [
+          "Speak or type in Arabic dialects, or switch to English mid-conversation.",
+          "Real-time web search for current information.",
+          "Share conversations with others.",
+          "Available on the web and on iOS and Android.",
+        ],
+      },
+      { type: "h2", id: "use-wisely", text: "Using it wisely" },
+      {
+        type: "ol",
+        items: [
+          "Double-check facts, especially fees, dates and legal rules — AI can be wrong.",
+          "Don't paste ID numbers, Iqama details, bank data or passwords into any chatbot.",
+          "For government services, use the official platforms such as Absher, Qiwa or Nafath.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Is HUMAIN Chat free?", answer: "It launched as a free beta. Check the app store listing for current terms." },
+      { question: "What model does HUMAIN Chat use?", answer: "ALLaM 34B, an Arabic-first large language model." },
+    ],
+    sources: [
+      { name: "Gulf News — Saudi Arabia launches Humain Chat", url: "https://gulfnews.com/world/gulf/saudi/saudi-arabia-launches-humain-chat-its-most-advanced-arabic-ai-1.500246219" },
+      { name: "Arab News — Saudi-owned Arabic app HUMAIN Chat launches in Kingdom", url: "https://www.arabnews.com/node/2613023" },
+      { name: "Saudipedia — HUMAIN Chat application", url: "https://saudipedia.com/en/humain-chat-application" },
+    ],
+    methodology: "Compiled from Gulf News, Arab News and Saudipedia, checked 27 November 2026. Features and pricing may have changed since launch.",
+  },
+  {
+    id: "sa-sdaia-deepfake-guidelines",
+    slug: "sdaia-deepfake-guidelines-saudi",
+    title: "SDAIA's deepfake guidelines: how Saudi Arabia says to spot and handle fake media",
+    seoTitle: "SDAIA Deepfake Guidelines: How to Spot Fake Media",
+    subtitle: "Saudi Arabia's data and AI authority sets rules for deepfake makers — and practical advice for everyone else.",
+    excerpt:
+      "SDAIA's 'Deepfakes Guidelines' cover impostor scams, non-consensual manipulation and disinformation, and include advice for the public: verify the source, use detection tools, and be wary of urgent requests.",
+    category: "ai-tools",
+    tags: ["SDAIA", "Deepfakes", "AI", "Saudi Arabia"],
+    publishedAt: "2026-11-27T11:00:00+03:00",
+    heroImage: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Code on a dark laptop screen",
+    keyTakeaways: [
+      "The Saudi Data and AI Authority (SDAIA) issued 'Deepfakes Guidelines: Mitigating Risks While Fostering Innovation'.",
+      "They identify three main threats: impostor scams, non-consensual manipulation, and disinformation.",
+      "For the public, SDAIA advises verifying the source before sharing or acting, and using detection tools.",
+      "For developers, it recommends traceability such as metadata and watermarking on synthetic content.",
+    ],
+    body: [
+      { type: "h2", id: "threats", text: "The three main threats" },
+      {
+        type: "ul",
+        items: [
+          "Impostor scams — fake voices or videos of relatives, executives or officials asking for money.",
+          "Non-consensual manipulation — altering someone's image or voice without permission.",
+          "Disinformation — fake clips designed to mislead the public.",
+        ],
+      },
+      { type: "h2", id: "public", text: "What SDAIA advises the public" },
+      {
+        type: "ol",
+        items: [
+          "Verify the source before sharing or acting on surprising content.",
+          "Be suspicious of urgent requests for money or data, even from familiar faces or voices.",
+          "Use reputable detection tools, but don't rely on them alone.",
+          "Report fraud to the authorities and your bank.",
+        ],
+      },
+      { type: "callout", title: "Read the full guidance", text: "The guidelines are published on SDAIA's website. Versions date from a 2024 consultation and later revision." },
+    ],
+    faq: [
+      { question: "What are SDAIA's deepfake guidelines?", answer: "Guidance from Saudi Arabia's data and AI authority on the risks of deepfakes, with advice for developers and the public." },
+      { question: "How should I check a suspicious video?", answer: "Verify the source through a trusted channel before sharing or acting on it." },
+      { question: "What is SDAIA?", answer: "The Saudi Data and Artificial Intelligence Authority, the Kingdom's national data and AI regulator." },
+      { question: "What should deepfake makers do under the guidelines?", answer: "SDAIA recommends traceability measures such as metadata and watermarking on synthetic content." },
+    ],
+    sources: [
+      { name: "Arab News — SDAIA sets rules for deepfakes", url: "https://www.arabnews.com/node/2642878" },
+      { name: "Biometric Update — Saudi Arabia issues deepfake guidelines", url: "https://www.biometricupdate.com/202608/saudi-arabia-issues-deepfake-guidelines-as-ai-driven-identity-threats-rise" },
+    ],
+    methodology: "Compiled from Arab News and Biometric Update, checked 27 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("sa", drafts);

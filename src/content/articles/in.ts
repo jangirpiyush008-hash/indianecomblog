@@ -1074,6 +1074,116 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from All India Radio and news reports on the Railway Board circular, checked 27 November 2026.",
   },
+  {
+    id: "in-ai-content-labelling-rules",
+    slug: "ai-generated-content-labelling-rules-india",
+    title: "AI-generated content must now be labelled in India: what the new IT Rules mean for you",
+    seoTitle: "India's AI Content Labelling Rules (IT Rules 2026) Explained",
+    subtitle: "Since 20 February 2026, platforms must label deepfakes and other synthetic content — and remove harmful ones within hours.",
+    excerpt:
+      "MeitY's IT Rules amendment, in force since 20 February 2026, defines 'synthetically generated information', requires visible labels on AI-made images, video and audio, and cuts takedown times for deepfakes.",
+    category: "ai-tools",
+    tags: ["Deepfakes", "IT Rules", "MeitY", "AI Labelling"],
+    publishedAt: "2026-11-27T11:00:00+05:30",
+    heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A circuit pattern on a glowing screen",
+    keyTakeaways: [
+      "The IT (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules, 2026 were notified on 10 February and took effect on 20 February 2026.",
+      "They define 'synthetically generated information' — AI-made or altered content that looks real.",
+      "Platforms must ask users to declare synthetic uploads and show clear labels: visible on images and video, spoken on audio.",
+      "Takedown windows are much shorter, especially for non-consensual intimate deepfakes.",
+    ],
+    body: [
+      { type: "h2", id: "what", text: "What changed" },
+      {
+        type: "p",
+        text: "The amendments bring deepfakes and other synthetic media under India's intermediary rules. Routine edits and educational content are carved out; the focus is content that realistically depicts a real person or event and could mislead viewers.",
+      },
+      { type: "h2", id: "you", text: "What it means for you" },
+      {
+        type: "ul",
+        items: [
+          "If you post AI-generated images, video or voice that look real, expect platforms to ask you to declare it.",
+          "Look for labels on AI content — and treat unlabelled 'shocking' videos of public figures with caution.",
+          "Platforms must act faster on complaints about deepfakes, especially morphed intimate images.",
+        ],
+      },
+      { type: "h2", id: "report", text: "How to report a deepfake" },
+      {
+        type: "ol",
+        items: [
+          "Use the platform's report option and choose impersonation, nudity or misinformation as relevant.",
+          "Escalate to the platform's grievance officer if it isn't removed.",
+          "For crimes such as extortion or intimate deepfakes, report at cybercrime.gov.in or call 1930.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When did India's AI labelling rules start?", answer: "On 20 February 2026, after notification on 10 February." },
+      { question: "Where can I report a deepfake in India?", answer: "On the platform first, then at cybercrime.gov.in or helpline 1930 for crimes." },
+      { question: "What is 'synthetically generated information'?", answer: "Content that is artificially or algorithmically created or modified and looks real, such as a deepfake video of a real person. Routine edits are excluded." },
+      { question: "Do I have to label AI images I post?", answer: "Platforms must ask users to declare synthetic content and label it, so expect a declaration step when uploading realistic AI images, video or audio." },
+    ],
+    sources: [
+      { name: "Business Today — Govt tightens rules on AI-generated content", url: "https://www.businesstoday.in/technology/story/govt-tightens-rules-on-ai-generated-content-mandates-labels-and-faster-takedowns-515505-2026-02-10" },
+      { name: "Bar & Bench — Centre amends IT Rules to regulate AI-generated content", url: "https://www.barandbench.com/news/law-policy/centre-amends-it-rules-to-regulate-ai-generated-content-takedown-timelines-reduced" },
+      { name: "Nishith Desai Associates — Unpacking India's SGI amendments", url: "https://www.nishithdesai.com/research-and-articles/hotline/technology-law-analysis/deepfakes-disclosure-and-due-diligence-unpacking-indias-sgi-amendments-15532" },
+    ],
+    methodology: "Compiled from Business Today, Bar & Bench and legal analysis of the notified rules, checked 27 November 2026. Not legal advice.",
+  },
+  {
+    id: "in-bhashini-app",
+    slug: "bhashini-app-indian-language-translation",
+    title: "Bhashini: the government's free AI app for translating Indian languages",
+    seoTitle: "Bhashini App: Free AI Translation for Indian Languages",
+    subtitle: "Translate text, speech and photos of text between Indian languages — including live conversations.",
+    excerpt:
+      "Bhashini is the Government of India's AI language platform. Its app translates text and speech between Indian languages, reads text from photos, and offers a live conversation mode.",
+    category: "ai-tools",
+    tags: ["Bhashini", "Translation", "Indian Languages", "Digital India"],
+    publishedAt: "2026-11-27T10:30:00+05:30",
+    heroImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A person using a laptop and a phone",
+    keyTakeaways: [
+      "Bhashini is a free Government of India app for translating between Indian languages.",
+      "It supports text translation, speech-to-text, text-to-speech and a live 'Converse' mode.",
+      "It can read text from photos (OCR) and lets you choose between models from different institutions.",
+      "Users report text translation works well; speech recognition can struggle.",
+    ],
+    body: [
+      { type: "h2", id: "features", text: "What it can do" },
+      {
+        type: "ul",
+        items: [
+          "Translate typed text from one Indian language to another.",
+          "Speak and get text, or type and hear it spoken.",
+          "Converse: translate a two-way conversation in real time.",
+          "Photo translation: point at a sign, form or menu to read and translate it.",
+        ],
+      },
+      { type: "h2", id: "use", text: "Good uses" },
+      {
+        type: "ol",
+        items: [
+          "Understanding a notice or form in another state's language.",
+          "Talking with someone who speaks a different Indian language.",
+          "Checking the gist of a message from a relative or customer.",
+        ],
+      },
+      { type: "callout", title: "Check important translations", text: "For legal, medical or financial documents, don't rely on machine translation alone — ask a fluent speaker or a professional." },
+    ],
+    faq: [
+      { question: "Is the Bhashini app free?", answer: "Yes, it's a free Government of India app." },
+      { question: "Can Bhashini translate speech?", answer: "Yes — it has speech-to-text and a live conversation mode, though accuracy varies." },
+      { question: "Who makes Bhashini?", answer: "It's part of the Government of India's Bhashini language mission under the Digital India programme." },
+      { question: "Can Bhashini translate text in photos?", answer: "Yes, it can read text from images and translate it; cropping the photo improves accuracy." },
+    ],
+    sources: [
+      { name: "Bhashini — App Store listing", url: "https://apps.apple.com/in/app/id6446089978" },
+      { name: "Bhashini — official website", url: "https://bhashini.gov.in/" },
+    ],
+    methodology: "Compiled from the official app listing and Bhashini website, checked 27 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("in", drafts);

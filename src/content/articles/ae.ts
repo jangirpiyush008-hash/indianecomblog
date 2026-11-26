@@ -634,6 +634,170 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from Gulf News, The National and Arabian Business reporting on RTA announcements, checked 27 November 2026.",
   },
+  {
+    id: "ae-u-ask-government-ai",
+    slug: "u-ask-uae-government-ai-assistant",
+    title: "U-Ask: how to use the UAE government's AI assistant for public services",
+    seoTitle: "U-Ask: The UAE Government's AI Assistant, Explained",
+    subtitle: "Ask about visas, licences or Emirates ID in Arabic or English, and get answers drawn from official government websites.",
+    excerpt:
+      "U-Ask is the UAE government's generative-AI assistant. It answers questions about federal and local government services in Arabic and English, using official sources, and some services need UAE PASS.",
+    category: "ai-tools",
+    tags: ["U-Ask", "UAE Government", "AI Assistant", "UAE PASS"],
+    publishedAt: "2026-11-27T10:00:00+04:00",
+    heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "The letters AI in a digital illustration",
+    keyTakeaways: [
+      "U-Ask is the UAE government's AI chat assistant for information about government services.",
+      "It works in Arabic and English, and is built into the u.ae portal and many government websites.",
+      "Some services need you to sign in with UAE PASS.",
+      "Use it to find the right service and documents, then complete the transaction on the official portal or app.",
+    ],
+    body: [
+      { type: "h2", id: "what", text: "What U-Ask is" },
+      {
+        type: "p",
+        text: "Launched by the Telecommunications and Digital Government Regulatory Authority (TDRA) in 2023, U-Ask uses generative AI to answer questions in plain language about UAE government services — for example how to renew an Emirates ID, what a visa requires, or which authority handles a licence.",
+      },
+      { type: "h2", id: "how", text: "How to use it" },
+      {
+        type: "ol",
+        items: [
+          "Open the U-Ask assistant on the UAE government portal (u.ae) or on a participating government website.",
+          "Type your question in Arabic or English, as you'd say it.",
+          "Check the answer against the linked official page before acting.",
+          "Sign in with UAE PASS if the service needs your details.",
+        ],
+      },
+      { type: "h2", id: "tips", text: "Tips for good answers" },
+      {
+        type: "ul",
+        items: [
+          "Say which emirate you're in — many services differ between Dubai, Abu Dhabi and the other emirates.",
+          "Ask one question at a time.",
+          "For fees and deadlines, always confirm on the official service page, as AI answers can be out of date.",
+        ],
+      },
+      { type: "callout", title: "Stay safe", text: "Government assistants never ask for passwords or OTPs in a chat. Ignore look-alike 'AI government helpers' on social media that ask for payment." },
+    ],
+    faq: [
+      { question: "Is U-Ask free?", answer: "Yes, it's a free government service." },
+      { question: "Does U-Ask work in English?", answer: "Yes, in Arabic and English." },
+    ],
+    sources: [
+      { name: "UAE Government portal — U-Ask", url: "https://u.ae/en/about-the-uae/digital-uae/digital-transformation/platforms-and-apps/U-Ask" },
+      { name: "Khaleej Times — UAE launches AI chatbot U-Ask in Arabic and English", url: "https://www.khaleejtimes.com/uae/uae-launches-ai-chatbot-u-ask-in-arabic-english" },
+      { name: "Gulf Business — UAE launches U-Ask for easier government services", url: "https://gulfbusiness.com/en/2023/artificial-intelligence/uae-launches-u-ask-for-easy-government-services" },
+    ],
+    methodology: "Compiled from the UAE government portal and UAE media, checked 27 November 2026. Features evolve; check u.ae for the current version.",
+  },
+  {
+    id: "ae-ai-curriculum-schools",
+    slug: "uae-ai-curriculum-schools-explained",
+    title: "AI is now a school subject in the UAE: what children learn, from kindergarten to Grade 12",
+    seoTitle: "UAE AI Curriculum in Schools: What Children Learn",
+    subtitle: "The Ministry of Education made AI part of the curriculum from the 2025–26 school year, starting in kindergarten.",
+    excerpt:
+      "From the 2025–26 academic year, UAE public schools teach artificial intelligence from kindergarten to Grade 12, within computing classes. What the curriculum covers and how it's assessed.",
+    category: "ai-tools",
+    tags: ["UAE Schools", "AI Curriculum", "Ministry of Education", "Parents"],
+    publishedAt: "2026-11-27T11:00:00+04:00",
+    heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Colourful code on a screen",
+    keyTakeaways: [
+      "AI became an official subject in UAE public schools from the 2025–26 academic year, from kindergarten to Grade 12.",
+      "It sits within computing classes and covers computing concepts, AI concepts, and practical and ethical use.",
+      "More than 1,000 trained teachers were assigned to deliver it in the first year.",
+      "Reports in September 2026 said the Cabinet approved the curriculum for both public and private schools.",
+    ],
+    body: [
+      { type: "h2", id: "what", text: "What children learn" },
+      {
+        type: "ul",
+        items: [
+          "Younger pupils: what AI is and how it shows up in daily life — often without using AI tools directly.",
+          "Middle grades: data, algorithms and how AI systems make predictions.",
+          "Older students: building simple AI projects, and the ethics of AI, including bias and privacy.",
+        ],
+      },
+      { type: "h2", id: "parents", text: "What parents can do" },
+      {
+        type: "ol",
+        items: [
+          "Ask the school how AI lessons are timetabled and assessed.",
+          "Talk about safe and honest use of AI for homework.",
+          "Set screen-time rules — the curriculum isn't meant to add screen time for young children.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When did the UAE start teaching AI in schools?", answer: "From the 2025–26 academic year in public schools." },
+      { question: "Does the AI curriculum apply to private schools?", answer: "Reports in September 2026 said the Cabinet approved it for public and private schools. Check with your school for timing." },
+      { question: "Is there an exam in the AI subject?", answer: "Reports at launch said the curriculum would be taught without exams; check with your school." },
+      { question: "How many teachers teach the AI curriculum?", answer: "More than 1,000 trained teachers were assigned in the first year." },
+    ],
+    sources: [
+      { name: "WAM — Ministry of Education introduces AI curriculum in public schools", url: "https://www.wam.ae/en/article/bji6z2n-ministry-education-introduces-curriculum-public" },
+      { name: "Gulf News — UAE to launch AI curriculum starting in kindergarten", url: "https://gulfnews.com/uae/education/uae-to-launch-ai-curriculum-starting-in-kindergarten-7-core-concepts-revealed-1.500115415" },
+      { name: "The National — How UAE schools are introducing AI to pupils", url: "https://www.thenationalnews.com/news/uae/2026/09/24/more-ai-but-no-more-screen-time-how-uae-schools-are-introducing-artificial-intelligence-to-pupils/" },
+    ],
+    methodology: "Compiled from WAM, Gulf News and The National, checked 27 November 2026.",
+  },
+  {
+    id: "ae-deepfake-scams-dubai-police",
+    slug: "deepfake-scams-uae-dubai-police-advice",
+    title: "Deepfake calls and fake officials: how to protect yourself from AI scams in the UAE",
+    seoTitle: "AI Deepfake Scams in the UAE: Dubai Police Advice",
+    subtitle: "Scammers clone voices and faces — even of ministry officials. Dubai Police say don't trust a voice or video alone.",
+    excerpt:
+      "Dubai Police and MoHRE warn that criminals use AI to fake voices, videos and images of family, employers and officials. The warning signs, verification steps and where to report.",
+    category: "ai-tools",
+    tags: ["Deepfakes", "Dubai Police", "Scams", "MoHRE"],
+    publishedAt: "2026-11-27T10:30:00+04:00",
+    heroImage: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A smartphone and wireless earbuds on a table",
+    keyTakeaways: [
+      "Dubai Police warn not to rely on a voice or image alone to confirm who is calling.",
+      "MoHRE has warned of deepfake scams impersonating its officials, often around visas and jobs.",
+      "Dubai Police say no legitimate authority asks for sensitive information by phone.",
+      "Dubai has an AI tool, 'Sarab', for assessing manipulated video, and a unit for AI-related crime.",
+    ],
+    body: [
+      { type: "h2", id: "how", text: "How these scams work" },
+      {
+        type: "ul",
+        items: [
+          "A cloned voice of a relative or boss asks for an urgent transfer.",
+          "A fake video call from an 'official' threatens visa cancellation unless you pay.",
+          "Fake job offers use AI-made videos of real company staff.",
+        ],
+      },
+      { type: "h2", id: "verify", text: "How to verify" },
+      {
+        type: "ol",
+        items: [
+          "Hang up and call back on a number you already have, or the official number on a government website.",
+          "Agree a family code word for emergencies.",
+          "Never share OTPs, card details or Emirates ID numbers on a call.",
+          "Check visa or labour issues only through official apps and portals.",
+        ],
+      },
+      { type: "h2", id: "report", text: "Where to report" },
+      { type: "p", text: "In Dubai, report cybercrime through the Dubai Police app or eCrime platform. Elsewhere, contact your emirate's police. If you've paid, contact your bank immediately." },
+    ],
+    faq: [
+      { question: "Do UAE authorities ask for information by phone?", answer: "Dubai Police say no legitimate authority will request sensitive information by phone." },
+      { question: "How can I check if a video is a deepfake?", answer: "Don't rely on spotting glitches — verify through a separate, trusted channel." },
+      { question: "What is Sarab?", answer: "An AI-powered tool from the Dubai Electronic Security Centre that assesses whether video has been manipulated." },
+      { question: "What should I do if I sent money?", answer: "Contact your bank immediately and report it to the police through the official app or platform." },
+    ],
+    sources: [
+      { name: "Emirates 24|7 — Dubai Police alert public to AI-powered scams", url: "https://www.emirates247.com/uae/dubai-police-alert-public-to-ai-powered-scams-using-fake-voices-and-images/6451" },
+      { name: "Khaleej Times — MoHRE warns residents of deepfake scams impersonating officials", url: "https://www.khaleejtimes.com/uae/mohre-warns-residents-deepfake-scams-impersonating-officials" },
+      { name: "The National — Dubai Police says deepfakes getting harder to detect", url: "https://www.thenationalnews.com/news/uae/2026/10/10/dubai-police-says-deepfakes-getting-harder-to-detect/" },
+    ],
+    methodology: "Compiled from UAE media reporting of Dubai Police and MoHRE warnings, checked 27 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("ae", drafts);

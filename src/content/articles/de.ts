@@ -624,6 +624,107 @@ const drafts: Draft[] = [
     ],
     methodology: "Zusammengestellt aus Angaben der Bundesregierung, des BMF und von ZDFheute, Stand 27. November 2026. Keine Steuerberatung.",
   },
+  {
+    id: "de-ai-act-kennzeichnung-2026",
+    slug: "ki-verordnung-kennzeichnungspflicht-deepfakes",
+    title: "KI-Verordnung: Seit August 2026 müssen Deepfakes gekennzeichnet werden",
+    seoTitle: "KI-Verordnung: Kennzeichnungspflicht für Deepfakes",
+    subtitle: "Seit dem 2. August 2026 gelten die Transparenzpflichten des AI Act. Was Nutzer davon merken.",
+    excerpt:
+      "Seit 2. August 2026 müssen Chatbots offenlegen, dass sie KI sind, und Deepfakes gekennzeichnet werden. Das Digital-Omnibus-Paket hat vor allem Hochrisiko-Pflichten verschoben – nicht die Kennzeichnung.",
+    category: "ai-tools",
+    tags: ["AI Act", "KI-Verordnung", "Deepfakes", "EU"],
+    publishedAt: "2026-11-27T11:00:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Ein Schaltkreismuster auf einem leuchtenden Bildschirm",
+    keyTakeaways: [
+      "Seit 2. August 2026 gelten die Transparenzpflichten nach Artikel 50 der KI-Verordnung (AI Act).",
+      "Wer mit einem KI-System interagiert, muss darauf hingewiesen werden.",
+      "Deepfakes müssen als künstlich erzeugt oder verändert gekennzeichnet werden.",
+      "Das Digital-Omnibus-Paket verschiebt vor allem Hochrisiko-Pflichten auf 2027 – die Deepfake-Kennzeichnung gilt.",
+    ],
+    body: [
+      { type: "h2", id: "was", text: "Was gilt seit August 2026" },
+      {
+        type: "ul",
+        items: [
+          "Chatbots müssen offenlegen, dass Sie mit einer KI sprechen – sofern es nicht offensichtlich ist.",
+          "Wer Deepfakes (realistisch wirkende Bilder, Videos oder Tonaufnahmen) erzeugt und veröffentlicht, muss sie kennzeichnen.",
+          "KI-generierte Texte zu Themen von öffentlichem Interesse müssen in bestimmten Fällen gekennzeichnet werden.",
+        ],
+      },
+      { type: "h2", id: "omnibus", text: "Was verschoben wurde" },
+      { type: "p", text: "Für maschinenlesbare Markierungen bei bereits zuvor angebotenen generativen KI-Systemen gibt es eine Übergangsfrist bis Dezember 2026. Die Pflichten für Hochrisiko-KI wurden auf August 2027 verschoben." },
+      { type: "h2", id: "tipps", text: "Was Sie tun können" },
+      {
+        type: "ol",
+        items: [
+          "Achten Sie auf Hinweise wie „KI-generiert“ unter Bildern und Videos.",
+          "Prüfen Sie überraschende Clips von Politikern oder Prominenten über seriöse Medien.",
+          "Melden Sie ungekennzeichnete Deepfakes der Plattform.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Seit wann müssen Deepfakes gekennzeichnet werden?", answer: "Seit dem 2. August 2026 nach Artikel 50 der KI-Verordnung." },
+      { question: "Wurde die Kennzeichnungspflicht verschoben?", answer: "Nein. Verschoben wurden vor allem Hochrisiko-Pflichten; für bestehende Systeme gibt es eine kurze Übergangsfrist bei maschinenlesbaren Markierungen." },
+      { question: "Was ist ein Deepfake im Sinne der KI-Verordnung?", answer: "Ein mit KI erzeugter oder veränderter Bild-, Ton- oder Videoinhalt, der echten Personen oder Ereignissen ähnelt und fälschlich echt wirken kann." },
+      { question: "Wann gelten die Pflichten für Hochrisiko-KI?", answer: "Nach dem Digital-Omnibus-Paket ab August 2027." },
+    ],
+    sources: [
+      { name: "Goodwin — EU AI Act transparency obligations now in force", url: "https://www.goodwinlaw.com/en/insights/publications/2026/08/alerts-technology-dpc-eu-ai-act-transparency-obligations-now-in-force" },
+      { name: "Mayer Brown — Digital Omnibus on AI and transparency guidance", url: "https://www.mayerbrown.com/en/insights/publications/2026/07/eu-ai-act-news-digital-omnibus-on-ai-new-guidance-on-risk-classification-gpai-and-transparency-obligations" },
+      { name: "Reed Smith — EU AI Act next level applies as of 2 August 2026", url: "https://www.reedsmith.com/our-insights/blogs/technology-law-dispatch/102nfi5/eu-ai-act-next-level-applies-as-of-2-august-2026/" },
+    ],
+    methodology: "Zusammengestellt aus juristischen Analysen zur KI-Verordnung, Stand 27. November 2026. Keine Rechtsberatung.",
+  },
+  {
+    id: "de-meta-ki-widerspruch",
+    slug: "meta-ki-training-widersprechen",
+    title: "Meta nutzt Ihre Beiträge für KI: So widersprechen Sie bei Facebook und Instagram",
+    seoTitle: "Meta-KI-Training: So widersprechen Sie bei Facebook",
+    subtitle: "Ein Widerspruch wirkt nur für die Zukunft – aber er ist weiterhin möglich und dauert zwei Minuten.",
+    excerpt:
+      "Meta trainiert seine KI mit öffentlichen Beiträgen erwachsener Nutzer aus der EU. Über ein Formular bei Facebook und Instagram können Sie widersprechen – ohne Begründung. Was danach gilt.",
+    category: "ai-tools",
+    tags: ["Meta", "KI-Training", "Datenschutz", "Widerspruch"],
+    publishedAt: "2026-11-27T10:30:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Grüner Code auf schwarzem Bildschirm",
+    keyTakeaways: [
+      "Meta verwendet öffentliche Beiträge erwachsener EU-Nutzer von Facebook und Instagram für das Training von Meta AI.",
+      "Das OLG Köln hat einen Eilantrag der Verbraucherzentrale NRW dagegen abgelehnt (Az. 15 UKl 2/25).",
+      "Ein Widerspruch ist weiter möglich, wirkt aber nur für künftige Inhalte.",
+      "Eine Begründung ist nicht nötig; für jedes Konto ist ein eigener Widerspruch sinnvoll.",
+    ],
+    body: [
+      { type: "h2", id: "so", text: "So widersprechen Sie" },
+      {
+        type: "ol",
+        items: [
+          "Melden Sie sich bei Facebook bzw. Instagram an.",
+          "Öffnen Sie in den Einstellungen die Datenschutzrichtlinie bzw. den Bereich „KI bei Meta“ und wählen Sie das Widerspruchsformular.",
+          "Geben Sie Ihre E-Mail-Adresse an – das Begründungsfeld kann leer bleiben.",
+          "Bewahren Sie die Bestätigungs-E-Mail auf.",
+        ],
+      },
+      { type: "h2", id: "whatsapp", text: "Und WhatsApp?" },
+      { type: "p", text: "Laut Verbraucherzentrale reicht es bei WhatsApp, Meta AI nicht zu nutzen. Private Chats werden nach Angaben von Meta nicht für das Training verwendet." },
+      { type: "callout", title: "Mehrere Konten", text: "Wer mehrere Profile mit unterschiedlichen E-Mail-Adressen hat, sollte für jedes Konto einzeln widersprechen." },
+    ],
+    faq: [
+      { question: "Kann ich dem Meta-KI-Training noch widersprechen?", answer: "Ja. Der Widerspruch gilt für künftige Inhalte; bereits verwendete Daten werden nicht aus den Modellen entfernt." },
+      { question: "Muss ich den Widerspruch begründen?", answer: "Nein. Meta muss ihn auch ohne Begründung akzeptieren." },
+      { question: "Wird WhatsApp für das Meta-KI-Training genutzt?", answer: "Laut Verbraucherzentrale genügt es bei WhatsApp, Meta AI nicht zu nutzen." },
+      { question: "Was entschied das OLG Köln?", answer: "Es lehnte den Eilantrag der Verbraucherzentrale NRW gegen das KI-Training ab (Az. 15 UKl 2/25)." },
+    ],
+    sources: [
+      { name: "Verbraucherzentrale — Meta AI bei Facebook, Instagram und WhatsApp: so widersprechen Sie", url: "https://www.verbraucherzentrale.de/wissen/digitale-welt/soziale-netzwerke/meta-ai-bei-facebook-instagram-und-whatsapp-so-widersprechen-sie-95646" },
+      { name: "Stiftung Warentest — Wie Sie dem KI-Training mit Ihren Nutzerdaten widersprechen", url: "https://www.test.de/Facebook-Instagram-und-Whatsapp-Wie-Sie-KI-Training-mit-Ihren-Nutzerdaten-widersprechen-6220809-0/" },
+      { name: "ZDFheute — Meta AI: So klappt der Widerspruch", url: "https://www.zdfheute.de/ratgeber/meta-ai-facebook-instagram-whatsapp-widersprechen-100.html" },
+    ],
+    methodology: "Zusammengestellt aus Verbraucherzentrale, Stiftung Warentest und ZDFheute, Stand 27. November 2026.",
+  },
 ];
 
 export const articles = buildArticles("de", drafts);

@@ -641,6 +641,174 @@ const drafts: Draft[] = [
     ],
     methodology: "Compilado a partir de reportagens sobre a resolução do Contran, verificado em 27 de novembro de 2026. Confirme as regras no Detran do seu estado.",
   },
+  {
+    id: "br-golpe-voz-clonada-ia",
+    slug: "golpe-falso-parente-voz-clonada-ia",
+    title: "Golpe do falso parente com voz clonada por IA: como reconhecer e se proteger",
+    seoTitle: "Golpe da voz clonada por IA: como se proteger",
+    subtitle: "Criminosos usam inteligência artificial para imitar a voz de filhos, netos e amigos e pedir Pix urgente.",
+    excerpt:
+      "Com poucos segundos de áudio, golpistas clonam a voz de um familiar e pedem dinheiro por Pix. Combine uma palavra-código, desligue e ligue de volta, e saiba o que fazer se já transferiu.",
+    category: "ai-tools",
+    tags: ["Golpe", "Voz Clonada", "Inteligência Artificial", "Pix"],
+    publishedAt: "2026-11-27T10:00:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Um fone de telefone antigo em fundo claro",
+    keyTakeaways: [
+      "O golpe usa IA para imitar a voz de um parente em uma falsa emergência e pedir Pix.",
+      "Áudios de vídeos e mensagens nas redes sociais podem servir de material para a clonagem.",
+      "Defesa mais eficaz: uma palavra-código combinada com a família.",
+      "Se transferiu, avise o banco imediatamente e peça a devolução pelo MED do Pix; registre boletim de ocorrência.",
+    ],
+    body: [
+      { type: "h2", id: "como", text: "Como o golpe funciona" },
+      {
+        type: "p",
+        text: "Chega uma ligação ou um áudio de WhatsApp com a voz de um filho ou neto: acidente, celular quebrado, número novo, pedido de Pix urgente. A voz parece real porque foi gerada por inteligência artificial a partir de gravações públicas. A Anatel publicou em 2026 uma campanha alertando para golpes com áudios, vídeos e imagens manipulados por IA.",
+      },
+      { type: "h2", id: "sinais", text: "Sinais de alerta" },
+      {
+        type: "ul",
+        items: [
+          "Pressa e pedido de segredo.",
+          "Número desconhecido ou 'número novo'.",
+          "Pix para conta de terceiros.",
+          "A pessoa evita responder perguntas pessoais.",
+        ],
+      },
+      { type: "h2", id: "proteger", text: "Como se proteger" },
+      {
+        type: "ol",
+        items: [
+          "Combine uma palavra-código com a família e nunca a publique.",
+          "Desligue e ligue para o número antigo salvo na sua agenda.",
+          "Confirme com outro parente antes de transferir.",
+          "Nunca compartilhe senhas nem códigos recebidos por SMS.",
+        ],
+      },
+      { type: "h2", id: "caiu", text: "Se você já transferiu" },
+      { type: "p", text: "Ligue imediatamente para o seu banco e peça a contestação pelo MED (Mecanismo Especial de Devolução) do Pix. Registre um boletim de ocorrência, de preferência pela delegacia on-line do seu estado." },
+    ],
+    faq: [
+      { question: "Dá para clonar uma voz com poucos áudios?", answer: "Sim. Especialistas alertam que trechos curtos de áudio publicados em redes sociais podem bastar." },
+      { question: "O que fazer se paguei um Pix para golpista?", answer: "Avise o banco na hora, peça a devolução pelo MED e registre boletim de ocorrência." },
+    ],
+    sources: [
+      { name: "TecMundo — Golpe com voz clonada por IA avança no Brasil", url: "https://www.tecmundo.com.br/seguranca/412687-golpe-com-voz-clonada-por-ia-avanca-no-brasil-veja-como-se-proteger.htm" },
+      { name: "Olhar Digital — Como proteger sua família de golpes com vozes clonadas", url: "https://olhardigital.com.br/2025/07/11/seguranca/como-proteger-sua-familia-de-golpes-com-vozes-clonadas-por-inteligencia-artificial/" },
+      { name: "WeLiveSecurity (ESET) — Palavra de segurança contra golpes com IA", url: "https://www.welivesecurity.com/pt/seguranca-digital/palavra-de-seguranca-como-se-proteger-de-golpes-com-ia/" },
+    ],
+    methodology: "Compilado a partir de TecMundo, Olhar Digital e ESET, verificado em 27 de novembro de 2026.",
+  },
+  {
+    id: "br-meta-ai-whatsapp",
+    slug: "meta-ai-whatsapp-o-que-e-como-limitar",
+    title: "Meta AI no WhatsApp: o que ela faz, dá para desativar e como limitar",
+    seoTitle: "Meta AI no WhatsApp: dá para desativar? Como limitar",
+    subtitle: "No Brasil não é possível remover a Meta AI do app, mas dá para esconder o atalho e se opor ao uso dos dados.",
+    excerpt:
+      "A Meta AI, o 'círculo azul' do WhatsApp, não pode ser removida no Brasil. Veja como tirar o atalho da tela, o que a IA acessa e como usar o formulário de oposição ao uso de dados para treinamento.",
+    category: "ai-tools",
+    tags: ["Meta AI", "WhatsApp", "Privacidade", "ANPD"],
+    publishedAt: "2026-11-27T11:00:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Celular e fones sem fio sobre a mesa",
+    keyTakeaways: [
+      "A Meta AI não pode ser desinstalada do WhatsApp no Brasil; dá apenas para limitar.",
+      "É possível desafixar ou arquivar a conversa com a Meta AI para tirá-la da tela principal.",
+      "A ANPD permitiu o treinamento de IA com dados de usuários desde que haja direito de oposição.",
+      "Existe um formulário da Meta para se opor, que pede o número do WhatsApp com DDI e DDD.",
+    ],
+    body: [
+      { type: "h2", id: "o-que", text: "O que é a Meta AI" },
+      { type: "p", text: "É o assistente de inteligência artificial da Meta, integrado ao WhatsApp, Instagram e Facebook. No WhatsApp, aparece como um círculo azul e também na barra de busca." },
+      { type: "h2", id: "limitar", text: "Como limitar" },
+      {
+        type: "ol",
+        items: [
+          "Pressione a conversa com a Meta AI e escolha desafixar ou arquivar.",
+          "Não marque @Meta AI em grupos.",
+          "Use o formulário de oposição da Meta para pedir que seus dados não sejam usados no treinamento.",
+        ],
+      },
+      { type: "h2", id: "privacidade", text: "Privacidade" },
+      {
+        type: "ul",
+        items: [
+          "Mensagens enviadas à própria Meta AI podem ser usadas pela empresa conforme sua política.",
+          "Não compartilhe dados sensíveis, CPF ou senhas com qualquer assistente de IA.",
+          "Dúvidas ou reclamações sobre dados pessoais podem ser levadas à ANPD.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Dá para remover a Meta AI do WhatsApp?", answer: "No Brasil, não. É possível apenas esconder o atalho e limitar o uso." },
+      { question: "Como impedir que a Meta use meus dados para treinar IA?", answer: "Use o formulário de oposição da Meta, informando o número do WhatsApp com DDI e DDD." },
+      { question: "A Meta AI lê minhas conversas privadas?", answer: "A Meta afirma que as conversas pessoais são protegidas por criptografia; mensagens enviadas diretamente à Meta AI seguem a política da empresa." },
+      { question: "O que a ANPD decidiu?", answer: "Em agosto de 2024, a ANPD permitiu o treinamento de IA com dados de usuários, desde que haja transparência e direito de oposição." },
+    ],
+    sources: [
+      { name: "Aos Fatos — Como impedir que o WhatsApp use seus dados para treinar IA", url: "https://www.aosfatos.org/noticias/como-impedir-whatsapp-usar-dados-treinar-modelos-ia/" },
+      { name: "Canaltech — É possível tirar a Meta AI do WhatsApp?", url: "https://canaltech.com.br/inteligencia-artificial/e-possivel-tirar-a-meta-ai-do-whatsapp-empresa-explica/" },
+      { name: "Diário do Comércio — Meta AI e a política de privacidade", url: "https://diariodocomercio.com.br/tecnologia/meta-ai-whatsapp-politica-privacidade/" },
+    ],
+    methodology: "Compilado a partir de Aos Fatos, Canaltech e Diário do Comércio, verificado em 27 de novembro de 2026. As opções do app podem mudar.",
+  },
+  {
+    id: "br-marco-legal-ia",
+    slug: "marco-legal-ia-pl-2338-o-que-muda",
+    title: "Marco legal da IA (PL 2338/2023): o que prevê e em que pé está",
+    seoTitle: "Marco legal da IA (PL 2338): o que prevê e o status",
+    subtitle: "Aprovado no Senado em 2024, o projeto segue em comissão especial na Câmara, sem data de votação.",
+    excerpt:
+      "O PL 2338/2023, que regula a inteligência artificial no Brasil, foi aprovado pelo Senado em dezembro de 2024 e está em análise na Câmara. O que o texto prevê e o que muda para você.",
+    category: "ai-tools",
+    tags: ["PL 2338", "Inteligência Artificial", "Câmara", "Regulação"],
+    publishedAt: "2026-11-27T10:30:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Código na tela escura de um notebook",
+    keyTakeaways: [
+      "O Senado aprovou o PL 2338/2023 em dezembro de 2024; ele chegou à Câmara em março de 2025.",
+      "Na Câmara, está em uma comissão especial sobre inteligência artificial, com relatoria de Aguinaldo Ribeiro.",
+      "Até agosto de 2026, o projeto seguia sem data definida para votação.",
+      "O texto adota uma abordagem baseada em risco, com regras mais rígidas para sistemas de alto risco.",
+    ],
+    body: [
+      { type: "h2", id: "preve", text: "O que o projeto prevê" },
+      {
+        type: "ul",
+        items: [
+          "Classificação de sistemas de IA por nível de risco.",
+          "Proibição de usos considerados de risco excessivo.",
+          "Obrigações de transparência e de avaliação para sistemas de alto risco.",
+          "Direitos para pessoas afetadas por decisões tomadas com IA.",
+        ],
+      },
+      { type: "h2", id: "tramitacao", text: "Tramitação" },
+      {
+        type: "table",
+        head: ["Etapa", "Data"],
+        rows: [
+          ["Aprovação no Senado", "Dezembro de 2024"],
+          ["Envio à Câmara", "Março de 2025"],
+          ["Situação mais recente encontrada", "Em comissão especial, sem data de votação (agosto de 2026)"],
+        ],
+      },
+      { type: "callout", title: "O texto pode mudar", text: "Se a Câmara alterar o projeto, ele volta ao Senado. Acompanhe a tramitação no site da Câmara dos Deputados." },
+    ],
+    faq: [
+      { question: "O marco legal da IA já está em vigor?", answer: "Não. O PL 2338/2023 ainda tramita na Câmara dos Deputados." },
+      { question: "Quando o Senado aprovou o projeto?", answer: "Em dezembro de 2024." },
+      { question: "Quem é o relator na Câmara?", answer: "O deputado Aguinaldo Ribeiro (PP-PB), na comissão especial sobre inteligência artificial." },
+      { question: "O que é a abordagem baseada em risco?", answer: "As regras ficam mais rígidas conforme o risco do sistema de IA, com obrigações maiores para usos de alto risco." },
+    ],
+    sources: [
+      { name: "Senado Federal — PL 2338/2023", url: "https://www25.senado.leg.br/web/atividade/materias/-/materia/157233" },
+      { name: "Senado Notícias — Comissão chega a consenso sobre regulamentação da IA", url: "https://www12.senado.leg.br/noticias/materias/2024/12/05/comissao-chega-a-consenso-e-regulamentacao-da-inteligencia-artificial-vai-a-plenario" },
+      { name: "Congresso em Foco — Relatório sobre regulação da IA na Câmara", url: "https://www.congressoemfoco.com.br/noticia/118309/relatorio-sobre-regulacao-da-ia-deve-ser-votado-na-camara-em-maio" },
+    ],
+    methodology: "Compilado a partir do Senado Federal e de reportagens, verificado em 27 de novembro de 2026. O status pode ter mudado.",
+  },
 ];
 
 export const articles = buildArticles("br", drafts);

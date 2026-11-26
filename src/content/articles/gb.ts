@@ -627,6 +627,114 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from GOV.UK, Which? and the OBR, checked 27 November 2026. Check later Budgets for any changes. Not tax advice.",
   },
+  {
+    id: "gb-ofcom-ai-chatbots-osa",
+    slug: "ofcom-ai-chatbots-online-safety-act",
+    title: "Are AI chatbots covered by the Online Safety Act? What Ofcom says",
+    seoTitle: "AI Chatbots and the Online Safety Act: What Ofcom Says",
+    subtitle: "Some chatbots fall under the UK's online safety rules, others don't. Here's where the line is — and how to complain.",
+    excerpt:
+      "Ofcom says AI chatbots are covered by the Online Safety Act when they work as user-to-user or search services, or publish porn. AI content shared on social platforms counts as user content. What that means for you.",
+    category: "ai-tools",
+    tags: ["Ofcom", "Online Safety Act", "AI Chatbots", "Children"],
+    publishedAt: "2026-11-27T11:00:00+00:00",
+    heroImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A humanoid robot sitting on a bench",
+    keyTakeaways: [
+      "Ofcom published guidance on AI chatbots in December 2025 and an explainer in March 2026.",
+      "A chatbot is covered when it's a user-to-user service, a search service, or publishes pornographic content.",
+      "AI-generated content posted on a social platform is treated as user-generated content.",
+      "Ofcom opened investigations in 2026, including into X over Grok. The government has signalled it may close gaps for standalone chatbots.",
+    ],
+    body: [
+      { type: "h2", id: "scope", text: "When a chatbot is covered" },
+      {
+        type: "ul",
+        items: [
+          "It lets users share content with each other (user-to-user).",
+          "It searches the web or multiple sites (search service).",
+          "It publishes pornographic content — which requires age checks.",
+        ],
+      },
+      { type: "p", text: "A one-to-one chatbot that only talks to you, without sharing or search features, may fall outside the Act. Ofcom has acknowledged these limits." },
+      { type: "h2", id: "parents", text: "For parents" },
+      {
+        type: "ol",
+        items: [
+          "Check the age rating and settings of AI features inside apps your child uses.",
+          "Use teen account settings and parental controls where available.",
+          "Report harmful content to the platform first; you can also tell Ofcom about a service's safety failings.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Is ChatGPT covered by the Online Safety Act?", answer: "Only to the extent it acts as a search or user-to-user service. Ofcom has said some chatbots fall outside the Act." },
+      { question: "Can I complain to Ofcom about a chatbot?", answer: "Ofcom doesn't handle individual complaints, but you can report concerns about a service's safety measures." },
+      { question: "Is AI-generated content on social media covered?", answer: "Yes. Ofcom treats AI content shared on a user-to-user service as user-generated content." },
+      { question: "Has Ofcom investigated an AI chatbot?", answer: "Yes. In January 2026 Ofcom opened an investigation into X over its Grok chatbot." },
+    ],
+    sources: [
+      { name: "Ofcom — AI chatbots and online regulation: what you need to know", url: "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/ai-chatbots-and-online-regulation-what-you-need-to-know" },
+      { name: "Ofcom — Open letter on generative AI and chatbots", url: "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/open-letter-to-uk-online-service-providers-regarding-generative-ai-and-chatbots" },
+      { name: "RPC — Ofcom explainer on AI chatbots under the Online Safety Act", url: "https://www.rpclegal.com/snapshots/technology-digital/spring-2026/ofcom-publishes-an-explainer-on-the-regulation-of-ai-chatbots-under-the-online-safety-act/" },
+    ],
+    methodology: "Compiled from Ofcom and legal commentary, checked 27 November 2026. Not legal advice.",
+  },
+  {
+    id: "gb-automated-decisions-rights",
+    slug: "automated-decisions-rights-uk",
+    title: "Decided by a computer? Your rights over automated decisions in the UK",
+    seoTitle: "Automated Decisions in the UK: Your Rights Explained",
+    subtitle: "New rules from the Data (Use and Access) Act took effect in February 2026. You can still ask for a human.",
+    excerpt:
+      "If a loan, job or benefit decision about you is made solely by a computer, UK data law gives you safeguards — including information about the decision and the right to human review. What changed in 2026.",
+    category: "ai-tools",
+    tags: ["ICO", "Automated Decisions", "UK GDPR", "Data (Use and Access) Act"],
+    publishedAt: "2026-11-27T10:30:00+00:00",
+    heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A laptop showing charts",
+    keyTakeaways: [
+      "Automated decision-making (ADM) means a significant decision about you made solely by automated means, such as a credit or hiring decision.",
+      "The Data (Use and Access) Act 2025 changed the ADM rules; those changes took effect on 5 February 2026.",
+      "Organisations using ADM must put safeguards in place, including letting you get human intervention and contest the decision.",
+      "The ICO consulted on updated guidance in spring 2026.",
+    ],
+    body: [
+      { type: "h2", id: "what", text: "What counts as automated decision-making" },
+      { type: "p", text: "It's a decision with legal or similarly significant effects — for example refusing credit, rejecting a job application or deciding a benefit — made without meaningful human involvement." },
+      { type: "h2", id: "rights", text: "What you can ask for" },
+      {
+        type: "ol",
+        items: [
+          "Information that a decision was made by automated means.",
+          "To make representations about the decision.",
+          "Human intervention — a person who reviews it with access to the relevant data.",
+          "To contest the decision.",
+        ],
+      },
+      { type: "h2", id: "how", text: "How to use your rights" },
+      {
+        type: "ul",
+        items: [
+          "Write to the organisation, say the decision seems automated and ask for human review.",
+          "You can also make a subject access request to see the personal data used.",
+          "If you're unhappy with the response, complain to the ICO.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Can I ask for a human to review an automated decision?", answer: "Yes. Safeguards under UK data law include the right to human intervention and to contest the decision." },
+      { question: "When did the new UK automated decision rules start?", answer: "The Data (Use and Access) Act's ADM provisions took effect on 5 February 2026." },
+      { question: "What is a 'significant decision'?", answer: "One with legal or similarly significant effects, such as refusing credit, a job or a benefit." },
+      { question: "Who regulates automated decisions in the UK?", answer: "The Information Commissioner's Office (ICO). You can complain to it if an organisation doesn't respond properly." },
+    ],
+    sources: [
+      { name: "ICO — What are the ADM safeguards?", url: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/automated-decision-making/what-are-the-adm-safeguards/" },
+      { name: "GOV.UK — Data (Use and Access) Act 2025: data protection changes", url: "https://www.gov.uk/guidance/data-use-and-access-act-2025-data-protection-and-privacy-changes" },
+      { name: "ICO — The DUAA: how does this affect me?", url: "https://ico.org.uk/about-the-ico/what-we-do/legislation-we-cover/data-use-and-access-act-2025/the-data-use-and-access-act-2025-how-does-this-affect-me/" },
+    ],
+    methodology: "Compiled from the ICO and GOV.UK, checked 27 November 2026. ICO guidance was still being finalised. Not legal advice.",
+  },
 ];
 
 export const articles = buildArticles("gb", drafts);

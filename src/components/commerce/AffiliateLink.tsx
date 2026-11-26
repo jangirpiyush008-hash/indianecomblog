@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import type { Product } from "@/types/content";
-import { linkMode, subIdFor, withSubId } from "@/lib/affiliate/links";
+import { linkMode, subIdFor, withSubId, withUtm } from "@/lib/affiliate/links";
 import { COMMERCE_COPY } from "@/config/commerce-copy";
 import { COUNTRIES } from "@/config/countries";
 import { track, trackEcommerce } from "@/lib/analytics/track";
@@ -53,7 +53,15 @@ export function AffiliateLink({
         article_slug: articleId,
       });
     return (
-      <a href={product.sourceUrl} target="_blank" rel="noopener nofollow" className={className} title={copy.notAffiliate} onClick={outbound} onAuxClick={outbound}>
+      <a
+        href={withUtm(product.sourceUrl!, articleId ?? `${product.country}-${placement ?? "products"}`, placement ?? "product_card")}
+        target="_blank"
+        rel="noopener nofollow"
+        className={className}
+        title={copy.notAffiliate}
+        onClick={outbound}
+        onAuxClick={outbound}
+      >
         {children}
       </a>
     );

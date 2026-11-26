@@ -639,6 +639,113 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from the IRS announcement (IR-2026-133, Rev. Proc. 2026-35) and CPA Practice Advisor, checked 27 November 2026. Not tax advice.",
   },
+  {
+    id: "us-ftc-ai-companion-inquiry",
+    slug: "ftc-ai-companion-chatbots-kids-inquiry",
+    title: "The FTC is probing AI 'companion' chatbots and kids: what parents should know",
+    seoTitle: "FTC Inquiry Into AI Companion Chatbots and Kids, Explained",
+    subtitle: "Seven companies, including OpenAI, Meta and Character.AI, were ordered to explain how they protect children.",
+    excerpt:
+      "In September 2025 the FTC ordered Alphabet, Character.AI, Instagram, Meta, OpenAI, Snap and xAI to report how their companion chatbots affect children. What the inquiry covers, and practical steps for parents.",
+    category: "ai-tools",
+    tags: ["FTC", "AI Chatbots", "Kids Online", "Parents"],
+    publishedAt: "2026-11-27T11:00:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A humanoid robot sitting on a bench",
+    keyTakeaways: [
+      "On September 11, 2025, the FTC voted 3–0 to issue 6(b) orders to seven companies offering AI companion chatbots.",
+      "The companies: Alphabet, Character Technologies, Instagram, Meta, OpenAI, Snap and xAI.",
+      "The FTC asked how they test for harms to children, limit minors' use and comply with the children's privacy law, COPPA.",
+      "A 6(b) study is not an enforcement action, but its findings can shape future rules and cases.",
+    ],
+    body: [
+      { type: "h2", id: "what", text: "What the FTC asked" },
+      {
+        type: "ul",
+        items: [
+          "How companies measure and test for negative effects on children and teens.",
+          "What they do to restrict minors' use and inform parents.",
+          "How they monetize engagement and handle data shared in chats.",
+          "Whether they comply with COPPA.",
+        ],
+      },
+      { type: "h2", id: "parents", text: "What parents can do now" },
+      {
+        type: "ol",
+        items: [
+          "Ask your kids which AI apps they use — including chat features inside social apps.",
+          "Turn on parental controls and teen account settings where they exist.",
+          "Explain that chatbots can sound caring but aren't people, and can be wrong.",
+          "Watch for secrecy, late-night use or emotional dependence on a chatbot.",
+        ],
+      },
+      { type: "callout", title: "In a crisis", text: "If a child talks about self-harm, call or text 988, the Suicide & Crisis Lifeline." },
+    ],
+    faq: [
+      { question: "Which companies did the FTC question?", answer: "Alphabet, Character Technologies, Instagram, Meta, OpenAI, Snap and xAI." },
+      { question: "Is the FTC suing these companies?", answer: "No. A 6(b) order is a study, not an enforcement action." },
+      { question: "What is a 6(b) order?", answer: "A legal order letting the FTC require companies to provide information for a study. It isn't a lawsuit." },
+      { question: "What does COPPA have to do with AI chatbots?", answer: "COPPA restricts collecting personal data from children under 13 without parental consent; the FTC asked whether chatbot makers comply." },
+    ],
+    sources: [
+      { name: "FTC — FTC launches inquiry into AI chatbots acting as companions", url: "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions" },
+      { name: "DLA Piper — FTC AI chatbots inquiry", url: "https://www.dlapiper.com/en/insights/publications/2025/09/ftc-ai-chatbots" },
+    ],
+    methodology: "Compiled from the FTC's announcement and legal analysis, checked 27 November 2026.",
+  },
+  {
+    id: "us-opt-out-ai-training",
+    slug: "opt-out-ai-training-chatgpt-gemini-linkedin",
+    title: "How to stop ChatGPT, Gemini and LinkedIn training AI on your data",
+    seoTitle: "Opt Out of AI Training: ChatGPT, Gemini and LinkedIn",
+    subtitle: "A few toggles keep your future chats and posts out of AI training. They don't undo what's already been used.",
+    excerpt:
+      "ChatGPT, Gemini and LinkedIn each have a setting to stop your data being used for AI training. Where to find them, what you lose, and why opting out only affects the future.",
+    category: "ai-tools",
+    tags: ["Privacy", "ChatGPT", "Gemini", "LinkedIn"],
+    publishedAt: "2026-11-27T10:30:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Green code on a black screen",
+    keyTakeaways: [
+      "ChatGPT: turn off model improvement in Settings → Data controls. Your chat history stays.",
+      "Gemini: training is tied to Gemini Apps activity; turning it off also turns off history, and Google still keeps chats for up to 72 hours.",
+      "LinkedIn: switch off the generative AI data setting under Settings & Privacy → Data privacy.",
+      "Opting out covers future use only — it doesn't remove data already used for training.",
+    ],
+    body: [
+      { type: "h2", id: "settings", text: "Where the settings are" },
+      {
+        type: "table",
+        head: ["Service", "Setting", "Trade-off"],
+        rows: [
+          ["ChatGPT", "Settings → Data controls → improve the model", "None — history is kept"],
+          ["Gemini", "Gemini Apps activity", "Turns off chat history; chats kept up to 72 hours"],
+          ["LinkedIn", "Data privacy → generative AI improvement", "No effect on recruiter visibility"],
+        ],
+      },
+      { type: "h2", id: "tips", text: "Other ways to protect yourself" },
+      {
+        type: "ul",
+        items: [
+          "Don't paste Social Security numbers, medical details or passwords into any chatbot.",
+          "Use temporary or incognito chat modes for sensitive questions.",
+          "Review settings after app updates — menus change.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Does opting out delete data already used to train AI?", answer: "No. Opt-outs apply to future use only." },
+      { question: "Does ChatGPT keep my history if I opt out of training?", answer: "Yes. OpenAI says conversations stay in your history but aren't used for training." },
+      { question: "Can I use ChatGPT without my chats training AI?", answer: "Yes. Turn off model improvement in Data controls, or use a temporary chat." },
+      { question: "Does turning off Gemini training delete my chats?", answer: "It stops saving activity, but Google says chats are kept for up to 72 hours." },
+    ],
+    sources: [
+      { name: "EFF — I want to opt out of AI tools or training", url: "https://eff.org/pages/i-want-opt-out-ai-tools-or-training-made-big-tech" },
+      { name: "Tom's Guide — How to stop AI models training on your data", url: "https://www.tomsguide.com/ai/how-to-opt-out-ai-model-data-collection" },
+      { name: "PIRG — How to stop your data from being used for AI training", url: "https://pirg.org/resources/how-to-stop-your-data-from-being-used-for-ai-training/" },
+    ],
+    methodology: "Compiled from EFF, PIRG and Tom's Guide, checked 27 November 2026. Menu names change; check each app.",
+  },
 ];
 
 export const articles = buildArticles("us", drafts);

@@ -601,6 +601,114 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from the ATO and Treasury, checked 27 November 2026. Not tax advice.",
   },
+  {
+    id: "au-ai-companion-age-checks",
+    slug: "ai-companion-chatbots-age-checks-australia",
+    title: "AI companion chatbots now need age checks in Australia: what changed in March 2026",
+    seoTitle: "AI Companion Chatbots and Age Checks in Australia (2026)",
+    subtitle: "Under new industry codes, companion bots that can produce sexual or self-harm content must confirm users are 18+.",
+    excerpt:
+      "Since 9 March 2026, Australia's age-restricted material codes require AI companion chatbots capable of sexually explicit, high-impact violence or self-harm content to verify users are adults. How services responded.",
+    category: "ai-tools",
+    tags: ["eSafety", "AI Companions", "Age Assurance", "Parents"],
+    publishedAt: "2026-11-27T11:00:00+11:00",
+    heroImage: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A smartphone and wireless earbuds on a table",
+    keyTakeaways: [
+      "The age-restricted material codes commenced on 9 March 2026.",
+      "AI companions that can generate sexually explicit, high-impact violence or self-harm material must confirm users are 18 or older before giving access to it.",
+      "eSafety made AI chatbots an early enforcement priority; penalties can reach $49.5 million.",
+      "Some services changed course: Character.AI added age assurance and removed chat for under-18s; one service withdrew from Australia.",
+    ],
+    body: [
+      { type: "h2", id: "what", text: "What the codes require" },
+      { type: "p", text: "The codes are registered industry codes enforced by the eSafety Commissioner. For AI companions, the key duty is age assurance before access to harmful material, plus safeguards for children." },
+      { type: "h2", id: "response", text: "How services responded" },
+      {
+        type: "ul",
+        items: [
+          "Character.AI introduced age assurance for Australian users and removed chat for its under-18 experience.",
+          "Chub AI geo-blocked Australia.",
+          "Chai restricted free access to AI companions, requiring a subscription.",
+        ],
+      },
+      { type: "h2", id: "parents", text: "For parents" },
+      {
+        type: "ol",
+        items: [
+          "Ask which AI apps your child uses, including companion or role-play bots.",
+          "Talk about why chatbots can feel like friends but aren't.",
+          "Report harmful content or services to eSafety at esafety.gov.au.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When did AI chatbot age checks start in Australia?", answer: "The age-restricted material codes commenced on 9 March 2026." },
+      { question: "Where can I report a harmful AI chatbot?", answer: "To eSafety at esafety.gov.au." },
+      { question: "What penalty can services face?", answer: "Up to $49.5 million for failing to comply with the codes, according to eSafety." },
+      { question: "Do the rules ban AI companions for teens?", answer: "No. They require age assurance before access to sexually explicit, high-impact violence or self-harm material." },
+    ],
+    sources: [
+      { name: "eSafety — Online safety codes introduce real-world protections", url: "https://esafety.gov.au/newsroom/media-releases/online-safety-codes-introduce-real-world-protections-for-children-online" },
+      { name: "eSafety — Report shows AI companions are putting children at risk", url: "https://esafety.gov.au/newsroom/media-releases/esafety-report-shows-ai-companions-are-putting-children-at-risk" },
+      { name: "eSafety — Age-restricted material codes fact sheet (April 2026)", url: "https://www.esafety.gov.au/sites/default/files/2026-04/Age-restricted-Material-Codes-fact-sheet-April2026.pdf" },
+    ],
+    methodology: "Compiled from eSafety Commissioner releases and fact sheets, checked 27 November 2026.",
+  },
+  {
+    id: "au-nsweduchat",
+    slug: "nsweduchat-ai-tool-nsw-schools",
+    title: "NSWEduChat: the AI tool now in NSW public schools, explained for parents",
+    seoTitle: "NSWEduChat Explained: AI in NSW Public Schools",
+    subtitle: "Students from Year 5 to Year 12 can use the department's own AI tool — designed to guide rather than hand over answers.",
+    excerpt:
+      "NSWEduChat, built by the NSW Department of Education, is available to all public school students from Year 5 to Year 12. How it differs from ChatGPT, what it's for, and what parents should know about privacy.",
+    category: "ai-tools",
+    tags: ["NSWEduChat", "Schools", "NSW", "AI in Education"],
+    publishedAt: "2026-11-27T10:30:00+11:00",
+    heroImage: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "An open notebook with a pen and glasses",
+    keyTakeaways: [
+      "NSWEduChat is the NSW Department of Education's own generative AI tool.",
+      "After a trial that began in 2024, it rolled out to all public school students from Year 5 to Year 12 from Term 4, 2025.",
+      "It's designed as a safer, privacy-focused alternative to public chatbots, and to prompt students to think rather than just give answers.",
+      "The department publishes a parental privacy notice explaining how data is used.",
+    ],
+    body: [
+      { type: "h2", id: "what", text: "What it is" },
+      { type: "p", text: "NSW public schools banned ChatGPT in 2023 over cheating concerns. NSWEduChat is the department's answer: an AI assistant run within the department's systems, with safeguards for students." },
+      { type: "h2", id: "use", text: "How students use it" },
+      {
+        type: "ul",
+        items: [
+          "Explaining concepts in different ways.",
+          "Brainstorming and planning — not writing the whole assignment.",
+          "Practice questions and feedback on drafts.",
+        ],
+      },
+      { type: "h2", id: "parents", text: "What parents should know" },
+      {
+        type: "ol",
+        items: [
+          "Read the NSWEduChat parental privacy notice.",
+          "Ask your school how teachers expect students to use and acknowledge AI.",
+          "Encourage your child to check facts and do their own thinking.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Who can use NSWEduChat?", answer: "NSW public school students from Year 5 to Year 12, plus teachers." },
+      { question: "Is NSWEduChat the same as ChatGPT?", answer: "No. It's the department's own tool with student safeguards." },
+      { question: "When did NSWEduChat reach all students?", answer: "From Term 4, 2025, for public school students in Years 5 to 12." },
+      { question: "Why did NSW build its own AI tool?", answer: "To offer a safer, privacy-focused alternative to public chatbots, after banning ChatGPT in schools in 2023." },
+    ],
+    sources: [
+      { name: "NSW Government — NSWEduChat rolls out to public school students from Year 5", url: "https://www.nsw.gov.au/ministerial-releases/nsw-to-roll-out-purpose-built-ai-education-tool-to-all-public-school-students-from-year-5" },
+      { name: "NSW Department of Education — Student use of NSWEduChat", url: "https://education.nsw.gov.au/schooling/parents-and-carers/artificial-intelligence/student-use-of-nsweduchat.html" },
+      { name: "NSWEduChat parental privacy notice", url: "https://education.nsw.gov.au/content/dam/main-education/about-us/educational-data/cese/NSWEduChat_Parental_Privacy_Notice.pdf" },
+    ],
+    methodology: "Compiled from the NSW Government and Department of Education, checked 27 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("au", drafts);

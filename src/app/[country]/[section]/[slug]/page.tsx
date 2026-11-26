@@ -6,11 +6,11 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { CategoryTag } from "@/components/ui/Badge";
 import { ArticleHCard, ArticleCard } from "@/components/editorial/ArticleCard";
-import { ArticleBody, tocFromBody } from "@/components/editorial/ArticleBody";
+import { ArticleBody, inlineLinkLabels, tocFromBody } from "@/components/editorial/ArticleBody";
 import { ShareButtons } from "@/components/editorial/ShareButtons";
 import { ArticleTracker } from "@/components/analytics/ArticleTracker";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
-import { everyArticle, getArticle, relatedArticles, slugify } from "@/lib/content";
+import { contextualLinks, everyArticle, getArticle, relatedArticles, slugify } from "@/lib/content";
 import { edition } from "@/lib/edition";
 import { sectionFromSlug, urls } from "@/config/countries";
 import { formatDate } from "@/lib/utils";
@@ -73,6 +73,15 @@ export default async function ArticlePage({
   const loc = e.country.locale;
 
   const related = relatedArticles(article, 3);
+  // In-article internal links: prefer articles not already in the "related" list at the bottom.
+  let contextual = contextualLinks(article, 3, related.map((a) => a.id));
+  if (contextual.length < 2) contextual = contextualLinks(article, 3);
+  const labels = inlineLinkLabels(article.lang.slice(0, 2));
+  const inlineLinks = {
+    heading: labels.heading,
+    items: contextual.map((a) => ({ title: a.title, url: a.url })),
+    section: { label: `${labels.moreIn} ${article.categoryName}`, url: urls.section(article.country, article.category) },
+  };
   const toc = tocFromBody(article.body);
   const hasProducts = article.body?.some((b) => b.type === "products");
   const initials = article.author.name.split(" ").map((n) => n[0]).join("");
@@ -234,7 +243,7 @@ export default async function ArticlePage({
             ) : null}
 
             <div data-article-body>
-              <ArticleBody article={article} />
+              <ArticleBody article={article} inlineLinks={inlineLinks} />
             </div>
 
             {article.faq?.length ? (
