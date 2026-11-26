@@ -70,7 +70,7 @@ export default function PrivacyPolicyPage() {
 
             <h2 id="cookies">Cookies</h2>
             <p>
-              We only set cookies that the site needs to work. We don&apos;t use analytics, advertising or tracking cookies today. If we add any, they will stay off until you opt in through the cookie banner, and we&apos;ll list them here.
+              We use essential cookies that the site needs to work. We also load Google Tag Manager on every page, using Google Consent Mode: analytics and advertising cookies stay off until you opt in through the cookie banner, and switch off again if you withdraw consent.
             </p>
             <table>
               <thead>
@@ -80,6 +80,8 @@ export default function PrivacyPolicyPage() {
                 <tr><td><code>tn_country</code></td><td>Remembers the edition you chose, so trendnations.com opens it next time</td><td>180 days</td><td>Essential</td></tr>
                 <tr><td><code>tn_consent</code></td><td>Remembers your cookie choices</td><td>About 6 months</td><td>Essential</td></tr>
                 <tr><td>Supabase session cookies</td><td>Keep editors signed in to the admin area (not set for readers)</td><td>Session</td><td>Essential</td></tr>
+                <tr><td>Google Analytics 4 (<code>_ga</code>, <code>_ga_*</code>), loaded through Google Tag Manager</td><td>Counts visits and shows which articles are read</td><td>Up to 2 years</td><td>Analytics — only with your consent</td></tr>
+                <tr><td>Advertising and affiliate tags, if configured in our tag manager</td><td>Measure ads and offers</td><td>Varies by provider</td><td>Marketing — only with your consent</td></tr>
                 <tr><td>Cloudflare security cookies (e.g. <code>__cf_bm</code>)</td><td>May be set by our network provider to protect the site from bots and abuse</td><td>Up to 30 minutes</td><td>Essential</td></tr>
               </tbody>
             </table>
@@ -93,6 +95,7 @@ export default function PrivacyPolicyPage() {
               <li><strong>Supabase</strong> — database that stores newsletter sign-ups, contact messages and click logs</li>
               <li><strong>Railway</strong> — website hosting</li>
               <li><strong>Cloudflare</strong> — network, security and content delivery for trendnations.com</li>
+              <li><strong>Google</strong> — Google Tag Manager on every page and, only if you consent, Google Analytics 4 and any advertising measurement. Google may process data outside your country.</li>
               <li><strong>EarnKaro</strong> — when you click a product link you go through EarnKaro&apos;s tracking page to the retailer; their privacy policy applies there</li>
             </ul>
             <p>We do not sell your personal data to anyone. Ever.</p>

@@ -7,6 +7,7 @@ import { COUNTRY_CODES } from "@/config/countries";
 import { edition, footerDiscover, headerProps } from "@/lib/edition";
 import { brand } from "@/config/brand";
 import { ConsentBanner } from "@/components/consent/ConsentBanner";
+import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
 import { CONSENT_COPY } from "@/config/consent-copy";
 
 export const dynamicParams = false;
@@ -41,6 +42,7 @@ export default async function EditionLayout({ children, params }: { children: Re
           cookieSettingsLabel={CONSENT_COPY[e.country.lang].settingsLink}
         />
         <ConsentBanner copy={CONSENT_COPY[e.country.lang]} />
+        <GoogleTagManager />
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { headerProps } from "@/lib/edition";
 import { ConsentBanner } from "@/components/consent/ConsentBanner";
+import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
 import { CONSENT_COPY } from "@/config/consent-copy";
 
 export const metadata = baseMetadata;
@@ -17,6 +18,7 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
         <main className="flex-1">{children}</main>
         <Footer />
         <ConsentBanner copy={CONSENT_COPY.en} />
+        <GoogleTagManager />
       </body>
     </html>
   );

@@ -2,6 +2,9 @@ import "./globals.css";
 import Link from "next/link";
 import { fontClasses } from "./shared-root";
 import { ALL_COUNTRIES, urls } from "@/config/countries";
+import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
+import { ConsentBanner } from "@/components/consent/ConsentBanner";
+import { CONSENT_COPY } from "@/config/consent-copy";
 
 export const metadata = { title: "Page not found — TrendNations", robots: { index: false } };
 
@@ -24,6 +27,8 @@ export default function GlobalNotFound() {
             ))}
           </ul>
         </main>
+        <ConsentBanner copy={CONSENT_COPY.en} />
+        <GoogleTagManager />
       </body>
     </html>
   );
