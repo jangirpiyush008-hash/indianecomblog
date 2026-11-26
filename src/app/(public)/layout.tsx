@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { headerProps } from "@/lib/edition";
 import { ConsentBanner } from "@/components/consent/ConsentBanner";
 import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
+import { PageViewTracker } from "@/components/analytics/PageViewTracker";
 import { CONSENT_COPY } from "@/config/consent-copy";
 
 export const metadata = baseMetadata;
@@ -19,6 +20,7 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
         <Footer />
         <ConsentBanner copy={CONSENT_COPY.en} />
         <GoogleTagManager />
+        <PageViewTracker />
       </body>
     </html>
   );

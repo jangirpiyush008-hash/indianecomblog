@@ -8,6 +8,7 @@ import { CategoryTag } from "@/components/ui/Badge";
 import { ArticleHCard, ArticleCard } from "@/components/editorial/ArticleCard";
 import { ArticleBody, tocFromBody } from "@/components/editorial/ArticleBody";
 import { ShareButtons } from "@/components/editorial/ShareButtons";
+import { ArticleTracker } from "@/components/analytics/ArticleTracker";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { everyArticle, getArticle, relatedArticles, slugify } from "@/lib/content";
 import { edition } from "@/lib/edition";
@@ -88,6 +89,18 @@ export default async function ArticlePage({
 
   return (
     <article>
+      <ArticleTracker
+        meta={{
+          article_id: article.id,
+          article_title: article.title,
+          article_slug: article.slug,
+          article_category: article.category,
+          author_name: article.author.name,
+          publication_date: article.publishedAt.slice(0, 10),
+          reading_time: article.readingTime,
+          content_type: article.productSlugs?.length ? "buying_guide" : "article",
+        }}
+      />
       {schemas.map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={jsonLd(s)} />
       ))}
@@ -191,7 +204,7 @@ export default async function ArticlePage({
               )}
               <div className="mt-10 pt-6 border-t border-line">
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-3 block">{t.share}</span>
-                <ShareButtons url={abs(article.url)} title={article.title} />
+                <ShareButtons url={abs(article.url)} title={article.title} slug={article.slug} />
               </div>
             </div>
           </aside>
@@ -220,7 +233,9 @@ export default async function ArticlePage({
               </section>
             ) : null}
 
-            <ArticleBody article={article} />
+            <div data-article-body>
+              <ArticleBody article={article} />
+            </div>
 
             {article.faq?.length ? (
               <section aria-labelledby="faq" className="mt-14">
@@ -276,7 +291,7 @@ export default async function ArticlePage({
 
             <div className="lg:hidden mt-10">
               <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-3 block">{t.share}</span>
-              <ShareButtons url={abs(article.url)} title={article.title} />
+              <ShareButtons url={abs(article.url)} title={article.title} slug={article.slug} />
             </div>
 
             {/* Author bio */}

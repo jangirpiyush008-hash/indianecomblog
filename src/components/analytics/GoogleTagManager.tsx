@@ -1,7 +1,8 @@
 import Script from "next/script";
 import { CONSENT_COOKIE, CONSENT_VERSION } from "@/lib/consent";
+import { GTM_ID } from "@/lib/analytics/config";
 
-export const GTM_ID = "GTM-NV6TQPPK";
+export { GTM_ID };
 
 /**
  * Google Tag Manager with Google Consent Mode v2.

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { track } from "@/lib/analytics/track";
+import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export function NewsletterForm({
@@ -18,6 +19,7 @@ export function NewsletterForm({
 }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const startedRef = useRef(false);
   const [message, setMessage] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
@@ -33,11 +35,13 @@ export function NewsletterForm({
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Subscription failed");
       setStatus("done");
+      track("newsletter_signup_success", { form_id: "newsletter", form_type: "newsletter", form_location: source });
       setMessage("You're subscribed. Thanks!");
       setEmail("");
-    } catch (err: any) {
+    } catch (err) {
       setStatus("error");
-      setMessage(err.message || "Something went wrong. Try again?");
+      track("newsletter_signup_error", { form_id: "newsletter", form_type: "newsletter", form_location: source });
+      setMessage((err instanceof Error ? err.message : "") || "Something went wrong. Try again?");
     }
   }
 
@@ -60,7 +64,7 @@ export function NewsletterForm({
   }[variant];
 
   return (
-    <form onSubmit={handleSubmit} className={cn("w-full", className)}>
+    <form onFocusCapture={() => { if (!startedRef.current) { startedRef.current = true; track("newsletter_signup_start", { form_id: "newsletter", form_type: "newsletter", form_location: source }); } }} onSubmit={handleSubmit} className={cn("w-full", className)}>
       {status === "done" ? (
         <p className={cn("text-sm", variants.message)}>{message}</p>
       ) : (

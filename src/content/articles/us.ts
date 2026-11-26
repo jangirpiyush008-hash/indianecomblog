@@ -497,8 +497,8 @@ const drafts: Draft[] = [
     category: "technology",
     tags: ["SIM Swap", "Verizon", "AT&T", "T-Mobile", "Security"],
     publishedAt: "2026-11-27T14:00:00-05:00",
-    heroImage: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&h=1000&q=80",
-    heroImageAlt: "A smartphone showing app icons",
+    heroImage: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A smartphone lock screen",
     keyTakeaways: [
       "In a SIM swap, a scammer moves your number to their SIM to receive your calls and verification texts.",
       "Verizon: SIM Protection and Number Lock in the My Verizon app.",
@@ -598,8 +598,8 @@ const drafts: Draft[] = [
     category: "money",
     tags: ["Taxes", "IRS", "Standard Deduction", "2027"],
     publishedAt: "2026-11-27T17:00:00-05:00",
-    heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format__CALC__fit=crop__CALC__w=1600__CALC__h=1000__CALC__q=80",
-    heroImageAlt: "A calculator and financial documents on a desk",
+    heroImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A person paying online with a bank card",
     keyTakeaways: [
       "Standard deduction 2027: $16,600 single, $33,200 married filing jointly, $24,925 head of household.",
       "Child tax credit: up to $2,300 per child.",

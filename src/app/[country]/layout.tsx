@@ -8,6 +8,7 @@ import { edition, footerDiscover, headerProps } from "@/lib/edition";
 import { brand } from "@/config/brand";
 import { ConsentBanner } from "@/components/consent/ConsentBanner";
 import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
+import { PageViewTracker } from "@/components/analytics/PageViewTracker";
 import { CONSENT_COPY } from "@/config/consent-copy";
 
 export const dynamicParams = false;
@@ -43,6 +44,7 @@ export default async function EditionLayout({ children, params }: { children: Re
         />
         <ConsentBanner copy={CONSENT_COPY[e.country.lang]} />
         <GoogleTagManager />
+        <PageViewTracker />
       </body>
     </html>
   );

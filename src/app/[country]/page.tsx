@@ -7,6 +7,8 @@ import { ArticleCard } from "@/components/editorial/ArticleCard";
 import { EditionHero } from "@/components/edition/EditionHero";
 import { HEROES, HOME_COPY } from "@/config/heroes";
 import { ProductCard } from "@/components/commerce/ProductCard";
+import { ItemListTracker } from "@/components/analytics/ItemListTracker";
+import { toAnalyticsItem } from "@/lib/analytics/items";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { Headlines, SearchChips } from "@/components/edition/Views";
 import { edition } from "@/lib/edition";
@@ -123,9 +125,11 @@ export default async function EditionHome({ params }: { params: Promise<{ countr
         <section className="py-16 border-b border-line">
           <Container size="xl">
             <SectionHeading eyebrow={e.dict.sections.shopping} title={copy.shopping} description={copy.shoppingText} seeMoreHref={urls.section(e.code, "shopping")} seeMoreLabel={copy.viewAll} />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {products.map((p) => <ProductCard key={p.id} product={p} placement="home" />)}
-            </div>
+            <ItemListTracker listId="homepage_products" listName="homepage_products" items={products.map(toAnalyticsItem)}>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {products.map((p) => <ProductCard key={p.id} product={p} placement="homepage_products" />)}
+              </div>
+            </ItemListTracker>
           </Container>
         </section>
       )}

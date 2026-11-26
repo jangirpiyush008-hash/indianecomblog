@@ -3,6 +3,7 @@ import Link from "next/link";
 import { fontClasses } from "./shared-root";
 import { ALL_COUNTRIES, urls } from "@/config/countries";
 import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
+import { PageViewTracker } from "@/components/analytics/PageViewTracker";
 import { ConsentBanner } from "@/components/consent/ConsentBanner";
 import { CONSENT_COPY } from "@/config/consent-copy";
 
@@ -29,6 +30,7 @@ export default function GlobalNotFound() {
         </main>
         <ConsentBanner copy={CONSENT_COPY.en} />
         <GoogleTagManager />
+        <PageViewTracker />
       </body>
     </html>
   );

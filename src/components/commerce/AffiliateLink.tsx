@@ -1,9 +1,12 @@
 "use client";
 
+import { useRef } from "react";
 import type { Product } from "@/types/content";
 import { linkMode, subIdFor, withSubId } from "@/lib/affiliate/links";
 import { COMMERCE_COPY } from "@/config/commerce-copy";
 import { COUNTRIES } from "@/config/countries";
+import { track, trackEcommerce } from "@/lib/analytics/track";
+import { toAnalyticsItem } from "@/lib/analytics/items";
 
 /**
  * Outbound product button.
@@ -25,6 +28,7 @@ export function AffiliateLink({
   className?: string;
   children: React.ReactNode;
 }) {
+  const sentRef = useRef(false);
   const mode = linkMode(product);
   const copy = COMMERCE_COPY[COUNTRIES[product.country].lang];
 
@@ -37,8 +41,19 @@ export function AffiliateLink({
   }
 
   if (mode === "retailer") {
+    // A plain merchant link: an outbound click, never reported as an affiliate click.
+    const outbound = () =>
+      track("outbound_click", {
+        link_type: "retailer",
+        link_domain: safeHost(product.sourceUrl),
+        product_id: product.slug,
+        product_name: product.name,
+        merchant_name: product.merchantName,
+        placement,
+        article_slug: articleId,
+      });
     return (
-      <a href={product.sourceUrl} target="_blank" rel="noopener nofollow" className={className} title={copy.notAffiliate}>
+      <a href={product.sourceUrl} target="_blank" rel="noopener nofollow" className={className} title={copy.notAffiliate} onClick={outbound} onAuxClick={outbound}>
         {children}
       </a>
     );
@@ -46,7 +61,24 @@ export function AffiliateLink({
 
   const href = withSubId(product.affiliateUrl!, product.affiliateNetwork, subIdFor(product.country, articleId, placement));
 
-  function track() {
+  function onClick() {
+    if (sentRef.current) return; // one click = one event, even if click and auxclick both fire
+    sentRef.current = true;
+    window.setTimeout(() => (sentRef.current = false), 1000);
+    const item = toAnalyticsItem(product);
+    track("affiliate_click", {
+      affiliate_link_id: product.id,
+      product_id: product.slug,
+      product_name: product.name,
+      merchant_name: product.merchantName,
+      affiliate_network: product.affiliateNetwork,
+      placement,
+      article_slug: articleId,
+      link_status: "active",
+      currency: product.currency,
+      link_domain: safeHost(href),
+    });
+    trackEcommerce("select_item", { item_list_name: placement }, { item_list_name: placement, items: [item] });
     try {
       const body = JSON.stringify({
         productSlug: product.slug,
@@ -68,12 +100,20 @@ export function AffiliateLink({
       href={href}
       target="_blank"
       rel="sponsored nofollow noopener"
-      onClick={track}
-      onAuxClick={track}
+      onClick={onClick}
+      onAuxClick={onClick}
       className={className}
       aria-label={`Buy ${product.name} on ${product.merchantName} (affiliate link, opens in new tab)`}
     >
       {children}
     </a>
   );
+}
+
+function safeHost(u?: string) {
+  try {
+    return u ? new URL(u).hostname : undefined;
+  } catch {
+    return undefined;
+  }
 }

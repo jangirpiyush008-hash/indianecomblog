@@ -258,8 +258,8 @@ const drafts: Draft[] = [
     category: "ai-tools",
     tags: ["AI Scams", "Voice Cloning", "Report Fraud", "159"],
     publishedAt: "2026-11-27T08:00:00+00:00",
-    heroImage: "https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?auto=format&fit=crop&w=1600&h=1000&q=80",
-    heroImageAlt: "An old telephone handset on a plain background",
+    heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "The letters AI in a digital illustration",
     keyTakeaways: [
       "AI tools can imitate a voice from a short clip posted online.",
       "Hang up and call the person back on a number you already have.",
@@ -527,8 +527,8 @@ const drafts: Draft[] = [
     category: "money",
     tags: ["Winter Fuel Payment", "Pensioners", "HMRC", "DWP"],
     publishedAt: "2026-11-27T16:00:00+00:00",
-    heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&h=1000&q=80",
-    heroImageAlt: "A calculator and financial documents on a desk",
+    heroImage: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A hand entering a PIN on an ATM keypad",
     keyTakeaways: [
       "Eligible: people born on or before 27 June 1960 (for winter 2026/27).",
       "Amount: £100 to £300, depending on age and circumstances. Letters confirming it go out in October and November.",
@@ -583,8 +583,8 @@ const drafts: Draft[] = [
     category: "money",
     tags: ["Income Tax", "Personal Allowance", "HMRC", "Fiscal Drag"],
     publishedAt: "2026-11-27T17:00:00+00:00",
-    heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format__CALC__fit=crop__CALC__w=1600__CALC__h=1000__CALC__q=80",
-    heroImageAlt: "A calculator and financial documents on a desk",
+    heroImage: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Banknotes from several countries",
     keyTakeaways: [
       "Personal allowance: £12,570, frozen until 5 April 2031.",
       "Higher-rate threshold: £50,270; additional-rate threshold: £125,140 — both frozen.",

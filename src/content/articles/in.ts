@@ -986,8 +986,8 @@ const drafts: Draft[] = [
     category: "money",
     tags: ["PPF", "SCSS", "Sukanya Samriddhi", "Small Savings"],
     publishedAt: "2026-11-27T18:00:00+05:30",
-    heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&h=1000&q=80",
-    heroImageAlt: "A calculator and financial documents on a desk",
+    heroImage: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A seedling growing from a pile of coins",
     keyTakeaways: [
       "PPF: 7.1%. Senior Citizens Savings Scheme: 8.2%. Sukanya Samriddhi Yojana: 8.2%.",
       "National Savings Certificate: 7.7%. Post office savings account: 4%.",

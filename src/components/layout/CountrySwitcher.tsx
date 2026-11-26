@@ -1,5 +1,6 @@
 "use client";
 
+import { track } from "@/lib/analytics/track";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
@@ -67,6 +68,7 @@ export function CountrySwitcher({
               <a
                 href={`/api/country?cc=${c.code}&from=${encodeURIComponent(pathname ?? "/")}`}
                 rel="nofollow"
+                onClick={() => track("country_switch", { from_edition: current?.code, to_edition: c.code })}
                 className={`flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-cream-100 ${c.code === current?.code ? "font-semibold" : ""}`}
               >
                 <span aria-hidden className="text-lg">{c.flag}</span>

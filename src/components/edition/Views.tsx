@@ -5,6 +5,9 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ArticleCard, ArticleListCard, FeatureArticleCard } from "@/components/editorial/ArticleCard";
 import { ProductCard } from "@/components/commerce/ProductCard";
+import { ItemListTracker } from "@/components/analytics/ItemListTracker";
+import { SearchTracker } from "@/components/analytics/SearchTracker";
+import { toAnalyticsItem } from "@/lib/analytics/items";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { urls, DESKS, type Desk } from "@/config/countries";
 import type { Edition } from "@/lib/edition";
@@ -243,9 +246,11 @@ export function DeskView({ e, desk, headlines }: { e: Edition; desk: Desk; headl
 
 function ProductGrid({ products, placement }: { products: Product[]; placement: string }) {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {products.map((p) => <ProductCard key={p.id} product={p} placement={placement} />)}
-    </div>
+    <ItemListTracker listId={placement} listName={placement} items={products.map(toAnalyticsItem)}>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {products.map((p) => <ProductCard key={p.id} product={p} placement={placement} />)}
+      </div>
+    </ItemListTracker>
   );
 }
 
@@ -395,6 +400,7 @@ export function SearchView({ e, q }: { e: Edition; q: string }) {
   const suggestions = tagsFor(e.code).slice(0, 12);
   return (
     <>
+      {q && <SearchTracker q={q} results={articles.length + products.length} />}
       <section className="pt-14 pb-10 border-b border-line">
         <Container size="xl">
           <div className="max-w-3xl">

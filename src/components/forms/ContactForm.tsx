@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { track } from "@/lib/analytics/track";
+import { useRef, useState } from "react";
 
 const topics = ["Correction / error report", "Outdated price or broken link", "Story suggestion", "Brand partnership", "Other"];
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const startedRef = useRef(false);
   const [error, setError] = useState("");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -23,9 +25,11 @@ export function ContactForm() {
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || "Something went wrong.");
       setStatus("done");
+      track("contact_form_success", { form_id: "contact", form_type: "contact", form_location: "contact_page" });
       form.reset();
     } catch (err) {
       setStatus("error");
+      track("contact_form_error", { form_id: "contact", form_type: "contact", form_location: "contact_page" });
       setError(err instanceof Error ? err.message : "Something went wrong.");
     }
   }
@@ -43,7 +47,7 @@ export function ContactForm() {
   const label = "block font-mono text-[11px] uppercase tracking-[0.2em] text-ink-40 mb-2";
 
   return (
-    <form onSubmit={onSubmit} className="space-y-5" noValidate={false}>
+    <form onFocusCapture={() => { if (!startedRef.current) { startedRef.current = true; track("contact_form_start", { form_id: "contact", form_type: "contact", form_location: "contact_page" }); } }} onSubmit={onSubmit} className="space-y-5" noValidate={false}>
       <div className="grid md:grid-cols-2 gap-5">
         <div>
           <label htmlFor="c-name" className={label}>Your name</label>

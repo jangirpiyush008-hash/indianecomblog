@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/analytics/track";
 
-export function ShareButtons({ url, title }: { url: string; title: string }) {
+export function ShareButtons({ url, title, slug }: { url: string; title: string; slug?: string }) {
+  const shared = (method: string) => track("article_share", { method, article_slug: slug });
   const [copied, setCopied] = useState(false);
   const u = encodeURIComponent(url);
   const t = encodeURIComponent(title);
@@ -17,9 +19,11 @@ export function ShareButtons({ url, title }: { url: string; title: string }) {
     try {
       if (navigator.share) {
         await navigator.share({ title, url });
+        shared("native_share");
         return;
       }
       await navigator.clipboard.writeText(url);
+      shared("copy_link");
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -36,6 +40,7 @@ export function ShareButtons({ url, title }: { url: string; title: string }) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={l.name}
+          onClick={() => shared(l.name.replace("Share on ", "").toLowerCase())}
           title={l.name}
           className="h-9 w-9 border border-line hover:border-ink flex items-center justify-center text-xs font-medium transition"
         >

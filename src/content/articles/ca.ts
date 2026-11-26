@@ -417,8 +417,8 @@ const drafts: Draft[] = [
     category: "money",
     tags: ["RRSP", "TFSA", "CPP", "CRA"],
     publishedAt: "2026-11-27T12:00:00-05:00",
-    heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&h=1000&q=80",
-    heroImageAlt: "A calculator and financial documents on a desk",
+    heroImage: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A rolled-up bundle of banknotes",
     keyTakeaways: [
       "RRSP dollar limit for 2027: $35,390 (up from $33,810).",
       "Your own RRSP room is 18% of last year's earned income up to that limit, minus any pension adjustment, plus unused room.",
@@ -526,8 +526,8 @@ const drafts: Draft[] = [
     category: "money",
     tags: ["Canada Child Benefit", "CCB", "CRA", "Families"],
     publishedAt: "2026-11-27T16:00:00-05:00",
-    heroImage: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1600&h=1000&q=80",
-    heroImageAlt: "A paper planner and a cup of coffee on a desk",
+    heroImage: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A person signing a document",
     keyTakeaways: [
       "Under 6: up to $8,157 a year ($679.75 a month).",
       "Ages 6 to 17: up to $6,883 a year ($573.58 a month).",
@@ -577,8 +577,8 @@ const drafts: Draft[] = [
     category: "money",
     tags: ["Income Tax", "CRA", "Tax Brackets", "2026"],
     publishedAt: "2026-11-27T17:00:00-05:00",
-    heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format__CALC__fit=crop__CALC__w=1600__CALC__h=1000__CALC__q=80",
-    heroImageAlt: "A calculator and financial documents on a desk",
+    heroImage: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Tax forms, a calculator on a phone and a coffee",
     keyTakeaways: [
       "The lowest federal rate fell to 14% for 2026 (it was 15%, and a blended 14.5% for 2025).",
       "Bill C-4 received Royal Assent on March 12, 2026.",
