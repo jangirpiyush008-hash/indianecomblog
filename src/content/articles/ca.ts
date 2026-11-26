@@ -675,8 +675,8 @@ const drafts: Draft[] = [
     category: "ai-tools",
     tags: ["Deepfakes", "Investment Scams", "CAFC", "Crypto"],
     publishedAt: "2026-11-27T10:30:00-05:00",
-    heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&h=1000&q=80",
-    heroImageAlt: "The letters AI in a digital illustration",
+    heroImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A laptop showing code on a white desk",
     keyTakeaways: [
       "The CAFC says deepfakes impersonate politicians, celebrities and news anchors to promote investments.",
       "Its rule: assume any video of a public figure promoting an investment is fake until you've verified it.",
@@ -713,6 +713,136 @@ const drafts: Draft[] = [
       { name: "CBC — More fake CBC ads investigation", url: "https://www.cbc.ca/news/canada/more-fake-cbc-ads-investigation-1.7494923" },
     ],
     methodology: "Compiled from the CAFC, the Competition Bureau and CBC reporting, checked 27 November 2026.",
+  },
+  {
+    id: "ca-ai-for-all-strategy",
+    slug: "canada-ai-for-all-national-ai-strategy-explained",
+    title: "Canada's 'AI for All' strategy: what it means for you",
+    seoTitle: "Canada's AI for All Strategy Explained for Canadians",
+    subtitle: "Ottawa's June 2026 plan bets on investment and existing laws instead of a single AI act. Here's what protects you today.",
+    excerpt:
+      "Canada released its AI for All strategy on June 4, 2026. There's still no AI law; here's which privacy and consumer rules apply to AI you use today.",
+    category: "ai-tools",
+    tags: ["AI Rules", "Privacy", "Government", "Canada"],
+    publishedAt: "2026-11-27T11:00:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A smartphone and wireless earbuds on a table",
+    keyTakeaways: [
+      "Prime Minister Carney launched 'AI for All', Canada's national AI strategy, on June 4, 2026.",
+      "The earlier Artificial Intelligence and Data Act (AIDA) died with Bill C-27, and the minister has said it won't return.",
+      "The strategy doesn't create a single AI law; it relies on privacy, online-harms and consumer laws instead.",
+      "Today, PIPEDA and provincial privacy laws still govern how companies use your data in AI tools.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: there's still no AI-specific law in Canada. If an app uses your personal information to power AI, federal and provincial privacy laws apply, and you can complain to the Privacy Commissioner. The new strategy promises future laws on privacy and online harms, but timelines are vague." },
+      { type: "h2", id: "what", text: "What 'AI for All' does" },
+      {
+        type: "ul",
+        items: [
+          "Sets out public investment in AI computing, research and adoption by Canadian businesses.",
+          "Outlines a framework for future rules on specific risks such as privacy, online harms and misinformation.",
+          "Confirms that a comprehensive AI law, like the EU AI Act, isn't planned for now.",
+        ],
+      },
+      { type: "h2", id: "today", text: "What protects you today" },
+      {
+        type: "table",
+        head: ["Concern", "Law or body"],
+        rows: [
+          ["Your data used by a company's AI", "PIPEDA, or Quebec, Alberta and B.C. privacy laws"],
+          ["Misleading AI-powered ads", "Competition Act (Competition Bureau)"],
+          ["AI scams and deepfakes", "Report to the Canadian Anti-Fraud Centre"],
+          ["Federal government use of AI", "Directive on Automated Decision-Making"],
+        ],
+      },
+      { type: "h2", id: "next", text: "What could change next" },
+      { type: "p", text: "Minister Evan Solomon has said legislation to protect children and Canadians' privacy and data will follow. Law-firm analysis reports a new privacy bill that would replace PIPEDA and add rules on automated decisions; check its status in Parliament before relying on it." },
+      { type: "h2", id: "do", text: "What you can do now" },
+      {
+        type: "ol",
+        items: [
+          "Check an AI app's privacy settings and turn off data use for training where possible.",
+          "Ask a company what personal information it holds about you — you have that right under PIPEDA.",
+          "Complain to the Office of the Privacy Commissioner if a company won't respond.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Does Canada have an AI law?", answer: "No. AIDA died with Bill C-27, and the June 2026 strategy doesn't create a single AI law." },
+      { question: "What is Canada's AI for All strategy?", answer: "The federal government's national AI strategy, released on June 4, 2026, focused on investment, adoption and a framework for targeted future rules." },
+      { question: "Who do I complain to if an AI app misuses my data?", answer: "The company first, then the Office of the Privacy Commissioner of Canada or your provincial commissioner." },
+      { question: "Will Canada regulate AI in future?", answer: "The government says privacy and online-harms legislation will follow, but hasn't given firm dates." },
+    ],
+    sources: [
+      { name: "Prime Minister of Canada — Launch of AI for All", url: "https://www.pm.gc.ca/en/news/news-releases/2026/06/04/prime-minister-carney-launches-ai-all-canadas-new-national-artificial" },
+      { name: "ISED — National AI strategy (PDF)", url: "https://ised-isde.canada.ca/site/ised/sites/default/files/documents/ai-strategy-en.pdf" },
+      { name: "Michael Geist — AI for All, details to follow", url: "https://www.michaelgeist.ca/2026/06/ai-for-all-details-to-follow-government-releases-a-big-spending-ai-strategy-that-is-still-short-on-the-specifics-that-matter/" },
+    ],
+    methodology: "Compiled from the Prime Minister's announcement, the ISED strategy document and legal analysis, checked 27 November 2026.",
+  },
+  {
+    id: "ca-spot-ai-generated-content",
+    slug: "how-to-spot-ai-generated-images-video-canada",
+    title: "How to spot AI-generated images, video and voice: Canada's checklist",
+    seoTitle: "How to Spot AI Images, Deepfake Video and Fake Voices",
+    subtitle: "Get Cyber Safe's tips for checking a photo, clip or call before you share it or send money.",
+    excerpt:
+      "Get Cyber Safe's tips for spotting AI images, deepfake video and cloned voices: what to look and listen for, how to reverse-search, and where to report.",
+    category: "ai-tools",
+    tags: ["Deepfakes", "Scams", "Misinformation", "AI Images"],
+    publishedAt: "2026-11-27T10:30:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Colourful code on a screen",
+    keyTakeaways: [
+      "AI images can look real at a glance — zoom in on hands, text, jewellery and backgrounds.",
+      "Some AI apps add a watermark or logo; look for icons or labels saying an image was made with AI.",
+      "In video and audio, listen for flat tone, choppy sentences and odd background noise.",
+      "Reverse-search images and check the original source; AI detection tools are often unreliable.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: slow down, look closely and check the source. If a photo, video or call pushes you to share, invest or send money quickly, verify it another way first — search for the original, or call the person back on a number you already have." },
+      { type: "h2", id: "images", text: "Checking an image" },
+      {
+        type: "ul",
+        items: [
+          "Look for warped hands, mismatched earrings, garbled text and blurry or repeating backgrounds.",
+          "Look for an AI watermark or a 'made with AI' label from the platform.",
+          "Do a reverse image search to find where it first appeared.",
+          "Check whether trusted news outlets are reporting the same thing.",
+        ],
+      },
+      { type: "h2", id: "video", text: "Checking video and voice" },
+      {
+        type: "ul",
+        items: [
+          "Listen for flat, unnatural tone, choppy sentences or unexpected background noise.",
+          "Watch the mouth: lip movements may not match the words.",
+          "Be wary of celebrity or politician videos promoting investments or giveaways.",
+          "For a call from 'family' asking for money, hang up and call them back.",
+        ],
+      },
+      { type: "h2", id: "report", text: "Where to report" },
+      {
+        type: "table",
+        head: ["What happened", "Where to report"],
+        rows: [
+          ["You lost money or were targeted by a scam", "Canadian Anti-Fraud Centre"],
+          ["A fake ad on social media", "The platform's report tool"],
+          ["An immediate threat", "Local police"],
+        ],
+      },
+    ],
+    faq: [
+      { question: "Can AI detection tools tell me if an image is fake?", answer: "Not reliably. The Canadian Centre for Cyber Security warns detection tools are often unreliable, so check the source too." },
+      { question: "What's the fastest way to check a suspicious photo?", answer: "Do a reverse image search to see where it first appeared and whether it was edited." },
+      { question: "How can I tell if a voice on the phone is cloned?", answer: "Listen for flat tone or choppy speech, and hang up and call the person back on a known number." },
+      { question: "Where do I report a deepfake scam in Canada?", answer: "Report it to the Canadian Anti-Fraud Centre and the platform where you saw it; call police if you're in danger." },
+    ],
+    sources: [
+      { name: "Get Cyber Safe — Spotting content created with artificial intelligence", url: "https://www.getcybersafe.gc.ca/en/next-generation-spotting-content-created-with-artificial-intelligence" },
+      { name: "Canadian Anti-Fraud Centre", url: "https://antifraudcentre-centreantifraude.ca/" },
+    ],
+    methodology: "Compiled from Get Cyber Safe (Government of Canada) guidance, checked 27 November 2026.",
   },
 ];
 

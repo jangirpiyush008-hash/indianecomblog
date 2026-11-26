@@ -746,6 +746,142 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from EFF, PIRG and Tom's Guide, checked 27 November 2026. Menu names change; check each app.",
   },
+  {
+    id: "us-chatgpt-parental-controls",
+    slug: "chatgpt-parental-controls-how-to-set-up",
+    title: "How to set up ChatGPT parental controls for your teen",
+    seoTitle: "ChatGPT Parental Controls: How to Set Them Up for Teens",
+    subtitle: "Link accounts, set quiet hours, switch off voice, memory and image generation — and know what the controls can't do.",
+    excerpt:
+      "ChatGPT parental controls let you link a teen's account, set quiet hours and turn off voice, memory and images. Step-by-step setup and the limits.",
+    category: "ai-tools",
+    tags: ["ChatGPT", "Parents", "Kids Online", "AI Chatbots"],
+    publishedAt: "2026-11-27T12:00:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "The letters AI in a digital illustration",
+    keyTakeaways: [
+      "OpenAI added parental controls to ChatGPT in late September 2025. Parent and teen each need their own account.",
+      "One sends an invite from Settings → Parental controls; the other accepts it.",
+      "Parents can set quiet hours and turn off voice mode, memory, image generation and model training.",
+      "Linked teen accounts get extra content protections automatically, but a teen can still sign up with another email.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: on the web, go to Settings → Parental controls → Add family member, enter your teen's email and choose 'My child'. Once they accept, pick their name under Family members to change settings." },
+      { type: "h2", id: "setup", text: "Step-by-step setup" },
+      {
+        type: "ol",
+        items: [
+          "Make sure you and your teen each have a ChatGPT account.",
+          "Sign in on the web and open your profile icon → Settings → Parental controls.",
+          "Select Add family member, enter your teen's email and choose 'My child'.",
+          "Your teen accepts the invite from the email, text or in-app notification.",
+          "Select their name under Family members to review and change settings.",
+        ],
+      },
+      { type: "h2", id: "settings", text: "What you can change" },
+      {
+        type: "table",
+        head: ["Setting", "What it does"],
+        rows: [
+          ["Quiet hours", "Blocks ChatGPT use during times you choose, such as school nights"],
+          ["Voice mode", "Turn off spoken conversations"],
+          ["Memory", "Stop ChatGPT remembering details between chats"],
+          ["Image generation", "Remove the ability to create or edit images"],
+          ["Model training", "Keep your teen's chats out of AI training"],
+          ["Study mode", "Turn on step-by-step tutoring instead of direct answers"],
+        ],
+      },
+      { type: "h2", id: "alerts", text: "What parents are told" },
+      { type: "p", text: "Parents don't see their teen's chats. You're notified if your teen unlinks the account, and OpenAI says it may alert parents in rare cases where its systems and reviewers detect a serious safety risk." },
+      { type: "h2", id: "limits", text: "What the controls can't do" },
+      {
+        type: "ul",
+        items: [
+          "A teen can create a second account with a different email, or use ChatGPT logged out.",
+          "Controls cover ChatGPT only — not AI chat features inside other apps.",
+          "Settings are best paired with family rules and regular conversations about AI.",
+        ],
+      },
+      { type: "callout", title: "In a crisis", text: "If your child talks about self-harm, call or text 988, the Suicide & Crisis Lifeline." },
+    ],
+    faq: [
+      { question: "Can I read my teen's ChatGPT conversations?", answer: "No. Parental controls let you change settings, not read chats." },
+      { question: "Does my teen need their own ChatGPT account?", answer: "Yes. Parent and teen each need an account, linked by invitation." },
+      { question: "What are quiet hours in ChatGPT?", answer: "Times you set when your teen can't use ChatGPT, such as overnight." },
+      { question: "Will I know if my teen unlinks the account?", answer: "Yes. OpenAI notifies the parent if a teen unlinks." },
+      { question: "Can parental controls be bypassed?", answer: "Yes. A teen can use another account or use ChatGPT logged out, so controls work best alongside conversations at home." },
+    ],
+    sources: [
+      { name: "OpenAI — Introducing parental controls", url: "https://openai.com/index/introducing-parental-controls/" },
+      { name: "Consumer Reports — How to use ChatGPT parental controls", url: "https://www.consumerreports.org/electronics/artificial-intelligence/how-to-use-chatgpt-parental-controls-a5645625531/" },
+    ],
+    methodology: "Compiled from OpenAI's announcement and help pages and Consumer Reports, checked 27 November 2026. Menu names can change between app versions.",
+  },
+  {
+    id: "us-google-ai-mode-explained",
+    slug: "google-ai-mode-search-how-it-works",
+    title: "Google AI Mode: what it is, how to use it, and how to skip it",
+    seoTitle: "Google AI Mode Explained: How to Use It or Skip It",
+    subtitle: "The chatbot-style tab in Google Search answers long questions with links. Regular results are still one tap away.",
+    excerpt:
+      "Google AI Mode answers complex questions in Search with an AI reply and source links. How it differs from AI Overviews, how to use it, and how to avoid it.",
+    category: "ai-tools",
+    tags: ["Google", "AI Search", "Gemini", "Privacy"],
+    publishedAt: "2026-11-27T11:30:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Colourful code on a screen",
+    keyTakeaways: [
+      "AI Mode launched in the US in May 2025 and is now available in more than 200 countries and territories.",
+      "It's a separate tab in Google Search for long, multi-part questions, with follow-ups and links to sources.",
+      "AI Overviews are the short AI summaries above normal results; AI Mode is the full chat-style view.",
+      "To skip AI, use the 'Web' filter under More, or simply don't open the AI Mode tab.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: AI Mode is Google's chatbot-style search. Open the 'AI Mode' tab (or google.com/ai), ask a full question and keep asking follow-ups. If you want plain blue links, choose the 'Web' filter instead." },
+      { type: "h2", id: "difference", text: "AI Mode vs AI Overviews" },
+      {
+        type: "table",
+        head: ["", "AI Overviews", "AI Mode"],
+        rows: [
+          ["Where", "Top of normal results", "Its own tab"],
+          ["Length", "A short summary", "A longer answer with sections"],
+          ["Follow-ups", "No", "Yes, in a thread"],
+          ["Input", "Text", "Text, voice and images"],
+        ],
+      },
+      { type: "h2", id: "how", text: "How to use it well" },
+      {
+        type: "ol",
+        items: [
+          "Ask the whole question at once, including your constraints (budget, dates, location).",
+          "Use follow-ups to narrow the answer instead of starting over.",
+          "Open the cited pages before you book, buy or follow medical or legal advice.",
+          "Use the camera or a photo to ask about something in front of you.",
+        ],
+      },
+      { type: "h2", id: "skip", text: "How to skip AI answers" },
+      {
+        type: "ul",
+        items: [
+          "Don't tap the AI Mode tab — normal results stay under 'All'.",
+          "Select More → Web to get a links-only results page.",
+          "There's no account setting that removes AI Overviews entirely, so the Web filter is the simplest workaround.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Is Google AI Mode free?", answer: "Yes. It's part of Google Search at no cost." },
+      { question: "What's the difference between AI Mode and AI Overviews?", answer: "AI Overviews are short summaries above normal results; AI Mode is a separate tab for longer answers and follow-up questions." },
+      { question: "Can I turn off Google AI Mode?", answer: "You don't need to — it only appears if you open its tab. For links only, use the Web filter." },
+      { question: "Can AI Mode be wrong?", answer: "Yes. Google warns that AI responses may include mistakes, so check the linked sources." },
+    ],
+    sources: [
+      { name: "Google — AI Mode expands to more languages and locations", url: "https://blog.google/products/search/ai-mode-expands-languages-locations/" },
+      { name: "Google Search Help — Get AI-powered responses with AI Mode", url: "https://support.google.com/websearch/answer/16011537" },
+      { name: "TechCrunch — Google's AI Mode adds 5 new languages", url: "https://techcrunch.com/2025/09/08/googles-ai-mode-adds-5-new-languages-including-hindi-japanese-and-korean" },
+    ],
+    methodology: "Compiled from Google's blog and help centre and TechCrunch, checked 27 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("us", drafts);
