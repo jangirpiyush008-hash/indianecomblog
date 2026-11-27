@@ -311,8 +311,8 @@ const drafts: Draft[] = [
     category: "entertainment",
     tags: ["Rugby World Cup", "Wallabies", "Sport", "Tickets"],
     publishedAt: "2026-11-27T10:00:00+11:00",
-    heroImage: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&h=1000&q=80",
-    heroImageAlt: "A floodlit stadium at dusk",
+    heroImage: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A crowd at a concert under colourful stage lights",
     keyTakeaways: [
       "Dates: Friday 1 October to Saturday 13 November 2027.",
       "Host cities: Sydney, Melbourne, Brisbane, Perth, Adelaide, Townsville and Newcastle.",
@@ -1078,6 +1078,127 @@ const drafts: Draft[] = [
       { name: "Premier of Victoria — CDS hits half a billion container deposits", url: "https://www.premier.vic.gov.au/victorias-cds-hits-half-billion-container-deposits" },
     ],
     methodology: "Compiled from EPA Victoria and Victorian Government releases, checked 28 November 2026.",
+  },
+  {
+    id: "au-sydney-nye-2026",
+    slug: "sydney-new-years-eve-2026-fireworks-times-vantage-points",
+    title: "Sydney New Year's Eve 2026: fireworks times, free vantage points and transport",
+    seoTitle: "Sydney NYE 2026: Fireworks Times, Vantage Points, Transport",
+    subtitle: "Family fireworks at 9pm, the midnight show over the Harbour Bridge, and most vantage points free.",
+    excerpt:
+      "Sydney NYE 2026: the 9pm family fireworks and the midnight show, how free and ticketed vantage points work, and getting home on public transport.",
+    category: "entertainment",
+    tags: ["New Year's Eve", "Sydney", "Fireworks", "Events"],
+    publishedAt: "2026-11-28T11:00:00+11:00",
+    heroImage: "https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Colourful fireworks over water at night",
+    keyTakeaways: [
+      "Two main displays: the 9pm Family Fireworks and the Midnight Fireworks over the Harbour Bridge.",
+      "Transport for NSW lists a smoking ceremony at 7:30pm and pylon projections at 8:30pm before the 9pm 'Calling Country' display.",
+      "Most vantage points are free and unticketed but close when full; some, like the Opera House forecourt, need tickets.",
+      "Public transport runs all night but isn't free; expect road closures and long walks.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: pick a vantage point on the official map, arrive early (many fill by early afternoon), and plan to get home by train, metro or ferry. Kids can see the 9pm show and still be in bed by 10." },
+      { type: "h2", id: "times", text: "The evening's timeline" },
+      {
+        type: "table",
+        head: ["Time", "What"],
+        rows: [
+          ["7:30pm", "Smoking ceremony"],
+          ["8:30pm", "Harbour Bridge pylon projections"],
+          ["9:00pm", "Calling Country / Family Fireworks"],
+          ["Midnight", "Midnight Fireworks over the Harbour Bridge and Opera House"],
+        ],
+      },
+      { type: "h2", id: "vantage", text: "Choosing a vantage point" },
+      {
+        type: "ul",
+        items: [
+          "Free spots: many harbour foreshore areas, parks and lookouts — check live capacity on the official site.",
+          "Ticketed: some national parks islands, the Opera House forecourt and Royal Botanic Garden areas.",
+          "Bring water, food, sunscreen and a hat — it's summer, and alcohol is banned at many sites.",
+        ],
+      },
+      { type: "h2", id: "transport", text: "Getting there and home" },
+      {
+        type: "ol",
+        items: [
+          "Check the Transport for NSW NYE page for road closures and extra services.",
+          "Metro and train services run frequently through the night.",
+          "Plan your route home before you leave — stations get very crowded after midnight.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "What time are the Sydney NYE fireworks?", answer: "The Family Fireworks are at 9pm and the main show is at midnight." },
+      { question: "Do I need a ticket for Sydney NYE fireworks?", answer: "Most vantage points are free, but some, like the Opera House forecourt, are ticketed." },
+      { question: "Is public transport free on NYE?", answer: "No, normal fares apply, but services run all night." },
+      { question: "When should I arrive?", answer: "Popular free vantage points can fill by early afternoon, so arrive early." },
+    ],
+    sources: [
+      { name: "Transport for NSW — Sydney New Year's Eve 2026", url: "https://transportnsw.info/events/2026/12/sydney-new-years-eve-2026" },
+      { name: "City of Sydney — What you need to know about Sydney New Year's Eve", url: "https://news.cityofsydney.nsw.gov.au/articles/what-you-need-to-know-about-sydney-new-years-eve" },
+      { name: "Sydney Opera House — New Year's Eve on the Forecourt", url: "https://www.sydneyoperahouse.com/experiences/new-years-eve-forecourt" },
+    ],
+    methodology: "Compiled from Transport for NSW, City of Sydney and Sydney Opera House pages, checked 28 November 2026.",
+  },
+  {
+    id: "au-boxing-day-test-2026",
+    slug: "boxing-day-test-2026-australia-new-zealand-mcg",
+    title: "Boxing Day Test 2026: Australia v New Zealand at the MCG",
+    seoTitle: "Boxing Day Test 2026: Australia v New Zealand at the MCG",
+    subtitle: "Five days from 26 December, 10.30am starts. Plus the rest of the MCG's international summer.",
+    excerpt:
+      "The 2026 Boxing Day Test is Australia v New Zealand at the MCG from 26–30 December, starting 10.30am. Tickets, how to watch and the 150th Anniversary Test.",
+    category: "entertainment",
+    tags: ["Cricket", "Boxing Day Test", "MCG", "Sports"],
+    publishedAt: "2026-11-28T10:30:00+11:00",
+    heroImage: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A floodlit cricket ground at dusk",
+    keyTakeaways: [
+      "The NRMA Insurance Boxing Day Test is Australia v New Zealand, 26–30 December 2026.",
+      "Play starts at 10.30am each day at the MCG.",
+      "The MCG also hosts a 150th Anniversary day-night Test, Australia v England, on 11–15 March 2027.",
+      "Buy tickets only through Cricket Australia or Ticketek.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: this year's Boxing Day Test is against New Zealand, starting Saturday 26 December at 10.30am. Day one is the biggest crowd of the summer, so book early." },
+      { type: "h2", id: "summer", text: "The MCG's international summer" },
+      {
+        type: "table",
+        head: ["Date", "Match"],
+        rows: [
+          ["21 November 2026", "Men's T20I, Australia v England"],
+          ["26–30 December 2026", "Boxing Day Test, Australia v New Zealand"],
+          ["11–15 March 2027", "150th Anniversary Test, Australia v England (day-night)"],
+        ],
+      },
+      { type: "h2", id: "tickets", text: "Tickets and getting there" },
+      {
+        type: "ul",
+        items: [
+          "Tickets through Cricket Australia's site and Ticketek; reserved seats sell first.",
+          "MCC members and their guests have separate access.",
+          "Trains to Richmond and Jolimont stations are the easiest way in.",
+          "Bring sunscreen and a hat — Melbourne summer days can be hot.",
+        ],
+      },
+      { type: "h2", id: "watch", text: "How to watch" },
+      { type: "p", text: "Tests in Australia are shown on Fox Cricket and Kayo, with free-to-air coverage on the Seven Network and 7plus. ABC Radio provides ball-by-ball commentary." },
+    ],
+    faq: [
+      { question: "Who is Australia playing in the 2026 Boxing Day Test?", answer: "New Zealand." },
+      { question: "What time does the Boxing Day Test start?", answer: "10.30am each day." },
+      { question: "Where is the Boxing Day Test?", answer: "At the Melbourne Cricket Ground (MCG)." },
+      { question: "When is the 150th Anniversary Test?", answer: "11–15 March 2027 at the MCG, Australia v England, as a day-night Test." },
+    ],
+    sources: [
+      { name: "MCG — International cricket schedule confirmed for 2026-27", url: "https://www.mcg.org.au/news/2026/march/international-cricket-schedule-confirmed-for-202627" },
+      { name: "MCG — Boxing Day Test day 3: Australia v New Zealand", url: "https://www.mcg.org.au/events/2026/december/boxing-day-test-day-3-australia-v-new-zealand" },
+      { name: "Cricket Australia — Boxing Day Test premium experiences", url: "https://www.cricket.com.au/premium-experiences/boxing-day-test/" },
+    ],
+    methodology: "Compiled from the MCG and Cricket Australia, checked 28 November 2026.",
   },
 ];
 

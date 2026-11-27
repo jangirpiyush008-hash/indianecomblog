@@ -1089,6 +1089,123 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from NHS England and NHS help pages, checked 28 November 2026. Features vary by GP surgery.",
   },
+  {
+    id: "gb-six-nations-2027-fixtures",
+    slug: "six-nations-2027-fixtures-dates-kick-off-times",
+    title: "Six Nations 2027 fixtures: dates, kick-off times and the big games",
+    seoTitle: "Six Nations 2027 Fixtures: Dates and Kick-Off Times",
+    subtitle: "Ireland v England opens the tournament on a Friday night in Dublin. England v Scotland is on Super Saturday.",
+    excerpt:
+      "The 2027 Six Nations opens with Ireland v England on Friday 5 February and ends on 13 March. England, Wales and Scotland fixtures and Super Saturday.",
+    category: "entertainment",
+    tags: ["Six Nations", "Rugby", "England", "Sports"],
+    publishedAt: "2026-11-28T11:00:00+00:00",
+    heroImage: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A packed stadium under floodlights",
+    keyTakeaways: [
+      "The tournament opens with Ireland v England in Dublin on Friday 5 February 2027.",
+      "England host France at Allianz Stadium, Twickenham, on Sunday 14 February.",
+      "Wales start away to France on Saturday 6 February; Scotland start against Italy the same day.",
+      "Super Saturday, 13 March, has Italy v Wales, England v Scotland and Ireland v France.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: the Six Nations runs from Friday 5 February to Saturday 13 March 2027. The opener, Ireland v England, is a Friday night game in Dublin, and England v Scotland for the Calcutta Cup comes on the final day." },
+      { type: "h2", id: "fixtures", text: "Key fixtures" },
+      {
+        type: "table",
+        head: ["Date", "Match"],
+        rows: [
+          ["Fri 5 Feb", "Ireland v England (Dublin)"],
+          ["Sat 6 Feb", "France v Wales; Scotland v Italy"],
+          ["Sat 13 Feb", "Italy v Ireland"],
+          ["Sun 14 Feb", "England v France (Allianz Stadium)"],
+          ["Sat 6 Mar", "Wales v England (Cardiff)"],
+          ["Sat 13 Mar", "Italy v Wales; England v Scotland; Ireland v France"],
+        ],
+      },
+      { type: "h2", id: "watch", text: "How to watch" },
+      { type: "p", text: "Six Nations matches are shown free-to-air in the UK, shared between the BBC and ITV. Check the broadcaster for each match closer to the date." },
+      { type: "h2", id: "tickets", text: "Tickets" },
+      {
+        type: "ul",
+        items: [
+          "Buy through the home union's official ticketing (RFU, WRU, Scottish Rugby, IRFU).",
+          "Avoid unofficial resale sites — tickets can be cancelled.",
+          "Big games like Ireland v England and England v France sell out quickly.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When does the 2027 Six Nations start?", answer: "Friday 5 February 2027, with Ireland v England in Dublin." },
+      { question: "When is England v Scotland in 2027?", answer: "On the final day, Saturday 13 March 2027." },
+      { question: "When do England play France in 2027?", answer: "Sunday 14 February 2027 at Allianz Stadium, Twickenham." },
+      { question: "Where can I watch the Six Nations?", answer: "Free-to-air on the BBC and ITV in the UK." },
+    ],
+    sources: [
+      { name: "IRFU — Guinness Men's Six Nations fixtures confirmed for 2027", url: "https://www.irishrugby.ie/2026/03/09/guinness-mens-six-nations-fixtures-confirmed-for-2027" },
+      { name: "Sky Sports — Six Nations 2027: Ireland vs England starts tournament", url: "https://www.skysports.com/rugby-union/news/12321/13517225/six-nations-2027-ireland-vs-england-starts-mens-tournament-with-england-vs-scotland-on-final-weekend" },
+      { name: "Rugby World — Six Nations 2027 fixtures announced", url: "https://www.rugbyworld.com/news/six-nations-2027-fixtures-announced-182615" },
+    ],
+    methodology: "Compiled from the IRFU fixture release and UK sports media, checked 28 November 2026. Kick-off times can change.",
+  },
+  {
+    id: "gb-brit-awards-2027",
+    slug: "brit-awards-2027-date-venue-how-to-watch",
+    title: "BRIT Awards 2027: date, venue and how to watch",
+    seoTitle: "BRIT Awards 2027: Date, Venue and How to Watch",
+    subtitle: "Saturday 27 February at Manchester's Co-op Live, live on ITV1 and ITVX — 50 years after the first televised BRITs.",
+    excerpt:
+      "The BRIT Awards 2027 are on Saturday 27 February at Co-op Live in Manchester, live on ITV1 and ITVX. What we know so far about nominations, host and tickets.",
+    category: "entertainment",
+    tags: ["BRIT Awards", "Music", "Manchester", "Awards"],
+    publishedAt: "2026-11-28T10:30:00+00:00",
+    heroImage: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A crowd watching a concert under bright stage lights",
+    keyTakeaways: [
+      "The BRIT Awards 2027 take place on Saturday 27 February 2027.",
+      "The ceremony returns to Co-op Live in Manchester for a second year.",
+      "It airs live on ITV1 and ITVX in a prime-time weekend slot.",
+      "Host, performers and nominations had not been announced as of late November 2026.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: the BRITs are on Saturday 27 February 2027 in Manchester, shown live on ITV1 and ITVX. Nominations are usually announced in January." },
+      { type: "h2", id: "facts", text: "What we know" },
+      {
+        type: "table",
+        head: ["Detail", "2027"],
+        rows: [
+          ["Date", "Saturday 27 February 2027"],
+          ["Venue", "Co-op Live, Manchester (capacity 23,500)"],
+          ["TV", "ITV1 and ITVX"],
+          ["Milestone", "50 years since the first televised BRITs"],
+          ["Host", "To be announced (Jack Whitehall hosted in 2026)"],
+        ],
+      },
+      { type: "h2", id: "tickets", text: "Tickets" },
+      {
+        type: "ul",
+        items: [
+          "Tickets are sold through Co-op Live and official ticket partners.",
+          "Sign up for alerts on the BRITs and Co-op Live websites.",
+          "Only buy from official sellers or authorised resale.",
+        ],
+      },
+      { type: "h2", id: "next", text: "What to watch for next" },
+      { type: "p", text: "Expect the nominations announcement and the Rising Star winner in the new year, followed by the host and performer line-up." },
+    ],
+    faq: [
+      { question: "When are the BRIT Awards 2027?", answer: "Saturday 27 February 2027." },
+      { question: "Where are the BRITs 2027 held?", answer: "At Co-op Live in Manchester." },
+      { question: "What channel are the BRITs on?", answer: "ITV1, with streaming on ITVX." },
+      { question: "Who is hosting the BRITs 2027?", answer: "The host hadn't been announced as of late November 2026." },
+    ],
+    sources: [
+      { name: "BPI — The BRIT Awards reveals 2027 date and return to Manchester", url: "https://www.bpi.co.uk/news/13280031" },
+      { name: "NME — The BRIT Awards 2027 date revealed", url: "https://www.nme.com/news/music/the-brit-awards-2027-date-revealed-3950006" },
+      { name: "Music Week — BRIT Awards confirms 2027 date", url: "https://www.musicweek.com/media/read/brit-awards-confirms-2027-date-for-ceremony-s-second-year-in-manchester/094267" },
+    ],
+    methodology: "Compiled from the BPI announcement and music trade press, checked 28 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("gb", drafts);

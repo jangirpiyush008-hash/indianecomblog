@@ -1584,6 +1584,127 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from ABDM material and the official app listing, checked 28 November 2026.",
   },
+  {
+    id: "in-cricket-world-cup-2027",
+    slug: "cricket-world-cup-2027-dates-venues-format",
+    title: "Cricket World Cup 2027: dates, venues, format and India's path",
+    seoTitle: "Cricket World Cup 2027: Dates, Venues and Format",
+    subtitle: "Fourteen teams, 57 matches and 12 venues across South Africa, Zimbabwe and Namibia, from 2 October to 21 November 2027.",
+    excerpt:
+      "The ICC Men's Cricket World Cup 2027 runs 2 October–21 November in South Africa, Zimbabwe and Namibia. Venues, the new format, qualification and tickets.",
+    category: "entertainment",
+    tags: ["Cricket", "ICC", "World Cup", "Team India"],
+    publishedAt: "2026-11-28T11:00:00+05:30",
+    heroImage: "https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A batsman playing a shot in front of the stumps",
+    keyTakeaways: [
+      "The ICC set the tournament for 2 October to 21 November 2027.",
+      "14 teams will play 57 matches at 12 venues: eight in South Africa, three in Zimbabwe and one in Namibia.",
+      "The format has three rounds before the semi-finals and final, including a 'Super' stage.",
+      "Ten teams had qualified directly by 30 September 2026; the rest come through a qualifier from 26 February to 21 March 2027.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: the 50-over World Cup returns to Africa for the first time since 2003, running for seven weeks from 2 October 2027. India are among the teams that qualified directly, and the ICC opened a ticket ballot alongside the fixture release." },
+      { type: "h2", id: "venues", text: "The 12 venues" },
+      {
+        type: "table",
+        head: ["Country", "Cities"],
+        rows: [
+          ["South Africa (8)", "Including Johannesburg, Tshwane (Pretoria), Cape Town, Durban, Gqeberha, Bloemfontein and Paarl"],
+          ["Zimbabwe (3)", "Including Harare and Bulawayo"],
+          ["Namibia (1)", "Windhoek"],
+        ],
+      },
+      { type: "h2", id: "format", text: "How the format works" },
+      {
+        type: "ul",
+        items: [
+          "14 teams, split into groups for the first stage.",
+          "Top teams move into a 'Super' stage before the knockouts.",
+          "Semi-finals and final in November.",
+          "57 matches in total, up from 48 at the 2023 edition in India.",
+        ],
+      },
+      { type: "h2", id: "india", text: "What it means for Indian fans" },
+      {
+        type: "ul",
+        items: [
+          "South Africa is 3.5 hours behind IST, so afternoon starts there are evening matches in India.",
+          "Watch the ICC's official site for India's fixtures and the ticket ballot.",
+          "Check visa rules for South Africa, Zimbabwe or Namibia early if you plan to travel.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When is the 2027 Cricket World Cup?", answer: "From 2 October to 21 November 2027." },
+      { question: "Where is the 2027 Cricket World Cup?", answer: "In South Africa, Zimbabwe and Namibia, across 12 venues." },
+      { question: "How many teams are in the 2027 World Cup?", answer: "14 teams playing 57 matches." },
+      { question: "How do I get tickets?", answer: "Through the ICC's official ticket ballot, which opened with the fixture release." },
+    ],
+    sources: [
+      { name: "ICC — Fixture schedule announced for Men's Cricket World Cup 2027", url: "https://www.icc-cricket.com/news/fixture-schedule-announced-for-icc-men-s-cricket-world-cup-2027" },
+      { name: "ICC — Men's Cricket World Cup 2027 venues and brand revealed", url: "https://www.icc-cricket.com/news/men-s-cricket-world-cup-2027-venues-and-brand-revealed" },
+      { name: "EWN — ICC announces schedule for 2027 Men's Cricket World Cup", url: "https://www.ewn.co.za/2026/10/02/icc-announces-schedule-for-2027-men-s-cricket-world-cup" },
+    ],
+    methodology: "Compiled from ICC announcements and EWN, checked 28 November 2026.",
+  },
+  {
+    id: "in-ipl-2027-auction",
+    slug: "ipl-2027-auction-date-goa-purse-slots",
+    title: "IPL 2027 auction: date, venue, purses and how many slots each team has",
+    seoTitle: "IPL 2027 Auction: Date, Venue, Purses and Slots",
+    subtitle: "The mini-auction is set for 16 December in Goa. Lucknow have the biggest purse; Gujarat the smallest.",
+    excerpt:
+      "IPL 2027 mini-auction on 16 December in Goa: 10 teams, ₹297.95 crore and 66 slots between them. Purses, retentions and how to watch.",
+    category: "entertainment",
+    tags: ["IPL", "Cricket", "IPL Auction", "Sports"],
+    publishedAt: "2026-11-28T10:30:00+05:30",
+    heroImage: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A red cricket ball resting on grass",
+    keyTakeaways: [
+      "The IPL 2027 mini-auction is reported for 16 December 2026 at ITC Grand Goa.",
+      "Together the 10 teams have ₹297.95 crore and 66 slots, including 25 for overseas players.",
+      "Lucknow Super Giants have the largest remaining purse (₹47.45 crore); Gujarat Titans the smallest (₹8.75 crore).",
+      "Retentions closed in mid-November; Gujarat kept the biggest squad, with 22 players.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: the auction is on Wednesday 16 December in Goa. It's a mini-auction, so teams are filling gaps rather than rebuilding — watch Lucknow, who have the most money to spend." },
+      { type: "h2", id: "purses", text: "Who has the most to spend" },
+      {
+        type: "table",
+        head: ["Team", "Remaining purse", "Note"],
+        rows: [
+          ["Lucknow Super Giants", "₹47.45 crore", "Largest purse"],
+          ["Gujarat Titans", "₹8.75 crore", "Smallest purse, 3 slots"],
+          ["All 10 teams", "₹297.95 crore", "66 slots, 25 overseas"],
+        ],
+      },
+      { type: "h2", id: "retentions", text: "Retention highlights" },
+      {
+        type: "ul",
+        items: [
+          "Gujarat Titans retained 22 players, the most of any team.",
+          "Royal Challengers Bengaluru kept seven overseas players, also the most.",
+          "Released players re-enter the auction pool if they register.",
+        ],
+      },
+      { type: "h2", id: "watch", text: "How to follow it" },
+      { type: "p", text: "The auction is usually broadcast live by the IPL's TV and streaming partners, with live updates on iplt20.com. The BCCI confirms timings closer to the date." },
+      { type: "callout", title: "Date clash", text: "The auction date overlaps with an India ODI against Sri Lanka in Bengaluru, so expect split coverage." },
+    ],
+    faq: [
+      { question: "When is the IPL 2027 auction?", answer: "It's reported for 16 December 2026 in Goa." },
+      { question: "Which team has the biggest purse?", answer: "Lucknow Super Giants, with ₹47.45 crore." },
+      { question: "How many players can be bought?", answer: "66 slots in total, including 25 for overseas players." },
+      { question: "Is it a mega or mini auction?", answer: "A mini-auction." },
+    ],
+    sources: [
+      { name: "Business Today — IPL 2027 mini-auction set for December 16 in Goa", url: "https://www.businesstoday.in/sports/ipl/story/ipl-2027-auction-mini-auction-set-for-december-16-in-goa-all-you-need-to-know-563837-2026-10-27" },
+      { name: "Outlook — IPL 2027 mini-auction, retention deadline", url: "https://www.outlookindia.com/sports/cricket/ipl-2027-mini-auction-date-venue-announced-goa-retention-deadline-report" },
+      { name: "CricTracker — IPL 2027 auction to be held on December 16 in Goa", url: "https://www.crictracker.com/cricket-news/ipl-2027-auction-to-be-held-on-december-16-in-goa-7060/" },
+    ],
+    methodology: "Compiled from sports media reports, checked 28 November 2026. Confirm timings with the BCCI/IPL.",
+  },
 ];
 
 export const articles = buildArticles("in", drafts);

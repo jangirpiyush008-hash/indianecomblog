@@ -1097,6 +1097,121 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from astronomical forecasts reported in regional media, checked 28 November 2026. Official dates follow the moon sighting.",
   },
+  {
+    id: "sa-saudi-cup-2027",
+    slug: "saudi-cup-2027-date-prize-money-tickets",
+    title: "Saudi Cup 2027: date, prize money and how to attend",
+    seoTitle: "Saudi Cup 2027: Date, Prize Money and Tickets",
+    subtitle: "The world's richest horse race returns to King Abdulaziz Racecourse in Riyadh on 5–6 February 2027.",
+    excerpt:
+      "The Saudi Cup 2027 meeting is on 5–6 February at King Abdulaziz Racecourse, Riyadh, with a $20 million headline race. Dates, prize money and tickets.",
+    category: "entertainment",
+    tags: ["Saudi Cup", "Horse Racing", "Riyadh", "Sports"],
+    publishedAt: "2026-11-28T11:00:00+03:00",
+    heroImage: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A white horse galloping across grass",
+    keyTakeaways: [
+      "The Jockey Club of Saudi Arabia lists the Saudi Cup meeting for 5–6 February 2027.",
+      "The Saudi Cup itself carries US$20 million — the world's richest horse race.",
+      "The Saudi Derby has been upgraded and runs on Saudi Cup day.",
+      "The wider 2026–27 Riyadh racing season offers SAR 236.3 million across 50 race days.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: the Saudi Cup is on Saturday 6 February 2027, with the opening day of the meeting on Friday 5 February, at King Abdulaziz Racecourse in Riyadh. Tickets and hospitality are sold through the official Saudi Cup website." },
+      { type: "h2", id: "facts", text: "Key facts" },
+      {
+        type: "table",
+        head: ["Detail", "2027"],
+        rows: [
+          ["Dates", "5–6 February 2027"],
+          ["Venue", "King Abdulaziz Racecourse, Riyadh"],
+          ["Saudi Cup prize", "US$20 million"],
+          ["Season", "Riyadh Racing Season, October 2026 to April 2027"],
+        ],
+      },
+      { type: "h2", id: "attend", text: "Going to the races" },
+      {
+        type: "ul",
+        items: [
+          "Book general admission or hospitality on the official Saudi Cup site.",
+          "There's a dress code for most enclosures — check before you go.",
+          "Allow extra time: traffic around the racecourse is heavy on Cup day.",
+          "Regular race days through the season are a cheaper, quieter way to try racing.",
+        ],
+      },
+      { type: "h2", id: "watch", text: "How to watch" },
+      { type: "p", text: "The meeting is broadcast in Saudi Arabia and internationally; check the Jockey Club of Saudi Arabia and the official Saudi Cup channels for broadcast partners." },
+    ],
+    faq: [
+      { question: "When is the Saudi Cup 2027?", answer: "The meeting is on 5–6 February 2027, with the Saudi Cup on 6 February." },
+      { question: "How much is the Saudi Cup prize money?", answer: "US$20 million for the Saudi Cup itself." },
+      { question: "Where is the Saudi Cup held?", answer: "At King Abdulaziz Racecourse in Riyadh." },
+      { question: "How do I get Saudi Cup tickets?", answer: "Through the official Saudi Cup website." },
+    ],
+    sources: [
+      { name: "Thoroughbred Daily News — Saudi Derby upgraded as 2026-27 Riyadh season revealed", url: "https://www.thoroughbreddailynews.com/saudi-derby-upgraded-as-2026-2027-riyadh-racing-season-revealed/" },
+      { name: "Arab News — Riyadh racing returns to King Abdulaziz Racecourse", url: "https://www.arabnews.pk/sport/riyadh-racing-returns-to-king-abdulaziz-racecourse-3004322" },
+      { name: "GDN — Riyadh racing season 2026–27 prize money exceeding SAR236 million", url: "https://www.gdnonline.com/Details/1409984" },
+    ],
+    methodology: "Compiled from the Jockey Club calendar as reported by racing and regional media, checked 28 November 2026. Some listings give other dates; confirm on the official site.",
+  },
+  {
+    id: "sa-soundstorm-2026-cancelled",
+    slug: "soundstorm-2026-cancelled-refunds-what-next",
+    title: "Soundstorm 2026 won't go ahead: what ticket holders need to know",
+    seoTitle: "Soundstorm 2026 Cancelled: Refunds and What's Next",
+    subtitle: "MDLBEAST said this year's festival 'will not take place as planned' and plans to return in 2027.",
+    excerpt:
+      "MDLBEAST Soundstorm, planned for 3–4 December 2026 in Riyadh, won't go ahead. What organisers said, how to check your refund, and other events this season.",
+    category: "entertainment",
+    tags: ["Soundstorm", "MDLBEAST", "Music Festivals", "Riyadh"],
+    publishedAt: "2026-11-28T10:30:00+03:00",
+    heroImage: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A crowd watching a concert under bright stage lights",
+    keyTakeaways: [
+      "Soundstorm was due at Banban, Riyadh, on 3–4 December 2026.",
+      "In early October, organisers told ticket holders by email that this year's festival would not take place as planned.",
+      "Organisers said they would focus on bringing the festival back in 2027.",
+      "Ticket holders should check refund details in the app or platform they bought through.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: don't travel to Banban for Soundstorm this December — it isn't happening in 2026. If you bought a ticket, look for the organiser's email and follow the refund steps on the platform you used." },
+      { type: "h2", id: "what", text: "What happened" },
+      {
+        type: "ul",
+        items: [
+          "DJ Mag reported on 5 October 2026 that Soundstorm had cancelled its 2026 edition.",
+          "Gulf News reported an email to ticket holders describing it as a postponement.",
+          "Some listing sites still show December dates — they're out of date.",
+          "No 2026 line-up was ever announced.",
+        ],
+      },
+      { type: "h2", id: "refund", text: "Getting your money back" },
+      {
+        type: "ol",
+        items: [
+          "Find the email from MDLBEAST about the change.",
+          "Open the ticketing app or site where you bought (for example, NOFOMO) and check your order.",
+          "Follow the refund instructions; keep screenshots of your order and messages.",
+          "If you bought from a reseller, contact them — the organiser can only refund official purchases.",
+        ],
+      },
+      { type: "h2", id: "instead", text: "What else is on" },
+      { type: "p", text: "Riyadh Season runs through the winter with concerts and events, and the Riyadh racing season builds toward the Saudi Cup in February. Check official Riyadh Season channels for music events." },
+    ],
+    faq: [
+      { question: "Is Soundstorm 2026 cancelled?", answer: "Yes. Organisers said this year's Soundstorm would not take place as planned and aim to return in 2027." },
+      { question: "Will I get a refund for Soundstorm 2026?", answer: "Check the organiser's email and the platform you bought from for refund steps." },
+      { question: "When was Soundstorm 2026 supposed to be?", answer: "3–4 December 2026 at Banban, Riyadh." },
+      { question: "Will Soundstorm return?", answer: "Organisers said they plan to bring it back in 2027." },
+    ],
+    sources: [
+      { name: "DJ Mag — Soundstorm festival cancels 2026 edition", url: "https://djmag.com/news/soundstorm-festival-cancels-2026-edition" },
+      { name: "Gulf News — High-profile Saudi music festival postponed: email to ticket holders", url: "https://gulfnews.com/entertainment/high-profile-saudi-music-festival-postponed-email-to-ticket-holders-1.500694032" },
+      { name: "Fact Magazine — MDLBEAST Soundstorm 2026", url: "https://www.factmagazines.com/saudi-arabia/riyadh/events/mdlbeast-soundstorm-2026-tickets" },
+    ],
+    methodology: "Compiled from DJ Mag, Gulf News and Fact Magazine, checked 28 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("sa", drafts);

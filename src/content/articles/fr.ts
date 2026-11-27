@@ -1145,6 +1145,123 @@ const drafts: Draft[] = [
     ],
     methodology: "Synthèse d'après info.gouv.fr, le ministère de la Transition écologique et l'ANIL, vérifiée le 28 novembre 2026.",
   },
+  {
+    id: "fr-fete-des-lumieres-2026",
+    slug: "fete-des-lumieres-lyon-2026-dates-horaires",
+    title: "Fête des Lumières 2026 à Lyon : dates, horaires et conseils",
+    seoTitle: "Fête des Lumières 2026 à Lyon : dates, horaires, conseils",
+    subtitle: "Du samedi 5 au mardi 8 décembre, 27 œuvres gratuites dans 20 lieux de la ville.",
+    excerpt:
+      "La Fête des Lumières 2026 a lieu à Lyon du 5 au 8 décembre : 27 œuvres gratuites, horaires par soir, lumignons, transports et conseils pour éviter la foule.",
+    category: "entertainment",
+    tags: ["Fête des Lumières", "Lyon", "Sorties", "Décembre"],
+    publishedAt: "2026-11-28T11:00:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Des cierges magiques lors d'une fête nocturne",
+    keyTakeaways: [
+      "La Fête des Lumières se tient du samedi 5 au mardi 8 décembre 2026.",
+      "27 œuvres lumineuses dans 20 lieux, toutes gratuites.",
+      "Horaires : 19 h–23 h les 5, 7 et 8 décembre, 18 h–22 h le dimanche 6.",
+      "Près de 2 millions de visiteurs sont attendus ; privilégiez les transports en commun.",
+    ],
+    body: [
+      { type: "p", text: "En bref : rendez-vous à Lyon du 5 au 8 décembre, de préférence lundi ou mardi soir pour éviter la foule. Tout est gratuit ; prévoyez des chaussures confortables et le métro." },
+      { type: "h2", id: "horaires", text: "Dates et horaires" },
+      {
+        type: "table",
+        head: ["Soir", "Horaires"],
+        rows: [
+          ["Samedi 5 décembre", "19 h – 23 h"],
+          ["Dimanche 6 décembre", "18 h – 22 h"],
+          ["Lundi 7 décembre", "19 h – 23 h"],
+          ["Mardi 8 décembre", "19 h – 23 h"],
+        ],
+      },
+      { type: "h2", id: "conseils", text: "Conseils" },
+      {
+        type: "ul",
+        items: [
+          "Le 8 décembre, les Lyonnais posent des lumignons aux fenêtres : c'est la soirée traditionnelle.",
+          "Les Lumignons du Cœur sont vendus 2 € au profit d'une association.",
+          "Certaines stations de métro peuvent fermer en cas d'affluence ; suivez les annonces TCL.",
+          "Téléchargez le plan officiel des œuvres pour organiser votre parcours.",
+        ],
+      },
+      { type: "h2", id: "avant", text: "En avant-première" },
+      { type: "p", text: "Une soirée « Lumière en arrondissement » est prévue le 3 décembre, avec des animations dans plusieurs quartiers." },
+    ],
+    faq: [
+      { question: "Quand a lieu la Fête des Lumières 2026 ?", answer: "Du samedi 5 au mardi 8 décembre 2026." },
+      { question: "La Fête des Lumières est-elle gratuite ?", answer: "Oui, les 27 œuvres sont gratuites." },
+      { question: "Quels sont les horaires ?", answer: "19 h–23 h les 5, 7 et 8 décembre, 18 h–22 h le dimanche 6." },
+      { question: "Quel soir éviter la foule ?", answer: "Le lundi ou le mardi soir sont souvent un peu moins chargés que le week-end." },
+    ],
+    sources: [
+      { name: "Ville de Lyon — Fête des Lumières 2026", url: "https://www.lyon.fr/node/952681" },
+      { name: "LyonMag — Fête des Lumières 2026 : 27 œuvres et près de 2 millions de visiteurs", url: "https://www.lyonmag.com/article/154742/fete-des-lumieres-2026-a-lyon-27-oeuvres-pac-man-geant-ia-et-pres-de-2-millions-de-visiteurs-attendus" },
+      { name: "Le Bonbon — Programme de la Fête des Lumières 2026", url: "https://www.lebonbon.fr/lyon/loisirs/fete-lumieres-2026-programme-etincelant-edition-2026-27-oeuvres/" },
+    ],
+    methodology: "Synthèse d'après la Ville de Lyon, LyonMag et Le Bonbon, vérifiée le 28 novembre 2026.",
+  },
+  {
+    id: "fr-tour-de-france-2027",
+    slug: "tour-de-france-2027-parcours-grand-depart-edimbourg",
+    title: "Tour de France 2027 : Grand Départ d'Édimbourg, dates et grandes lignes du parcours",
+    seoTitle: "Tour de France 2027 : départ d'Édimbourg, dates et parcours",
+    subtitle: "Du 2 au 25 juillet 2027, 21 étapes et 3 479 km, avec trois jours en Grande-Bretagne.",
+    excerpt:
+      "Le Tour de France 2027 part d'Édimbourg le 2 juillet et arrive sur les Champs-Élysées le 25 juillet : 3 479 km, trois arrivées au sommet, 71 km de chrono.",
+    category: "entertainment",
+    tags: ["Tour de France", "Cyclisme", "Sport", "Été 2027"],
+    publishedAt: "2026-11-28T10:30:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Un peloton de cyclistes en course",
+    keyTakeaways: [
+      "Le Tour 2027 part d'Édimbourg (Écosse) le vendredi 2 juillet et arrive à Paris le dimanche 25 juillet.",
+      "21 étapes pour 3 479 km au total.",
+      "Les premiers jours traversent l'Écosse, l'Angleterre et le pays de Galles, avec une première étape Édimbourg–Carlisle.",
+      "Le parcours compte trois arrivées au sommet et 71 km de contre-la-montre.",
+    ],
+    body: [
+      { type: "p", text: "En bref : le Tour 2027 commence au Royaume-Uni et met l'accent sur les contre-la-montre plutôt que sur les arrivées en altitude. Le Tour de France Femmes démarrera, lui, le 30 juillet entre Leeds et Manchester." },
+      { type: "h2", id: "chiffres", text: "Les chiffres clés" },
+      {
+        type: "table",
+        head: ["", "Tour 2027"],
+        rows: [
+          ["Dates", "2 – 25 juillet 2027"],
+          ["Grand Départ", "Édimbourg (Écosse)"],
+          ["Distance", "3 479 km en 21 étapes"],
+          ["Arrivées au sommet", "3"],
+          ["Contre-la-montre", "71 km"],
+          ["Arrivée", "Paris, Champs-Élysées"],
+        ],
+      },
+      { type: "h2", id: "uk", text: "Les étapes britanniques" },
+      {
+        type: "ul",
+        items: [
+          "Étape 1 : Édimbourg – Carlisle (environ 184 km).",
+          "Puis traversée du nord de l'Angleterre et du pays de Galles, avec Cardiff comme ville étape.",
+          "Le peloton rejoint ensuite la France pour la suite de la course.",
+        ],
+      },
+      { type: "h2", id: "voir", text: "Comment suivre le Tour" },
+      { type: "p", text: "En France, le Tour est diffusé en clair sur France Télévisions. Le parcours détaillé étape par étape est publié sur le site officiel letour.fr." },
+    ],
+    faq: [
+      { question: "Quand commence le Tour de France 2027 ?", answer: "Le 2 juillet 2027 à Édimbourg." },
+      { question: "Où se termine le Tour de France 2027 ?", answer: "À Paris, sur les Champs-Élysées, le 25 juillet 2027." },
+      { question: "Combien de kilomètres fait le Tour 2027 ?", answer: "3 479 km répartis sur 21 étapes." },
+      { question: "Quand a lieu le Tour de France Femmes 2027 ?", answer: "Il démarre le 30 juillet 2027, entre Leeds et Manchester." },
+    ],
+    sources: [
+      { name: "Cycling Weekly — Tour de France 2027 route revealed", url: "https://www.cyclingweekly.com/racing/tour-de-france-2027-route-revealed" },
+      { name: "Tour Magazin — Des étapes en Écosse, en Angleterre et au pays de Galles", url: "https://www.tour-magazin.de/fr/professionnel-cyclisme/actualites/tour-de-france-2027-des-etapes-en-ecosse-en-angleterre-et-au-pays-de-galles/" },
+      { name: "VisitScotland — Tour de France", url: "https://www.visitscotland.com/fr-fr/things-to-do/events/tour-de-france" },
+    ],
+    methodology: "Synthèse d'après Cycling Weekly, Tour Magazin et VisitScotland, vérifiée le 28 novembre 2026.",
+  },
 ];
 
 export const articles = buildArticles("fr", drafts);

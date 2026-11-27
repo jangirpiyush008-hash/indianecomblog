@@ -1099,6 +1099,126 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from Canadian news coverage and a federal briefing note, checked 28 November 2026.",
   },
+  {
+    id: "ca-world-juniors-2027",
+    slug: "world-juniors-2027-edmonton-red-deer-schedule",
+    title: "World Juniors 2027 in Edmonton and Red Deer: schedule and Canada's games",
+    seoTitle: "World Juniors 2027: Schedule, Venues and Canada's Games",
+    subtitle: "The tournament runs December 26 to January 5. Canada opens against Switzerland at Rogers Place.",
+    excerpt:
+      "The 2027 IIHF World Junior Championship runs Dec 26–Jan 5 in Edmonton and Red Deer. Canada opens vs Switzerland; the medal games are in Edmonton.",
+    category: "entertainment",
+    tags: ["World Juniors", "Hockey", "Team Canada", "Edmonton"],
+    publishedAt: "2026-11-28T11:00:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1515703407324-5f753afd8be8?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A hockey net on an outdoor ice rink",
+    keyTakeaways: [
+      "The 2027 IIHF World Junior Championship runs December 26, 2026 to January 5, 2027.",
+      "Rogers Place in Edmonton hosts 17 games; the Centrium in Red Deer hosts 14.",
+      "Canada opens against Switzerland at Rogers Place on December 26.",
+      "The semi-finals and gold-medal game are in Edmonton.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: the World Juniors are back in Alberta over the holidays. Canada starts on Boxing Day against Switzerland in Edmonton, and the gold-medal game is in Edmonton on January 5." },
+      { type: "h2", id: "venues", text: "Venues" },
+      {
+        type: "table",
+        head: ["Venue", "City", "Games"],
+        rows: [
+          ["Rogers Place", "Edmonton", "17, including semi-finals and final"],
+          ["Centrium", "Red Deer", "14"],
+        ],
+      },
+      { type: "h2", id: "key", text: "Key dates" },
+      {
+        type: "ul",
+        items: [
+          "December 26: opening day; Canada vs. Switzerland in Edmonton.",
+          "Early January: quarter-finals and semi-finals.",
+          "January 5: bronze and gold-medal games in Edmonton.",
+        ],
+      },
+      { type: "h2", id: "watch", text: "How to watch and get tickets" },
+      {
+        type: "ul",
+        items: [
+          "TSN is Hockey Canada's broadcast partner for the World Juniors in Canada.",
+          "Buy tickets only through Hockey Canada's official ticketing.",
+          "Red Deer games are often easier to get and cheaper than Canada's games in Edmonton.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When are the 2027 World Juniors?", answer: "December 26, 2026 to January 5, 2027." },
+      { question: "Where are the 2027 World Juniors?", answer: "In Edmonton (Rogers Place) and Red Deer (Centrium), Alberta." },
+      { question: "Who does Canada play first?", answer: "Switzerland, on December 26 at Rogers Place." },
+      { question: "Where is the gold-medal game?", answer: "In Edmonton on January 5, 2027." },
+    ],
+    sources: [
+      { name: "NHL.com — 2027 World Junior Championship schedule announced", url: "https://www.nhl.com/news/2027-world-junior-championship-schedule-announced" },
+      { name: "IIHF — Edmonton and Red Deer to host 2027 World Juniors", url: "https://www.iihf.com/en/news/70834/edmonton_and_red_deer_to_host_2027_iihf_world_juni" },
+      { name: "TSN — Canada to open 2027 World Juniors against Switzerland", url: "https://www.tsn.ca/world-juniors/article/canada-to-open-2027-world-juniors-against-switzerland-in-edmonton/" },
+    ],
+    methodology: "Compiled from the IIHF, NHL.com and TSN, checked 28 November 2026.",
+  },
+  {
+    id: "ca-juno-awards-2027",
+    slug: "juno-awards-2027-winnipeg-date-host",
+    title: "Juno Awards 2027: Winnipeg, April 4, and Carly Rae Jepsen as host",
+    seoTitle: "Juno Awards 2027 in Winnipeg: Date, Host and Categories",
+    subtitle: "JUNO Week runs April 1–4, with the broadcast live from Canada Life Centre on CBC.",
+    excerpt:
+      "The 2027 Juno Awards are in Winnipeg, broadcast live from Canada Life Centre on April 4. Carly Rae Jepsen hosts, Our Lady Peace enters the Hall of Fame.",
+    category: "entertainment",
+    tags: ["Juno Awards", "Music", "Winnipeg", "Awards"],
+    publishedAt: "2026-11-28T10:30:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "An excited crowd cheering at a concert",
+    keyTakeaways: [
+      "The 56th Juno Awards broadcast live from Canada Life Centre in Winnipeg on Sunday, April 4, 2027.",
+      "JUNO Week runs April 1–4, with concerts and events across the city.",
+      "Carly Rae Jepsen will host and perform; Our Lady Peace will be inducted into the Canadian Music Hall of Fame.",
+      "CARAS has restructured several categories for 2027.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: the Junos are in Winnipeg next spring. The broadcast is Sunday, April 4, 2027, live on CBC, with JUNO Week events from April 1." },
+      { type: "h2", id: "facts", text: "Key facts" },
+      {
+        type: "table",
+        head: ["Detail", "2027"],
+        rows: [
+          ["Broadcast", "Sunday, April 4, 2027, live on CBC"],
+          ["Venue", "Canada Life Centre, Winnipeg"],
+          ["JUNO Week", "April 1–4"],
+          ["Host", "Carly Rae Jepsen"],
+          ["Hall of Fame", "Our Lady Peace"],
+        ],
+      },
+      { type: "h2", id: "categories", text: "What's changing" },
+      { type: "p", text: "CARAS reshaped several categories and eligibility rules to reflect how Canadian music is made and released today. Submissions opened September 21, 2026; nominees are usually revealed in early spring." },
+      { type: "h2", id: "go", text: "Going to JUNO Week" },
+      {
+        type: "ul",
+        items: [
+          "Tickets for the broadcast go on sale through Canada Life Centre.",
+          "JUNOfest showcases take place in venues around Winnipeg.",
+          "Book hotels early — April 1–4 will be busy.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When are the 2027 Juno Awards?", answer: "Sunday, April 4, 2027." },
+      { question: "Where are the 2027 Junos?", answer: "Canada Life Centre in Winnipeg, Manitoba." },
+      { question: "Who is hosting the 2027 Junos?", answer: "Carly Rae Jepsen." },
+      { question: "How can I watch the Junos?", answer: "Live on CBC and CBC Gem." },
+    ],
+    sources: [
+      { name: "CBC Media Centre — The JUNO Awards return to Winnipeg in 2027", url: "https://mediacentre.cbc.ca/announcement/5670/the-juno-awards-return-to-winnipeg-in-2027-putting-a-national-spotlight-on-manitoba-s-creative-spirit" },
+      { name: "CTV News — Carly Rae Jepsen to host 2027 Junos", url: "https://www.ctvnews.ca/entertainment/article/carly-rae-jepsen-to-host-2027-juno-awards-our-lady-peace-to-enter-hall-of-fame/" },
+      { name: "Billboard Canada — Juno Awards restructure categories for 2027", url: "https://ca.billboard.com/music/awards/juno-awards-2027-categories" },
+    ],
+    methodology: "Compiled from CBC, CTV News and Billboard Canada, checked 28 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("ca", drafts);

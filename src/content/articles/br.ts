@@ -1132,6 +1132,128 @@ const drafts: Draft[] = [
     ],
     methodology: "Reunido a partir de reportagens nacionais e material da distribuidora Neoenergia, conferido em 28 de novembro de 2026.",
   },
+  {
+    id: "br-reveillon-rio-2027",
+    slug: "reveillon-rio-2027-copacabana-atracoes-fogos",
+    title: "Réveillon do Rio 2027: atrações em Copacabana, palcos e queima de fogos",
+    seoTitle: "Réveillon do Rio 2027: Atrações e Fogos em Copacabana",
+    subtitle: "Djavan estreia na virada de Copacabana. São 13 palcos pela cidade e 12 minutos de fogos.",
+    excerpt:
+      "Réveillon do Rio 2027: Djavan, Simone Mendes e Pedro Sampaio em Copacabana, 13 palcos pela cidade, 12 minutos de fogos em 19 balsas e dicas de transporte.",
+    category: "entertainment",
+    tags: ["Réveillon", "Rio de Janeiro", "Copacabana", "Shows"],
+    publishedAt: "2026-11-28T11:00:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Confete caindo sobre o público em um show",
+    keyTakeaways: [
+      "A festa terá 13 palcos e mais de 70 atrações pela cidade; três estruturas ficam em Copacabana.",
+      "Entre os nomes confirmados estão Djavan (pela primeira vez no Réveillon de Copacabana), Simone Mendes, Xande de Pilares, Pedro Sampaio e Grupo Revelação.",
+      "A queima de fogos em Copacabana dura 12 minutos, com 19 balsas ao longo da orla.",
+      "A programação do Palco Rio no dia 31 começa a partir das 18h.",
+    ],
+    body: [
+      { type: "p", text: "Resposta rápida: se for a Copacabana, chegue cedo, vá de metrô e combine um ponto de encontro. Os shows começam no fim da tarde e os fogos são à meia-noite." },
+      { type: "h2", id: "atracoes", text: "Atrações confirmadas" },
+      {
+        type: "table",
+        head: ["Onde", "Destaques"],
+        rows: [
+          ["Palco Rio (Copacabana, em frente ao Copacabana Palace)", "Djavan, Simone Mendes, DJ JP"],
+          ["Outros palcos de Copacabana", "Xande de Pilares, Pedro Sampaio, Grupo Revelação"],
+          ["Pela cidade", "Mais de 70 atrações em 13 palcos"],
+        ],
+      },
+      { type: "h2", id: "fogos", text: "Fogos e show de drones" },
+      {
+        type: "ul",
+        items: [
+          "12 minutos de fogos à meia-noite, a partir de 19 balsas.",
+          "Show de drones inspirado em Harry Potter e a Pedra Filosofal, ligado à série da HBO.",
+          "Antes do dia 31, há eventos de samba e shows ao longo da temporada de Réveillon.",
+        ],
+      },
+      { type: "h2", id: "dicas", text: "Dicas de transporte e segurança" },
+      {
+        type: "ul",
+        items: [
+          "O metrô funciona em esquema especial; compre o cartão com antecedência.",
+          "Vias de Copacabana são fechadas para carros à tarde.",
+          "Leve pouco: documento, cartão e celular em bolsa fechada à frente do corpo.",
+          "Combine um ponto de encontro — o sinal de celular costuma falhar.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Quem vai tocar no Réveillon de Copacabana 2027?", answer: "Entre os confirmados estão Djavan, Simone Mendes, Xande de Pilares, Pedro Sampaio e Grupo Revelação." },
+      { question: "Quanto tempo dura a queima de fogos em Copacabana?", answer: "12 minutos, com 19 balsas ao longo da orla." },
+      { question: "Quantos palcos terá o Réveillon do Rio?", answer: "13 palcos pela cidade, três deles em Copacabana." },
+      { question: "A que horas começam os shows no dia 31?", answer: "No Palco Rio, a programação começa a partir das 18h." },
+    ],
+    sources: [
+      { name: "SBT News — Réveillon no Rio terá Djavan, Simone Mendes e Pedro Sampaio", url: "https://sbtnews.sbt.com.br/noticia/brasil/reveillon-no-rio-tera-djavan-simone-mendes-e-pedro-sampaio" },
+      { name: "Diário do Rio — Prefeitura anuncia Djavan no Réveillon de Copacabana", url: "https://diariodorio.com/agenda/2026/10/27/prefeitura-do-rio-anuncia-djavan-pela-primeira-vez-no-reveillon-de-copacabana.html" },
+      { name: "CNN Brasil — Como será o Réveillon no Rio de Janeiro", url: "https://www.cnnbrasil.com.br/nacional/sudeste/rj/como-sera-o-reveillon-no-rio-de-janeiro-virada-tera-de-samba-a-gospel/" },
+    ],
+    methodology: "Reunido a partir de SBT News, Diário do Rio e CNN Brasil, conferido em 28 de novembro de 2026. Consulte a Riotur para a grade final.",
+  },
+  {
+    id: "br-lollapalooza-2027",
+    slug: "lollapalooza-brasil-2027-datas-line-up-ingressos",
+    title: "Lollapalooza Brasil 2027: datas, line-up e ingressos",
+    seoTitle: "Lollapalooza Brasil 2027: Datas, Line-up e Ingressos",
+    subtitle: "De 19 a 21 de março em Interlagos, com Travis Scott, Charli XCX, The Killers e David Guetta.",
+    excerpt:
+      "Lollapalooza Brasil 2027 acontece de 19 a 21 de março no Autódromo de Interlagos, em São Paulo. Line-up, ingressos na Ticketmaster e dicas.",
+    category: "entertainment",
+    tags: ["Lollapalooza", "Festivais", "São Paulo", "Música"],
+    publishedAt: "2026-11-28T10:30:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Público animado comemorando em um show",
+    keyTakeaways: [
+      "O Lollapalooza Brasil 2027 acontece em 19, 20 e 21 de março de 2027, no Autódromo de Interlagos, em São Paulo.",
+      "O line-up completo saiu em 8 de outubro de 2026, com Travis Scott, Charli XCX, The Killers e David Guetta entre os destaques.",
+      "São mais de 70 atrações; a edição marca 15 anos do festival no Brasil.",
+      "Ingressos pela Ticketmaster Brasil: Lolla Day (um dia) e Lolla Pass (três dias).",
+    ],
+    body: [
+      { type: "p", text: "Resposta rápida: compre na Ticketmaster Brasil, o único canal oficial. Decida entre Lolla Day e Lolla Pass olhando a programação por dia, que já foi divulgada." },
+      { type: "h2", id: "ingressos", text: "Tipos de ingresso" },
+      {
+        type: "table",
+        head: ["Ingresso", "O que inclui"],
+        rows: [
+          ["Lolla Day", "Acesso a um dos três dias"],
+          ["Lolla Pass", "Acesso aos três dias"],
+          ["Setores", "Pista, Comfort e Lounge"],
+          ["LollaLovers", "Esgotado"],
+        ],
+      },
+      { type: "h2", id: "dicas", text: "Dicas para o festival" },
+      {
+        type: "ul",
+        items: [
+          "Vá de trem (Linha 9-Esmeralda até Autódromo) — o trânsito na região é intenso.",
+          "Leve capa de chuva: março em São Paulo costuma ter pancadas à tarde.",
+          "Confira a lista de itens proibidos antes de sair de casa.",
+          "Desconfie de ingressos vendidos em redes sociais.",
+        ],
+      },
+      { type: "h2", id: "meia", text: "Meia-entrada" },
+      { type: "p", text: "Estudantes, idosos, pessoas com deficiência e jovens de baixa renda têm direito a meia-entrada, mediante comprovação na entrada." },
+    ],
+    faq: [
+      { question: "Quando é o Lollapalooza Brasil 2027?", answer: "Em 19, 20 e 21 de março de 2027." },
+      { question: "Onde acontece o Lollapalooza Brasil?", answer: "No Autódromo de Interlagos, em São Paulo." },
+      { question: "Quem está no line-up do Lollapalooza 2027?", answer: "Entre os destaques estão Travis Scott, Charli XCX, The Killers e David Guetta." },
+      { question: "Onde comprar ingressos do Lollapalooza?", answer: "Na Ticketmaster Brasil, canal oficial do festival." },
+    ],
+    sources: [
+      { name: "Canaltech — Lollapalooza 2027 anuncia Travis Scott, Charli XCX e The Killers", url: "https://canaltech.com.br/entretenimento/lollapalooza-2027-anuncia-travis-scott-charli-xcx-e-the-killers-veja-line-up/" },
+      { name: "Billboard Brasil — Lollapalooza Brasil 2027 confirma edição e venda", url: "https://billboard.com.br/lollapalooza-braisl-2027-confirma-edicao-e-venda/" },
+      { name: "Folha PE — Lollapalooza 2027 divulga shows por dia", url: "https://www.folhape.com.br/cultura/lollapalooza-2027-shows-por-dia-ingresso/518337/" },
+    ],
+    methodology: "Reunido a partir de Canaltech, Billboard Brasil e Folha PE, conferido em 28 de novembro de 2026.",
+  },
 ];
 
 export const articles = buildArticles("br", drafts);

@@ -1113,6 +1113,125 @@ const drafts: Draft[] = [
     ],
     methodology: "Zusammengestellt aus Informationen von BIÖG/organspende-info.de, TK und AOK, Stand 28. November 2026.",
   },
+  {
+    id: "de-handball-wm-2027",
+    slug: "handball-wm-2027-spielplan-spielorte-tickets",
+    title: "Handball-WM 2027 in Deutschland: Spielplan, Spielorte und Tickets",
+    seoTitle: "Handball-WM 2027: Spielplan, Spielorte und Tickets",
+    subtitle: "Vom 13. bis 31. Januar in sechs Städten. Das DHB-Team eröffnet in München gegen Tunesien.",
+    excerpt:
+      "Die Handball-WM 2027 läuft vom 13. bis 31. Januar in München, Stuttgart, Kiel, Magdeburg, Hannover und Köln. Deutsche Spiele, Tickets und Übertragung.",
+    category: "entertainment",
+    tags: ["Handball", "WM 2027", "DHB", "Sport"],
+    publishedAt: "2026-11-28T11:00:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Eine volle Arena mit bunter Beleuchtung",
+    keyTakeaways: [
+      "Die Männer-WM 2027 findet vom 13. bis 31. Januar 2027 in Deutschland statt – 112 Spiele in sechs Städten.",
+      "Vorrunde (13.–19.1.) in München, Stuttgart, Kiel und Magdeburg; Hauptrunde (20.–25.1.) in Hannover; Finalrunde (26.–31.1.) in Köln.",
+      "Deutschland eröffnet am 13. Januar um 20:30 Uhr in München gegen Tunesien.",
+      "Tickets gibt es offiziell bei Eventim.",
+    ],
+    body: [
+      { type: "p", text: "Kurz gesagt: Die Heim-WM startet am Mittwoch, 13. Januar, mit Deutschland gegen Tunesien im SAP Garden in München. Das Finale steigt am 31. Januar in der Lanxess Arena in Köln." },
+      { type: "h2", id: "orte", text: "Spielorte und Phasen" },
+      {
+        type: "table",
+        head: ["Phase", "Termin", "Spielorte"],
+        rows: [
+          ["Vorrunde", "13.–19. Januar", "München, Stuttgart, Kiel, Magdeburg"],
+          ["Hauptrunde", "20.–25. Januar", "Hannover"],
+          ["Finalrunde", "26.–31. Januar", "Köln"],
+        ],
+      },
+      { type: "h2", id: "dhb", text: "Die deutschen Vorrundenspiele" },
+      {
+        type: "ul",
+        items: [
+          "Mi., 13. Januar, 20:30 Uhr: Deutschland – Tunesien (München, Eröffnungsspiel).",
+          "Fr., 15. Januar, 20:30 Uhr: Deutschland – Uruguay (München).",
+          "Drittes Vorrundenspiel gegen Serbien (München).",
+        ],
+      },
+      { type: "h2", id: "tickets", text: "Tickets und Übertragung" },
+      {
+        type: "ul",
+        items: [
+          "Offizieller Ticketpartner ist Eventim; die Arenen geben gelegentlich neue Kontingente frei.",
+          "Nur über offizielle Kanäle kaufen – Zweitmarkt-Tickets können ungültig sein.",
+          "Die Spiele werden im deutschen Fernsehen und per Livestream übertragen; die Sender bestätigen ihre Pläne vor dem Turnier.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Wann ist die Handball-WM 2027?", answer: "Vom 13. bis 31. Januar 2027." },
+      { question: "Wo findet die Handball-WM 2027 statt?", answer: "In München, Stuttgart, Kiel, Magdeburg, Hannover und Köln." },
+      { question: "Wann spielt Deutschland?", answer: "Zum Auftakt am 13. Januar gegen Tunesien, dann am 15. Januar gegen Uruguay, jeweils um 20:30 Uhr in München." },
+      { question: "Wo gibt es Tickets für die Handball-WM?", answer: "Beim offiziellen Ticketpartner Eventim." },
+    ],
+    sources: [
+      { name: "Sky Sport — Handball-WM 2027: Spielplan, Spielorte, Tickets", url: "https://sport.sky.de/handball/artikel/handball-wm-spielplan-spielorte-tickets-uebertragung/13531268/34274" },
+      { name: "muenchen.de — Handball-WM 2027 im SAP Garden", url: "https://www.muenchen.de/veranstaltungen/sport/handball-wm-2027-muenchen-sap-garden-spielort" },
+      { name: "Stuttgarter Zeitung — Deutscher Spielplan Handball-WM 2027", url: "https://www.stuttgarter-zeitung.de/sport/sport-mix/deutscher-spielplan-handball-wm-2027-wann-ist-das-erste-deutschland-spiel-gegner-und-termine-79539722.html" },
+    ],
+    methodology: "Zusammengestellt aus Sky Sport, der Stadt München und der Stuttgarter Zeitung, Stand 28. November 2026.",
+  },
+  {
+    id: "de-weihnachtsmaerkte-2026",
+    slug: "weihnachtsmaerkte-2026-termine-nuernberg-dresden-koeln",
+    title: "Weihnachtsmärkte 2026: Termine in Nürnberg, Dresden und Köln",
+    seoTitle: "Weihnachtsmärkte 2026: Termine Nürnberg, Dresden, Köln",
+    subtitle: "Der Striezelmarkt öffnet am 25. November, der Christkindlesmarkt am 27. November. Tipps gegen Gedränge.",
+    excerpt:
+      "Weihnachtsmärkte 2026: Dresdner Striezelmarkt ab 25.11., Nürnberger Christkindlesmarkt ab 27.11., Kölner Hafen-Weihnachtsmarkt bis 3.1. Tipps für den Besuch.",
+    category: "entertainment",
+    tags: ["Weihnachtsmarkt", "Advent", "Ausflüge", "Reisen"],
+    publishedAt: "2026-11-28T10:30:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Weihnachtsstrümpfe und Kugeln an einem geschmückten Tannenbaum",
+    keyTakeaways: [
+      "Dresdner Striezelmarkt: 25. November bis 24. Dezember 2026.",
+      "Nürnberger Christkindlesmarkt: 27. November bis 24. Dezember 2026.",
+      "Kölner Hafen-Weihnachtsmarkt: 13. November 2026 bis 3. Januar 2027, täglich 11–21 Uhr, Fr./Sa. bis 22 Uhr.",
+      "Öffnungszeiten 2026 vor dem Besuch auf den offiziellen Seiten prüfen.",
+    ],
+    body: [
+      { type: "p", text: "Kurz gesagt: Die großen Märkte laufen jetzt. Wer Gedränge meiden will, kommt unter der Woche am Nachmittag und reist mit Bus und Bahn an." },
+      { type: "h2", id: "termine", text: "Termine 2026" },
+      {
+        type: "table",
+        head: ["Markt", "Zeitraum"],
+        rows: [
+          ["Striezelmarkt, Dresden", "25.11.–24.12.2026"],
+          ["Christkindlesmarkt, Nürnberg", "27.11.–24.12.2026"],
+          ["Hafen-Weihnachtsmarkt, Köln", "13.11.2026–3.1.2027"],
+        ],
+      },
+      { type: "p", text: "Köln hat mehrere große Märkte, etwa am Dom, auf dem Alter Markt und dem Neumarkt; Termine und Zeiten stehen auf koeln.de." },
+      { type: "h2", id: "tipps", text: "Tipps für den Besuch" },
+      {
+        type: "ul",
+        items: [
+          "Werktags am frühen Nachmittag ist es am ruhigsten.",
+          "Pfandbecher zurückgeben oder als Souvenir behalten – das Pfand ist im Preis enthalten.",
+          "Viele Stände akzeptieren Karte, etwas Bargeld hilft trotzdem.",
+          "Am 24. Dezember schließen die meisten Märkte früher.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Wann öffnet der Nürnberger Christkindlesmarkt 2026?", answer: "Am 27. November 2026; er läuft bis 24. Dezember." },
+      { question: "Wann ist der Dresdner Striezelmarkt 2026?", answer: "Vom 25. November bis 24. Dezember 2026." },
+      { question: "Welcher Kölner Weihnachtsmarkt hat am längsten geöffnet?", answer: "Der Hafen-Weihnachtsmarkt am Rheinauhafen, bis 3. Januar 2027." },
+      { question: "Wann ist es auf dem Weihnachtsmarkt am leersten?", answer: "Werktags am frühen Nachmittag." },
+    ],
+    sources: [
+      { name: "urlaubstracker.de — Weihnachtsmärkte: Termine und Informationen", url: "https://www.urlaubstracker.de/weihnachtsmaerkte-termine-informationen/" },
+      { name: "monrose.de — Weihnachtsmarkt 2026: wann startet welcher Markt?", url: "https://monrose.de/2026/10/30/weihnachtsmarkt-2026-termine/" },
+      { name: "koeln.de — Hafen-Weihnachtsmarkt", url: "https://www.koeln.de/weihnachten/weihnachtsmaerkte-koeln/hafen-weihnachtsmarkt/" },
+    ],
+    methodology: "Zusammengestellt aus Terminübersichten und koeln.de, Stand 28. November 2026. Öffnungszeiten bitte auf den offiziellen Seiten der Märkte prüfen.",
+  },
 ];
 
 export const articles = buildArticles("de", drafts);

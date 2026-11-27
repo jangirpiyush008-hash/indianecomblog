@@ -1147,6 +1147,121 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from CPSC releases and PIRG guidance, checked 28 November 2026.",
   },
+  {
+    id: "us-golden-globes-2027",
+    slug: "golden-globes-2027-nominations-date-host-how-to-watch",
+    title: "Golden Globes 2027: nominations date, host and how to watch",
+    seoTitle: "Golden Globes 2027: Nominations, Host and How to Watch",
+    subtitle: "Nominations on December 7, the ceremony on January 10 on CBS and Paramount+, with Nikki Glaser hosting again.",
+    excerpt:
+      "The 84th Golden Globes air Sunday, January 10, 2027 on CBS and Paramount+, hosted by Nikki Glaser. Nominations come December 7. Key dates and how to watch.",
+    category: "entertainment",
+    tags: ["Golden Globes", "Awards Season", "Movies", "TV"],
+    publishedAt: "2026-11-28T11:00:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Confetti falling over a crowd at a live show",
+    keyTakeaways: [
+      "Nominations are announced Monday, December 7, 2026.",
+      "The 84th Golden Globes air live Sunday, January 10, 2027, from the Beverly Hilton.",
+      "Nikki Glaser hosts for a third straight year.",
+      "Watch on CBS from 8–11 p.m. ET (5–8 p.m. PT), or stream on Paramount+.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: put Sunday, January 10 in your calendar. The show airs live on CBS at 8 p.m. ET and streams on Paramount+. Nominations drop on the morning of Monday, December 7." },
+      { type: "h2", id: "dates", text: "Key dates" },
+      {
+        type: "table",
+        head: ["Date", "What happens"],
+        rows: [
+          ["Mon, Dec 7, 2026", "Nominations announced"],
+          ["Sat, Jan 2, 2027", "Final voting ballots due"],
+          ["Sun, Jan 10, 2027", "Ceremony, 8–11 p.m. ET on CBS and Paramount+"],
+        ],
+      },
+      { type: "h2", id: "watch", text: "How to watch" },
+      {
+        type: "ul",
+        items: [
+          "Live on CBS with an antenna, cable or a live-TV streaming service that carries CBS.",
+          "Streaming on Paramount+ (plans that include live CBS).",
+          "Red carpet coverage usually starts a couple of hours earlier on entertainment channels and social media.",
+        ],
+      },
+      { type: "h2", id: "new", text: "What's new this year" },
+      { type: "p", text: "The Globes added rules on the use of AI in eligible work and expanded the podcast category's pool of contenders. Expect the nominations to shape the rest of the awards season through the Oscars." },
+    ],
+    faq: [
+      { question: "When are the 2027 Golden Globes?", answer: "Sunday, January 10, 2027." },
+      { question: "Who is hosting the 2027 Golden Globes?", answer: "Nikki Glaser, for the third year in a row." },
+      { question: "What channel are the Golden Globes on?", answer: "CBS, with streaming on Paramount+." },
+      { question: "When are the Golden Globe nominations?", answer: "Monday, December 7, 2026." },
+    ],
+    sources: [
+      { name: "Paramount Press Express — 84th Annual Golden Globes", url: "https://www.paramountpressexpress.com/cbs-entertainment/shows/84th-annual-golden-globes/" },
+      { name: "Gold Derby — 2027 Golden Globes timeline and new AI rules", url: "https://www.goldderby.com/film/2026/2027-golden-globes-timeline-eligibility-new-ai-rules/" },
+      { name: "TVLine — Nikki Glaser returning as host for third time", url: "https://tvline.com/2121018/golden-globes-2027-nikki-glaser-hosting/" },
+    ],
+    methodology: "Compiled from CBS/Paramount press material and entertainment trade coverage, checked 28 November 2026.",
+  },
+  {
+    id: "us-nba-christmas-day-2026",
+    slug: "nba-christmas-day-2026-schedule-how-to-watch",
+    title: "NBA Christmas Day 2026: all five games, tip-off times and how to watch",
+    seoTitle: "NBA Christmas Day 2026 Schedule: Games, Times, TV",
+    subtitle: "A Finals rematch at Madison Square Garden opens the day. All five games are on ABC.",
+    excerpt:
+      "The NBA's Christmas Day 2026 slate: Spurs-Knicks Finals rematch at noon ET, then Heat-Celtics, 76ers-Lakers, Thunder-Wolves and Nuggets-Warriors. All on ABC.",
+    category: "entertainment",
+    tags: ["NBA", "Basketball", "Christmas", "Sports"],
+    publishedAt: "2026-11-28T10:30:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A basketball dropping toward the hoop in an arena",
+    keyTakeaways: [
+      "Five games on Friday, December 25, 2026 — the 19th straight year with a five-game Christmas slate.",
+      "It opens with a rematch of the 2026 NBA Finals: San Antonio Spurs at New York Knicks, noon ET.",
+      "All five games air on ABC.",
+      "The day ends with Denver at Golden State at 10:30 p.m. ET.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: basketball runs from noon to past midnight ET on Christmas Day, all on ABC. The Spurs-Knicks Finals rematch opens the day at Madison Square Garden." },
+      { type: "h2", id: "schedule", text: "The schedule" },
+      {
+        type: "table",
+        head: ["Time (ET)", "Game", "TV"],
+        rows: [
+          ["12:00 p.m.", "San Antonio Spurs at New York Knicks", "ABC"],
+          ["2:30 p.m.", "Miami Heat at Boston Celtics", "ABC"],
+          ["5:00 p.m.", "Philadelphia 76ers at Los Angeles Lakers", "ABC"],
+          ["8:00 p.m.", "Oklahoma City Thunder at Minnesota Timberwolves", "ABC"],
+          ["10:30 p.m.", "Denver Nuggets at Golden State Warriors", "ABC"],
+        ],
+      },
+      { type: "h2", id: "storylines", text: "Storylines to watch" },
+      {
+        type: "ul",
+        items: [
+          "Spurs vs. Knicks: the first meeting on a big stage since the 2026 Finals.",
+          "Heat vs. Celtics: both chased the offseason's blockbuster Giannis Antetokounmpo trade; Miami won it.",
+          "Thunder vs. Timberwolves: two Western Conference contenders.",
+          "Nuggets vs. Warriors: Nikola Jokić against Steph Curry to close the night.",
+        ],
+      },
+      { type: "h2", id: "watch", text: "How to watch" },
+      { type: "p", text: "Watch on ABC with an antenna, cable or a live-TV streaming service that includes ABC. ESPN's streaming options may also carry the games depending on your plan." },
+    ],
+    faq: [
+      { question: "How many NBA games are on Christmas Day 2026?", answer: "Five." },
+      { question: "What channel are the NBA Christmas games on?", answer: "ABC carries all five games." },
+      { question: "What's the first NBA game on Christmas 2026?", answer: "San Antonio Spurs at New York Knicks at noon ET." },
+      { question: "What's the last game?", answer: "Denver Nuggets at Golden State Warriors at 10:30 p.m. ET." },
+    ],
+    sources: [
+      { name: "CBS Sports — 2026 NBA Christmas Day schedule", url: "https://cbssports.com/nba/news/2026-nba-christmas-day-schedule-rankings" },
+      { name: "Fox Sports — 2026 NBA Christmas games schedule, matchups and start times", url: "https://www.foxsports.com/stories/nba/2026-nba-christmas-games-schedule-matchups-start-times" },
+      { name: "NBC New York — NBA Christmas schedule 2026", url: "https://www.nbcnewyork.com/nba/nba-christmas-schedule-2026-games-matchups-times/" },
+    ],
+    methodology: "Compiled from national sports coverage of the NBA schedule release, checked 28 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("us", drafts);

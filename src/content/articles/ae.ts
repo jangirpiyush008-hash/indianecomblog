@@ -1168,6 +1168,128 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from MOHRE, the UAE government portal and Khaleej Times, checked 28 November 2026.",
   },
+  {
+    id: "ae-global-village-season-31",
+    slug: "global-village-season-31-tickets-timings-guide",
+    title: "Global Village Season 31: tickets, timings and tips for your visit",
+    seoTitle: "Global Village Season 31: Tickets, Timings and Tips",
+    subtitle: "Open since 14 October 2026 and running into May 2027. Buy tickets on the official website or app.",
+    excerpt:
+      "Global Village Season 31 opened on 14 October 2026 and runs to May 2027. Ticket prices, opening hours, VIP packs, getting there and avoiding fake ticket sites.",
+    category: "entertainment",
+    tags: ["Global Village", "Dubai", "Things to Do", "Family"],
+    publishedAt: "2026-11-28T11:00:00+04:00",
+    heroImage: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A crowd at a concert under colourful stage lights",
+    keyTakeaways: [
+      "Season 31 opened on 14 October 2026 and runs for over seven months, until May 2027.",
+      "Khaleej Times reported ticket prices unchanged from last season (Dh25 weekdays, Dh30 weekends), with weekend rates now also applying on Sundays.",
+      "Doors open at 4pm; closing is midnight on quieter nights and 1am at the weekend.",
+      "VIP packs range from Dh1,890 (Silver) to Dh7,900 (Diamond).",
+    ],
+    body: [
+      { type: "p", text: "Short answer: buy tickets on the Global Village website or app to skip the queue, go on a weekday evening to avoid crowds, and arrive around opening at 4pm if you want rides without long waits." },
+      { type: "h2", id: "tickets", text: "Tickets and hours" },
+      {
+        type: "table",
+        head: ["", "Details"],
+        rows: [
+          ["Weekday ticket", "About Dh25 (check the official site)"],
+          ["Weekend ticket (now incl. Sunday)", "About Dh30"],
+          ["Opening hours", "From 4pm; closing midnight or 1am depending on the day"],
+          ["VIP packs", "Dh1,890–Dh7,900"],
+        ],
+      },
+      { type: "h2", id: "tips", text: "Tips" },
+      {
+        type: "ul",
+        items: [
+          "Only buy tickets from the official website, app or gates — fake sites appear every season.",
+          "Weekdays, especially early in the week, are quieter.",
+          "Bring cash and cards: many pavilion stalls take both, but small vendors prefer cash.",
+          "Check the events calendar for fireworks nights and concerts.",
+        ],
+      },
+      { type: "h2", id: "getting", text: "Getting there" },
+      { type: "p", text: "Global Village is on Sheikh Mohammed Bin Zayed Road (E311). There's paid and free parking, RTA buses from several metro stations, and taxi drop-off points." },
+    ],
+    faq: [
+      { question: "When does Global Village Season 31 close?", answer: "It runs until May 2027; the exact closing date hadn't been announced." },
+      { question: "How much is a Global Village ticket?", answer: "Reported at about Dh25 on weekdays and Dh30 at weekends, now including Sunday. Check the official site." },
+      { question: "What time does Global Village open?", answer: "4pm, closing at midnight or 1am depending on the day." },
+      { question: "Where can I buy Global Village tickets?", answer: "On the official Global Village website or app, or at the gates." },
+    ],
+    sources: [
+      { name: "Khaleej Times — Global Village announces ticket prices ahead of opening", url: "https://www.khaleejtimes.com/uae/dubais-global-village-ticket-prices-announced-ahead-of-31st-season" },
+      { name: "The National — Global Village reopens: what's new for Season 31", url: "https://www.thenationalnews.com/lifestyle/things-to-do/2026/10/15/global-village-reopens-in-dubai-whats-new-for-its-31st-season/" },
+      { name: "Gulf News — Your guide to Global Village Season 31", url: "https://gulfnews.com/lifestyle/your-guide-to-global-village-season-31-how-to-plan-your-visit-from-rides-to-food-1.500699897" },
+    ],
+    methodology: "Compiled from UAE media coverage, checked 28 November 2026. Sources differ slightly on hours; check the official site.",
+  },
+  {
+    id: "ae-dubai-nye-2027",
+    slug: "dubai-new-years-eve-2027-burj-khalifa-fireworks-guide",
+    title: "Dubai New Year's Eve 2027: Burj Khalifa fireworks, Cirque du Soleil and free viewing",
+    seoTitle: "Dubai NYE 2027: Burj Khalifa Fireworks and Free Viewing",
+    subtitle: "Cirque du Soleil joins the Downtown countdown for the first time. Here's how to watch for free or with a ticket.",
+    excerpt:
+      "Dubai NYE 2027: Burj Khalifa fireworks with Cirque du Soleil at 11:25pm, free Downtown viewing zones, Burj Park tickets, road closures and Metro tips.",
+    category: "entertainment",
+    tags: ["New Year's Eve", "Dubai", "Fireworks", "Burj Khalifa"],
+    publishedAt: "2026-11-28T10:30:00+04:00",
+    heroImage: "https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Colourful fireworks over water at night",
+    keyTakeaways: [
+      "Emaar's NYE 2027 show adds a Cirque du Soleil performance at about 11:25pm before the midnight fireworks.",
+      "Downtown has free public viewing areas on a first-come, first-served basis, split into colour-coded zones.",
+      "Burj Park returns as a premium ticketed area, booked through Emaar's official NYE site.",
+      "Road closures start around 4pm; check RTA and Dubai Police announcements for Metro hours.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: for free viewing, head to Downtown early in the afternoon and use your assigned gate. For guaranteed space, book Burj Park on Emaar's official site. Use the Metro — roads close from around 4pm." },
+      { type: "h2", id: "timeline", text: "The evening" },
+      {
+        type: "table",
+        head: ["Time", "What"],
+        rows: [
+          ["From ~4pm", "Road closures in Downtown"],
+          ["From 7pm", "Entertainment in Downtown"],
+          ["~11:25pm", "Cirque du Soleil performance"],
+          ["Midnight", "Burj Khalifa fireworks, drones and light show"],
+        ],
+      },
+      { type: "h2", id: "where", text: "Where to watch" },
+      {
+        type: "ul",
+        items: [
+          "Free: public viewing zones in Downtown (gates include Address Downtown and Vida Dubai Mall areas).",
+          "Ticketed: Burj Park, booked through Emaar's official NYE website.",
+          "Elsewhere: fireworks are also held at locations like Dubai Marina beaches and other landmarks.",
+        ],
+      },
+      { type: "h2", id: "tips", text: "Tips" },
+      {
+        type: "ul",
+        items: [
+          "Arrive early; zones close when full.",
+          "Take the Metro and check extended operating hours announced by the RTA.",
+          "Book only on Emaar's official site — fake ticket pages appear every year.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Is it free to watch the Burj Khalifa fireworks?", answer: "Yes, there are free public viewing areas in Downtown, first come, first served." },
+      { question: "What's new for Dubai NYE 2027?", answer: "Cirque du Soleil performs as part of the Downtown countdown for the first time." },
+      { question: "How do I get Burj Park tickets?", answer: "Through Emaar's official NYE website." },
+      { question: "When do roads close in Downtown Dubai?", answer: "From around 4pm on 31 December; check RTA and Dubai Police updates." },
+    ],
+    sources: [
+      { name: "Emaar — NYE 2027 with Cirque du Soleil", url: "https://www.emaar.com/en/press-release-listing/emaar-celebrates-dubais-unstoppable-spirit-with-spectacular-nye-2027-and-special-performance-by-cirque-du-soleil" },
+      { name: "Gulf News — Dubai NYE 2027 viewing guide", url: "https://gulfnews.com/living-in-uae/ask-us/dubai-nye-2027-burj-khalifa-fireworks-guide-1.500751754" },
+      { name: "The National — Dubai NYE fireworks, tickets and road closures", url: "https://www.thenationalnews.com/lifestyle/things-to-do/2026/11/18/dubai-new-years-eve-burj-khalifa-fireworks-tickets-and-road-closures/" },
+    ],
+    methodology: "Compiled from Emaar and UAE media, checked 28 November 2026. Timings and closures may change.",
+  },
 ];
 
 export const articles = buildArticles("ae", drafts);
