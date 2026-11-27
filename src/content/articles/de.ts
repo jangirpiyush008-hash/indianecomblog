@@ -982,6 +982,137 @@ const drafts: Draft[] = [
     ],
     methodology: "Zusammengestellt aus Angaben von ADAC und Fachpresse, Stand 27. November 2026. Maßgeblich sind § 2 Abs. 3a StVO und der aktuelle Bußgeldkatalog.",
   },
+  {
+    id: "de-silvester-feuerwerk-regeln",
+    slug: "silvester-feuerwerk-verkauf-boellerverbot-regeln",
+    title: "Silvester-Feuerwerk: Wann der Verkauf startet und wo Böllern verboten ist",
+    seoTitle: "Silvester-Feuerwerk: Verkauf, Böllerverbote und Regeln",
+    subtitle: "F2-Feuerwerk gibt es nur in den letzten Werktagen des Jahres, ab 18 Jahren. Viele Städte haben eigene Verbotszonen.",
+    excerpt:
+      "Silvester-Feuerwerk: Verkauf nur an den letzten Werktagen, ab 18, Zünden meist nur 31.12./1.1. Wo Böllerverbote gelten, Bußgelder und Sicherheitstipps.",
+    category: "lifestyle",
+    tags: ["Silvester", "Feuerwerk", "Sicherheit", "Feiertage"],
+    publishedAt: "2026-11-28T10:00:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Buntes Feuerwerk über dem Wasser bei Nacht",
+    keyTakeaways: [
+      "Kleinfeuerwerk der Kategorie F2 wird in der Regel nur an den letzten drei Werktagen des Jahres verkauft – nur an Erwachsene ab 18.",
+      "Gezündet werden darf es grundsätzlich nur am 31. Dezember und 1. Januar.",
+      "Viele Städte haben Böllerverbotszonen, etwa München innerhalb des Mittleren Rings oder Teile der Kölner Innenstadt.",
+      "Verstöße kosten je nach Stadt in der Regel ab etwa 200 Euro.",
+    ],
+    body: [
+      { type: "p", text: "Kurz gesagt: Kaufen Sie nur geprüftes Feuerwerk mit CE-Zeichen und Registriernummer im Handel, zünden Sie es nur in der Silvesternacht und prüfen Sie vorher, ob Ihre Stadt eine Verbotszone hat." },
+      { type: "h2", id: "verkauf", text: "Verkauf und Zünden" },
+      {
+        type: "table",
+        head: ["Regel", "Was gilt"],
+        rows: [
+          ["Verkauf F2", "Letzte drei Werktage des Jahres, ab 18 Jahren"],
+          ["Zünden F2", "31. Dezember und 1. Januar"],
+          ["F1 (Wunderkerzen, Knallerbsen)", "Ganzjährig, ab 12 Jahren"],
+          ["Nähe zu Kirchen, Kliniken, Kinder- und Altenheimen, Fachwerkhäusern", "Zünden verboten"],
+        ],
+      },
+      { type: "h2", id: "zonen", text: "Böllerverbotszonen – Beispiele" },
+      {
+        type: "ul",
+        items: [
+          "München: Böllerverbot innerhalb des Mittleren Rings, Feuerwerksverbot in der Fußgängerzone und am Viktualienmarkt.",
+          "Köln: Verbotszone in Teilen der Innenstadt vom 31. Dezember, 18 Uhr, bis 1. Januar, 5 Uhr.",
+          "Hannover: Verbot von F2-, F3- und F4-Feuerwerk in der City; Verstöße in der Regel 200 Euro.",
+          "Weitere Städte legen eigene Zonen fest – die Allgemeinverfügungen erscheinen meist im Dezember.",
+        ],
+      },
+      { type: "h2", id: "sicherheit", text: "Sicherheitstipps" },
+      {
+        type: "ul",
+        items: [
+          "Kein Feuerwerk aus dem Ausland oder ohne Prüfzeichen – Lebensgefahr.",
+          "Raketen nur senkrecht aus einer stabilen Flasche oder Abschussrampe.",
+          "Blindgänger nie erneut zünden.",
+          "Haustiere drinnen lassen, Fenster schließen.",
+        ],
+      },
+      { type: "callout", title: "Notruf", text: "Bei Verletzungen oder Bränden sofort die 112 wählen." },
+    ],
+    faq: [
+      { question: "Wann beginnt der Feuerwerksverkauf zu Silvester?", answer: "In der Regel an den letzten drei Werktagen des Jahres. Der genaue Tag hängt vom Kalender ab." },
+      { question: "Ab welchem Alter darf man Böller kaufen?", answer: "Feuerwerk der Kategorie F2 nur ab 18 Jahren." },
+      { question: "Wann darf man Feuerwerk zünden?", answer: "F2-Feuerwerk grundsätzlich nur am 31. Dezember und 1. Januar." },
+      { question: "Gibt es ein bundesweites Böllerverbot?", answer: "Nein. Verbotszonen legen Städte und Gemeinden selbst fest." },
+    ],
+    sources: [
+      { name: "ZDFheute — Darauf muss man beim Böllern achten", url: "https://www.zdfheute.de/ratgeber/silvester-boeller-verkaufsstart-feuerwerk-100.html" },
+      { name: "München.de — Feuerwerksverbot und Böllerverbot", url: "https://www.muenchen.de/silvester" },
+      { name: "koeln.de — Böllerverbotszone in der Kölner Innenstadt", url: "https://www.koeln.de/silvester/boellerverbotszone-in-der-koelner-innenstadt/" },
+    ],
+    methodology: "Zusammengestellt aus ZDFheute und Informationen der Städte München, Köln und Hannover, Stand 28. November 2026. Örtliche Regeln für 2026 bitte bei Ihrer Stadt prüfen.",
+  },
+  {
+    id: "de-organspende-register",
+    slug: "organspende-register-erklaerung-abgeben-so-gehts",
+    title: "Organspende-Register: So halten Sie Ihre Entscheidung online fest",
+    seoTitle: "Organspende-Register: Erklärung online abgeben – so geht's",
+    subtitle: "Per Online-Ausweis oder Krankenkassen-App – kostenlos, freiwillig und jederzeit änderbar.",
+    excerpt:
+      "Im Organspende-Register halten Sie Ihre Entscheidung für oder gegen eine Spende fest – per Online-Ausweis oder Kassen-App. Was Sie brauchen und wie Sie ändern.",
+    category: "lifestyle",
+    tags: ["Organspende", "Gesundheit", "Digitale Verwaltung", "Krankenkasse"],
+    publishedAt: "2026-11-28T09:30:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Zwei Hände strecken sich einander entgegen",
+    keyTakeaways: [
+      "Im Organspende-Register können Sie Ja, Nein oder eine Auswahl von Organen festhalten.",
+      "Zugang über organspende-register.de mit Online-Ausweis oder über die App Ihrer gesetzlichen Krankenkasse (GesundheitsID).",
+      "Die Erklärung ist freiwillig, kostenlos und jederzeit änderbar; es gilt immer die neueste.",
+      "Bis Juli 2026 hatten rund 582.000 Menschen ihre Entscheidung eingetragen.",
+    ],
+    body: [
+      { type: "p", text: "Kurz gesagt: Öffnen Sie organspende-register.de, melden Sie sich mit dem Personalausweis und der AusweisApp an und geben Sie Ihre Entscheidung ab. Alternativ geht es in der App Ihrer Krankenkasse. Der Organspendeausweis aus Papier bleibt weiterhin gültig." },
+      { type: "h2", id: "wege", text: "Zwei Wege ins Register" },
+      {
+        type: "table",
+        head: ["Weg", "Was Sie brauchen"],
+        rows: [
+          ["Website organspende-register.de", "Personalausweis mit Online-Funktion, PIN, NFC-Smartphone mit AusweisApp, Krankenversichertennummer, E-Mail"],
+          ["App der Krankenkasse", "GesundheitsID; Menüpunkt „Organspende-Erklärung abgeben“"],
+        ],
+      },
+      { type: "h2", id: "schritte", text: "Schritt für Schritt (Website)" },
+      {
+        type: "ol",
+        items: [
+          "AusweisApp installieren und PIN des Personalausweises bereithalten.",
+          "Auf organspende-register.de „Erklärung abgeben“ wählen.",
+          "Ausweis ans Smartphone halten und PIN eingeben.",
+          "Entscheidung wählen: Ja, Ja mit Ausnahmen, Nein oder eine Person entscheiden lassen.",
+          "Erklärungs-ID sicher aufbewahren – Sie brauchen sie zum Ändern oder Löschen.",
+        ],
+      },
+      { type: "h2", id: "wichtig", text: "Wichtig zu wissen" },
+      {
+        type: "ul",
+        items: [
+          "Die Erklärung wird nur im Register gespeichert – nicht in der Kassen-App oder auf der Gesundheitskarte.",
+          "Nur berechtigte Krankenhäuser können im Ernstfall abfragen.",
+          "Sprechen Sie mit Ihren Angehörigen über Ihre Entscheidung.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Ist der Eintrag im Organspende-Register Pflicht?", answer: "Nein. Er ist freiwillig; auch der Organspendeausweis aus Papier bleibt gültig." },
+      { question: "Kann ich meine Entscheidung ändern?", answer: "Ja, jederzeit. Es gilt immer die zuletzt abgegebene Erklärung." },
+      { question: "Was brauche ich für die Online-Erklärung?", answer: "Den Personalausweis mit Online-Funktion und PIN, ein NFC-Smartphone mit AusweisApp oder die App Ihrer Krankenkasse." },
+      { question: "Wer kann meine Erklärung sehen?", answer: "Nur berechtigte Personen in Entnahmekrankenhäusern, wenn eine Spende infrage kommt." },
+    ],
+    sources: [
+      { name: "Techniker Krankenkasse — Organspende-Register: So geben Sie Ihre Erklärung ab", url: "https://www.tk.de/techniker/krankheit-und-behandlungen/organspende/organspenderegister-so-geben-sie-ihre-erklaerung-ab-2179324" },
+      { name: "organspende-info.de — Organspende-Register über die Krankenkassen-App", url: "https://www.organspende-info.de/fileadmin/Organspende/05_Mediathek/Redaktionsbaukasten/Hintergrundinformationen/BIOEG_OGR_Krankenkassen_App.pdf" },
+      { name: "AOK — Das digitale Organspende-Register wächst", url: "https://www.aok.de/gp/news-pflege/newsdetail/das-digitale-organspende-register-waechst" },
+    ],
+    methodology: "Zusammengestellt aus Informationen von BIÖG/organspende-info.de, TK und AOK, Stand 28. November 2026.",
+  },
 ];
 
 export const articles = buildArticles("de", drafts);

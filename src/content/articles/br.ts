@@ -1009,6 +1009,129 @@ const drafts: Draft[] = [
     ],
     methodology: "Reunido a partir da Agência Gov, Agência Brasil e O Liberal, conferido em 27 de novembro de 2026. Confirme a lista oficial no gov.br/saude.",
   },
+  {
+    id: "br-gas-do-povo",
+    slug: "gas-do-povo-botijao-gratis-quem-tem-direito",
+    title: "Gás do Povo: quem tem direito ao botijão grátis e como retirar",
+    seoTitle: "Gás do Povo: Quem Tem Direito ao Botijão Grátis e Como Pegar",
+    subtitle: "Famílias do CadÚnico com renda de até meio salário mínimo por pessoa recebem vales para botijões de 13 kg.",
+    excerpt:
+      "O Gás do Povo dá vales para botijões de 13 kg grátis a famílias do CadÚnico. Quem tem direito, quantos botijões, como consultar e onde retirar.",
+    category: "lifestyle",
+    tags: ["Gás de Cozinha", "Benefícios Sociais", "CadÚnico", "Casa"],
+    publishedAt: "2026-11-28T10:00:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Uma cozinha clara com fogão e bancada",
+    keyTakeaways: [
+      "O Gás do Povo dá vales digitais para retirar botijões de 13 kg gratuitamente em revendas credenciadas.",
+      "Tem direito quem está no CadÚnico com renda de até meio salário mínimo por pessoa; quem recebe Bolsa Família tem preferência.",
+      "A quantidade de botijões por ano depende do tamanho da família.",
+      "Consulte pelo app Gás do Povo ou pela Caixa com o CPF do responsável familiar.",
+    ],
+    body: [
+      { type: "p", text: "Resposta rápida: confira no app Gás do Povo (ou no site da Caixa) se a sua família tem direito. Se tiver, vá a uma revenda credenciada e retire o botijão com o vale digital, o cartão do Bolsa Família ou informando o CPF do responsável familiar." },
+      { type: "h2", id: "quem", text: "Quem tem direito" },
+      {
+        type: "ul",
+        items: [
+          "Famílias inscritas no CadÚnico com renda de até meio salário mínimo por pessoa.",
+          "Beneficiários do Bolsa Família têm prioridade.",
+          "Quem recebia o antigo Auxílio Gás migra para o novo programa.",
+          "O cadastro precisa estar atualizado.",
+        ],
+      },
+      { type: "h2", id: "retirar", text: "Como retirar o botijão" },
+      {
+        type: "ol",
+        items: [
+          "Baixe o app Gás do Povo e consulte com o CPF do responsável familiar.",
+          "Veja os vales disponíveis e as revendas credenciadas perto de você.",
+          "Na revenda, apresente o vale no app, o cartão do Bolsa Família com chip, o cartão de débito da Caixa ou informe o CPF.",
+          "Retire o botijão de 13 kg sem pagar.",
+        ],
+      },
+      { type: "h2", id: "cuidados", text: "Cuidados" },
+      {
+        type: "table",
+        head: ["Situação", "O que fazer"],
+        rows: [
+          ["Revenda cobra taxa ou diferença", "Não pague; denuncie pelos canais do programa"],
+          ["Mensagem pedindo dados ou pagamento", "É golpe — use só o app oficial e o site da Caixa"],
+          ["Não aparece como beneficiário", "Atualize o CadÚnico no CRAS"],
+        ],
+      },
+    ],
+    faq: [
+      { question: "Quem tem direito ao Gás do Povo?", answer: "Famílias do CadÚnico com renda de até meio salário mínimo por pessoa, com prioridade para o Bolsa Família." },
+      { question: "O botijão é totalmente grátis?", answer: "Sim, o vale cobre o botijão de 13 kg em revendas credenciadas." },
+      { question: "Quantos botijões a família recebe?", answer: "Depende do tamanho da família; consulte o app para ver seus vales." },
+      { question: "Como consultar se tenho direito?", answer: "Pelo app Gás do Povo ou pela página do programa na Caixa, com o CPF do responsável familiar." },
+    ],
+    sources: [
+      { name: "Caixa — Programa Gás do Povo", url: "https://www.caixa.gov.br/programas-sociais/programa-gas-do-povo/Paginas/default.aspx" },
+      { name: "Agência Brasil — Como será a retirada de botijões pelo Gás do Povo", url: "https://agenciabrasil.ebc.com.br/economia/noticia/2025-09/saiba-como-sera-retirada-de-botijoes-pelo-programa-gas-do-povo" },
+      { name: "Secom — FAQ consolidado do Gás do Povo", url: "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/03/com-nova-expansao-gas-do-povo-ja-alcanca-quase-15-milhoes-de-familias-em-todos-os-municipios-do-brasil/2603-faq_consolidado_gas_do_povo.pdf" },
+    ],
+    methodology: "Reunido a partir da Caixa, Agência Brasil e Secom, conferido em 28 de novembro de 2026.",
+  },
+  {
+    id: "br-tarifa-social-energia",
+    slug: "tarifa-social-energia-conta-de-luz-gratis-80-kwh",
+    title: "Tarifa Social: conta de luz grátis até 80 kWh — quem tem direito",
+    seoTitle: "Tarifa Social de Energia: Conta de Luz Grátis Até 80 kWh",
+    subtitle: "Desde julho de 2025, famílias de baixa renda não pagam o consumo até 80 kWh por mês. Na maioria dos casos é automático.",
+    excerpt:
+      "A nova Tarifa Social zera o consumo de até 80 kWh/mês para famílias de baixa renda do CadÚnico e do BPC. Quem tem direito e o que fazer se não recebe.",
+    category: "lifestyle",
+    tags: ["Conta de Luz", "Energia", "CadÚnico", "Benefícios Sociais"],
+    publishedAt: "2026-11-28T09:30:00-03:00",
+    heroImage: "https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Sala de estar de um apartamento moderno",
+    keyTakeaways: [
+      "A nova Tarifa Social de Energia Elétrica vale desde 5 de julho de 2025 (Lei 15.235/2025).",
+      "Famílias do CadÚnico com renda de até meio salário mínimo por pessoa não pagam o consumo até 80 kWh por mês.",
+      "Também têm direito beneficiários do BPC e famílias indígenas e quilombolas do CadÚnico.",
+      "Acima de 80 kWh, paga-se só o excedente; impostos e taxa de iluminação podem continuar na conta.",
+    ],
+    body: [
+      { type: "p", text: "Resposta rápida: se sua família está no CadÚnico com renda de até meio salário mínimo por pessoa, ou recebe BPC, o desconto deve aparecer automaticamente na conta. Se não aparecer, ligue para a distribuidora com o NIS em mãos." },
+      { type: "h2", id: "quem", text: "Quem tem direito" },
+      {
+        type: "table",
+        head: ["Grupo", "Direito"],
+        rows: [
+          ["CadÚnico com renda até ½ salário mínimo por pessoa", "Grátis até 80 kWh/mês"],
+          ["Beneficiários do BPC (idosos 65+ e pessoas com deficiência)", "Grátis até 80 kWh/mês"],
+          ["Famílias indígenas e quilombolas no CadÚnico", "Grátis até 80 kWh/mês"],
+        ],
+      },
+      { type: "h2", id: "exemplo", text: "Como funciona na conta" },
+      { type: "p", text: "Se a família consumir 100 kWh no mês, paga apenas os 20 kWh acima do limite. Tributos como o ICMS e a contribuição de iluminação pública podem continuar sendo cobrados, conforme o estado e o município." },
+      { type: "h2", id: "nao-recebe", text: "Tem direito e não recebe?" },
+      {
+        type: "ol",
+        items: [
+          "Confira se o CadÚnico está atualizado (no CRAS ou pelo app do CadÚnico).",
+          "Verifique se a conta de luz está no nome de alguém da família.",
+          "Ligue para a distribuidora e peça a inclusão na Tarifa Social informando o NIS.",
+          "Guarde o protocolo do atendimento.",
+        ],
+      },
+      { type: "callout", title: "Cuidado com golpes", text: "Ninguém cobra para incluir você na Tarifa Social. Desconfie de mensagens pedindo pagamento ou dados bancários." },
+    ],
+    faq: [
+      { question: "Quem tem direito à conta de luz grátis?", answer: "Famílias do CadÚnico com renda de até meio salário mínimo por pessoa, beneficiários do BPC e famílias indígenas e quilombolas do CadÚnico, até 80 kWh por mês." },
+      { question: "Preciso pedir a Tarifa Social?", answer: "Na maioria dos casos é automática. Se não aparecer na conta, peça à distribuidora." },
+      { question: "O que acontece se eu passar de 80 kWh?", answer: "Você paga apenas o consumo acima de 80 kWh." },
+      { question: "A conta fica totalmente zerada?", answer: "O consumo até 80 kWh fica grátis, mas impostos e taxa de iluminação pública podem continuar." },
+    ],
+    sources: [
+      { name: "Band — Nova tarifa social de energia passa a valer", url: "https://www.band.com.br/economia/nova-tarifa-social-de-energia-eletrica-passa-a-valer-neste-sabado" },
+      { name: "Correio Braziliense — Tarifa social de energia está em vigor: veja quem tem direito", url: "https://www.correiobraziliense.com.br/economia/2025/07/7193171-tarifa-social-de-energia-esta-em-vigor-veja-quem-tem-direito.html" },
+      { name: "Neoenergia Brasília — Tarifa Social", url: "https://www.neoenergia.com/documents/d/brasilia/lamina_tarifa_social_nbsb" },
+    ],
+    methodology: "Reunido a partir de reportagens nacionais e material da distribuidora Neoenergia, conferido em 28 de novembro de 2026.",
+  },
 ];
 
 export const articles = buildArticles("br", drafts);

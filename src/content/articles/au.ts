@@ -958,6 +958,127 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from Australia Post and SBS, checked 27 November 2026. Some parcel dates vary by route; use Australia Post's tool for your exact deadline.",
   },
+  {
+    id: "au-bulk-billing-everyone",
+    slug: "bulk-billing-all-australians-find-bulk-billing-gp",
+    title: "Bulk billing for everyone: what changed and how to find a bulk-billing GP",
+    seoTitle: "Bulk Billing for All Australians: How to Find a GP",
+    subtitle: "Since 1 November 2025, bulk-billing incentives cover every Medicare card holder — not just kids and concession holders.",
+    excerpt:
+      "Since November 2025, GPs get bulk-billing incentives for every Medicare patient, and fully bulk-billing clinics get a bonus. What it means and how to find one.",
+    category: "lifestyle",
+    tags: ["Medicare", "Health", "GP", "Australia"],
+    publishedAt: "2026-11-28T10:00:00+11:00",
+    heroImage: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A doctor in a white coat holding a stethoscope",
+    keyTakeaways: [
+      "From 1 November 2025, bulk-billing incentives apply to all Medicare-eligible patients.",
+      "Practices that bulk bill every eligible patient get an extra 12.5% incentive through the Bulk Billing Practice Incentive Program.",
+      "Participating clinics must advertise that they take part, and all their GPs must bulk bill eligible services.",
+      "The government says about 97% of Australians live within a 20-minute drive of a bulk-billing doctor.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: look for clinics that say they're 'fully bulk billing' or part of the Bulk Billing Practice Incentive Program. At those clinics, standard GP visits for Medicare card holders should cost nothing out of pocket. Always ask when booking." },
+      { type: "h2", id: "changed", text: "What changed" },
+      {
+        type: "table",
+        head: ["Before Nov 2025", "From 1 Nov 2025"],
+        rows: [
+          ["Incentives only for under-16s and concession card holders", "Incentives for every Medicare-eligible patient"],
+          ["No extra payment for fully bulk-billing clinics", "Extra 12.5% for clinics that bulk bill everyone"],
+        ],
+      },
+      { type: "h2", id: "find", text: "How to find a bulk-billing GP" },
+      {
+        type: "ol",
+        items: [
+          "Check clinic websites and booking apps for 'fully bulk billing' or the incentive program.",
+          "Use the healthdirect service finder and filter for bulk billing.",
+          "Ask when you book: 'Is a standard consult bulk billed for all patients?'",
+          "Bring your Medicare card.",
+        ],
+      },
+      { type: "h2", id: "limits", text: "What may still cost you" },
+      {
+        type: "ul",
+        items: [
+          "Clinics not in the program can still charge a gap fee.",
+          "Some services, like certain procedures or after-hours visits, may not be covered.",
+          "Specialists, allied health and pathology have their own billing.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Is bulk billing now free for everyone in Australia?", answer: "Incentives now cover every Medicare-eligible patient, but each clinic decides whether to bulk bill. Clinics in the incentive program bulk bill everyone." },
+      { question: "How do I know if a clinic fully bulk bills?", answer: "Participating clinics must advertise it. Check their website or ask when booking." },
+      { question: "What is the Bulk Billing Practice Incentive Program?", answer: "An extra 12.5% payment for clinics that bulk bill all eligible patients for all eligible services." },
+      { question: "When did the changes start?", answer: "1 November 2025." },
+    ],
+    sources: [
+      { name: "Department of Health — Bulk billing incentives: patient benefits", url: "https://www.health.gov.au/sites/default/files/2025-10/bulk-billing-incentives-in-general-practice-patient-benefits.pdf" },
+      { name: "Minister for Health — Delivering the Bulk Billing Incentive Program", url: "https://www.health.gov.au/ministers/the-hon-mark-butler-mp/media/delivering-the-bulk-billing-incentive-program" },
+      { name: "Minister for Health — Bulk billing practice milestone reached", url: "https://www.health.gov.au/ministers/the-hon-mark-butler-mp/media/bulk-billing-practice-milestone-reached-well-ahead-of-schedule" },
+    ],
+    methodology: "Compiled from the Department of Health and Minister for Health releases, checked 28 November 2026.",
+  },
+  {
+    id: "au-container-deposit-scheme-vic",
+    slug: "container-deposit-scheme-10c-refund-how-it-works",
+    title: "10c container refunds: how Victoria's container deposit scheme works",
+    seoTitle: "Container Deposit Scheme: How 10c Refunds Work (Victoria)",
+    subtitle: "Return eligible cans, bottles and cartons to 600+ refund points for 10 cents each — or donate it to charity.",
+    excerpt:
+      "CDS Vic pays 10c per eligible drink container at 600+ refund points. Which containers count, how to get paid or donate, and which app you need.",
+    category: "lifestyle",
+    tags: ["Recycling", "Environment", "Victoria", "Money Tips"],
+    publishedAt: "2026-11-28T09:30:00+11:00",
+    heroImage: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Plastic bottles and waste washed up on a beach",
+    keyTakeaways: [
+      "CDS Vic opened on 1 November 2023 and pays 10c for every eligible can, bottle and carton.",
+      "There are more than 600 refund points: reverse vending machines, over-the-counter depots and bulk drop-offs.",
+      "Three zone operators (Return-It, TOMRA Cleanaway and Visy) run the points; you may need the operator's app.",
+      "You can take cash, a bank transfer or a voucher, or donate refunds to charity.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: keep your empty drink containers (lids off, not crushed), take them to a refund point and collect 10c each. Use the map on the CDS Vic website to find the nearest one." },
+      { type: "h2", id: "eligible", text: "What's eligible" },
+      {
+        type: "table",
+        head: ["Usually eligible", "Usually not eligible"],
+        rows: [
+          ["Aluminium cans", "Plain milk containers"],
+          ["Plastic and glass drink bottles (150 ml–3 L)", "Wine and spirit glass bottles"],
+          ["Juice and flavoured milk cartons", "Cordial and concentrated juice"],
+        ],
+      },
+      { type: "p", text: "Look for the 10c refund mark on the label. The full list is in the scheme regulations, linked from the CDS Vic site." },
+      { type: "h2", id: "how", text: "How to get your refund" },
+      {
+        type: "ol",
+        items: [
+          "Empty the containers and keep them uncrushed so the label and barcode can be read.",
+          "Find a refund point on the CDS Vic map.",
+          "Feed them into a machine or hand them over at a depot.",
+          "Take a voucher, cash or bank transfer — or choose a charity.",
+        ],
+      },
+      { type: "h2", id: "other", text: "Other states" },
+      { type: "p", text: "Most other states and territories run their own 10c schemes with different operators and apps. Check your state's scheme website for its refund-point map." },
+    ],
+    faq: [
+      { question: "How much do you get for returning a can in Victoria?", answer: "10 cents per eligible container." },
+      { question: "Where can I return containers?", answer: "At more than 600 refund points across Victoria; find them on the CDS Vic map." },
+      { question: "Do I need an app?", answer: "Some refund points pay through the zone operator's app; others give vouchers or cash." },
+      { question: "Can I donate my refund?", answer: "Yes, refunds can be donated to charities and community groups." },
+    ],
+    sources: [
+      { name: "EPA Victoria — How CDS Vic works", url: "https://www.epa.vic.gov.au/how-cds-vic-works" },
+      { name: "EPA Victoria — Who operates CDS Vic", url: "https://www.epa.vic.gov.au/who-operates-cds-vic" },
+      { name: "Premier of Victoria — CDS hits half a billion container deposits", url: "https://www.premier.vic.gov.au/victorias-cds-hits-half-billion-container-deposits" },
+    ],
+    methodology: "Compiled from EPA Victoria and Victorian Government releases, checked 28 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("au", drafts);

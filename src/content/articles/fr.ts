@@ -1021,6 +1021,130 @@ const drafts: Draft[] = [
     ],
     methodology: "Synthèse d'après info.gouv.fr, Service-Public.fr et Vidal, vérifiée le 27 novembre 2026.",
   },
+  {
+    id: "fr-interdiction-fumer-plages-parcs",
+    slug: "interdiction-fumer-plages-parcs-abribus-amende",
+    title: "Interdiction de fumer à la plage, dans les parcs et aux arrêts de bus : ce qui a changé",
+    seoTitle: "Interdiction de fumer plages, parcs, abribus : l'amende",
+    subtitle: "Depuis l'été 2025, fumer dans ces lieux expose à une amende de 135 €. La cigarette électronique n'est pas concernée.",
+    excerpt:
+      "Depuis l'été 2025, interdiction de fumer sur les plages, dans les parcs, aux abribus et près des écoles. Les lieux visés, l'amende de 135 €, les exceptions.",
+    category: "lifestyle",
+    tags: ["Tabac", "Santé", "Réglementation", "Amendes"],
+    publishedAt: "2026-11-28T10:00:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Une plage ensoleillée au lever du soleil",
+    keyTakeaways: [
+      "Le décret du 27 juin 2025 a étendu l'interdiction de fumer à de nouveaux espaces extérieurs, appliquée depuis l'été 2025.",
+      "Sont concernés : parcs et jardins publics, plages de baignade pendant la saison, abribus et zones d'attente, abords des écoles.",
+      "Amende forfaitaire de 135 € (375 € si majorée), jusqu'à 750 € en cas de poursuite.",
+      "La cigarette électronique et les terrasses de cafés ne sont pas visées.",
+    ],
+    body: [
+      { type: "p", text: "En bref : vous ne pouvez plus fumer dans un parc public, sur une plage surveillée pendant la saison, à un arrêt de bus pendant le service ni devant une école. La vapoteuse reste autorisée dans ces lieux, sauf règle locale contraire." },
+      { type: "h2", id: "lieux", text: "Les lieux concernés" },
+      {
+        type: "table",
+        head: ["Lieu", "Quand"],
+        rows: [
+          ["Parcs et jardins publics", "Toute l'année"],
+          ["Plages de baignade (mer, lacs, rivières)", "Pendant la saison balnéaire"],
+          ["Abribus et zones d'attente des voyageurs", "Pendant les heures de service"],
+          ["Abords des écoles et établissements pour mineurs", "Aux heures d'entrée et de sortie"],
+        ],
+      },
+      { type: "h2", id: "amende", text: "L'amende" },
+      {
+        type: "ul",
+        items: [
+          "135 € d'amende forfaitaire (contravention de 4e classe).",
+          "375 € si l'amende est majorée.",
+          "Jusqu'à 750 € en cas de poursuite devant le tribunal.",
+          "Certaines affiches indiquent encore 68 € : c'est l'ancien montant.",
+        ],
+      },
+      { type: "h2", id: "exceptions", text: "Ce qui n'est pas concerné" },
+      {
+        type: "ul",
+        items: [
+          "La cigarette électronique.",
+          "Les terrasses de cafés et restaurants.",
+          "Les plages hors saison balnéaire, sauf arrêté local.",
+        ],
+      },
+      { type: "callout", title: "Envie d'arrêter ?", text: "Tabac Info Service : 39 89, service gratuit, et l'appli Tabac Info Service." },
+    ],
+    faq: [
+      { question: "Peut-on fumer sur la plage en France ?", answer: "Non, plus sur les plages de baignade pendant la saison balnéaire depuis l'été 2025." },
+      { question: "Quelle est l'amende pour avoir fumé dans un parc ?", answer: "135 € en amende forfaitaire, 375 € si majorée, jusqu'à 750 €." },
+      { question: "La cigarette électronique est-elle interdite dans les parcs ?", answer: "Non, le décret ne vise pas la cigarette électronique." },
+      { question: "Peut-on fumer en terrasse ?", answer: "Oui, les terrasses de cafés et restaurants ne sont pas concernées." },
+    ],
+    sources: [
+      { name: "info.gouv.fr — L'interdiction de fumer à la plage ou autour des écoles entre en vigueur", url: "https://www.info.gouv.fr/actualite/interdiction-de-fumer-de-nouveaux-lieux-concernes-cet-ete" },
+      { name: "INC — Dans quels lieux est-il interdit de fumer depuis le 29 juin 2025 ?", url: "https://www.inc-conso.fr/content/dans-quels-lieux-est-il-interdit-de-fumer-depuis-le-29-juin-2025" },
+      { name: "Paris.fr — Interdiction de fumer dans les lieux publics", url: "https://www.paris.fr/pages/interdiction-de-fumer-dans-les-lieux-publics-tout-ce-qui-change-cet-ete-31740" },
+    ],
+    methodology: "Synthèse d'après info.gouv.fr, l'INC et la Ville de Paris, vérifiée le 28 novembre 2026.",
+  },
+  {
+    id: "fr-tri-biodechets",
+    slug: "tri-biodechets-obligatoire-compost-collecte",
+    title: "Tri des biodéchets : ce qui est obligatoire et comment faire chez soi",
+    seoTitle: "Tri des biodéchets obligatoire : compost ou collecte ?",
+    subtitle: "Depuis le 1er janvier 2024, chaque commune doit proposer une solution. Vous n'êtes pas obligé de composter vous-même.",
+    excerpt:
+      "Depuis 2024, le tri à la source des biodéchets est généralisé. Ce qui se trie, les solutions (bac, borne, compost) et ce que doit proposer votre commune.",
+    category: "lifestyle",
+    tags: ["Déchets", "Environnement", "Maison", "Écologie"],
+    publishedAt: "2026-11-28T09:30:00+01:00",
+    heroImage: "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Trois poubelles de tri : compost, déchets et recyclage",
+    keyTakeaways: [
+      "Depuis le 1er janvier 2024, le tri à la source des biodéchets est généralisé aux particuliers et aux professionnels.",
+      "L'obligation pèse surtout sur les collectivités, qui doivent proposer une solution.",
+      "Solutions possibles : bac de collecte à domicile, borne dans la rue, composteur collectif ou individuel.",
+      "Le compostage individuel n'est pas obligatoire.",
+    ],
+    body: [
+      { type: "p", text: "En bref : renseignez-vous auprès de votre mairie ou de votre intercommunalité sur la solution proposée chez vous, puis séparez vos restes alimentaires du reste des ordures. Un petit bio-seau en cuisine suffit." },
+      { type: "h2", id: "quoi", text: "Qu'est-ce qu'on trie ?" },
+      {
+        type: "table",
+        head: ["Oui", "À vérifier selon votre commune"],
+        rows: [
+          ["Épluchures de fruits et légumes", "Viande et poisson"],
+          ["Restes de repas", "Os, coquillages"],
+          ["Marc de café, sachets de thé", "Essuie-tout et serviettes en papier"],
+          ["Coquilles d'œufs", "Déchets de jardin (souvent en déchèterie)"],
+        ],
+      },
+      { type: "h2", id: "solutions", text: "Les solutions" },
+      {
+        type: "ul",
+        items: [
+          "Collecte en porte-à-porte avec un bac dédié.",
+          "Bornes d'apport volontaire dans l'espace public.",
+          "Composteur partagé en pied d'immeuble ou de quartier.",
+          "Composteur individuel si vous avez un jardin — souvent fourni ou subventionné par la collectivité.",
+        ],
+      },
+      { type: "h2", id: "pourquoi", text: "Pourquoi trier ?" },
+      { type: "p", text: "Les biodéchets représentent une part importante de nos poubelles. Triés, ils deviennent du compost ou du biogaz au lieu d'être incinérés ou enfouis, ce qui réduit les émissions et peut alléger la facture de collecte." },
+    ],
+    faq: [
+      { question: "Le tri des biodéchets est-il obligatoire ?", answer: "Oui, le tri à la source est généralisé depuis le 1er janvier 2024 ; les collectivités doivent proposer une solution." },
+      { question: "Dois-je avoir un composteur ?", answer: "Non. Le compostage individuel n'est pas obligatoire ; vous pouvez utiliser la collecte ou les bornes de votre commune." },
+      { question: "Que faire si ma commune ne propose rien ?", answer: "Contactez votre mairie ou intercommunalité ; elles sont tenues de mettre en place une solution." },
+      { question: "Peut-on mettre de la viande dans le compost ?", answer: "Ça dépend de la solution : souvent oui en collecte, déconseillé en composteur individuel." },
+    ],
+    sources: [
+      { name: "info.gouv.fr — Biodéchets : le tri devient obligatoire", url: "https://www.info.gouv.fr/actualite/biodechets-le-tri-devient-obligatoire" },
+      { name: "Ministère de la Transition écologique — Biodéchets", url: "https://www.ecologie.gouv.fr/politiques-publiques/biodechets" },
+      { name: "ANIL — Compost obligatoire en 2024 : tout ce qu'il faut savoir", url: "https://www.anil.org/parole-expert-logement-compost-obligatoire" },
+    ],
+    methodology: "Synthèse d'après info.gouv.fr, le ministère de la Transition écologique et l'ANIL, vérifiée le 28 novembre 2026.",
+  },
 ];
 
 export const articles = buildArticles("fr", drafts);

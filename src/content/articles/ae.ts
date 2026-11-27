@@ -1050,6 +1050,124 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from MOHAP and UAE news coverage, checked 27 November 2026. Speak to a doctor or genetic counsellor about your situation.",
   },
+  {
+    id: "ae-national-day-holiday-2026",
+    slug: "uae-national-day-2026-holiday-dates-long-weekend",
+    title: "UAE National Day 2026: holiday dates and how to turn them into a long break",
+    seoTitle: "UAE National Day Holiday 2026: Dates and Long Weekend",
+    subtitle: "Private sector off on 2–3 December; public sector 2–4 December. One day of leave makes it five days.",
+    excerpt:
+      "UAE National Day (Eid Al Etihad) 2026: private sector off 2–3 December, public sector 2–4 December. How to stretch it to five or nine days.",
+    category: "lifestyle",
+    tags: ["Public Holidays", "UAE National Day", "Long Weekends", "Travel"],
+    publishedAt: "2026-11-28T10:00:00+04:00",
+    heroImage: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Confetti in the air",
+    keyTakeaways: [
+      "MOHRE confirmed a two-day paid break for the private sector on Wednesday 2 and Thursday 3 December 2026.",
+      "The public sector is off Wednesday 2 to Friday 4 December and returns on Monday 7 December.",
+      "Private-sector workers can take Friday 4 December as leave for a five-day break (2–6 December).",
+      "This is the UAE's 55th National Day, also called Eid Al Etihad.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: if you work in the private sector, you're off on 2 and 3 December. Add one day of annual leave on Friday 4 December and you get five days in a row, through Sunday 6 December." },
+      { type: "h2", id: "dates", text: "Holiday dates" },
+      {
+        type: "table",
+        head: ["Sector", "Days off", "Back to work"],
+        rows: [
+          ["Private sector", "Wed 2 – Thu 3 December", "Fri 4 December (unless on leave)"],
+          ["Public sector", "Wed 2 – Fri 4 December", "Mon 7 December"],
+        ],
+      },
+      { type: "h2", id: "plan", text: "How to stretch the break" },
+      {
+        type: "ul",
+        items: [
+          "1 day of leave (Fri 4 Dec): 5 days off, 2–6 December.",
+          "3 days of leave (Mon 30 Nov, Tue 1 Dec, Fri 4 Dec): 9 days off, 28 November–6 December.",
+          "Book flights early — National Day is a busy travel week.",
+        ],
+      },
+      { type: "h2", id: "celebrate", text: "Celebrating" },
+      {
+        type: "ul",
+        items: [
+          "Expect fireworks, parades and events across the emirates.",
+          "Follow official rules on car decorations and stickers, which emirates publish each year.",
+          "Dubai and Abu Dhabi schools may have separate break dates — check your school's notice.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When is the UAE National Day holiday in 2026?", answer: "2–3 December for the private sector, and 2–4 December for the public sector." },
+      { question: "Is the National Day holiday paid?", answer: "Yes. MOHRE confirmed it's a paid holiday for private-sector employees." },
+      { question: "How can I get a long weekend?", answer: "Take Friday 4 December as leave to get five days off, 2–6 December." },
+      { question: "Which National Day is it?", answer: "The UAE's 55th National Day, also known as Eid Al Etihad." },
+    ],
+    sources: [
+      { name: "The National — UAE confirms National Day holidays for private sector", url: "https://www.thenationalnews.com/news/uae/2026/11/13/uae-confirms-national-day-holidays-for-private-sector-employees/" },
+      { name: "Khaleej Times — 2-day National Day break for private sector", url: "https://www.khaleejtimes.com/uae/uae-2-day-national-day-break-private-sector-employees-eid-al-etihad" },
+      { name: "Khaleej Times — 3-day Eid Al Etihad break for public sector", url: "https://www.khaleejtimes.com/uae/uae-national-day-2026-eid-al-etihad-holiday-public-sector" },
+    ],
+    methodology: "Compiled from official announcements as reported by The National and Khaleej Times, checked 28 November 2026.",
+  },
+  {
+    id: "ae-mandatory-health-insurance",
+    slug: "uae-mandatory-health-insurance-private-sector-domestic-workers",
+    title: "Mandatory health insurance in the UAE: what employers and workers need to know",
+    seoTitle: "UAE Mandatory Health Insurance: Rules for Workers in 2026",
+    subtitle: "Since January 2025, private-sector employees and domestic workers need cover in every emirate before a visa is issued or renewed.",
+    excerpt:
+      "Health insurance is mandatory for private-sector staff and domestic workers across the UAE. Who pays, the AED 320 basic plan, and family cover.",
+    category: "lifestyle",
+    tags: ["Health Insurance", "Visas", "Domestic Workers", "Health"],
+    publishedAt: "2026-11-28T09:30:00+04:00",
+    heroImage: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A stethoscope on a white surface",
+    keyTakeaways: [
+      "From 1 January 2025, employers must buy health insurance for private-sector employees and domestic workers before issuing or renewing residence visas.",
+      "Abu Dhabi and Dubai already had their own mandatory schemes; the rule extended it to the Northern Emirates.",
+      "A basic package for the Northern Emirates starts from AED 320 a year, for ages 1–64.",
+      "The employer is responsible for buying the worker's cover.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: if you employ someone in the private sector or as a domestic worker anywhere in the UAE, you must provide health insurance before their visa is issued or renewed. In the Northern Emirates, a government-approved basic plan starts from AED 320 a year." },
+      { type: "h2", id: "where", text: "How it works in each emirate" },
+      {
+        type: "table",
+        head: ["Emirate", "Scheme"],
+        rows: [
+          ["Abu Dhabi", "Long-standing mandatory scheme (Thiqa for Emiratis; employer-provided cover for expats)"],
+          ["Dubai", "DHA mandatory scheme; basic plan for domestic workers from about AED 550"],
+          ["Sharjah, Ajman, UAQ, RAK, Fujairah", "Federal mandate since January 2025; basic package from AED 320"],
+        ],
+      },
+      { type: "h2", id: "basic", text: "The basic package" },
+      {
+        type: "ul",
+        items: [
+          "For ages 1 to 64, valid for two years.",
+          "Covers outpatient and inpatient care at network providers with set co-payments.",
+          "Available from approved insurers; employers can also choose better plans.",
+        ],
+      },
+      { type: "h2", id: "family", text: "What about family members?" },
+      { type: "p", text: "The mandate requires employers to cover the worker. Cover for spouses and children depends on the emirate and your sponsor rules; in Dubai and Abu Dhabi sponsors must insure their dependants. Check with your insurer or MOHRE." },
+    ],
+    faq: [
+      { question: "Is health insurance mandatory in the UAE?", answer: "Yes. Since 1 January 2025, private-sector employees and domestic workers must have cover in every emirate." },
+      { question: "Who pays for the insurance?", answer: "The employer, as a condition of issuing or renewing the residence visa." },
+      { question: "How much is the basic plan?", answer: "From AED 320 a year in the Northern Emirates, for ages 1 to 64." },
+      { question: "Do I need to insure my family?", answer: "It depends on the emirate. Dubai and Abu Dhabi require sponsors to insure dependants." },
+    ],
+    sources: [
+      { name: "MOHRE — Health insurance scheme", url: "https://mohre.gov.ae/en/media-center/Awareness-and-Guidance/health-insurance-scheme.aspx" },
+      { name: "u.ae — Getting health insurance", url: "https://u.ae/en/information-and-services/health-and-fitness/healthcare-access-and-insurance/getting-a-health-insurance" },
+      { name: "Khaleej Times — Basic health insurance for Northern Emirates from Dh320", url: "https://www.khaleejtimes.com/lifestyle/health/uae-announces-new-basic-health-insurance-for-private-sector-workers-from-january-2025" },
+    ],
+    methodology: "Compiled from MOHRE, the UAE government portal and Khaleej Times, checked 28 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("ae", drafts);

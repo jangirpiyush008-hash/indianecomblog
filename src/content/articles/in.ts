@@ -1450,6 +1450,140 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from published scheme guides and news coverage, checked 27 November 2026. Confirm details on the Ayushman app or PM-JAY portal before applying.",
   },
+  {
+    id: "in-pm-surya-ghar-rooftop-solar",
+    slug: "pm-surya-ghar-rooftop-solar-subsidy-how-to-apply",
+    title: "PM Surya Ghar: how much rooftop solar subsidy you get and how to apply",
+    seoTitle: "PM Surya Ghar Solar Subsidy: Amounts and How to Apply",
+    subtitle: "Up to ₹78,000 from the Centre for a 3 kW home system — plus state top-ups in some places.",
+    excerpt:
+      "PM Surya Ghar pays ₹30,000/kW up to 2 kW and ₹18,000 for the third kW, capped at ₹78,000. Steps on pmsuryaghar.gov.in, net metering and what to check.",
+    category: "lifestyle",
+    tags: ["Solar", "Electricity", "Home", "Government Schemes"],
+    publishedAt: "2026-11-28T10:00:00+05:30",
+    heroImage: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "Rows of solar panels under a cloudy sky",
+    keyTakeaways: [
+      "Central subsidy: ₹30,000 per kW for the first 2 kW and ₹18,000 for the next 1 kW.",
+      "That's about ₹30,000 for 1 kW, ₹60,000 for 2 kW and ₹78,000 for 3 kW or more (the cap).",
+      "Apply on pmsuryaghar.gov.in through your electricity distribution company (DISCOM).",
+      "The subsidy is paid after installation, net metering and inspection; some states add their own subsidy.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: register on pmsuryaghar.gov.in with your electricity consumer number, get DISCOM approval, have a registered vendor install the panels, complete net metering and inspection, then submit your bank details. The central subsidy lands in your account after commissioning." },
+      { type: "h2", id: "amounts", text: "How much subsidy" },
+      {
+        type: "table",
+        head: ["System size", "Central subsidy"],
+        rows: [
+          ["1 kW", "₹30,000"],
+          ["2 kW", "₹60,000"],
+          ["3 kW or more", "₹78,000 (maximum)"],
+        ],
+      },
+      { type: "p", text: "As a rough guide from the scheme, homes using up to 150 units a month suit 1–2 kW, 150–300 units suit 2–3 kW, and above 300 units suit 3 kW or more. Your state may add a subsidy on top — check your DISCOM or state renewable energy agency." },
+      { type: "h2", id: "apply", text: "How to apply" },
+      {
+        type: "ol",
+        items: [
+          "Go to pmsuryaghar.gov.in and choose 'Apply for Rooftop Solar'.",
+          "Select your state and DISCOM, and enter your electricity consumer number and mobile number.",
+          "Submit the application and wait for DISCOM feasibility approval.",
+          "Pick a registered vendor and install the system.",
+          "Apply for net metering; the DISCOM installs the net meter and inspects.",
+          "Once commissioned, submit your bank details and a cancelled cheque for the subsidy.",
+        ],
+      },
+      { type: "h2", id: "check", text: "Before you sign with a vendor" },
+      {
+        type: "ul",
+        items: [
+          "Use a vendor registered on the national portal.",
+          "Ask for the panel and inverter make, warranty and the total price before subsidy.",
+          "Confirm who handles net-metering paperwork.",
+          "You need your own roof (or permission) with shade-free space.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "How much subsidy do I get for a 3 kW rooftop solar system?", answer: "₹78,000 from the Centre, which is also the maximum for larger systems." },
+      { question: "Where do I apply for PM Surya Ghar?", answer: "On the official portal pmsuryaghar.gov.in." },
+      { question: "When is the subsidy paid?", answer: "After installation, net metering and DISCOM inspection, directly to your bank account." },
+      { question: "Can I get a state subsidy too?", answer: "Some states add their own subsidy on top of the central amount. Check with your DISCOM." },
+    ],
+    sources: [
+      { name: "india.gov.in — PM Surya Ghar Muft Bijli Yojana", url: "https://www.india.gov.in/spotlight/pm-surya-ghar-muft-bijli-yojana" },
+      { name: "myScheme — PM Surya Ghar eligibility", url: "https://myscheme.gov.in/schemes/pmsgmb" },
+      { name: "Delhi Solar Portal — Central subsidy", url: "https://solar.delhi.gov.in/page/central-subsidy" },
+    ],
+    methodology: "Compiled from government scheme pages, checked 28 November 2026. Check pmsuryaghar.gov.in for current amounts.",
+  },
+  {
+    id: "in-abha-health-account",
+    slug: "abha-health-account-how-to-create-benefits",
+    title: "ABHA health account: what it is, how to create one, and is it worth it?",
+    seoTitle: "ABHA Health ID: How to Create It and What It's For",
+    subtitle: "A free 14-digit health ID that lets you keep lab reports and prescriptions in one place — with your consent.",
+    excerpt:
+      "ABHA is India's free digital health ID. How to create it with Aadhaar or a driving licence, link reports, share them with doctors, and control consent.",
+    category: "lifestyle",
+    tags: ["ABHA", "Health", "Digital India", "Privacy"],
+    publishedAt: "2026-11-28T09:30:00+05:30",
+    heroImage: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A stethoscope on a white surface",
+    keyTakeaways: [
+      "ABHA (Ayushman Bharat Health Account) is a free 14-digit health ID under the Ayushman Bharat Digital Mission.",
+      "Create it in the ABHA app or at abha.abdm.gov.in using Aadhaar or a driving licence.",
+      "You can link lab reports, prescriptions and vaccination certificates, and share them with consent.",
+      "It's voluntary — you don't need ABHA to get treatment.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: download the ABHA app, sign up with Aadhaar OTP (or a driving licence), choose an easy ABHA address like name@abdm, and you're done. Hospitals and labs connected to ABDM can then push records to you, and you decide who sees them." },
+      { type: "h2", id: "what", text: "What you can do with ABHA" },
+      {
+        type: "ul",
+        items: [
+          "Store lab reports, prescriptions and discharge summaries in one place.",
+          "Share records with a doctor by scanning a QR code, only with your consent.",
+          "Skip paperwork with 'scan and share' registration at many hospitals.",
+          "Link government health schemes and some insurance policies.",
+        ],
+      },
+      { type: "h2", id: "create", text: "How to create an ABHA" },
+      {
+        type: "ol",
+        items: [
+          "Install the ABHA app or go to abha.abdm.gov.in.",
+          "Choose Aadhaar (OTP) or driving licence to verify.",
+          "Confirm your details and create an ABHA address.",
+          "Download your ABHA card.",
+        ],
+      },
+      { type: "h2", id: "privacy", text: "Privacy controls" },
+      {
+        type: "table",
+        head: ["Control", "What it does"],
+        rows: [
+          ["Consent requests", "Approve or deny each request to view your records"],
+          ["Time limits", "Give access for a set period only"],
+          ["Revoke", "Withdraw consent at any time"],
+          ["Delete or deactivate", "Close your ABHA if you no longer want it"],
+        ],
+      },
+    ],
+    faq: [
+      { question: "Is ABHA mandatory?", answer: "No. It's voluntary, and you can get treatment without it." },
+      { question: "Is creating an ABHA free?", answer: "Yes, creating and using ABHA is free." },
+      { question: "Can doctors see my records without permission?", answer: "No. Records are shared only after you approve a consent request." },
+      { question: "Can I create ABHA without Aadhaar?", answer: "Yes, a driving licence can be used for verification." },
+    ],
+    sources: [
+      { name: "ABDM — ABHA app user guide", url: "https://abdm.gov.in:8081/uploads/ABHA_App_8413f7c295.pdf" },
+      { name: "App Store — ABHA ABDM", url: "https://apps.apple.com/in/app/abha-abdm/id1630917266" },
+      { name: "News On AIR — ABHA digital health account", url: "https://www.newsonair.gov.in/abha-digital-health-account-a-digital-health-revolution-to-empower-citizens" },
+    ],
+    methodology: "Compiled from ABDM material and the official app listing, checked 28 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("in", drafts);

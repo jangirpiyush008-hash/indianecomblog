@@ -982,6 +982,121 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from Ministry of Health announcements and Arab News, checked 27 November 2026. Not a substitute for medical advice.",
   },
+  {
+    id: "sa-sfda-menu-labelling",
+    slug: "sfda-menu-rules-caffeine-salt-calorie-labels",
+    title: "New menu labels in Saudi restaurants: caffeine, salt and calorie-burn times explained",
+    seoTitle: "SFDA Menu Rules: Caffeine, Salt and Calorie-Burn Labels",
+    subtitle: "Since 1 July 2025, cafés and restaurants must show caffeine content, flag salty dishes and say how long it takes to burn off a meal.",
+    excerpt:
+      "Saudi restaurants and cafés must now show caffeine per drink, a salt icon on dishes over 5 g, and the exercise time to burn calories. How to use the labels.",
+    category: "lifestyle",
+    tags: ["Food", "SFDA", "Health", "Restaurants"],
+    publishedAt: "2026-11-28T10:00:00+03:00",
+    heroImage: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A healthy breakfast plate with eggs, avocado and vegetables",
+    keyTakeaways: [
+      "The Saudi Food and Drug Authority's three menu rules took effect on 1 July 2025, on paper menus, screens and delivery apps.",
+      "Caffeine: drinks must show milligrams per 100 ml or per cup, and menus must state the 400 mg daily limit for adults.",
+      "Salt: dishes with more than 5 g of salt (2,000 mg sodium) carry a salt icon.",
+      "Calorie burn: menus show how long it takes to burn off an item through physical activity.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: next time you order, look for the caffeine number next to your coffee, the salt icon on dishes, and the 'minutes of walking' to burn off what you're eating. They're there to help you compare options at a glance." },
+      { type: "h2", id: "rules", text: "The three rules" },
+      {
+        type: "table",
+        head: ["Rule", "What you'll see"],
+        rows: [
+          ["Caffeine content disclosure", "mg of caffeine per 100 ml or per cup; note on the 400 mg/day adult limit"],
+          ["High salt content labelling", "A salt icon on items with more than 5 g salt"],
+          ["Physical activity calorie burn", "Time needed to burn the item's calories, e.g. minutes of walking"],
+        ],
+      },
+      { type: "h2", id: "use", text: "How to use the labels" },
+      {
+        type: "ul",
+        items: [
+          "Adults should stay under 400 mg of caffeine a day; pregnant women and children need less — ask a doctor.",
+          "If you're watching blood pressure, choose dishes without the salt icon.",
+          "Use calorie-burn times to compare similar dishes, not as a workout plan.",
+          "The labels also apply when ordering through delivery apps.",
+        ],
+      },
+      { type: "h2", id: "report", text: "Missing labels?" },
+      { type: "p", text: "If a restaurant or café isn't showing the required information, you can report it to the SFDA through its official channels or the unified number 19999." },
+    ],
+    faq: [
+      { question: "When did the SFDA menu rules start?", answer: "On 1 July 2025." },
+      { question: "What is the daily caffeine limit shown on menus?", answer: "400 mg per day for adults." },
+      { question: "When does a dish get the salt icon?", answer: "When it contains more than 5 g of salt (2,000 mg of sodium)." },
+      { question: "Do delivery apps have to show the labels?", answer: "Yes, the rules cover paper and electronic menus and online ordering platforms." },
+    ],
+    sources: [
+      { name: "Gulf News — Saudi Arabia to enforce new food labelling rules from July 1", url: "https://gulfnews.com/world/gulf/saudi/saudi-arabia-to-enforce-new-food-labelling-rules-from-july-1-1.500169964" },
+      { name: "Gulf News — Saudi Arabia enforces new menu rules on salt, caffeine and calorie burn", url: "https://gulfnews.com/world/gulf/saudi/saudi-arabia-enforces-new-menu-rules-to-flag-salt-caffeine-and-calorie-burn-1.500183654" },
+      { name: "Saudi Gazette — Restaurants required to change menus", url: "https://www.saudigazette.com.sa/article/652879" },
+    ],
+    methodology: "Compiled from the SFDA and Saudi and Gulf media, checked 28 November 2026.",
+  },
+  {
+    id: "sa-ramadan-2027-expected-dates",
+    slug: "ramadan-2027-expected-start-date-saudi-arabia",
+    title: "Ramadan 2027 in Saudi Arabia: expected start date and Eid al-Fitr",
+    seoTitle: "Ramadan 2027 in Saudi Arabia: Expected Start and Eid Dates",
+    subtitle: "The Umm al-Qura calendar points to Monday 8 February 2027. The official start depends on the moon sighting.",
+    excerpt:
+      "Ramadan 1448 is expected to start in Saudi Arabia on Monday 8 February 2027, with Eid al-Fitr around 9 March. How the date is confirmed and how to plan.",
+    category: "lifestyle",
+    tags: ["Ramadan", "Islamic Calendar", "Eid", "Saudi Arabia"],
+    publishedAt: "2026-11-28T09:30:00+03:00",
+    heroImage: "https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A white mosque framed by palm trees under a blue sky",
+    keyTakeaways: [
+      "Ramadan 1448 AH is expected to begin on Monday 8 February 2027, based on the Umm al-Qura calendar and astronomical calculations.",
+      "The crescent would be sought on the evening of Sunday 7 February.",
+      "Eid al-Fitr is expected around Tuesday 9 March 2027 if Ramadan lasts 29 days.",
+      "The Supreme Court announces the official dates after the moon sighting.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: plan for Ramadan to start on Monday 8 February 2027 and for Eid al-Fitr around 9–10 March. Treat these as expected dates until the official moon-sighting announcement." },
+      { type: "h2", id: "dates", text: "Expected dates" },
+      {
+        type: "table",
+        head: ["Event", "Expected date"],
+        rows: [
+          ["Moon sighting", "Evening of Sunday 7 February 2027"],
+          ["First day of Ramadan", "Monday 8 February 2027"],
+          ["Eid al-Fitr (29-day month)", "Tuesday 9 March 2027"],
+          ["Eid al-Fitr (30-day month)", "Wednesday 10 March 2027"],
+        ],
+      },
+      { type: "h2", id: "how", text: "How the date is confirmed" },
+      { type: "p", text: "Saudi Arabia uses the Umm al-Qura calendar for planning, but the start of Ramadan and Eid is confirmed by sighting the crescent moon. The Supreme Court calls on the public to look for the moon and announces the result the same evening." },
+      { type: "h2", id: "plan", text: "Planning tips" },
+      {
+        type: "ul",
+        items: [
+          "Book Umrah permits early in Nusuk — Ramadan is peak season.",
+          "Expect shorter working hours in government and many private jobs.",
+          "Check the official Eid al-Fitr holiday once it's announced.",
+          "Shop for Ramadan supplies early; prices and crowds rise in the last week of Sha'ban.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "When does Ramadan 2027 start in Saudi Arabia?", answer: "It's expected to begin on Monday 8 February 2027, subject to the moon sighting." },
+      { question: "When is Eid al-Fitr 2027?", answer: "Expected around Tuesday 9 March 2027, or 10 March if Ramadan lasts 30 days." },
+      { question: "Who announces the start of Ramadan?", answer: "Saudi Arabia's Supreme Court, after the crescent moon is sighted." },
+      { question: "Can the date change?", answer: "Yes. Calculated dates are a guide; the official date follows the moon sighting." },
+    ],
+    sources: [
+      { name: "Gulf News — When does Ramadan 2027 begin?", url: "https://gulfnews.com/uae/ramadan/when-does-ramadan-2027-begin-everything-you-need-to-know-1.500630523" },
+      { name: "Jordan News — First day of Ramadan 2027 by astronomical calculations", url: "https://www.jordannews.jo/Section-20/Middle-East/Date-of-the-First-Day-of-Ramadan-2027-According-to-Astronomical-Calculations-52316" },
+      { name: "The National — Ramadan 2027 expected dates", url: "https://www.thenationalnews.com/news/uae/2026/10/06/ramadan-2027-uae-dates-eid-al-fitr-holiday/" },
+    ],
+    methodology: "Compiled from astronomical forecasts reported in regional media, checked 28 November 2026. Official dates follow the moon sighting.",
+  },
 ];
 
 export const articles = buildArticles("sa", drafts);

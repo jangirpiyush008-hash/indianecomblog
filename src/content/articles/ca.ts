@@ -977,6 +977,128 @@ const drafts: Draft[] = [
     ],
     methodology: "Compiled from Québec, SAAQ and B.C. government pages, checked 27 November 2026.",
   },
+  {
+    id: "ca-canada-post-holiday-deadlines-2026",
+    slug: "canada-post-holiday-shipping-deadlines-2026",
+    title: "Canada Post holiday deadlines 2026: when to mail cards and parcels",
+    seoTitle: "Canada Post Holiday Shipping Deadlines 2026",
+    subtitle: "Regular Parcel across the country by December 10. Faster services buy you a few more days.",
+    excerpt:
+      "Canada Post's 2026 holiday deadlines: Regular Parcel by Dec 10 nationally, Dec 16 regionally, Dec 21 locally. Faster options, U.S. cut-offs and closures.",
+    category: "lifestyle",
+    tags: ["Christmas", "Canada Post", "Post", "Holidays"],
+    publishedAt: "2026-11-28T10:00:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A person holding a wrapped Christmas parcel",
+    keyTakeaways: [
+      "Regular Parcel: December 10 (national), December 16 (regional), December 21 (local).",
+      "Faster services such as Xpresspost and Priority have later cut-offs, around December 22–23.",
+      "Sending to the U.S. or overseas? Deadlines are earlier — check Canada Post's list for your destination.",
+      "Post offices close December 25 and for Boxing Day on Monday, December 28.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: if your parcel is crossing the country by Regular Parcel, mail it by Thursday, December 10. For nearby addresses you have until December 16 (regional) or December 21 (local). After that, pay for Xpresspost or Priority." },
+      { type: "h2", id: "domestic", text: "Domestic parcel deadlines" },
+      {
+        type: "table",
+        head: ["Service", "Local", "Regional", "National"],
+        rows: [
+          ["Regular Parcel", "Dec 21", "Dec 16", "Dec 10"],
+          ["Expedited Parcel", "—", "—", "About Dec 14"],
+          ["Xpresspost", "—", "About Dec 22", "About Dec 22"],
+          ["Priority", "About Dec 23", "About Dec 23", "About Dec 23"],
+        ],
+      },
+      { type: "p", text: "Regular Parcel dates come from Canada Post's November 12 announcement; faster-service dates are from published 2026 tables and can vary by route. Check Canada Post's holiday page for your postal code." },
+      { type: "h2", id: "us", text: "Sending to the U.S. and abroad" },
+      {
+        type: "ul",
+        items: [
+          "Tracked Packet to the U.S.: about December 11.",
+          "Xpresspost to the U.S.: about December 17.",
+          "International deadlines vary by country and are much earlier for surface mail.",
+        ],
+      },
+      { type: "h2", id: "tips", text: "Tips" },
+      {
+        type: "ul",
+        items: [
+          "Print labels online and drop off at a post office or parcel locker.",
+          "Write the full address and postal code, with a return address.",
+          "Watch for fake 'delivery fee' texts — track only on canadapost.ca or the app.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "What's the last day to send a Regular Parcel across Canada for Christmas 2026?", answer: "December 10 for national delivery." },
+      { question: "What if I miss the Regular Parcel deadline?", answer: "Use Xpresspost or Priority, which have cut-offs around December 22–23." },
+      { question: "When are post offices closed over the holidays?", answer: "December 25 and Monday, December 28 for Boxing Day." },
+      { question: "Is a text about an unpaid Canada Post fee real?", answer: "Be cautious — Canada Post warns about scam texts. Check tracking on the official site." },
+    ],
+    sources: [
+      { name: "Canada Post — Canada's holiday delivery network is ready (Nov 12, 2026)", url: "https://www.canadapost-postescanada.ca/cpc/en/our-company/news-and-media/corporate-news/news-release/2026-11-12-canadas-holiday-delivery-network-is-ready-for-canadians" },
+      { name: "Canada Post — Holidays", url: "https://www.canadapost-postescanada.ca/holidays" },
+      { name: "ShipStation — Canada 2026 holiday shipping deadlines", url: "https://www.shipstation.com/blog/canada-2026-holiday-shipping-deadlines/" },
+    ],
+    methodology: "Compiled from Canada Post and a published 2026 carrier table, checked 28 November 2026. Use Canada Post's tool for exact dates.",
+  },
+  {
+    id: "ca-grocery-code-of-conduct",
+    slug: "grocery-code-of-conduct-canada-what-it-means-for-shoppers",
+    title: "Canada's Grocery Code of Conduct: what it does — and doesn't do — for shoppers",
+    seoTitle: "Canada Grocery Code of Conduct: What It Means for Shoppers",
+    subtitle: "It took full effect on January 1, 2026. It governs grocers and suppliers, not prices at the till.",
+    excerpt:
+      "Canada's voluntary Grocery Code took full effect in January 2026. What it covers, why it won't directly cut food prices, and where shoppers can complain.",
+    category: "lifestyle",
+    tags: ["Groceries", "Food Prices", "Consumers", "Canada"],
+    publishedAt: "2026-11-28T09:30:00-05:00",
+    heroImage: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1600&h=1000&q=80",
+    heroImageAlt: "A supermarket aisle lined with shelves of products",
+    keyTakeaways: [
+      "The Canada Grocery Code is a voluntary code for grocers, suppliers, wholesalers and producers, fully in effect since January 1, 2026.",
+      "It sets trade rules and a dispute-resolution process run by the Office of the Grocery Sector Code of Conduct.",
+      "Only members can file complaints; it received 14 between July 2025 and May 2026.",
+      "The government says there's no direct link between the code and food prices.",
+    ],
+    body: [
+      { type: "p", text: "Short answer: the code is about fair dealing between big grocers and the companies that supply them — things like surprise fees and late payments. It won't change what you pay at the checkout directly, and you can't file a complaint under it as a shopper." },
+      { type: "h2", id: "what", text: "What the code covers" },
+      {
+        type: "ul",
+        items: [
+          "Rules on fair dealing between retailers and suppliers.",
+          "Limits on unexpected fees and changes to agreed terms.",
+          "A governance office and a dispute-resolution and adjudication process.",
+        ],
+      },
+      { type: "h2", id: "prices", text: "Will it lower grocery prices?" },
+      { type: "p", text: "Not directly. A federal briefing note says it's extremely difficult to draw a direct link between a grocery code and food prices, and analysts point out that most food inflation comes from outside factors such as weather, energy and global commodity prices." },
+      { type: "h2", id: "shoppers", text: "Where shoppers can go instead" },
+      {
+        type: "table",
+        head: ["Problem", "Where to go"],
+        rows: [
+          ["Wrong price at the till", "Ask the store; many follow the Scanner Price Accuracy Code"],
+          ["Misleading pricing or promotions", "Competition Bureau"],
+          ["Food safety or labelling", "Canadian Food Inspection Agency"],
+          ["Other consumer problems", "Your provincial consumer protection office"],
+        ],
+      },
+    ],
+    faq: [
+      { question: "When did the Grocery Code of Conduct take effect?", answer: "It took full effect on January 1, 2026." },
+      { question: "Is the Grocery Code mandatory?", answer: "No. It's voluntary, though the largest grocers signed on." },
+      { question: "Can I complain under the Grocery Code as a shopper?", answer: "No. Complaints are for members such as grocers and suppliers." },
+      { question: "Will the Grocery Code lower food prices?", answer: "Not directly; the government says there's no clear link between the code and prices." },
+    ],
+    sources: [
+      { name: "Global News — Grocery code of conduct takes effect", url: "https://globalnews.ca/news/11596326/grocery-code-of-conduct-takes-effect" },
+      { name: "CTV News — Retailers, suppliers hesitant to raise concerns, report finds", url: "https://www.ctvnews.ca/business/inflation/article/retailers-suppliers-hesitant-to-raise-concerns-grocery-code-report-finds/" },
+      { name: "Government of Canada — Question Period Note: Grocery Code of Conduct", url: "https://search.open.canada.ca/qpnotes/record/aafc-aac%2CAAFC-2026-QP-00011" },
+    ],
+    methodology: "Compiled from Canadian news coverage and a federal briefing note, checked 28 November 2026.",
+  },
 ];
 
 export const articles = buildArticles("ca", drafts);
